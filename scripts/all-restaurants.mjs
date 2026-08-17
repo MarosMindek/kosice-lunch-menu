@@ -17,3 +17,4 @@ await visit('bluebell-bing',`https://www.bing.com/search?q=${encodeURIComponent(
 await visit('stara-sypka-home','https://www.starasypka.sk/sk/',7000,6);
 for(const [n,d] of Object.entries(results.pages)){console.log(`\n===== ${n} =====`);console.log(JSON.stringify({url:d.finalUrl||d.requestedUrl,status:d.status,title:d.title,hasToday:d.hasToday,error:d.error},null,2));if(d.lines){const hits=d.lines.filter(x=>/(17\.?\s*8\.?\s*2026|17\.08\.26|€|EUR|PONDELOK|pondelok|menu|poliev|hlavn)/i.test(x));console.log(hits.slice(0,180).join('\n'));}}
 fs.writeFileSync(`${OUT}/summary.json`,JSON.stringify(results,null,2));await browser.close();
+// live multi-restaurant test
