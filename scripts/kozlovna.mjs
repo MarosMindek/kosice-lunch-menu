@@ -1,3 +1,4 @@
+// Trigger workflow test
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 
