@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "scrape:kozlovna": "node scripts/kozlovna.mjs"
+    "scrape:kozlovna": "node scripts/kozlovna.mjs",
+    "scrape:all": "node scripts/all-restaurants.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"
