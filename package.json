@@ -1,0 +1,11 @@
+{
+  "name": "kosice-lunch-menu",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape:kozlovna": "node scripts/kozlovna.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
