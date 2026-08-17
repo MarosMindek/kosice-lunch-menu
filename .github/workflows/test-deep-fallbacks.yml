@@ -1,0 +1,27 @@
+name: Test deep menu fallbacks
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/deep-fallbacks.mjs'
+      - '.github/workflows/test-deep-fallbacks.yml'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/deep-fallbacks.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-fallbacks-output
+          path: output/deep-fallbacks/
+          if-no-files-found: error
