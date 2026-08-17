@@ -1,0 +1,29 @@
+name: Test Kozlovna live scraper
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/kozlovna.mjs'
+      - 'package.json'
+      - '.github/workflows/test-kozlovna.yml'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run scrape:kozlovna
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kozlovna-output
+          path: output/
+          if-no-files-found: error
