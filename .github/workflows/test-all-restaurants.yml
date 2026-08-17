@@ -1,0 +1,28 @@
+name: Test all restaurants live scraper
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/all-restaurants.mjs'
+      - 'package.json'
+      - '.github/workflows/test-all-restaurants.yml'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run scrape:all
+      - uses: actions/upload-artifact@v4
+        with:
+          name: all-restaurants-output
+          path: output/all-restaurants/
+          if-no-files-found: error
