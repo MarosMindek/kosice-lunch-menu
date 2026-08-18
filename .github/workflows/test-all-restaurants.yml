@@ -1,4 +1,4 @@
-name: Test all restaurants live scraper
+name: Live all restaurants scraper
 
 on:
   push:
@@ -8,21 +8,54 @@ on:
       - 'package.json'
       - '.github/workflows/test-all-restaurants.yml'
   workflow_dispatch:
+  schedule:
+    # Run at 09:50 Europe/Bratislava in both summer and winter time.
+    - cron: '50 7,8 * * 1-5'
+
+permissions:
+  contents: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Local-time gate
+        id: gate
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
+        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:all
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/upload-artifact@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           name: all-restaurants-output
           path: output/all-restaurants/
           if-no-files-found: error
+      - name: Publish latest text/JSON results
+        if: steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          rm -rf results/all-restaurants
+          mkdir -p results/all-restaurants
+          find output/all-restaurants -maxdepth 1 -type f \( -name '*.json' -o -name '*.txt' \) -exec cp {} results/all-restaurants/ \;
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/all-restaurants
+          git commit -m "Update live restaurant data [skip ci]" || exit 0
+          git push
