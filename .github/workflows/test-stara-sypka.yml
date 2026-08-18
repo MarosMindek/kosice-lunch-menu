@@ -8,6 +8,9 @@ on:
       - 'package.json'
       - '.github/workflows/test-stara-sypka.yml'
   workflow_dispatch:
+  schedule:
+    # 09:47 Europe/Bratislava in summer/winter; local gate keeps only the 09:xx run.
+    - cron: '47 7,8 * * 1-5'
 
 permissions:
   contents: write
@@ -17,22 +20,37 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Local-time gate
+        id: gate
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
+        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.gate.outputs.run == 'true'
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:stara-sypka
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.gate.outputs.run == 'true'
         with:
           name: stara-sypka-output
           path: output/stara-sypka/
           if-no-files-found: warn
       - name: Publish latest text and JSON
-        if: always()
+        if: always() && steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           if [ -d output/stara-sypka ]; then
