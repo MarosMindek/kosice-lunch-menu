@@ -22,7 +22,12 @@ fs.writeFileSync(path.join(OUT,'page.html'),await page.content());
 await page.screenshot({path:path.join(OUT,'page.png'),fullPage:true});
 
 const menuLinks=await page.locator('a').evaluateAll(as=>as.map(a=>({text:(a.innerText||a.textContent||'').trim(),href:a.href})).filter(x=>/ZOBRAZI|VYTLA|menu|ponuka/i.test(x.text)||/\.pdf(?:$|\?)/i.test(x.href)));
-const chosen=menuLinks.find(x=>/ZOBRAZI|VYTLA/i.test(x.text)) || menuLinks.find(x=>/\.pdf(?:$|\?)/i.test(x.href));
+// Prefer the actual daily-menu PDF. The page also contains unrelated "zobraziť všetky fotky" links.
+const chosen=
+  menuLinks.find(x=>/\/media\/object\/.*\.pdf(?:$|\?)/i.test(x.href)) ||
+  menuLinks.find(x=>/\.pdf(?:$|\?)/i.test(x.href) && /VYTLAČIŤ|VYTLACIT/i.test(x.text)) ||
+  menuLinks.find(x=>/\.pdf(?:$|\?)/i.test(x.href) && /ZOBRAZIŤ|ZOBRAZIT/i.test(x.text)) ||
+  menuLinks.find(x=>/\.pdf(?:$|\?)/i.test(x.href));
 if(!chosen?.href) throw new Error(`Menu PDF link not found. Candidates: ${JSON.stringify(menuLinks)}`);
 
 const pdfUrl=new URL(chosen.href);
@@ -42,8 +47,10 @@ try {
 }
 
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
-const nBody=normalize(bodyText), nPdf=normalize(pdfText), nToday=normalize(today);
-const dateVariants=[today,today.replace(/\.(?=\d)/g,'. '),today.replace(/^0/,'').replace('.0','.')].map(normalize);
+const nBody=normalize(bodyText), nPdf=normalize(pdfText);
+const parts=today.split('.').filter(Boolean);
+const d=String(Number(parts[0])), m=String(Number(parts[1])), y=parts[2];
+const dateVariants=[today,`${d}.${m}.${y}`,`${d}. ${m}. ${y}`,`${d}.${m}.${y.slice(-2)}`].map(normalize);
 const pageDateMatch=dateVariants.some(x=>nBody.includes(x));
 const pdfDateMatch=dateVariants.some(x=>nPdf.includes(x));
 
@@ -57,6 +64,7 @@ const summary={
 fs.writeFileSync(path.join(OUT,'summary.json'),JSON.stringify(summary,null,2));
 console.log(JSON.stringify(summary,null,2));
 
+if(!/application\/pdf/i.test(summary.contentType||'')) throw new Error(`Expected PDF, got ${summary.contentType}`);
 if(!pdfText) throw new Error('PDF downloaded but pdftotext produced no text');
 if(!pdfDateMatch) throw new Error(`Downloaded PDF is not for today (${today}). PDF text starts: ${pdfText.slice(0,500)}`);
 
