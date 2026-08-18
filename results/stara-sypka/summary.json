@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-08-18T08:43:48.874Z",
+  "fetchedAt": "2026-08-18T08:45:33.618Z",
   "today": "18.08.2026",
   "pageStatus": 200,
-  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787042620802",
+  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787042723556",
   "pageDateMatch": true,
-  "pdfDateMatch": false,
+  "pdfDateMatch": true,
   "chosenLink": {
-    "text": "zobraziť všetky fotky",
-    "href": "https://www.starasypka.sk/sk/restauracia/fotogaleria#restauracia"
+    "text": "ZOBRAZIŤ / VYTLAČIŤ",
+    "href": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf"
   },
-  "requestedPdfUrl": "https://www.starasypka.sk/sk/restauracia/fotogaleria?_live=1787042620802#restauracia",
+  "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf?_live=1787042723556",
   "pdfStatus": 200,
-  "contentType": "text/html; charset=UTF-8",
-  "contentLength": 36539,
+  "contentType": "application/pdf",
+  "contentLength": 792447,
   "menuLinks": [
     {
       "text": "DENNÉ MENU",
@@ -47,6 +47,14 @@
       "href": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf"
     }
   ],
-  "priceLines": [],
-  "pdfText": ""
+  "priceLines": [
+    "0,3 l/1,3/1,20 €",
+    "150/100/100g/7/12,90 €",
+    "450g/7/8,50 €",
+    "300/150g/1,3,7/8,70 €",
+    "150/200g/1,3,7/9,20 €",
+    "450g/1,3,7,11/9,20 €",
+    "150/200g/1,3,7,10/10,20 €"
+  ],
+  "pdfText": "             Denné menu\n              18.8.2026\n                  POLIEVKA\n\n           Paradajková s cestovinou\n                0,3 l/1,3/1,20 €\n\n                ŠPECIALITA\n\n Abovské medailonky,ryža,dusená zelenina\n          150/100/100g/7/12,90 €\n\n             HLAVNÉ JEDLÁ\n\n   Hydinové rizoto so strúhaným syrom,cvikla\n                 450g/7/8,50 €\n\nZemiakový prívarok s bravčovým perkeltom,chlieb\n             300/150g/1,3,7/8,70 €\n\n\n    Holandský mletý rezeň,maslové zemiaky,\n                 kyslé uhorky\n              150/200g/1,3,7/9,20 €\n\n  Zeleninový šalát BBQ chicken so smotanou a\n         opečenou bagetkou na masle\n              450g/1,3,7,11/9,20 €\n\n          Syrová pochúťka,chrumkavé hranolky\n                 domáca tatárska omáčka\n                  150/200g/1,3,7,10/10,20 €\n\f"
 }
