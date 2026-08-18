@@ -1,0 +1,52 @@
+{
+  "fetchedAt": "2026-08-18T08:43:48.874Z",
+  "today": "18.08.2026",
+  "pageStatus": 200,
+  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787042620802",
+  "pageDateMatch": true,
+  "pdfDateMatch": false,
+  "chosenLink": {
+    "text": "zobraziť všetky fotky",
+    "href": "https://www.starasypka.sk/sk/restauracia/fotogaleria#restauracia"
+  },
+  "requestedPdfUrl": "https://www.starasypka.sk/sk/restauracia/fotogaleria?_live=1787042620802#restauracia",
+  "pdfStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "contentLength": 36539,
+  "menuLinks": [
+    {
+      "text": "DENNÉ MENU",
+      "href": "https://www.starasypka.sk/sk/restauracia/obedove-menu"
+    },
+    {
+      "text": "JEDÁLNY LÍSTOK",
+      "href": "https://www.starasypka.sk/media/jedalny_listok_2026.pdf"
+    },
+    {
+      "text": "NÁPOJOVÝ LÍSTOK",
+      "href": "https://www.starasypka.sk/media/napojovy_listok_2026.pdf"
+    },
+    {
+      "text": "zobraziť všetky fotky",
+      "href": "https://www.starasypka.sk/sk/restauracia/fotogaleria#restauracia"
+    },
+    {
+      "text": "zobraziť všetky fotky",
+      "href": "https://www.starasypka.sk/sk/restauracia/fotogaleria#letna-zahrada"
+    },
+    {
+      "text": "zobraziť všetky fotky",
+      "href": "https://www.starasypka.sk/sk/restauracia/fotogaleria#spolocenske-akcie"
+    },
+    {
+      "text": "zobraziť mapu",
+      "href": "https://www.starasypka.sk/sk/restauracia/mapa"
+    },
+    {
+      "text": "ZOBRAZIŤ / VYTLAČIŤ",
+      "href": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf"
+    }
+  ],
+  "priceLines": [],
+  "pdfText": ""
+}
