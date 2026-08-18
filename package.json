@@ -6,7 +6,8 @@
     "scrape:kozlovna": "node scripts/kozlovna.mjs",
     "scrape:all": "node scripts/all-restaurants.mjs",
     "scrape:bluebell-images": "node scripts/bluebell-images.mjs",
-    "scrape:bluebell-hires": "node scripts/bluebell-hires.mjs"
+    "scrape:bluebell-hires": "node scripts/bluebell-hires.mjs",
+    "scrape:stara-sypka": "node scripts/stara-sypka.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"
