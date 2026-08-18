@@ -1,15 +1,15 @@
 {
-  "fetchedAt": "2026-08-18T08:45:33.618Z",
+  "fetchedAt": "2026-08-18T08:46:52.271Z",
   "today": "18.08.2026",
   "pageStatus": 200,
-  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787042723556",
+  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787042803657",
   "pageDateMatch": true,
   "pdfDateMatch": true,
   "chosenLink": {
     "text": "ZOBRAZIŤ / VYTLAČIŤ",
     "href": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf"
   },
-  "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf?_live=1787042723556",
+  "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_126.pdf?_live=1787042803657",
   "pdfStatus": 200,
   "contentType": "application/pdf",
   "contentLength": 792447,
