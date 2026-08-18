@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "scrape:kozlovna": "node scripts/kozlovna.mjs",
-    "scrape:all": "node scripts/all-restaurants.mjs"
+    "scrape:all": "node scripts/all-restaurants.mjs",
+    "scrape:bluebell-images": "node scripts/bluebell-images.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"
