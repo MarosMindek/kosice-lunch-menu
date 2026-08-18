@@ -24,6 +24,17 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - run: npm run scrape:bluebell-images
+      - name: OCR recent BlueBell posts and photo thumbnails
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-slk
+          mkdir -p output/bluebell-images/ocr
+          shopt -s nullglob
+          for f in output/bluebell-images/post-*.png output/bluebell-images/thumb-*.png; do
+            b=$(basename "$f" .png)
+            tesseract "$f" "output/bluebell-images/ocr/$b" -l slk+eng --psm 6 2>/dev/null || true
+          done
+          cat output/bluebell-images/ocr/*.txt > output/bluebell-images/ocr-all.txt || true
       - uses: actions/upload-artifact@v4
         with:
           name: bluebell-images-output
