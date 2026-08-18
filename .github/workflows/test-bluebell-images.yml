@@ -1,0 +1,28 @@
+name: Test BlueBell image capture
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/bluebell-images.mjs'
+      - 'package.json'
+      - '.github/workflows/test-bluebell-images.yml'
+  workflow_dispatch:
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run scrape:bluebell-images
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bluebell-images-output
+          path: output/bluebell-images/
+          if-no-files-found: error
