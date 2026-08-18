@@ -1,0 +1,40 @@
+name: OCR captured BlueBell images
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/ocr-bluebell-existing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ocr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OCR
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr
+      - name: OCR recent posts and thumbnails
+        shell: bash
+        run: |
+          rm -rf results/bluebell-images/ocr-fast
+          mkdir -p results/bluebell-images/ocr-fast
+          shopt -s nullglob
+          for f in results/bluebell-images/post-*.png results/bluebell-images/thumb-*.png; do
+            b=$(basename "$f" .png)
+            tesseract "$f" "results/bluebell-images/ocr-fast/$b" -l eng --psm 6 2>/dev/null || true
+          done
+          cat results/bluebell-images/ocr-fast/*.txt > results/bluebell-images/ocr-fast-all.txt || true
+      - name: Publish OCR
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/bluebell-images/ocr-fast results/bluebell-images/ocr-fast-all.txt
+          git commit -m "Update BlueBell OCR [skip ci]" || exit 0
+          git push
