@@ -8,6 +8,9 @@ on:
       - 'package.json'
       - '.github/workflows/test-bluebell-images.yml'
   workflow_dispatch:
+  schedule:
+    # Daily fresh Facebook/image capture before the first 09:30 mail gate.
+    - cron: '0 7,8 * * 1-5'
 
 permissions:
   contents: write
@@ -17,14 +20,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Local-time gate
+        id: gate
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
+        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:bluebell-images
+        if: steps.gate.outputs.run == 'true'
       - name: OCR recent BlueBell posts and photo thumbnails
+        if: steps.gate.outputs.run == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-slk
@@ -36,11 +54,13 @@ jobs:
           done
           cat output/bluebell-images/ocr/*.txt > output/bluebell-images/ocr-all.txt || true
       - uses: actions/upload-artifact@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           name: bluebell-images-output
           path: output/bluebell-images/
           if-no-files-found: error
       - name: Publish latest capture to repository
+        if: steps.gate.outputs.run == 'true'
         run: |
           rm -rf results/bluebell-images
           mkdir -p results
@@ -49,4 +69,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/bluebell-images
           git commit -m "Update BlueBell image capture [skip ci]" || exit 0
+          git pull --rebase origin main
           git push
