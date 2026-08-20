@@ -9,8 +9,8 @@ on:
       - '.github/workflows/test-stara-sypka.yml'
   workflow_dispatch:
   schedule:
-    # 09:47 Europe/Bratislava in summer/winter; local gate keeps only the 09:xx run.
-    - cron: '47 7,8 * * 1-5'
+    # Refresh before the 09:30, 09:45 and 10:00 Europe/Bratislava mail gates.
+    - cron: '15,35,50 7,8 * * 1-5'
 
 permissions:
   contents: write
@@ -61,5 +61,6 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add results/stara-sypka
             git commit -m "Update Stara Sypka live PDF data [skip ci]" || exit 0
+            git pull --rebase origin main
             git push
           fi
