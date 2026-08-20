@@ -9,8 +9,9 @@ on:
       - '.github/workflows/test-all-restaurants.yml'
   workflow_dispatch:
   schedule:
-    # Run at 09:50 Europe/Bratislava in both summer and winter time.
-    - cron: '50 7,8 * * 1-5'
+    # Refresh before the 09:30, 09:45 and 10:00 Europe/Bratislava mail gates.
+    # Both UTC hours are listed; the local-time gate keeps only the 09:xx local runs.
+    - cron: '0,25,40 7,8 * * 1-5'
 
 permissions:
   contents: write
@@ -58,4 +59,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/all-restaurants
           git commit -m "Update live restaurant data [skip ci]" || exit 0
+          git pull --rebase origin main
           git push
