@@ -8,6 +8,9 @@ on:
       - 'package.json'
       - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
+  schedule:
+    # Fresh hi-res OCR after the regular BlueBell capture, before the first mail gate.
+    - cron: '10 7,8 * * 1-5'
 
 permissions:
   contents: write
@@ -17,14 +20,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
+      - name: Local-time gate
+        id: gate
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
+        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:bluebell-hires
+        if: steps.gate.outputs.run == 'true'
       - name: OCR hi-res images
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           sudo apt-get update -qq
@@ -40,6 +58,7 @@ jobs:
           done
           cat output/bluebell-hires/ocr/*.txt > output/bluebell-hires/ocr-all.txt || true
       - name: Publish hi-res OCR
+        if: steps.gate.outputs.run == 'true'
         run: |
           rm -rf results/bluebell-hires
           mkdir -p results
@@ -48,4 +67,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/bluebell-hires
           git commit -m "Update BlueBell hi-res OCR [skip ci]" || exit 0
+          git pull --rebase origin main
           git push
