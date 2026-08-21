@@ -1,13 +1,13 @@
 {
   "name": "tahiti-andiamo",
   "requestedUrl": "https://menu.andiamogroup.eu/chickin/denne-menu",
-  "finalUrl": "https://menu.andiamogroup.eu/chickin/denne-menu?_cb=1787210735305",
+  "finalUrl": "https://menu.andiamogroup.eu/chickin/denne-menu?_cb=1787297891736",
   "status": 200,
   "title": "Andiamo Group",
-  "today": "20.08.2026",
+  "today": "21.08.2026",
   "weekStart": "17.08.2026",
   "weekEnd": "21.08.2026",
-  "hasToday": false,
+  "hasToday": true,
   "hasCurrentWeek": false,
   "lines": [
     "Skočiť na hlavný obsah",
