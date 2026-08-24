@@ -1,12 +1,12 @@
 {
   "name": "bluebell-site",
   "requestedUrl": "https://pivarenbluebell.sk/",
-  "finalUrl": "https://pivarenbluebell.sk/?_cb=1787297907218",
+  "finalUrl": "https://pivarenbluebell.sk/?_cb=1787557944575",
   "status": 200,
   "title": "Piváreň BlueBell",
-  "today": "21.08.2026",
-  "weekStart": "17.08.2026",
-  "weekEnd": "21.08.2026",
+  "today": "24.08.2026",
+  "weekStart": "24.08.2026",
+  "weekEnd": "28.08.2026",
   "hasToday": false,
   "hasCurrentWeek": false,
   "lines": [
