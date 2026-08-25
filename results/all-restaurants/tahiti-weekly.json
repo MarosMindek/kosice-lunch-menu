@@ -1,10 +1,10 @@
 {
   "name": "tahiti-weekly",
   "requestedUrl": "https://www.tahitirestaurant.sk/tyzdenne-menu",
-  "finalUrl": "https://www.tahitirestaurant.sk/tyzdenne-menu?_cb=1787557914937",
+  "finalUrl": "https://www.tahitirestaurant.sk/tyzdenne-menu?_cb=1787643486452",
   "status": 200,
   "title": "Týždenné menu | Tahiti Restaurant",
-  "today": "24.08.2026",
+  "today": "25.08.2026",
   "weekStart": "24.08.2026",
   "weekEnd": "28.08.2026",
   "hasToday": false,
