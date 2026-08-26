@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-08-25T07:57:44.587Z",
-  "today": "25.08.2026",
+  "fetchedAt": "2026-08-26T07:58:16.344Z",
+  "today": "26.08.2026",
   "pageStatus": 200,
-  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787644654665",
+  "finalPageUrl": "https://www.starasypka.sk/sk/?_live=1787731087538",
   "pageDateMatch": true,
   "pdfDateMatch": true,
   "chosenLink": {
     "text": "ZOBRAZIŤ / VYTLAČIŤ",
-    "href": "https://www.starasypka.sk/media/object/canva_denne_menu_130.pdf"
+    "href": "https://www.starasypka.sk/media/object/canva_denne_menu_131.pdf"
   },
-  "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_130.pdf?_live=1787644654665",
+  "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_131.pdf?_live=1787731087538",
   "pdfStatus": 200,
   "contentType": "application/pdf",
-  "contentLength": 796375,
+  "contentLength": 798596,
   "menuLinks": [
     {
       "text": "DENNÉ MENU",
@@ -44,17 +44,17 @@
     },
     {
       "text": "ZOBRAZIŤ / VYTLAČIŤ",
-      "href": "https://www.starasypka.sk/media/object/canva_denne_menu_130.pdf"
+      "href": "https://www.starasypka.sk/media/object/canva_denne_menu_131.pdf"
     }
   ],
   "priceLines": [
     "0,3 l/1,3/1,20 €",
-    "180/200g/7/11,90 €",
-    "75/75/200g/1,3,7/8,90 €",
-    "150/200g/3/9,20 €",
-    "450g/1,3,7/9,50 €",
-    "450g/1,3,6,7/8,90 €",
+    "350/120g/7/12,90 €",
+    "150/300g/1,3,7/9,20 €",
+    "75/75/100/100g/1,3,7,10/9,20 €",
+    "450g/1,7/11,90 €",
+    "450g/1,3,7/7,90 €",
     "150/200g/1,3,7,10/10,20 €"
   ],
-  "pdfText": "             Denné menu\n              25.8.2026\n                  POLIEVKA\n\n           Vajíčková s krutónkami\n                0,3 l/1,3/1,20 €\n\n                ŠPECIALITA\n\nBravčový steak z karé,hranolky so slaným syrom,\n                  Demi glace\n              180/200g/7/11,90 €\n\n             HLAVNÉ JEDLÁ\n          Duo rezne,zemiaková kaša,\n           kapustovo-cviklový šalát\n            75/75/200g/1,3,7/8,90 €\n\n   Hovädzie Námornícke,ryža,kyslé uhorky\n             150/200g/3/9,20 €\n\n   Zeleninový šalát s grilovaným oštiepkom,\n  bryndzovým dipom,slaninkovými chipsami a\n         opečenou bagetkou na masle\n               450g/1,3,7/9,50 €\n\nCestoviny s grilovanou zeleninou a parmezánom\n               450g/1,3,6,7/8,90 €\n\n        Vyprážaný syr s chrumkavými hranolkami a\n              domácou tatárskou omáčkou\n                 150/200g/1,3,7,10/10,20 €\n\f"
+  "pdfText": "              Denné menu\n               26.8.2026\n                   POLIEVKA\n\n               Kelová s mrkvou\n                0,3 l/1,3/1,20 €\n\n                 ŠPECIALITA\n\n    Zeleninovo-cuketové krémové risotto s\n hovädzími rezancami zo sviečkovice, parmezán\n              350/120g/7/12,90 €\n\n              HLAVNÉ JEDLÁ\nBravčový plátok na strapačkách s kyslou kapustou\n              150/300g/1,3,7/9,20 €\n\n  DUO (hovädzí stroganov, kurací rezeň v panco\nstrúhanke) dusená ryža, opekané zemiaky, domáca\n                 tatárska omáčka\n          75/75/100/100g/1,3,7,10/9,20 €\n\nZeleninový šalát “SÝPKA” s bravčovými nugetkami\n  z panenky, parmezán, cesnakový dip, opečená\n                bagetka na masle\n                 450g/1,7/11,90 €\n\n   Cestoviny s brokolicou a syrovou omáčkou,\n                  strúhaný syr\n                450g/1,3,7/7,90 €\n\n         Vyprážaný syr s chrumkavými hranolkami a\n               domácou tatárskou omáčkou\n                  150/200g/1,3,7,10/10,20 €\n\f"
 }
