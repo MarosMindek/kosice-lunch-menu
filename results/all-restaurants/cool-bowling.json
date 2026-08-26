@@ -1,10 +1,10 @@
 {
   "name": "cool-bowling",
   "requestedUrl": "https://www.coolbowling.sk/denne-menu",
-  "finalUrl": "https://www.coolbowling.sk/denne-menu?_cb=1787643474793",
+  "finalUrl": "https://www.coolbowling.sk/denne-menu?_cb=1787729973269",
   "status": 200,
   "title": "Denné menu na tento týždeň | Cool Bowling",
-  "today": "25.08.2026",
+  "today": "26.08.2026",
   "weekStart": "24.08.2026",
   "weekEnd": "28.08.2026",
   "hasToday": true,
