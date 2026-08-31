@@ -3,7 +3,6 @@ Súhlasím
 Tieto internetové stránky používajú k poskytovaniu služieb a analýze návštevnosti súbory cookie. Používaním týchto internetových stránok s týmto súhlasíte. Viac info.
 
 REŠTAURÁCIA
-DENNÉ MENU
 JEDÁLNY LÍSTOK
 NÁPOJOVÝ LÍSTOK
 LETNÁ ZÁHRADA
@@ -117,7 +116,7 @@ Podmienky
 Nahlásiť chybu mapy
 
 zobraziť mapu
-26.08.2026
+31.08.2026
 Dnešná ponuka
 (podávame od 11:00)
- ZOBRAZIŤ / VYTLAČIŤ
+ VYTLAČIŤ

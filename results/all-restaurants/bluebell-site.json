@@ -1,14 +1,15 @@
 {
   "name": "bluebell-site",
   "requestedUrl": "https://pivarenbluebell.sk/",
-  "finalUrl": "https://pivarenbluebell.sk/?_cb=1787730015062",
+  "finalUrl": "https://pivarenbluebell.sk/?_cb=1788165117893",
   "status": 200,
   "title": "Piváreň BlueBell",
-  "today": "26.08.2026",
-  "weekStart": "24.08.2026",
-  "weekEnd": "28.08.2026",
+  "today": "31.08.2026",
+  "weekStart": "31.08.2026",
+  "weekEnd": "04.09.2026",
   "hasToday": false,
   "hasCurrentWeek": false,
+  "isBlueBellPub": true,
   "lines": [
     "Piváreň BlueBell",
     "Reštaurácia",
@@ -68,5 +69,6 @@
     "Spravovať",
     "Len nevyhnutné",
     "Prijať"
-  ]
+  ],
+  "blueBellAccepted": true
 }

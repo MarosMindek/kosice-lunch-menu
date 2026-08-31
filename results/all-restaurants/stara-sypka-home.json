@@ -1,19 +1,19 @@
 {
   "name": "stara-sypka-home",
   "requestedUrl": "https://www.starasypka.sk/sk/",
-  "finalUrl": "https://www.starasypka.sk/sk/?_cb=1787730062861",
+  "finalUrl": "https://www.starasypka.sk/sk/?_cb=1788165197228",
   "status": 200,
   "title": "Reštaurácia | Stará Sýpka - Reštaurácia s kaviarňou a pivárňou",
-  "today": "26.08.2026",
-  "weekStart": "24.08.2026",
-  "weekEnd": "28.08.2026",
+  "today": "31.08.2026",
+  "weekStart": "31.08.2026",
+  "weekEnd": "04.09.2026",
   "hasToday": true,
   "hasCurrentWeek": false,
+  "isBlueBellPub": false,
   "lines": [
     "Súhlasím",
     "Tieto internetové stránky používajú k poskytovaniu služieb a analýze návštevnosti súbory cookie. Používaním týchto internetových stránok s týmto súhlasíte. Viac info.",
     "REŠTAURÁCIA",
-    "DENNÉ MENU",
     "JEDÁLNY LÍSTOK",
     "NÁPOJOVÝ LÍSTOK",
     "LETNÁ ZÁHRADA",
@@ -101,9 +101,9 @@
     "Podmienky",
     "Nahlásiť chybu mapy",
     "zobraziť mapu",
-    "26.08.2026",
+    "31.08.2026",
     "Dnešná ponuka",
     "(podávame od 11:00)",
-    "ZOBRAZIŤ / VYTLAČIŤ"
+    "VYTLAČIŤ"
   ]
 }

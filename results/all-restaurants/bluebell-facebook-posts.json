@@ -1,7 +1,7 @@
 {
-  "name": "bluebell-facebook",
-  "requestedUrl": "https://www.facebook.com/pivarenbluebell/",
-  "finalUrl": "https://www.facebook.com/pivarenbluebell/?_cb=1788165129212",
+  "name": "bluebell-facebook-posts",
+  "requestedUrl": "https://www.facebook.com/pivarenbluebell/posts/",
+  "finalUrl": "https://www.facebook.com/pivarenbluebell/",
   "status": 200,
   "title": "Piváreň BlueBell | Kosice | Facebook",
   "today": "31.08.2026",
