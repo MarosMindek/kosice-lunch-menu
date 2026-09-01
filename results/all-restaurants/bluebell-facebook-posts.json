@@ -4,11 +4,11 @@
   "finalUrl": "https://www.facebook.com/pivarenbluebell/",
   "status": 200,
   "title": "Piváreň BlueBell | Kosice | Facebook",
-  "today": "31.08.2026",
+  "today": "01.09.2026",
   "weekStart": "31.08.2026",
   "weekEnd": "04.09.2026",
   "hasToday": false,
-  "hasCurrentWeek": false,
+  "hasCurrentWeek": true,
   "isBlueBellPub": true,
   "lines": [
     "Prihlásiť sa",
@@ -28,7 +28,7 @@
     "Stránka · Piváreň",
     "Hlavná 22, Kosice, Slovakia",
     "+421 910 613 000",
-    "Čoskoro otvára",
+    "Teraz otvorené",
     "Jedenie v reštaurácii · Sedenie vonku · Vyzdvihnutie v obchode",
     "Cenová kategória · $$$",
     "82 % odporúča (23 recenzií)",
@@ -41,10 +41,11 @@
     "· Cookies",
     "· Viac",
     "Piváreň BlueBell je na mieste Piváreň BlueBell.",
-    "15 h",
+    "1 d.",
     "·",
     "Kosice, Košický kraj, Slovensko",
     "·",
+    "Týždňová obedová ponuka od 31.8.2026 do 4.9.2026... Zobraziť viac",
     "Páči sa mi to",
     "Komentár",
     "Pozrite si viac od stránky Piváreň BlueBell | Kosice",
@@ -55,5 +56,5 @@
     "alebo",
     "Vytvoriť nový účet"
   ],
-  "blueBellAccepted": false
+  "blueBellAccepted": true
 }
