@@ -69,7 +69,11 @@ for (const [i,q] of [
   `site:facebook.com/pivarenbluebell Piváreň BlueBell ${weekStartLoose} ${weekEndLoose} týždňová obedová ponuka`,
   `Piváreň BlueBell Košice ${weekStartLoose} ${weekEndLoose} menu ceny`
 ].entries()) await visit(`bluebell-search-${i+1}`,`https://www.bing.com/search?q=${encodeURIComponent(q)}`,5500,3);
-await visit('stara-sypka-home','https://www.starasypka.sk/sk/',7000,6);
+
+// Stará Sýpka: use the dedicated lunch-menu page first. It exposes the current day's date and menu,
+// while the homepage can be stale or omit the active daily offer. Keep homepage only as a fallback/identity source.
+await visit('stara-sypka-menu','https://www.starasypka.sk/sk/restauracia/obedove-menu',8000,8);
+await visit('stara-sypka-home','https://www.starasypka.sk/sk/',5000,4);
 
 // Hard safety guard: never let Bistro/cafe data qualify as BlueBell pub.
 for(const [name,d] of Object.entries(results.pages)){
