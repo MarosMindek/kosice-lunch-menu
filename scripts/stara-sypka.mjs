@@ -2,12 +2,23 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { localDate, weekday } from './lib/menu-contract.mjs';
 
 const OUT='output/stara-sypka';
+fs.rmSync(OUT,{recursive:true,force:true});
 fs.mkdirSync(OUT,{recursive:true});
 const now=new Date();
 const today=new Intl.DateTimeFormat('sk-SK',{timeZone:'Europe/Bratislava',day:'2-digit',month:'2-digit',year:'numeric'}).format(now).replaceAll(' ','');
 const cacheBust=Date.now();
+
+// A closed Monday is expected, not a failed attempt to fetch last Friday's PDF.
+if ([0, 1, 6].includes(weekday(localDate(now)))) {
+  const summary = { fetchedAt: now.toISOString(), capturedAt: now.toISOString(), today, status: 'closed', closed: true, required: false, contentComplete: false, reason: 'Regular non-service day' };
+  fs.writeFileSync(path.join(OUT, 'summary.json'), JSON.stringify(summary, null, 2));
+  fs.writeFileSync(path.join(OUT, 'menu.txt'), 'Zatvorené – pravidelný deň bez obedového menu.\n');
+  console.log(JSON.stringify(summary));
+  process.exit(0);
+}
 
 const browser=await chromium.launch({headless:true});
 const ctx=await browser.newContext({locale:'sk-SK',timezoneId:'Europe/Bratislava',viewport:{width:1440,height:1400}});
