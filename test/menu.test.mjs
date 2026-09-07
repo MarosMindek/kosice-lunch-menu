@@ -103,3 +103,47 @@ test('HTML and plain text are deterministic, complete and reject edits before se
   assert.ok(a.html.indexOf('Kozlovňa') < a.html.indexOf('Cool Bowling'));
   assert.throws(() => validateBody({ ...a, html: a.html.replace('8,90 €', '9,90 €') }, input, options), /differs/);
 });
+
+const realMenu = JSON.parse(fs.readFileSync(new URL('fixtures/menu-2026-09-07.json', import.meta.url)));
+const realOptions = { date: '2026-09-07', now: new Date('2026-09-07T12:00:00Z') };
+test('actual September 7 sources render every meal, garnish, dessert and published price', () => {
+  const m = validateMenu(realMenu, realOptions), message = renderEmail(realMenu, realOptions);
+  assert.deepEqual(m.restaurants.map(r => [r.soups.length, r.mains.length, r.desserts?.length || 0]), [[2,4,0],[2,8,2],[2,6,0],[3,5,0],[0,0,0]]);
+  for (const r of m.restaurants) for (const i of [...r.soups, ...r.mains, ...(r.desserts || [])]) {
+    for (const value of [i.name, i.description, i.portion].filter(Boolean)) assert.ok(message.plain.includes(value), value);
+  }
+  assert.deepEqual(m.restaurants[2].mains.map(i => i.finalCents), [1437,799,799,799,799,799]);
+  assert.ok(message.plain.includes('💶 NAJLACNEJŠIE: Kozlovňa Košice'));
+  assert.ok(message.html.includes('DEZERTY'));
+  assert.equal(message.html, renderEmail(clone(realMenu), realOptions).html);
+  assert.doesNotThrow(() => validateBody(message, realMenu, realOptions));
+});
+test('short printed years cannot turn last year or a mixed daily section into today', () => {
+  for (const change of [
+    s => { s.text = s.text.replaceAll('07.09.26', '07.09.25'); s.sectionText = s.sectionText.replaceAll('07.09.26', '07.09.25'); s.dateText = s.dateText.replace('26', '25'); },
+    s => { s.text += '\n08.09.26 UTOROK'; s.sectionText += '\n08.09.26 UTOROK'; }
+  ]) {
+    const m = clone(realMenu); change(m.restaurants[1].source);
+    assert.throws(() => renderEmail(m, realOptions), /mixed dates|today's section/);
+  }
+});
+test('a shared Tahiti week requires a current bounded range and no daily or conflicting headings', () => {
+  for (const [from, to] of [['07.09-11.09.2026', '31.08-04.09.2026'], ['07.09-11.09.2026', '07.09-18.09.2026']]) {
+    const m = clone(realMenu), s = m.restaurants[2].source;
+    for (const key of ['text', 'sectionText', 'dateText']) s[key] = s[key].replace(from, to);
+    assert.throws(() => renderEmail(m, realOptions), /wrong weekly/);
+  }
+  for (const extra of ['UTOROK', '14.09.2026']) {
+    const m = clone(realMenu), s = m.restaurants[2].source;
+    s.text += '\n' + extra; s.sectionText += '\n' + extra;
+    assert.throws(() => renderEmail(m, realOptions), /shared weekly|mixed dates/);
+  }
+});
+test('unproven side dishes, portions and pending image review block sending', () => {
+  for (const field of ['description', 'portion']) {
+    const m = clone(realMenu); m.restaurants[0].mains[0][field] = 'vymyslený údaj';
+    assert.throws(() => renderEmail(m, realOptions), /unproven/);
+  }
+  const m = clone(realMenu); m.restaurants[3].needsVisualReview = true;
+  assert.throws(() => renderEmail(m, realOptions), /needs visual review/);
+});

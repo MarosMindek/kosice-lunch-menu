@@ -1,0 +1,301 @@
+{
+  "date": "2026-09-07",
+  "restaurants": [
+    {
+      "id": "kozlovna",
+      "reviewedComplete": true,
+      "source": {
+        "kind": "html",
+        "url": "https://kozlovnakosice.sk/#obedove-menu",
+        "capturedAt": "2026-09-07T08:48:57.674Z",
+        "text": "Pondelok [dnes] 7. 9. 2026\nPolievky\nZeleninová krémová s korenenými krutónmi\n0,33 l/ [ 1, 7, 9]\n2,10 €\nVývar s cestovinou a koreňovou zeleninou\n0,33 l/ [ 1, 3, 9]\n2,10 €\nHlavné jedlá\nPrírodný kurací rezeň v brokolicovo syrovej omáčke\n7,80 €\npodávaný s dusenou ryžou, pečenými zemiakmi a listovým šalátikom\n150/180 g/ [ 1, 7]\nPomaly pečené bravčové mäsko v krémovej omáčke z čerstvého chrenu\n7,90 €\npodávané s domácou parenou knedľou\n150/180 g/ [ 1, 7, 12]\nDomáce kuracie krokety so syrom Cheddar\n7,80 €\npodávané na našom humuse so sézamovým olejom a pita chlebom\n130/120 g/ [ 1, 7, 8]\nŠpeciálna ponuka\nPoke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom\n360 g/ [ 1, 3, 4, 7, 8, 11, 12]\n12,50 €",
+        "sectionText": "Pondelok [dnes] 7. 9. 2026\nPolievky\nZeleninová krémová s korenenými krutónmi\n0,33 l/ [ 1, 7, 9]\n2,10 €\nVývar s cestovinou a koreňovou zeleninou\n0,33 l/ [ 1, 3, 9]\n2,10 €\nHlavné jedlá\nPrírodný kurací rezeň v brokolicovo syrovej omáčke\n7,80 €\npodávaný s dusenou ryžou, pečenými zemiakmi a listovým šalátikom\n150/180 g/ [ 1, 7]\nPomaly pečené bravčové mäsko v krémovej omáčke z čerstvého chrenu\n7,90 €\npodávané s domácou parenou knedľou\n150/180 g/ [ 1, 7, 12]\nDomáce kuracie krokety so syrom Cheddar\n7,80 €\npodávané na našom humuse so sézamovým olejom a pita chlebom\n130/120 g/ [ 1, 7, 8]\nŠpeciálna ponuka\nPoke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom\n360 g/ [ 1, 3, 4, 7, 8, 11, 12]\n12,50 €",
+        "dateText": "Pondelok [dnes] 7. 9. 2026",
+        "serviceDate": "2026-09-07"
+      },
+      "soups": [
+        {
+          "name": "Zeleninová krémová s korenenými krutónmi",
+          "portion": "0,33 l",
+          "price": 2.1,
+          "sourceText": "Zeleninová krémová s korenenými krutónmi\n0,33 l/ [ 1, 7, 9]\n2,10 €"
+        },
+        {
+          "name": "Vývar s cestovinou a koreňovou zeleninou",
+          "portion": "0,33 l",
+          "price": 2.1,
+          "sourceText": "Vývar s cestovinou a koreňovou zeleninou\n0,33 l/ [ 1, 3, 9]\n2,10 €"
+        }
+      ],
+      "mains": [
+        {
+          "name": "Prírodný kurací rezeň v brokolicovo syrovej omáčke",
+          "description": "podávaný s dusenou ryžou, pečenými zemiakmi a listovým šalátikom",
+          "portion": "150/180 g",
+          "price": 7.8,
+          "sourceText": "Prírodný kurací rezeň v brokolicovo syrovej omáčke\n7,80 €\npodávaný s dusenou ryžou, pečenými zemiakmi a listovým šalátikom\n150/180 g/ [ 1, 7]"
+        },
+        {
+          "name": "Pomaly pečené bravčové mäsko v krémovej omáčke z čerstvého chrenu",
+          "description": "podávané s domácou parenou knedľou",
+          "portion": "150/180 g",
+          "price": 7.9,
+          "sourceText": "Pomaly pečené bravčové mäsko v krémovej omáčke z čerstvého chrenu\n7,90 €\npodávané s domácou parenou knedľou\n150/180 g/ [ 1, 7, 12]"
+        },
+        {
+          "name": "Domáce kuracie krokety so syrom Cheddar",
+          "description": "podávané na našom humuse so sézamovým olejom a pita chlebom",
+          "portion": "130/120 g",
+          "price": 7.8,
+          "sourceText": "Domáce kuracie krokety so syrom Cheddar\n7,80 €\npodávané na našom humuse so sézamovým olejom a pita chlebom\n130/120 g/ [ 1, 7, 8]"
+        },
+        {
+          "name": "Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom",
+          "portion": "360 g",
+          "price": 12.5,
+          "sourceText": "Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom\n360 g/ [ 1, 3, 4, 7, 8, 11, 12]\n12,50 €"
+        }
+      ]
+    },
+    {
+      "id": "cool-bowling",
+      "reviewedComplete": true,
+      "source": {
+        "kind": "html",
+        "url": "https://www.coolbowling.sk/denne-menu",
+        "capturedAt": "2026-09-07T08:49:10.198Z",
+        "text": "Denné menu na tento týždeň\nC O O L B OW L I N G Rezervácie reštaurácia – 0910 88 66 66, Rezervácie Bowling – 0904 64 48 88\n0,25l Polievka z denného menu bez hlavného jedla.......2,00€ 0,33l Polievka z denného menu bez hlavného jedla...........                     2,50€\nAKCIA K MENU: Espresso, Coca-Cola 0,33l, Coca-ColaZero 0,33l ........................................................................................                     1,50€\n07.09.26 PONDELOK: 0,25l Slepačia s cestovinou a zeleninou /1,3,9/                 0,25l Thajská ostrokyslá                                  /B,3,9/     1,70€\nB.M. 300g/150g Pečené kačacie stehno na mede podávané s červenou kapustou a zemiakovou lokšou                            /1,3,7/    12,90€\n1Amenu -250g/150g Maďarský kurací paprikáš zo stehna podávaný s kolienkami a kyslou uhorkou                                         /1/           8,30€\n1Bmenu -250g/150g Maďarský kurací perkelt zo stehna podávaný s kolienkami a kyslou uhorkou                                          /1,7/         8,30€\n2menu -150g/150g Bravčový maslový rezeň zapečený mozzarellou preliaty talianskou omáčkou podávaný s ryžou              /1,3,7/    8,60€\n4menu -140g/150g Grilovaný halloumi syr podávaný s pečenými zemiakmi zdobený pórovou slamou a brusnicami            /B,7/        8,20€\n5menu -350g White chicken pizza                                                                                                                                                           /1,7/        8,20€\n6menu -350g Grécky šalát s pečenou slaninou a benedikt vajíčkom preliaty ajvar dressingom                                                   /B,3,7/    8,20€\n7ADEZERT-150g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     4,00€\n7BDEZERT-300g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     7,00€\n8menu -140g/150g Grilovaný halloumi syr podávaný s kapustovým šalátikom zdobený pórovou slamou a brusnicami           /B,1/    8,60€",
+        "sectionText": "07.09.26 PONDELOK: 0,25l Slepačia s cestovinou a zeleninou /1,3,9/                 0,25l Thajská ostrokyslá                                  /B,3,9/     1,70€\nB.M. 300g/150g Pečené kačacie stehno na mede podávané s červenou kapustou a zemiakovou lokšou                            /1,3,7/    12,90€\n1Amenu -250g/150g Maďarský kurací paprikáš zo stehna podávaný s kolienkami a kyslou uhorkou                                         /1/           8,30€\n1Bmenu -250g/150g Maďarský kurací perkelt zo stehna podávaný s kolienkami a kyslou uhorkou                                          /1,7/         8,30€\n2menu -150g/150g Bravčový maslový rezeň zapečený mozzarellou preliaty talianskou omáčkou podávaný s ryžou              /1,3,7/    8,60€\n4menu -140g/150g Grilovaný halloumi syr podávaný s pečenými zemiakmi zdobený pórovou slamou a brusnicami            /B,7/        8,20€\n5menu -350g White chicken pizza                                                                                                                                                           /1,7/        8,20€\n6menu -350g Grécky šalát s pečenou slaninou a benedikt vajíčkom preliaty ajvar dressingom                                                   /B,3,7/    8,20€\n7ADEZERT-150g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     4,00€\n7BDEZERT-300g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     7,00€\n8menu -140g/150g Grilovaný halloumi syr podávaný s kapustovým šalátikom zdobený pórovou slamou a brusnicami           /B,1/    8,60€",
+        "dateText": "07.09.26 PONDELOK:",
+        "serviceDate": "2026-09-07"
+      },
+      "soups": [
+        {
+          "name": "Slepačia s cestovinou a zeleninou",
+          "portion": "0,25l",
+          "price": 1.7,
+          "sourceText": "07.09.26 PONDELOK: 0,25l Slepačia s cestovinou a zeleninou /1,3,9/                 0,25l Thajská ostrokyslá                                  /B,3,9/     1,70€"
+        },
+        {
+          "name": "Thajská ostrokyslá",
+          "portion": "0,25l",
+          "price": 1.7,
+          "sourceText": "07.09.26 PONDELOK: 0,25l Slepačia s cestovinou a zeleninou /1,3,9/                 0,25l Thajská ostrokyslá                                  /B,3,9/     1,70€"
+        }
+      ],
+      "mains": [
+        {
+          "name": "Pečené kačacie stehno na mede podávané s červenou kapustou a zemiakovou lokšou",
+          "portion": "300g/150g",
+          "price": 12.9,
+          "sourceText": "B.M. 300g/150g Pečené kačacie stehno na mede podávané s červenou kapustou a zemiakovou lokšou                            /1,3,7/    12,90€"
+        },
+        {
+          "name": "Maďarský kurací paprikáš zo stehna podávaný s kolienkami a kyslou uhorkou",
+          "portion": "250g/150g",
+          "price": 8.3,
+          "sourceText": "1Amenu -250g/150g Maďarský kurací paprikáš zo stehna podávaný s kolienkami a kyslou uhorkou                                         /1/           8,30€"
+        },
+        {
+          "name": "Maďarský kurací perkelt zo stehna podávaný s kolienkami a kyslou uhorkou",
+          "portion": "250g/150g",
+          "price": 8.3,
+          "sourceText": "1Bmenu -250g/150g Maďarský kurací perkelt zo stehna podávaný s kolienkami a kyslou uhorkou                                          /1,7/         8,30€"
+        },
+        {
+          "name": "Bravčový maslový rezeň zapečený mozzarellou preliaty talianskou omáčkou podávaný s ryžou",
+          "portion": "150g/150g",
+          "price": 8.6,
+          "sourceText": "2menu -150g/150g Bravčový maslový rezeň zapečený mozzarellou preliaty talianskou omáčkou podávaný s ryžou              /1,3,7/    8,60€"
+        },
+        {
+          "name": "Grilovaný halloumi syr podávaný s pečenými zemiakmi zdobený pórovou slamou a brusnicami",
+          "portion": "140g/150g",
+          "price": 8.2,
+          "sourceText": "4menu -140g/150g Grilovaný halloumi syr podávaný s pečenými zemiakmi zdobený pórovou slamou a brusnicami            /B,7/        8,20€"
+        },
+        {
+          "name": "White chicken pizza",
+          "portion": "350g",
+          "price": 8.2,
+          "sourceText": "5menu -350g White chicken pizza                                                                                                                                                           /1,7/        8,20€"
+        },
+        {
+          "name": "Grécky šalát s pečenou slaninou a benedikt vajíčkom preliaty ajvar dressingom",
+          "portion": "350g",
+          "price": 8.2,
+          "sourceText": "6menu -350g Grécky šalát s pečenou slaninou a benedikt vajíčkom preliaty ajvar dressingom                                                   /B,3,7/    8,20€"
+        },
+        {
+          "name": "Grilovaný halloumi syr podávaný s kapustovým šalátikom zdobený pórovou slamou a brusnicami",
+          "portion": "140g/150g",
+          "price": 8.6,
+          "sourceText": "8menu -140g/150g Grilovaný halloumi syr podávaný s kapustovým šalátikom zdobený pórovou slamou a brusnicami           /B,1/    8,60€"
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou",
+          "portion": "150g",
+          "price": 4,
+          "sourceText": "7ADEZERT-150g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     4,00€"
+        },
+        {
+          "name": "Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou",
+          "portion": "300g",
+          "price": 7,
+          "sourceText": "7BDEZERT-300g Domáce parené buchty plnené slivkovým lekvárom zdobené maslom a opraženou sladkou strúhankou   /1,3,7/     7,00€"
+        }
+      ],
+      "notes": [
+        "0,25l Polievka z denného menu bez hlavného jedla.......2,00€ 0,33l Polievka z denného menu bez hlavného jedla...........                     2,50€"
+      ]
+    },
+    {
+      "id": "tahiti",
+      "reviewedComplete": true,
+      "source": {
+        "kind": "html",
+        "url": "https://menu.andiamogroup.eu/chickin/denne-menu",
+        "capturedAt": "2026-09-07T08:49:41.335Z",
+        "text": "Týždenné menu TAHITI SC AUPARK Košice 07.09-11.09.2026\nPolievka 1\nSlepačí vývar (Pôvod mäsa: Slovensko) 1,9,12\n0,33 l so zeleninou a domácimi rezancami\n2.10 €\nPolievka 2\nGulašová s bravčovým mäsom a zemiakmi, chlieb (Pôvod mäsa: Španielsko) 1,7,9,12\n0,33 l\n2.50 €\nTip šéfkuchára\nWiener Schnitzel - vyprážaný teľací rezeň (Pôvod mäsa: Belgicko) 1,3,7,10,12\npodávaný s rakúskym zemiakovým šalátom, brusnicovým džemom a citrónom 200/200 g\n16.90 €\nMenu 1\nKuracie prsia plnené brusnicami, hermelínom a baby špenátom (Pôvod mäsa: Slovensko) 7\npodávané s batatovým pyré a maslovou omáčkou 150/200 g\n9.40 €\nMenu 2\nPečená bravčová panenka s omáčkou z dijónskej horčice 7,9,10,12\npodávaná s pečenými baby zemiakmi s chorizom, tymiánom a restovanou červenou cibuľou 150/200 g\n9.40 €\nMenu 3\nCestoviny Casarecce s bazalkou, sušenými paradajkami, zelenými olivami a parmezánom 1,3,7,12\n350 g\n9.40 €\nMenu 4\nIndické butter chicken - maslové kura (Pôvod mäsa: Slovensko) 1,7,8,12\npodávané s jasmínovou ryžou, koriandrom a pita chlebom 150/200 g\n9.40 €\nMenu 5\nKonfitované kačacie stehno s dusenou červenou kapustou so slivkami (Pôvod mäsa: Slovensko) 1,7,12\npodávané s mastenými lokšami 220/200 g\n9.40 €",
+        "sectionText": "Týždenné menu TAHITI SC AUPARK Košice 07.09-11.09.2026\nPolievka 1\nSlepačí vývar (Pôvod mäsa: Slovensko) 1,9,12\n0,33 l so zeleninou a domácimi rezancami\n2.10 €\nPolievka 2\nGulašová s bravčovým mäsom a zemiakmi, chlieb (Pôvod mäsa: Španielsko) 1,7,9,12\n0,33 l\n2.50 €\nTip šéfkuchára\nWiener Schnitzel - vyprážaný teľací rezeň (Pôvod mäsa: Belgicko) 1,3,7,10,12\npodávaný s rakúskym zemiakovým šalátom, brusnicovým džemom a citrónom 200/200 g\n16.90 €\nMenu 1\nKuracie prsia plnené brusnicami, hermelínom a baby špenátom (Pôvod mäsa: Slovensko) 7\npodávané s batatovým pyré a maslovou omáčkou 150/200 g\n9.40 €\nMenu 2\nPečená bravčová panenka s omáčkou z dijónskej horčice 7,9,10,12\npodávaná s pečenými baby zemiakmi s chorizom, tymiánom a restovanou červenou cibuľou 150/200 g\n9.40 €\nMenu 3\nCestoviny Casarecce s bazalkou, sušenými paradajkami, zelenými olivami a parmezánom 1,3,7,12\n350 g\n9.40 €\nMenu 4\nIndické butter chicken - maslové kura (Pôvod mäsa: Slovensko) 1,7,8,12\npodávané s jasmínovou ryžou, koriandrom a pita chlebom 150/200 g\n9.40 €\nMenu 5\nKonfitované kačacie stehno s dusenou červenou kapustou so slivkami (Pôvod mäsa: Slovensko) 1,7,12\npodávané s mastenými lokšami 220/200 g\n9.40 €",
+        "dateText": "Týždenné menu TAHITI SC AUPARK Košice 07.09-11.09.2026",
+        "serviceDate": "2026-09-07",
+        "scope": "weekly-shared"
+      },
+      "soups": [
+        {
+          "name": "Slepačí vývar",
+          "price": 2.1,
+          "sourceText": "Slepačí vývar (Pôvod mäsa: Slovensko) 1,9,12\n0,33 l so zeleninou a domácimi rezancami\n2.10 €",
+          "portion": "0,33 l",
+          "description": "so zeleninou a domácimi rezancami"
+        },
+        {
+          "name": "Gulašová s bravčovým mäsom a zemiakmi, chlieb",
+          "price": 2.5,
+          "sourceText": "Gulašová s bravčovým mäsom a zemiakmi, chlieb (Pôvod mäsa: Španielsko) 1,7,9,12\n0,33 l\n2.50 €",
+          "portion": "0,33 l"
+        }
+      ],
+      "mains": [
+        {
+          "name": "Wiener Schnitzel - vyprážaný teľací rezeň",
+          "price": 16.9,
+          "sourceText": "Wiener Schnitzel - vyprážaný teľací rezeň (Pôvod mäsa: Belgicko) 1,3,7,10,12\npodávaný s rakúskym zemiakovým šalátom, brusnicovým džemom a citrónom 200/200 g\n16.90 €",
+          "portion": "200/200 g",
+          "description": "podávaný s rakúskym zemiakovým šalátom, brusnicovým džemom a citrónom"
+        },
+        {
+          "name": "Kuracie prsia plnené brusnicami, hermelínom a baby špenátom",
+          "price": 9.4,
+          "sourceText": "Kuracie prsia plnené brusnicami, hermelínom a baby špenátom (Pôvod mäsa: Slovensko) 7\npodávané s batatovým pyré a maslovou omáčkou 150/200 g\n9.40 €",
+          "portion": "150/200 g",
+          "description": "podávané s batatovým pyré a maslovou omáčkou"
+        },
+        {
+          "name": "Pečená bravčová panenka s omáčkou z dijónskej horčice",
+          "price": 9.4,
+          "sourceText": "Pečená bravčová panenka s omáčkou z dijónskej horčice 7,9,10,12\npodávaná s pečenými baby zemiakmi s chorizom, tymiánom a restovanou červenou cibuľou 150/200 g\n9.40 €",
+          "portion": "150/200 g",
+          "description": "podávaná s pečenými baby zemiakmi s chorizom, tymiánom a restovanou červenou cibuľou"
+        },
+        {
+          "name": "Cestoviny Casarecce s bazalkou, sušenými paradajkami, zelenými olivami a parmezánom",
+          "price": 9.4,
+          "sourceText": "Cestoviny Casarecce s bazalkou, sušenými paradajkami, zelenými olivami a parmezánom 1,3,7,12\n350 g\n9.40 €",
+          "portion": "350 g"
+        },
+        {
+          "name": "Indické butter chicken - maslové kura",
+          "price": 9.4,
+          "sourceText": "Indické butter chicken - maslové kura (Pôvod mäsa: Slovensko) 1,7,8,12\npodávané s jasmínovou ryžou, koriandrom a pita chlebom 150/200 g\n9.40 €",
+          "portion": "150/200 g",
+          "description": "podávané s jasmínovou ryžou, koriandrom a pita chlebom"
+        },
+        {
+          "name": "Konfitované kačacie stehno s dusenou červenou kapustou so slivkami",
+          "price": 9.4,
+          "sourceText": "Konfitované kačacie stehno s dusenou červenou kapustou so slivkami (Pôvod mäsa: Slovensko) 1,7,12\npodávané s mastenými lokšami 220/200 g\n9.40 €",
+          "portion": "220/200 g",
+          "description": "podávané s mastenými lokšami"
+        }
+      ]
+    },
+    {
+      "id": "bluebell",
+      "imageFile": "gallery-03.jpg",
+      "mains": [
+        {
+          "category": "biznis",
+          "name": "Grilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél",
+          "price": 11.9,
+          "sourceText": "BIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2",
+          "portion": "180/100/100/50g"
+        },
+        {
+          "category": "tradicne",
+          "name": "Pečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót",
+          "price": 8.9,
+          "sourceText": "TRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z",
+          "portion": "250/250/50g"
+        },
+        {
+          "category": "veggie",
+          "name": "Grilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka",
+          "price": 8.9,
+          "sourceText": "VEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :",
+          "portion": "120/250/50g"
+        },
+        {
+          "category": "special-1",
+          "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+          "price": 8.9,
+          "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10",
+          "portion": "150/100/100g"
+        },
+        {
+          "category": "special-2",
+          "name": "Obrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát",
+          "price": 9.9,
+          "sourceText": "ŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2",
+          "portion": "180/250/50g"
+        }
+      ],
+      "needsVisualReview": false,
+      "reviewedComplete": true,
+      "soups": [
+        {
+          "name": "Kurací Vývar",
+          "price": 2,
+          "sourceText": "0,331 Kurací Vývar 139 2,00€ |"
+        },
+        {
+          "name": "Podľa Dennej Ponuky",
+          "price": 2,
+          "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
+        },
+        {
+          "name": "Polievka Samostatne",
+          "price": 3.5,
+          "sourceText": "0,331 Polievka Samostatne 3,50€"
+        }
+      ],
+      "source": {
+        "capturedAt": "2026-09-07T09:03:09.501Z",
+        "dateText": "7.9.2026 do 11.9.2026",
+        "identityText": "Piváreň BlueBell | Kosice | Facebook",
+        "imageSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd",
+        "kind": "image-ocr",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "text": ". bad —”\nY Ý od 7.9.2026 do 11.9.2026 Vpivárni kmenu\nBLUEBELL 0d 11:00 do 14:00 džbán vody\n— PIVÁREŇ — sditrónom\nPOLIEVKY Selle\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2\nTRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z\nVEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2\nOSOBNÝ ODBER: + 421910 613 000\n",
+        "url": "https://www.facebook.com/photo/?fbid=1807237660902565&set=a.877992830493724&__cft__[0]=AZjd1AKCI8QjHn6ENxlLUU8skbwR7WlOgeWhAdYEUFgEk8e3fpiK-V8mhdYqFiAmf1xSHqpEyeV32L0VwR_KBX9GjYOZwd9obD9iKrhE-7OEPgfC7RuYxoF4qTIn7A8TqYgpG_-sE0IYaDDacVx_DsqFEDWuI6FRW7ovCLdEsgPQhjShtZVnJaRVWj8&__tn__=EH-R",
+        "validFrom": "2026-09-07",
+        "validTo": "2026-09-11",
+        "reviewedAgainst": "Live gallery-03.jpg and user-supplied menu image; same five meals, prices and printed date range",
+        "reviewedAt": "2026-09-07T09:28:11.612Z"
+      }
+    }
+  ]
+}

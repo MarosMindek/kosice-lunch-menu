@@ -32,16 +32,19 @@ Tieto pravidlá a renderer používajú všetky tri existujúce ranné pokusy. Z
 | --- | --- | --- |
 | `kozlovna` | https://kozlovnakosice.sk/#obedove-menu | Dnešná sekcia + kompletné jedlá, prílohy, ceny. |
 | `cool-bowling` | https://www.coolbowling.sk/denne-menu | Dnešná sekcia vrátane všetkých publikovaných špeciálov. |
-| `tahiti` | https://www.tahitirestaurant.sk/tyzdenne-menu | Aktuálny explicitný týždeň a dnešná sekcia; fallback https://menu.andiamogroup.eu/chickin/denne-menu. Pri konflikte rozhoduje novší potvrdený zdroj, nie cache. |
+| `tahiti` | https://www.tahitirestaurant.sk/tyzdenne-menu | Aktuálny explicitný týždeň: spoločné týždenné menu alebo izolovaná dnešná sekcia; fallback https://menu.andiamogroup.eu/chickin/denne-menu. Pri konflikte rozhoduje novší potvrdený zdroj, nie cache. |
 | `stara-sypka` | https://www.starasypka.sk/sk/restauracia/obedove-menu | Utorok–piatok dnešný dátum; staré či nejasne datované PDF odmietni. |
 
 ## Normalizovaný kontrakt
 
 Vrchná úroveň: `{ "date": "YYYY-MM-DD", "restaurants": [...] }`.
 Podnik: `{ "id": "kozlovna", "reviewedComplete": true, "source": {...}, "soups": [...], "mains": [...] }`.
-Každá položka: `name` (úplný prepis názvu/príloh), `price` (pôvodná publikovaná cena, číselne EUR), `sourceText` (doslovný úsek toho istého menu zahŕňajúci názov a jeho cenu s €). Zľavnenú cenu nedodávaj; počíta ju renderer.
+Voliteľné `desserts` obsahuje publikované dezerty; nezapočítavajú sa do najlacnejšieho hlavného jedla ani zľavy Tahiti. Voliteľné `notes` sú doslovné podmienky cien z toho istého dokumentu.
+Každá položka: `name` (úplný prepis názvu), voliteľné `description` (prílohy, ak sú v zdroji oddelené cenou/alergénmi) a `portion` (gramáž/objem); každá hodnota musí byť doložená v rovnakom `sourceText`, `price` (pôvodná publikovaná cena, číselne EUR), `sourceText` (doslovný úsek toho istého menu zahŕňajúci názov a jeho cenu s €). Zľavnenú cenu nedodávaj; počíta ju renderer.
 
-Bežný `source`: `kind: "html"`, `url` (oficiálny zdroj), `capturedAt` (skutočný ISO čas zberu), `text` (relevantný dokument), `dateText` (doslovný dátum v dokumente), `sectionText` (izolovaná dnešná sekcia vrátane hlavičky), `serviceDate: "YYYY-MM-DD"`. Dnešná sekcia nesmie obsahovať položky iných dní. Pri Tahiti s týždennou hlavičkou navyše `scope: "weekly"`, `dateText` s celým rozsahom a `dayText` s doslovným názvom dnešného dňa v `sectionText` alebo jeho dátumom. Ak zdroj používa skrátené dátumy, získaj ďalší explicitný zdroj; dátumy nedopisuj do citovaného textu.
+Bežný `source`: `kind: "html"`, `url` (oficiálny zdroj), `capturedAt` (skutočný ISO čas zberu), `text` (relevantný dokument), `dateText` (doslovný dátum v dokumente), `sectionText` (izolovaná dnešná sekcia vrátane hlavičky), `serviceDate: "YYYY-MM-DD"`. Dnešná sekcia nesmie obsahovať položky iných dní. Pri Tahiti s týždennou hlavičkou navyše `scope: "weekly"`, `dateText` s celým rozsahom a `dayText` s doslovným názvom dnešného dňa v `sectionText` alebo jeho dátumom. Oficiálny HTML dátum `07.09.26` je prípustný len s vytlačeným rokom zhodným s dnešným rokom; `07.09-11.09.2026` používa vytlačený spoločný rok. Dátumy nikdy nedopisuj do citovaného textu. BlueBell naďalej vyžaduje oba plné roky z jedného obrázka.
+
+Tahiti, ktoré publikuje jednu ponuku na celý týždeň bez denných hlavičiek: použi `scope: "weekly-shared"`, `dateText` ako celú doslovnú hlavičku „Týždenné menu … od–do“, `sectionText` ako celú spoločnú ponuku. Rozsah musí obsahovať dnešok a mať najviac sedem kalendárnych dní; iné dátumy alebo hlavičky jednotlivých dní sú zakázané. Nevymýšľaj pondelkovú hlavičku.
 
 BlueBell `source`: `kind: "image-ocr"` alebo `"verified-image"`, `url`, `ownerUrl`, `identityText`, `capturedAt`, `imageSha256`, `text` (OCR/vizuálny prepis jedného celého menu), `dateText`, `validFrom`, `validTo`. Pri overenom prepise aj `verification: "visual-transcription"`; pôvod a skutočný čas overenia musia zostať zachované. Päť hlavných položiek má kategórie `biznis`, `tradicne`, `veggie`, `special-1`, `special-2`.
 

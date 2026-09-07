@@ -31,6 +31,22 @@ export function dateRanges(text) {
 export function explicitDates(text) {
   return [...String(text).matchAll(/(?<!\d)(\d{1,2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{4})(?!\d)/g)].map(m => dateISO(m[1], m[2], m[3])).filter(Boolean);
 }
+// Official HTML menus also publish 07.09.26 and 07.09-11.09.2026.
+// Keep the image parser strict: BlueBell still requires both printed full years.
+export function serviceDates(text, referenceDate) {
+  const century = Math.floor(Number(referenceDate.slice(0, 4)) / 100) * 100;
+  return [...String(text).matchAll(/(?<!\d)(\d{1,2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{4}|\d{2})(?!\d)/g)]
+    .map(m => dateISO(m[1], m[2], m[3].length === 2 ? century + Number(m[3]) : m[3])).filter(Boolean);
+}
+export function weeklyDateRanges(text) {
+  const ranges = dateRanges(text);
+  for (const m of String(text).matchAll(/(?<![\d.])(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?\s*(?:do|až|az|[-–—])\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{4})(?!\d)/gi)) {
+    // A shared printed year is valid only within that calendar year.
+    const from = dateISO(m[1], m[2], m[5]), to = dateISO(m[3], m[4], m[5]);
+    if (from && to && from <= to) ranges.push({ from, to, text: m[0] });
+  }
+  return [...new Map(ranges.map(r => [`${r.from}/${r.to}`, r])).values()];
+}
 export function moneyCents(value) {
   if (typeof value === 'number') {
     if (!Number.isFinite(value) || value <= 0 || Math.abs(value * 100 - Math.round(value * 100)) > 1e-7) throw Error('Invalid published price');
@@ -71,16 +87,25 @@ export function validateSource(source, date, id, now = new Date()) {
   } else {
     const permitted = { kozlovna: ['kozlovnakosice.sk'], 'cool-bowling': ['www.coolbowling.sk', 'coolbowling.sk'], tahiti: ['www.tahitirestaurant.sk', 'tahitirestaurant.sk', 'menu.andiamogroup.eu'], 'stara-sypka': ['www.starasypka.sk', 'starasypka.sk'] };
     if (!permitted[id]?.includes(u.hostname)) throw Error(`${id}: unrecognized restaurant source`);
-    if (!source.sectionText?.trim() || !normalized(source.text).includes(normalized(source.sectionText))) throw Error(`${id}: missing isolated daily section`);
-    if (explicitDates(source.sectionText).some(d => d !== date)) throw Error(`${id}: mixed dates in daily section`);
-    const ranges = dateRanges(source.dateText);
-    if (source.scope === 'weekly' && id === 'tahiti') {
-      if (ranges.length !== 1 || ranges[0].from > date || ranges[0].to < date || source.serviceDate !== date) throw Error(`${id}: wrong weekly/day section`);
-      const dayNames = ['nedela', 'pondelok', 'utorok', 'streda', 'stvrtok', 'piatok', 'sobota'];
-      if (!source.dayText || !source.sectionText.includes(source.dayText) || !(explicitDates(source.dayText).includes(date) || fold(source.dayText).trim() === dayNames[weekday(date)])) throw Error(`${id}: weekday heading not confirmed`);
+    if (!source.sectionText?.trim() || !normalized(source.text).includes(normalized(source.sectionText))) throw Error(`${id}: missing isolated menu section`);
+    const ranges = weeklyDateRanges(source.dateText);
+    const dayNames = ['nedela', 'pondelok', 'utorok', 'streda', 'stvrtok', 'piatok', 'sobota'];
+    if (['weekly', 'weekly-shared'].includes(source.scope) && id === 'tahiti') {
+      if (ranges.length !== 1 || ranges[0].from > date || ranges[0].to < date || (new Date(ranges[0].to) - new Date(ranges[0].from)) / 86400000 > 6 || source.serviceDate !== date) throw Error(`${id}: wrong weekly/day section`);
       const headings = dayNames.filter(d => new RegExp(`\\b${d}\\b`).test(fold(source.sectionText)));
-      if (headings.some(d => d !== dayNames[weekday(date)])) throw Error(`${id}: mixed weekdays`);
-    } else if (!explicitDates(source.dateText).includes(date) || source.serviceDate !== date || !source.sectionText.includes(source.dateText)) throw Error(`${id}: today's section not confirmed`);
+      if (source.scope === 'weekly-shared') {
+        if (!/tyzdenne\s+menu/.test(fold(source.dateText)) || !source.sectionText.includes(source.dateText) || headings.length) throw Error(`${id}: shared weekly menu not confirmed`);
+        const body = source.sectionText.replace(source.dateText, '');
+        if (serviceDates(body, date).length || weeklyDateRanges(body).length) throw Error(`${id}: mixed dates in weekly menu`);
+      } else {
+        if (!source.dayText || !source.sectionText.includes(source.dayText) || !(serviceDates(source.dayText, date).includes(date) || fold(source.dayText).trim() === dayNames[weekday(date)])) throw Error(`${id}: weekday heading not confirmed`);
+        if (headings.some(d => d !== dayNames[weekday(date)])) throw Error(`${id}: mixed weekdays`);
+        if (serviceDates(source.sectionText, date).some(d => d !== date)) throw Error(`${id}: mixed dates in daily section`);
+      }
+    } else {
+      if (serviceDates(source.sectionText, date).some(d => d !== date)) throw Error(`${id}: mixed dates in daily section`);
+      if (!serviceDates(source.dateText, date).includes(date) || source.serviceDate !== date || !source.sectionText.includes(source.dateText)) throw Error(`${id}: today's section not confirmed`);
+    }
   }
 }
 export function validateMenu(data, { date = localDate(), now = new Date() } = {}) {
@@ -98,17 +123,21 @@ export function validateMenu(data, { date = localDate(), now = new Date() } = {}
       if (!item.name?.trim() || !item.sourceText?.trim()) throw Error(`${id}: unnamed/unproven meal`);
       const evidenceText = id === 'bluebell' ? r.source.text : r.source.sectionText;
       if (!normalized(evidenceText).includes(normalized(item.sourceText)) || !normalized(item.sourceText).includes(normalized(item.name))) throw Error(`${id}: meal not found in this source`);
+      for (const field of ['description', 'portion']) if (item[field] != null && (typeof item[field] !== 'string' || !item[field].trim() || !normalized(item.sourceText).includes(normalized(item[field])))) throw Error(`${id}: unproven ${field}`);
       const cents = moneyCents(item.price);
       const prices = [...item.sourceText.matchAll(/(?<!\d)(\d{1,3}[,.]\d{2})\s*(?:€|eur)/gi)].map(m => moneyCents(m[1]));
       if (!prices.includes(cents)) throw Error(`${id}: price not present beside meal evidence`);
       return { ...item, priceCents: cents, finalCents: id === 'tahiti' && isMain ? discountedCents(cents) : cents };
     });
-    const soups = normalizeItems(r.soups, false), mains = normalizeItems(r.mains, true);
+    const soups = normalizeItems(r.soups, false), mains = normalizeItems(r.mains, true), desserts = normalizeItems(r.desserts || [], false);
+    const notes = r.notes || [];
+    if (!Array.isArray(notes) || notes.some(n => typeof n !== 'string' || !n.trim() || !r.source.text.includes(n))) throw Error(`${id}: unproven menu note`);
     if (id === 'bluebell') {
+      if (r.needsVisualReview === true) throw Error('bluebell: image still needs visual review');
       const expected = ['biznis', 'tradicne', 'veggie', 'special-1', 'special-2'];
       if (mains.length !== expected.length || !expected.every(x => mains.some(i => i.category === x))) throw Error('bluebell: all five published menu categories required');
     }
-    return { ...r, name: NAMES[id], soups, mains };
+    return { ...r, name: NAMES[id], soups, mains, desserts, notes };
   });
   return { date, restaurants: normalizedRestaurants };
 }
