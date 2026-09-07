@@ -40,22 +40,31 @@ export function selectCandidates(candidates) {
   return { status: 'needs_visual_review', selected: candidates[0] };
 }
 export function run(directory = 'output/bluebell-hires', date = localDate()) {
-  const meta = JSON.parse(fs.readFileSync(path.join(directory, 'metadata.json'), 'utf8')), accepted = [], rejected = [];
+  const meta = JSON.parse(fs.readFileSync(path.join(directory, 'metadata.json'), 'utf8')), accepted = [], rejected = [], reviewCandidates = [];
   for (const c of meta.candidates || []) {
     if (!c.saved) continue;
     const imagePath = path.join(directory, path.basename(c.saved.file));
     if (!c.imageSha256 || sha256(fs.readFileSync(imagePath)) !== c.imageSha256) { rejected.push({ file: c.saved.file, reason: 'image_hash_mismatch' }); continue; }
-    let parsed, reasons = [];
+    let parsed, reasons = [], ocrByMode = {};
     // OCR modes and different images never get concatenated into one menu.
     for (const psm of [6, 11]) {
       const file = path.join(directory, 'ocr', `${path.parse(c.saved.file).name}-psm${psm}.txt`);
       if (!fs.existsSync(file)) continue;
-      try { parsed = parseBluebell(fs.readFileSync(file, 'utf8'), c, meta.capturedAt, date); break; } catch (e) { reasons.push(e.message); }
+      const text = fs.readFileSync(file, 'utf8'); ocrByMode[psm] = text;
+      try { parsed = parseBluebell(text, c, meta.capturedAt, date); break; } catch (e) { reasons.push(e.message); }
     }
     if (parsed) accepted.push({ ...parsed, imageFile: c.saved.file });
-    else rejected.push({ file: c.saved.file, href: c.href, reason: reasons.join(', ') || 'no_ocr' });
+    else {
+      const reason = reasons.join(', ') || 'no_ocr';
+      rejected.push({ file: c.saved.file, href: c.href, reason });
+      const looksLikeMenu = Object.values(ocrByMode).some(t => [...fold(t).matchAll(/(?:biznis|tradicne|veggie|special)\s*menu/g)].length >= 3);
+      const knownExpired = Object.values(ocrByMode).flatMap(dateRanges).some(r => r.to < date || r.from > date);
+      // A reviewer may read the SAME image when OCR is unclear, but this is never sendable data.
+      if (looksLikeMenu && !knownExpired) reviewCandidates.push({ imageFile: c.saved.file, href: c.href, ownerUrl: c.ownerUrl, identityText: c.identityText, imageSha256: c.imageSha256, capturedAt: c.capturedAt || meta.capturedAt, needsVisualReview: true, reason, ocrByMode });
+    }
   }
-  const selection = { date, capturedAt: meta.capturedAt, ...selectCandidates(accepted), candidates: accepted, rejected };
+  const selection = { date, capturedAt: meta.capturedAt, ...selectCandidates(accepted), candidates: accepted, rejected, reviewCandidates };
+  if (selection.status === 'unavailable' && reviewCandidates.length) selection.status = 'needs_visual_review';
   fs.writeFileSync(path.join(directory, 'selection.json'), JSON.stringify(selection, null, 2));
   console.log(JSON.stringify({ status: selection.status, currentImages: accepted.length, rejected: rejected.length }));
   return selection;

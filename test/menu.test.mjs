@@ -30,6 +30,8 @@ test('public image resizing keeps image identity/signature and the original fall
   assert.equal(new URL(urls[0]).pathname, new URL(src).pathname);
   assert.equal(new URL(urls[0]).searchParams.get('ctp'), 's1080x1080');
   for (const key of ['oh', 'oe', 'cstp']) assert.equal(new URL(urls[0]).searchParams.get(key), new URL(src).searchParams.get(key));
+  // The current weekly image was served as p526x296, not an s206x206 gallery thumbnail.
+  assert.equal(new URL(publicImageVariants(src.replace('s206x206', 'p526x296'))[0]).searchParams.get('ctp'), 's1080x1080');
   assert.throws(() => publicImageVariants('https://fbcdn.net.example.com/menu.jpg'));
 });
 
