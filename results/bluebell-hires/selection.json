@@ -1,13 +1,128 @@
 {
   "date": "2026-09-07",
-  "capturedAt": "2026-09-07T08:51:16.220Z",
+  "capturedAt": "2026-09-07T08:56:48.405Z",
   "status": "unavailable",
   "selected": null,
   "candidates": [],
   "rejected": [
     {
+      "file": "gallery-01.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1779999920293006&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "expired_or_future_image, expired_or_future_image"
+    },
+    {
       "file": "gallery-02.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-03.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1807237660902565&set=a.877992830493724&__cft__[0]=AZgNxFd8YRCq1F94kjVlBpjmjQHQXt3mndXrPZc-1n9qAMTd3Uc7QQ5Wsr9DRGdcUe6SO-xbuzwqYzt1U9I8LJatN9GXQUAqwKA_l3zbxCRHfsZtKVCe7-vky529n59UwZR-OqLsH2fJA1KmUXgo91mCRUXCbgmopg3PoDRGd-0O8cuxM953KKJ_yr0&__tn__=EH-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-04.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1800452811581050&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-05.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1800452808247717&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-06.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1800452804914384&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-07.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1800452801581051&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-08.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1800452798247718&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-09.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1799845331641798&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "expired_or_future_image, expired_or_future_image"
+    },
+    {
+      "file": "gallery-10.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793769652249366&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-11.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793769648916033&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-12.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793769645582700&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-13.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793769642249367&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-14.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793769638916034&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-15.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1793548495604815&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "expired_or_future_image, expired_or_future_image"
+    },
+    {
+      "file": "gallery-16.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1786945102931821&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-17.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1786945099598488&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-18.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1786259979667000&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "expired_or_future_image, expired_or_future_image"
+    },
+    {
+      "file": "gallery-19.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1780193610273637&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-20.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1773313120961686&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-21.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1773313117628353&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-22.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1773313110961687&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-23.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1773138307645834&set=pb.100048490447015.-2207520000&type=3",
+      "reason": "expired_or_future_image, expired_or_future_image"
+    },
+    {
+      "file": "gallery-24.jpg",
+      "href": "https://www.facebook.com/photo.php?fbid=1767397398219925&set=pb.100048490447015.-2207520000&type=3",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     }
   ]
