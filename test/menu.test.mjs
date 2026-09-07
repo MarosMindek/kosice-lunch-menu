@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { dateRanges, localDate, discountedCents, validateMenu, displayDate, validateSource } from '../scripts/lib/menu-contract.mjs';
 import { parseBluebell, selectCandidates } from '../scripts/bluebell-select.mjs';
 import { renderEmail, validateBody } from '../scripts/render-email.mjs';
+import { publicImageVariants } from '../scripts/lib/facebook-images.mjs';
 
 const bluebell = JSON.parse(fs.readFileSync(new URL('../data/bluebell/2026-09-07.json', import.meta.url)));
 const capturedAt = bluebell.source.capturedAt;
@@ -21,6 +22,16 @@ export function fixture(date = '2026-09-07') {
 const candidate = { href: 'https://www.facebook.com/pivarenbluebell/photos/123/', ownerUrl: 'https://www.facebook.com/pivarenbluebell/', identityText: 'Piváreň BlueBell | Kosice | Facebook', imageSha256: bluebell.source.imageSha256, capturedAt };
 const currentOCR = fs.readFileSync(new URL('fixtures/bluebell-current-ocr.txt', import.meta.url), 'utf8');
 const oldOCR = fs.readFileSync(new URL('fixtures/bluebell-old-ocr.txt', import.meta.url), 'utf8');
+
+test('public image resizing keeps image identity/signature and the original fallback URL', () => {
+  const src = 'https://scontent.example.fbcdn.net/menu.jpg?cstp=mx1080x1080&ctp=s206x206&oh=example&oe=example';
+  const urls = publicImageVariants(src);
+  assert.equal(urls.length, 2); assert.equal(urls[1], src);
+  assert.equal(new URL(urls[0]).pathname, new URL(src).pathname);
+  assert.equal(new URL(urls[0]).searchParams.get('ctp'), 's1080x1080');
+  for (const key of ['oh', 'oe', 'cstp']) assert.equal(new URL(urls[0]).searchParams.get(key), new URL(src).searchParams.get(key));
+  assert.throws(() => publicImageVariants('https://fbcdn.net.example.com/menu.jpg'));
+});
 
 test('actual uploaded image OCR yields five current mains and the published soup labels', () => {
   const menu = parseBluebell(currentOCR, candidate, capturedAt, options.date);
