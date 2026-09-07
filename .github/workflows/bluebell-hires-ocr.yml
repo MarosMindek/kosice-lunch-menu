@@ -5,12 +5,18 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/bluebell-hires.mjs'
+      - 'scripts/bluebell-select.mjs'
+      - 'scripts/lib/menu-contract.mjs'
       - 'package.json'
       - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
   schedule:
-    # Fresh hi-res OCR after the regular BlueBell capture, before the first mail gate.
-    - cron: '10 7,8 * * 1-5'
+    # Primary image capture with another opportunity before the later mail attempts.
+    - cron: '3,28 7,8 * * 1-5'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -18,47 +24,37 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 20
     steps:
-      - name: Local-time gate
-        id: gate
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
-        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
-        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
-        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:bluebell-hires
-        if: steps.gate.outputs.run == 'true'
       - name: OCR hi-res images
-        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq tesseract-ocr
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-slk
           mkdir -p output/bluebell-hires/ocr
           shopt -s nullglob
           for f in output/bluebell-hires/gallery-*; do
             [ -f "$f" ] || continue
             b=$(basename "$f"); b=${b%.*}
             for psm in 6 11; do
-              tesseract "$f" "output/bluebell-hires/ocr/${b}-psm${psm}" -l eng --psm "$psm" 2>/dev/null || true
+              tesseract "$f" "output/bluebell-hires/ocr/${b}-psm${psm}" -l slk+eng --psm "$psm" 2>/dev/null || true
             done
           done
-          cat output/bluebell-hires/ocr/*.txt > output/bluebell-hires/ocr-all.txt || true
+      - name: Select dated menu images independently
+        run: node scripts/bluebell-select.mjs output/bluebell-hires
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bluebell-hires-output
+          path: output/bluebell-hires/
+          retention-days: 7
       - name: Publish hi-res OCR
-        if: steps.gate.outputs.run == 'true'
         run: |
           rm -rf results/bluebell-hires
           mkdir -p results
@@ -67,5 +63,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/bluebell-hires
           git commit -m "Update BlueBell hi-res OCR [skip ci]" || exit 0
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1

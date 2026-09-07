@@ -10,8 +10,12 @@ on:
   workflow_dispatch:
   schedule:
     # Refresh before the 09:30, 09:45 and 10:00 Europe/Bratislava mail gates.
-    # Both UTC hours are listed; the local-time gate keeps only the 09:xx local runs.
-    - cron: '0,25,40 7,8 * * 1-5'
+    # Both UTC hours refresh; delayed jobs must not be discarded based on the actual clock.
+    - cron: '7,22,37 7,8 * * 1-5'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -21,35 +25,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Local-time gate
-        id: gate
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Bratislava date +%H)" = "09" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v4
-        if: steps.gate.outputs.run == 'true'
         with:
           node-version: '22'
       - run: npm install
-        if: steps.gate.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
-        if: steps.gate.outputs.run == 'true'
       - run: npm run scrape:all
-        if: steps.gate.outputs.run == 'true'
       - uses: actions/upload-artifact@v4
-        if: steps.gate.outputs.run == 'true'
         with:
           name: all-restaurants-output
           path: output/all-restaurants/
           if-no-files-found: error
       - name: Publish latest text/JSON results
-        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           rm -rf results/all-restaurants
@@ -59,5 +47,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/all-restaurants
           git commit -m "Update live restaurant data [skip ci]" || exit 0
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
+

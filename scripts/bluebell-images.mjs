@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 
 const OUT='output/bluebell-images';
+fs.rmSync(OUT,{recursive:true,force:true});
 fs.mkdirSync(OUT,{recursive:true});
 
 const browser=await chromium.launch({headless:true});
@@ -104,3 +105,4 @@ for(let i=0;i<uniq.length;i++){
 fs.writeFileSync(`${OUT}/metadata.json`,JSON.stringify(meta,null,2));
 console.log(JSON.stringify({posts:meta.posts.map(x=>({index:x.index,text:x.text.slice(0,800),images:x.images.length})),photoCandidates:(meta.photoCandidates||[]).slice(0,10),photos:meta.photos.map(x=>({index:x.index,href:x.href,best:x.best,error:x.error}))},null,2));
 await browser.close();
+

@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 
 const OUT = 'output/all-restaurants';
+fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 
 const TZ = 'Europe/Bratislava';
@@ -42,12 +43,12 @@ const results={today,weekStart,weekEnd,generatedAt:new Date().toISOString(),page
 async function visit(name,url,wait=6000,scroll=6){
   const p=await context.newPage();
   try{
-    const sep=url.includes('?')?'&':'?';
-    const resp=await p.goto(`${url}${sep}_cb=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});
+    const target = new URL(url); target.searchParams.set('_cb', String(Date.now()));
+    const resp=await p.goto(target.href,{waitUntil:'domcontentloaded',timeout:90000});
     await p.waitForTimeout(wait);
     for(let i=0;i<scroll;i++){await p.mouse.wheel(0,1200);await p.waitForTimeout(450);}
     const text=await p.locator('body').innerText().catch(()=> '');
-    const data={name,requestedUrl:url,finalUrl:p.url(),status:resp?.status()??null,title:await p.title().catch(()=>''),today,weekStart,weekEnd,hasToday:hasToday(text),hasCurrentWeek:hasCurrentWeek(text),isBlueBellPub:isBlueBellPub(text+' '+p.url()),lines:clean(text)};
+    const data={capturedAt:new Date().toISOString(),dateFlagsAreDiscoveryOnly:true,name,requestedUrl:url,finalUrl:p.url(),status:resp?.status()??null,title:await p.title().catch(()=>''),today,weekStart,weekEnd,hasToday:hasToday(text),hasCurrentWeek:hasCurrentWeek(text),isBlueBellPub:isBlueBellPub(text+' '+p.url()),lines:clean(text)};
     results.pages[name]=data;
     fs.writeFileSync(`${OUT}/${name}.txt`,text);
     fs.writeFileSync(`${OUT}/${name}.json`,JSON.stringify(data,null,2));
@@ -78,10 +79,14 @@ await visit('stara-sypka-home','https://www.starasypka.sk/sk/',5000,4);
 // Hard safety guard: never let Bistro/cafe data qualify as BlueBell pub.
 for(const [name,d] of Object.entries(results.pages)){
   if(name.startsWith('bluebell') && d.lines){
-    d.blueBellAccepted = d.isBlueBellPub && (d.hasToday || d.hasCurrentWeek || name==='bluebell-site');
+    // Whole-page dates and identity are discovery hints, never image-menu acceptance.
+    d.blueBellAccepted = false;
+    d.contentComplete = false;
+    d.validationReason = 'Use per-image selection.json and verify the date inside the same image';
     if(/bistro|kaviareň|kaviaren|café|cafe/i.test(d.lines.join(' ')) && !/piváreň bluebell|pivaren bluebell/i.test(d.lines.join(' '))) d.blueBellAccepted=false;
     fs.writeFileSync(`${OUT}/${name}.json`,JSON.stringify(d,null,2));
   }
 }
 fs.writeFileSync(`${OUT}/summary.json`,JSON.stringify(results,null,2));
 await browser.close();
+

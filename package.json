@@ -7,7 +7,10 @@
     "scrape:all": "node scripts/all-restaurants.mjs",
     "scrape:bluebell-images": "node scripts/bluebell-images.mjs",
     "scrape:bluebell-hires": "node scripts/bluebell-hires.mjs",
-    "scrape:stara-sypka": "node scripts/stara-sypka.mjs"
+    "scrape:stara-sypka": "node scripts/stara-sypka.mjs",
+    "test": "node --test test/*.test.mjs",
+    "select:bluebell": "node scripts/bluebell-select.mjs",
+    "render:email": "node scripts/render-email.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"

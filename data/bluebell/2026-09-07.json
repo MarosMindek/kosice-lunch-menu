@@ -1,0 +1,69 @@
+{
+  "id": "bluebell",
+  "source": {
+    "kind": "verified-image",
+    "origin": "user-upload",
+    "url": "https://www.facebook.com/pivarenbluebell/",
+    "urlRole": "business identity; exact post URL not provided",
+    "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+    "identityText": "Piváreň BlueBell",
+    "capturedAt": "2026-09-07T08:39:23.618473+00:00",
+    "imageSha256": "6cc5680bb8400b2746217088a8f8c3aab22a4c21426c6e368ad8a3865e4721f4",
+    "originalFilename": "cab0a6ac-256b-444f-b95b-2bb2449abd5a.png",
+    "verification": "visual-transcription",
+    "dateText": "od 7.9.2026 do 11.9.2026",
+    "validFrom": "2026-09-07",
+    "validTo": "2026-09-11",
+    "text": "PIVÁREŇ BLUEBELL\nTÝŽDENNÉ MENU\nod 7.9.2026 do 11.9.2026\nod 11:00 do 14:00\nPOLIEVKY\n0,33 l Kurací vývar 2,00 €\n0,33 l Podľa dennej ponuky 2,00 €\n0,33 l Polievka samostatne 3,50 €\nBIZNIS MENU | 11,90 €\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél\nTRADIČNÉ MENU | 8,90 €\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót\nVEGGIE MENU | 8,90 €\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka\nŠPECIÁL MENU 1 | 8,90 €\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami\nŠPECIÁL MENU 2 | 9,90 €\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát"
+  },
+  "soups": [
+    {
+      "name": "Kurací vývar",
+      "price": 2.0,
+      "sourceText": "0,33 l Kurací vývar 2,00 €"
+    },
+    {
+      "name": "Podľa dennej ponuky",
+      "price": 2.0,
+      "sourceText": "0,33 l Podľa dennej ponuky 2,00 €"
+    },
+    {
+      "name": "Polievka samostatne",
+      "price": 3.5,
+      "sourceText": "0,33 l Polievka samostatne 3,50 €"
+    }
+  ],
+  "mains": [
+    {
+      "category": "biznis",
+      "name": "Grilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél",
+      "price": 11.9,
+      "sourceText": "BIZNIS MENU | 11,90 €\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél"
+    },
+    {
+      "category": "tradicne",
+      "name": "Pečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót",
+      "price": 8.9,
+      "sourceText": "TRADIČNÉ MENU | 8,90 €\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót"
+    },
+    {
+      "category": "veggie",
+      "name": "Grilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka",
+      "price": 8.9,
+      "sourceText": "VEGGIE MENU | 8,90 €\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka"
+    },
+    {
+      "category": "special-1",
+      "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+      "price": 8.9,
+      "sourceText": "ŠPECIÁL MENU 1 | 8,90 €\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami"
+    },
+    {
+      "category": "special-2",
+      "name": "Obrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát",
+      "price": 9.9,
+      "sourceText": "ŠPECIÁL MENU 2 | 9,90 €\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát"
+    }
+  ],
+  "reviewedComplete": true
+}

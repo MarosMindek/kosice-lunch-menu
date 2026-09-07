@@ -1,0 +1,18 @@
+name: Menu validation and fixed email checks
+on:
+  push:
+    paths: ['scripts/**', 'templates/**', 'data/bluebell/**', 'test/**', '.github/workflows/menu-checks.yml']
+  pull_request:
+    paths: ['scripts/**', 'templates/**', 'data/bluebell/**', 'test/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
