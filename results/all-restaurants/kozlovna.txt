@@ -1,11 +1,4 @@
 Preskočiť na hlavný obsah
-Obedové menu
-Jedálny lístok
-Nápojový lístok
-Galéria
-Rezervácia
-Kontakt
-SK
 Zažite autentickú pivovú kultúru v Kozlovni
 
 Kvalitné pivo a domáce jedlá každý deň – už od obeda
@@ -34,130 +27,130 @@ streda
 piatok
 sobota
 Previous
-Pondelok 31. 8. 2026
+Pondelok [dnes] 7. 9. 2026
 Polievky
-Karfiolový krém s krutónmi
-0,33 l/ [ 1, 3, 7, 9]
-2,10 €
-Vývar s cestovinou a koreňovou zeleninou
-0,33 l/ [ 1, 3, 9]
-2,10 €
-Hlavné jedlá
-Gyros z vykostených kuracích stehien s domácou tzatziky omáčkou,
-7,80 €
-podávaný so zeleninovým šalátikom a pita chlebom
-150/100/75 g/ [ 1, 3, 7, 12]
-Grilovaná bravčová panenka na krémovej omáčke z čerstvých šampiňónov,
-7,90 €
-podávaná s dusenou ryžou a pečenými americkými zemiakmi so šupkou
-150/180 g/ [ 7]
-Vyprážaná brokolica v strúhanke, poprášená strúhaným ovčím syrom Pecorino,
-7,80 €
-podávaná na zemiakovo batátovej kaši s domácou sweet chilli majonézou
-200/180/30 g/ [ 1, 3, 7, 10]
-Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Utorok [dnes] 1. 9. 2026
-Polievky
-Zeleninová s drobnou cestovinou
-0,33 l/ [ 1, 3, 7, 9]
-2,10 €
-Vývar s cestovinou a koreňovou zeleninou
-0,33 l/ [ 1, 3, 9]
-2,10 €
-Hlavné jedlá
-Prírodná kuracia kapsa plnená s balkánskym slaným syrom a baby špenátom na maslovej omáčke s čerstvým estragónom,
-7,80 €
-podávaná s pečenými Grenaille zemiakmi
-150/180/30 g/ [ 1, 3, 7, 10, 12]
-Viedenská hovädzia roštenka s chrumkavou viedenskou cibuľkou,
-8,10 €
-podávaná s dusenou ryžou
-150/180 g/ [ 1, 7, 10, 12]
-Vyprážaný údený pastiersky syr so šunkou v cestíčku,
-7,80 €
-podávaný s varenými zemiakmi a domácou tatárskou omáčkou
-110/180/30 g/ [ 1, 3, 7, 10]
-Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Streda 2. 9. 2026
-Polievky
-Sedliacka cesnaková so zemiakmi a slaninkou
-1,3,7,9/ [ 1, 7, 9]
-2,10 €
-Vývar s cestovinou a koreňovou zeleninou
-0,33 l/ [ 1, 3, 9]
-2,10 €
-Hlavné jedlá
-Kurací prsný rezeň v šunkovom cestíčku,
-7,80 €
-podávaný s varenými maslovými zemiakmi s čerstvou pažítkou a cviklou
-130/180 g/ [ 1, 3, 7, 12]
-Steak z bravčového karé,
-7,90 €
-podávaný na zemiakových gnocchi s omáčkou Quatro formaggi posypané strúhaným pecorinom
-150/180 g/ [ 1, 3, 7, 12]
-Grécky šalát s Feta syrom a červenou cibuľou
-7,80 €
-podávaný s grilovanými kuracími rezančekmi a pečeným toustom
-280/100 g/ [ 1, 7, 12]
-Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Štvrtok 3. 9. 2026
-Polievky
-Hrachová s párkom
+Zeleninová krémová s korenenými krutónmi
 0,33 l/ [ 1, 7, 9]
 2,10 €
 Vývar s cestovinou a koreňovou zeleninou
 0,33 l/ [ 1, 3, 9]
 2,10 €
 Hlavné jedlá
-Plnená kuracia roláda z pŕs s prosciuttom a syrom Cheddar na omáčke z čerstvých byliniek,
+Prírodný kurací rezeň v brokolicovo syrovej omáčke
 7,80 €
-podávaná s dusenou ryžou a paradajkovým šalátikom
-150/180 g/ [ 7, 12]
-Obrátené bravčové rezne v jemnej maslovej omáčke s domácim kečupom,
-7,90 €
-podávané na šťuchaných zemiakoch s restovanou cibuľkou
-150/180 g/ [ 1, 3, 7, 12]
-Zemiakové halušky s tvarohom, prepraženým maslom a opečenými slaninovými chipsami, zdobené s kyslou smotanou a čerstvým kôprom
-360 g/ [ 1, 3, 7, 12]
-7,70 €
-Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Piatok 4. 9. 2026
-Polievky
-Brokolicová krémová s krutónmi
-0,33 l/ [ 1, 7, 9]
-2,10 €
-Vývar s cestovinou a koreňovou zeleninou
-0,33 l/ [ 1, 3, 9]
-2,10 €
-Hlavné jedlá
-Kurací steak Capresse, plnený čerstvou rajčinou, mozzarellou a čerstvou bazalkou,
-7,80 €
-podávaný s dusenou ryžou a listovým šalátikom s domácim zeleným pestom
+podávaný s dusenou ryžou, pečenými zemiakmi a listovým šalátikom
 150/180 g/ [ 1, 7]
-Krémové hubové rizoto s grilovanými bravčovými rezančekmi, posypané parmezánom a čerstvou petržlenovou vňaťou
-150/180 g/ [ 7]
-7,80 €
-Fish and chips - filety tresky tmavej v bylinkovej strúhanke
+Pomaly pečené bravčové mäsko v krémovej omáčke z čerstvého chrenu
 7,90 €
-podávané na steakových hranolkách s domácou kôprovou majonézou s čerstvou limetkou
-350 g/ [ 1, 3, 4, 7, 10]
+podávané s domácou parenou knedľou
+150/180 g/ [ 1, 7, 12]
+Domáce kuracie krokety so syrom Cheddar
+7,80 €
+podávané na našom humuse so sézamovým olejom a pita chlebom
+130/120 g/ [ 1, 7, 8]
 Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Sobota 5. 9. 2026
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 4, 7, 8, 11, 12]
+12,50 €
+Utorok 8. 9. 2026
+Polievky
+Karfiolová so zemiakmi
+0,33 l/ [ 7, 9]
+2,10 €
+Vývar s cestovinou a koreňovou zeleninou
+0,33 l/ [ 1, 3, 9]
+2,10 €
+Hlavné jedlá
+Vyprážaný kurací rezeň v panko strúhanke
+7,80 €
+podávaný s rakúskym zemiakovým šalátom s červenou cibuľkou bez majonézy
+150/220 g/ [ 1, 3, 7, 12]
+Bravčové karé špikované slaninkou na omáčke zo sliviek a horkej čokolády,
+7,90 €
+podávané s opekanými zemiakmi
+150/180 g/ [ 7, 12]
+Chimichanga - zapekaná tortila s kuracím mäsom, ryžou, kukuricou, fazuľou a strúhaným syrom
+7,80 €
+podávaná s kyslou smotanou a quacamole salsou na listovom šaláte s červenou cibuľou
+100/100/50 g/ [ 1, 7, 12]
+Špeciálna ponuka
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 4, 7, 8, 11, 12]
+12,50 €
+Streda 9. 9. 2026
+Polievky
+Krémová franktfurtská s párkom
+0,33 l/ [ 1, 7, 9]
+2,10 €
+Vývar s cestovinou a koreňovou zeleninou
+0,33 l/ [ 1, 3, 9]
+2,10 €
+Hlavné jedlá
+Kurací korenený steak s ciabattovo bylinkovou krustou
+7,80 €
+podávaný na anglickej zelenine a pečených amerických zemiakoch
+150/180 g/ [ 1, 3, 7]
+Bačovský prírodný bravčový rezeň z karé, plnený údeným oštiepkom a pancettou
+7,90 €
+podávaný na krémovej omáčke z čerstvých byliniek s dusenou ryžou
+150/180 g/ [ 7]
+Zemiakový prívarok na kyslo s pečenými zemiakmi a domácou fašírkou
+7,80 €
+podávaný s chlebom 2 ks
+360 g/ [ 1, 3, 7, 12]
+Špeciálna ponuka
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 4, 7, 8, 11, 12]
+12,50 €
+Štvrtok 10. 9. 2026
+Polievky
+Babičkina bramboračka s hubami, koreňovou zeleninou a čerstvým tymiánom
+0,33 l/ [ 1, 7, 9]
+2,10 €
+Vývar s cestovinou a koreňovou zeleninou
+0,33 l/ [ 1, 3, 9]
+2,10 €
+Hlavné jedlá
+Kurací Cordon Bleu, plnený prosciuttom a Nivou,
+7,80 €
+podávaný s varenými zemiakmi
+150/180 g/ [ 1, 3, 7]
+Bravčové na hrášku
+7,80 €
+podávané s dusenou ryžou a zeleninovým šalátikom
+150/180 g/ [ 1, 3, 4, 7, 9, 12]
+Lagagne Bolognesse s u nás mletým mäsom, pomodoro s čerstvou bazalkou, bešamelom a koreňovou zeleninou, zapekané s mozzarellou
+360 g/ [ 1, 3, 7, 9, 12]
+7,90 €
+Špeciálna ponuka
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 4, 7, 8, 11, 12]
+12,50 €
+Piatok 11. 9. 2026
+Polievky
+Kapustová s hubami a údeninou
+0,33 l/ [ 1, 9, 12]
+2,30 €
+Vývar s cestovinou a koreňovou zeleninou
+0,33 l/ [ 1, 3, 9]
+2,30 €
+Hlavné jedlá
+Kuracie prsia plnené s bryndzou a mladou cibuľkou na maslovej omáčke,
+7,80 €
+podávané so zeleninovou ryžou a pečenými zemiakmi
+150/180 g/ [ 7, 12]
+Holandský mletý bravčový rezeň so syrom,
+7,90 €
+podávaný so zemiakovou kašou a kyslou uhorkou
+150/180 g/ [ 1, 3, 7, 12]
+Domáca jablkovo tvarohová žemľovka so škoricou a snehovou perinkou
+350 g/ [ 1, 3, 7, 12]
+7,80 €
+Špeciálna ponuka
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 4, 7, 8, 11, 12]
+12,50 €
+Sobota 12. 9. 2026
 Polievky
 polievka
 0,33 l/ [ 1, 7, 9, 12]
@@ -166,10 +159,10 @@ Vývar s cestovinou a koreňovou zeleninou
 0,33 l/ [ 1, 3, 9]
 2,90 €
 Hlavné jedlá
-Grilovaný kurací plátok na Quatro Formaggi omáčke s blanšírovanou brokolicou
+Grilovaný kurací plátok na smotanovej omáčke so sušenými rajčinami, baby špenátom a muškátovým orieškom
 9,50 €
-podávaný s pečenými americkými zemiakmi
-150/180 g/ [ 1, 7, 12]
+podávaný s dusneou ryžou a opekanými zemiakmi
+150/180 g/ 
 Zemiakové bryndzové halušky s opečenou slaninkou, kyslou smotanou a čerstvou pažítkou
 360 g/ [ 1, 3, 7, 12]
 9,30 €
@@ -178,10 +171,10 @@ Vyprážaný syr Gouda v trojobale
 podávaný so zemiakovými hranolkami a domácou tátárskou omáčkou
 110/180/30 g/ [ 1, 3, 7, 10]
 Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
-Nedeľa 6. 9. 2026
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 7, 8, 11, 12]
+12,50 €
+Nedeľa 13. 9. 2026
 Polievky
 Bravčové bratislavské pliecko na omáčke z koreňovej zeleniny
 3,50 €
@@ -203,9 +196,9 @@ Vyprážaný syr Gouda v trojobale
 podávaný so zemiakovými hranolkami a domácou tatárskou omáčkou
 110/180/30 g/ [ 1, 3, 7, 10]
 Špeciálna ponuka
-Tasmánsky kurací steak, servírovaný na linquinne s krémovej maslovej omáčkou s parmezánom a čerstvou julienne zeleninou z cukety, mrkvy a mladého hrášku
-150/200 g/ [ 1, 3, 7]
-12,90 €
+Poke bowl s grilovanými kuracími kúskami marinovanými v Hoisin omáčke, mangom, edaname, nakladanou červenou kapustou, mrkvou a kukuricou s krémovou sweet chilli majonézou, zdobená sézamom a čerstvým koriandrom
+360 g/ [ 1, 3, 7, 8, 11, 12]
+12,50 €
 Next
 Jedálny lístok
 
