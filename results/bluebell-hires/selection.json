@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-07",
+  "capturedAt": "2026-09-07T08:51:16.220Z",
+  "status": "unavailable",
+  "selected": null,
+  "candidates": [],
+  "rejected": [
+    {
+      "file": "gallery-02.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    }
+  ]
+}
