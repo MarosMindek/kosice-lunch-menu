@@ -3,14 +3,16 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { parseBluebell } from '../bluebell-select.mjs';
 import { sha256, normalized, validateSource, dateRanges } from './menu-contract.mjs';
+const publishedPortion=item=>item.sourceText.match(/(?:^|\s)(\d{2,3}(?:\s*\/\s*\d{2,3})*\s*g)\b/i)?.[1];
 
 export function cleanOCRMenu(menu) {
   const m=structuredClone(menu);
   for(const soup of m.soups) soup.name=soup.name.replace(/\s+[\d,]+\s*$/,'').trim();
+  for(const main of m.mains) {const portion=publishedPortion(main);if(portion)main.portion=portion;}
   return m;
 }
 export function imageMenuKey(m) {
-  return JSON.stringify([m.source.validFrom,m.source.validTo,m.soups.map(i=>[normalized(i.name),i.price]),m.mains.map(i=>[i.category,normalized(i.name),i.price])]);
+  return JSON.stringify([m.source.validFrom,m.source.validTo,m.soups.map(i=>[normalized(i.name),i.price]),m.mains.map(i=>[i.category,normalized(i.name),normalized(publishedPortion(i)),i.price])]);
 }
 export function agreeOCR(passes,candidate,date) {
   const groups=new Map();

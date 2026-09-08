@@ -75,6 +75,7 @@ test('the real Facebook image passes on two original readings without a manual b
   const accepted=agreeOCR(passes.slice(0,2),candidate,'2026-09-08');
   assert.ok(accepted);assert.equal(accepted.soups[0].name,'Kurací Vývar');
   assert.deepEqual(accepted.mains.map(i=>i.price),[11.9,8.9,8.9,8.9,9.9]);
+  assert.deepEqual(accepted.mains.map(i=>i.portion),['180/100/100/50g','250/250/50g','120/250/50g','150/100/100g','180/250/50g']);
   assert.equal(accepted.source.kind,'image-ocr');assert.equal(accepted.source.ocrEvidence.length,2);
   // The optional transformed reading misreads the r as ľ; it is unnecessary after agreement.
   assert.equal(agreeOCR([passes[0],passes[2]],candidate,'2026-09-08'),null);
