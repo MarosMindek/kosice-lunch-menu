@@ -89,4 +89,3 @@ for(const [name,d] of Object.entries(results.pages)){
 }
 fs.writeFileSync(`${OUT}/summary.json`,JSON.stringify(results,null,2));
 await browser.close();
-

@@ -1,0 +1,6 @@
+node_modules/
+output/
+.state/
+gmail-oauth.json
+client_secret*.json
+.env

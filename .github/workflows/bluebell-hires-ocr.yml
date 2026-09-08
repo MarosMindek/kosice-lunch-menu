@@ -1,19 +1,8 @@
 name: BlueBell hi-res OCR
 
+# Superseded by daily-lunch.yml; retained for explicit diagnostics only.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/bluebell-hires.mjs'
-      - 'scripts/bluebell-select.mjs'
-      - 'scripts/lib/menu-contract.mjs'
-      - 'scripts/lib/facebook-images.mjs'
-      - 'package.json'
-      - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
-  schedule:
-    # Primary image capture with another opportunity before the later mail attempts.
-    - cron: '3,28 7,8 * * 1-5'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

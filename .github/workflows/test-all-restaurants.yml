@@ -1,17 +1,8 @@
 name: Live all restaurants scraper
 
+# Superseded by daily-lunch.yml; retained for explicit diagnostics only.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/all-restaurants.mjs'
-      - 'package.json'
-      - '.github/workflows/test-all-restaurants.yml'
   workflow_dispatch:
-  schedule:
-    # Refresh before the 09:30, 09:45 and 10:00 Europe/Bratislava mail gates.
-    # Both UTC hours refresh; delayed jobs must not be discarded based on the actual clock.
-    - cron: '7,22,37 7,8 * * 1-5'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -52,4 +43,3 @@ jobs:
             if git push; then exit 0; fi
           done
           exit 1
-

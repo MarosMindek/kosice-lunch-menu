@@ -1,16 +1,8 @@
 name: Live Stara Sypka PDF scraper
 
+# Superseded by daily-lunch.yml; retained for explicit diagnostics only.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/stara-sypka.mjs'
-      - 'package.json'
-      - '.github/workflows/test-stara-sypka.yml'
   workflow_dispatch:
-  schedule:
-    # Refresh before the 09:30, 09:45 and 10:00 Europe/Bratislava mail gates.
-    - cron: '15,35,50 7,8 * * 1-5'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -56,4 +48,3 @@ jobs:
             done
             exit 1
           fi
-

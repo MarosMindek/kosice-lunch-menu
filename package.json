@@ -10,9 +10,12 @@
     "scrape:stara-sypka": "node scripts/stara-sypka.mjs",
     "test": "node --test test/*.test.mjs",
     "select:bluebell": "node scripts/bluebell-select.mjs",
-    "render:email": "node scripts/render-email.mjs"
+    "render:email": "node scripts/render-email.mjs",
+    "lunch:dry-run": "node scripts/lunch.mjs --dry-run",
+    "lunch:send": "node scripts/lunch.mjs --send",
+    "lunch:check-config": "node scripts/lunch.mjs --check-config"
   },
   "dependencies": {
-    "playwright": "^1.55.0"
+    "playwright": "1.55.0"
   }
 }

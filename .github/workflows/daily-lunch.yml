@@ -1,0 +1,88 @@
+name: Autonomous lunch email
+
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'templates/**', 'test/**', 'package.json', '.github/workflows/daily-lunch.yml']
+  workflow_dispatch:
+    inputs:
+      send:
+        description: 'Send the validated email (false runs a live preview only)'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '30,45 9 * * 1-5'
+      timezone: 'Europe/Bratislava'
+    - cron: '0 10 * * 1-5'
+      timezone: 'Europe/Bratislava'
+
+concurrency:
+  group: autonomous-lunch-delivery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  lunch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SEND_EMAIL: ${{ github.event_name == 'schedule' || inputs.send == true }}
+      GMAIL_OAUTH_JSON: ${{ secrets.GMAIL_OAUTH_JSON }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Skip non-working days and already delivered mail before installing browsers
+        id: preflight
+        run: node scripts/preflight.mjs
+      - name: Regression tests
+        if: steps.preflight.outputs.skip != 'true'
+        run: npm test
+      - name: Install deterministic collection dependencies
+        if: steps.preflight.outputs.skip != 'true'
+        run: |
+          npm install --ignore-scripts
+          npx playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
+      - name: Collect, validate, render and optionally deliver
+        if: steps.preflight.outputs.skip != 'true'
+        run: |
+          if [ "$SEND_EMAIL" = "true" ]; then
+            npm run lunch:send
+          else
+            npm run lunch:dry-run
+          fi
+      - name: Save diagnostics and exact rendered preview
+        if: always() && steps.preflight.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lunch-${{ github.run_id }}
+          path: |
+            output/autonomous/
+            output/bluebell-hires/
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Publish public source evidence for development runs
+        if: always() && github.event_name == 'push'
+        run: |
+          mkdir -p results/autonomous
+          for name in sources.json status.json; do
+            if [ -f "output/autonomous/$name" ]; then
+              cp "output/autonomous/$name" "results/autonomous/$name"
+            fi
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/autonomous
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record autonomous live validation [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
