@@ -17,8 +17,8 @@ on:
       timezone: 'Europe/Bratislava'
 
 concurrency:
-  group: autonomous-lunch-delivery
-  cancel-in-progress: false
+  group: ${{ (github.event_name == 'schedule' || inputs.send == true) && 'autonomous-lunch-delivery' || 'autonomous-lunch-preview' }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' && inputs.send != true }}
 
 permissions:
   contents: write
@@ -42,13 +42,22 @@ jobs:
       - name: Regression tests
         if: steps.preflight.outputs.skip != 'true'
         run: npm test
-      - name: Install deterministic collection dependencies
+      - name: Install pinned Node dependencies
         if: steps.preflight.outputs.skip != 'true'
+        timeout-minutes: 3
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium and browser system dependencies
+        if: steps.preflight.outputs.skip != 'true'
+        timeout-minutes: 6
+        env:
+          PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '30000'
+        run: npx playwright install --with-deps chromium
+      - name: Install PDF and OCR dependencies
+        if: steps.preflight.outputs.skip != 'true'
+        timeout-minutes: 3
         run: |
-          npm install --ignore-scripts
-          npx playwright install --with-deps chromium
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
       - name: Collect, validate, render and optionally deliver
         if: steps.preflight.outputs.skip != 'true'
         run: |

@@ -1,6 +1,6 @@
 # Obedové menu bez modelových volaní
 
-Bežný beh používa Node.js, Playwright, lokálny Tesseract a Gmail API. Nevolá žiadny jazykový ani obrazový model a nepotrebuje ChatGPT úlohu, prompt, ručné skladanie JSON ani ručné odoslanie.
+Bežný beh používa Node.js, Playwright, lokálny Tesseract a Gmail API. Nevolá žiadne generatívne modelové API a nepotrebuje ChatGPT úlohu, prompt, ručné skladanie JSON ani ručné odoslanie. OCR beží lokálne bez spotreby LLM tokenov.
 
 ## Jeden príkaz
 
@@ -10,7 +10,7 @@ npm run lunch:send
 
 Príkaz sám overí pracovný deň a Gmail Sent, stiahne oficiálne zdroje, vyberie dnešné sekcie, spracuje obrázky/PDF, skontroluje položky a ceny, vygeneruje pevnú šablónu a odošle ju. Úspech potvrdí až po porovnaní odoslanej MIME kópie s pôvodným HTML aj textom. Na živý test bez odoslania slúži `npm run lunch:dry-run`.
 
-Výstupy sú v `output/autonomous/`: `status.json`, `sources.json`, `normalized-menu.json`, `email.json`, `email.html`, `email.txt`. Pred novým behom sa staré e-mailové výstupy odstránia. `status.json` uvádza `modelCalls: 0`; ide o počet modelových volaní tohto programu.
+Výstupy sú v `output/autonomous/`: `status.json`, `sources.json`, `normalized-menu.json`, `email.json`, `email.html`, `email.txt`. Pred novým behom sa staré e-mailové výstupy odstránia. `status.json` uvádza `modelCalls: 0`; označuje volania externých generatívnych modelov, nie lokálne OCR.
 
 ## Jednorazové pripojenie Gmailu
 
@@ -39,7 +39,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
 ## Rozvrh a formát
 
 - Jediný prevádzkový workflow: `daily-lunch.yml`, pondelok–piatok **09:30, 09:45 a 10:00 Europe/Bratislava**. Časové pásmo rieši aj letný čas. GitHub môže plánovaný štart oneskoriť; nejde o garanciu doručenia presne na minútu. [GitHub: plánované workflow](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
-- Druhý a tretí pokus skončia pred inštaláciou prehliadača, ak už existuje overený e-mail. Súbežné behy sa serializujú.
+- Druhý a tretí pokus skončia pred inštaláciou prehliadača, ak už existuje overený e-mail. Odosielacie behy sa serializujú a nikdy sa automaticky nerušia. Skúšobné behy majú samostatnú skupinu; nový náhľad môže nahradiť starší bez zrušenia odosielania. Inštalácie majú vlastné časové limity.
 - `templates/email-v1.html` zostáva rovnaký. Jeho SHA-256 je uložené v `templates/email-v1.sha256`. Zmena šablóny bez výslovnej aktualizácie kontrolného súčtu zablokuje beh.
 - Všetky konkrétne položky, prílohy a ceny ostávajú v HTML aj textovej alternatíve. Tahiti má 15 % zľavu len na hlavné jedlá. Dezerty sa neporovnávajú s hlavnými jedlami.
 - Stará Sýpka je v pondelok zatvorená; utorok–piatok je povinná. Kalendár obsahuje Veľkú noc aj zákonné výnimky pre 8. máj a 15. september 2026. [Zákon 241/1993, účinné znenie](https://static.slov-lex.sk/static/SK/ZZ/1993/241/20251101.html).
