@@ -62,4 +62,4 @@ Gmail API neposkytuje transakciu spoločnú s GitHubom. Ak sa po požiadavke na 
 
 `npm test` kontroluje reálne formáty celého publikovaného týždňa, prílohy, dezerty, ceny, sviatky, expiráciu a konflikty OCR, presné MIME, opakovaný/súbežný beh, zmenu dátumu a trvalý záznam nejasného odoslania. Testy transportu používajú simulovanú schránku; skutočné odoslanie samostatným programom sa overí po pripojení Gmailu.
 
-Push zmeny kódu na `main` vykoná celý živý test bez odoslania. Výsledok a verejné zdrojové údaje sa zapíšu aj do `results/autonomous/`. Samotný push nikdy neposiela e-mail. Staré jednotlivé zberové workflow ostávajú iba na výslovnú diagnostiku.
+Push zmeny kódu na `main` vykoná celý živý test bez odoslania. Výsledok, zdrojové údaje a presný náhľad sú uložené v artefakte daného behu na sedem dní. Zber nezapisuje diagnostiku do hlavnej vetvy; staršie súbory `results/autonomous/` sú historické výstupy, nie stav najnovšieho behu. Samotný push nikdy neposiela e-mail. Staré jednotlivé zberové workflow ostávajú iba na výslovnú diagnostiku.
