@@ -31,6 +31,15 @@ test('new unrecognized rows and missing prices stop automatic parsing',()=>{
   const t=structuredClone(raw.tahiti);t.lines=t.lines.filter(s=>s!=='16.90 €');
   assert.throws(()=>parsers.tahiti(t,options.date),/price/);
 });
+test('Sypka current PDF retains wrapped meals and handles prices beside portions',()=>{
+  const raw=read('raw-sypka.json');
+  for(const pdfText of [raw.pdfText,raw.pdfText.replaceAll(')\n',') ')]) {
+    const parsed=parsers['stara-sypka']({...raw,pdfText},'2026-09-08');
+    assert.equal(parsed.soups.length,1);assert.equal(parsed.mains.length,6);
+    assert.deepEqual(parsed.mains.map(i=>i.price),[8.9,9.2,9.5,10.2,8.9,12.9]);
+    assert.ok(parsed.mains.some(i=>i.name.includes('UHORKOVÝ ŠALÁT')));
+  }
+});
 test('Slovak calendar includes Easter and the enacted 2026 exceptions',()=>{
   for(const d of ['2026-01-01','2026-01-06','2026-04-03','2026-04-06','2026-05-01','2026-12-24','2026-09-12'])assert.equal(isWorkday(d),false,d);
   for(const d of ['2026-05-08','2026-09-01','2026-09-08','2026-09-15','2026-11-17'])assert.equal(isWorkday(d),true,d);

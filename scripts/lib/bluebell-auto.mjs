@@ -46,6 +46,7 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
     try{const m=JSON.parse(fs.readFileSync(path.join(backupDirectory,f)));validateSource(m.source,date,'bluebell');return[m];}catch{return[];}
   }):[];
   const out=path.join(directory,'auto-ocr');fs.mkdirSync(out,{recursive:true});
+  const diagnostics=[];
   for(const c of meta.candidates||[]) {
     if(!c.saved)continue;
     const file=path.join(directory,path.basename(c.saved.file));
@@ -59,7 +60,7 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
         execFileSync('tesseract',[image,base,'-l','slk+eng','--psm',String(psm),'txt','tsv'],{timeout:20000,stdio:'pipe'});
         const text=fs.readFileSync(base+'.txt','utf8'),confidence=ocrConfidence(fs.readFileSync(base+'.tsv','utf8'));
         passes.push({text,confidence,psm,inputSha256:sha256(fs.readFileSync(image))});
-        try{observed.push(cleanOCRMenu(parseBluebell(text,c,c.capturedAt,date)));}catch{}
+        if(confidence>=85)try{observed.push(cleanOCRMenu(parseBluebell(text,c,c.capturedAt,date)));}catch{}
         if(label==='original-6') {
           const ranges=dateRanges(text),markers=[...normalized(text).matchAll(/biznismenu|tradicnemenu|veggiemenu|specialmenu/g)].length;
           if(markers<3 || (ranges.length===1&&(ranges[0].to<date||ranges[0].from>date)))break;
@@ -67,7 +68,10 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
       }catch{failures.push({file:c.saved.file,psm,reason:'ocr_failed'});}
     }
     const menu=agreeOCR(passes,c,date);if(menu)accepted.push(menu);
+    diagnostics.push({candidate:c,passes,accepted:!!menu});
   }
+  fs.mkdirSync('output/autonomous',{recursive:true});
+  fs.writeFileSync('output/autonomous/bluebell-diagnostics.json',JSON.stringify({date,diagnostics,observed,failures},null,2));
   const keys=new Set(accepted.map(imageMenuKey));
   if(keys.size>1)throw Error('Bluebell: conflicting current images');
   if(accepted.length) {

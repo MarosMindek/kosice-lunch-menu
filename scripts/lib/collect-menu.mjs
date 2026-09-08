@@ -22,6 +22,7 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
       await page.waitForTimeout(1800);
       const text=await page.locator('body').innerText();
       const raw={requestedUrl:url,capturedAt:new Date().toISOString(),lines:text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean)};
+      sources[id+'-latest-attempt']=raw;
       if(id==='stara-sypka') {
         const links=await page.locator('a').evaluateAll(as=>as.map(a=>a.href).filter(u=>/\.pdf(?:$|\?)/i.test(u)));
         for(const link of [...new Set(links)].slice(0,3)) {
@@ -30,8 +31,9 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
           const res=await ctx.request.get(pdfURL.href,{timeout:30000,headers:{'cache-control':'no-cache'}});
           if(!res.ok()||!/application\/pdf/.test(res.headers()['content-type']||''))continue;
           const pdf=path.join(out,'stara-sypka.pdf'),txt=path.join(out,'stara-sypka.txt');
-          fs.writeFileSync(pdf,await res.body());await execute('pdftotext',['-layout',pdf,txt],{timeout:15000});
+          fs.writeFileSync(pdf,await res.body());await execute('pdftotext',['-raw',pdf,txt],{timeout:15000});
           const candidate={...raw,lines:undefined,pdfText:fs.readFileSync(txt,'utf8'),requestedPdfUrl:pdfURL.href};
+          sources['stara-sypka-pdf-'+pdfURL.pathname.split('/').pop()]=candidate;
           try{const parsed=parsers[id](candidate,date);validateSource(parsed.source,date,id);return{raw:candidate,parsed};}catch(e){errors.push({id,reason:e.message});}
         }
         throw Error('No current Sypka PDF parsed');

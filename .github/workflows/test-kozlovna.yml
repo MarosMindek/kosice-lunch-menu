@@ -1,12 +1,7 @@
 name: Test Kozlovna live scraper
 
+# Explicit diagnostic only; production runs through daily-lunch.yml.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/kozlovna.mjs'
-      - 'package.json'
-      - '.github/workflows/test-kozlovna.yml'
   workflow_dispatch:
 
 jobs:

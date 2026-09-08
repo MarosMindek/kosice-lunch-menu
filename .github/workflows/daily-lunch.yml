@@ -71,7 +71,7 @@ jobs:
         if: always() && github.event_name == 'push'
         run: |
           mkdir -p results/autonomous
-          for name in sources.json status.json; do
+          for name in sources.json status.json bluebell-diagnostics.json; do
             if [ -f "output/autonomous/$name" ]; then
               cp "output/autonomous/$name" "results/autonomous/$name"
             fi

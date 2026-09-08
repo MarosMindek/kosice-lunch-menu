@@ -1,11 +1,7 @@
 name: Test deep menu fallbacks
 
+# Explicit diagnostic only; production runs through daily-lunch.yml.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/deep-fallbacks.mjs'
-      - '.github/workflows/test-deep-fallbacks.yml'
   workflow_dispatch:
 
 jobs:

@@ -86,9 +86,9 @@ export function parseSypka(raw,date) {
   const lines=linesOf(raw), dates=lines.filter(s=>serviceDates(s,date).includes(date));
   if(!dates.length)throw Error('Sypka: PDF does not contain current date');
   const soups=[],mains=[],notes=[];
-  const isLabel=s=>['starasypka','denne','menu','polievka','specialita','dennaponuka'].includes(normalized(s)) || serviceDates(s,date).length>0;
+  const isLabel=s=>['starasypka','dennemenu','denne','menu','polievka','specialita','dennaponuka'].includes(normalized(s)) || serviceDates(s,date).length>0;
   const isFooter=s=>/^(1obilniny|6sojove|pribalenijedal)/.test(normalized(s));
-  const priceIndexes=lines.map((s,i)=>/^\d{1,3}[,.]\d{2}\s*€$/.test(s)?i:-1).filter(i=>i>=0);
+  const priceIndexes=lines.map((s,i)=>/\d{1,3}[,.]\d{2}\s*€$/.test(s)&&!isFooter(s)?i:-1).filter(i=>i>=0);
   let cursor=0;
   for(const end of priceIndexes) {
     const block=lines.slice(cursor,end+1);cursor=end+1;
@@ -100,7 +100,7 @@ export function parseSypka(raw,date) {
     const item={name,portion:q[1],price:price(lines[end]),sourceText:lines.slice(end-block.length+1,end+1).join('\n')};
     (/l$/i.test(q[1])?soups:mains).push(item);
   }
-  const otherPrices=lines.filter(s=>/€/.test(s)&&!/^\d{1,3}[,.]\d{2}\s*€$/.test(s));
+  const otherPrices=lines.filter((s,i)=>/€/.test(s)&&!priceIndexes.includes(i));
   for(const line of otherPrices) { if(!isFooter(line))throw Error('Sypka: unparsed published price'); notes.push(line); }
   return complete('stara-sypka',source(raw,date,lines,dates[0]),soups,mains,[],notes);
 }

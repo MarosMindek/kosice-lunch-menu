@@ -1,10 +1,7 @@
 name: OCR captured BlueBell images
 
+# Explicit diagnostic only; production runs through daily-lunch.yml.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/ocr-bluebell-existing.yml'
   workflow_dispatch:
 
 permissions:

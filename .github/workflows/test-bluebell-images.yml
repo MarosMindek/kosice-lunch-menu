@@ -1,12 +1,7 @@
 name: Test BlueBell image capture
 
+# Explicit diagnostic only; production runs through daily-lunch.yml.
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/bluebell-images.mjs'
-      - 'package.json'
-      - '.github/workflows/test-bluebell-images.yml'
   workflow_dispatch:
 
 concurrency:
@@ -58,4 +53,3 @@ jobs:
             if git push; then exit 0; fi
           done
           exit 1
-

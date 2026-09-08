@@ -12,7 +12,7 @@ if([...args].some(a=>!['--send','--dry-run','--check-config'].includes(a)))throw
 if(args.has('--send')&&args.has('--dry-run'))throw Error('Choose one execution mode');
 fs.mkdirSync(out,{recursive:true});
 for(const name of ['email.json','email.html','email.txt','normalized-menu.json','status.json','sources.json'])fs.rmSync(path.join(out,name),{force:true});
-const status={date,mode:args.has('--send')?'send':'dry-run',startedAt:new Date().toISOString(),modelCalls:0};
+const status={date,mode:args.has('--send')?'send':'dry-run',startedAt:new Date().toISOString(),modelCalls:0,mailSecretPresent:!!process.env.GMAIL_OAUTH_JSON};
 try {
   if(args.has('--check-config')){mailConfig();new GitHubJournal();status.status='configured';}
   else if(!isWorkday(date))status.status='non_workday';
