@@ -70,6 +70,15 @@ test('Gmail MIME preserves the exact template and rejects altered or legacy copi
   assert.equal(validSentCopy({labelIds:['SENT'],payload:{headers:[],parts:[]}},options.date,config.to),false);
   assert.throws(()=>mailConfig(JSON.stringify({...config,to:'a@example.com\r\nBcc: b@example.com'})),/mailbox/);
 });
+test('the real Facebook image passes on two original readings without a manual backup',()=>{
+  const {candidate,passes}=read('bluebell-live-consensus.json');
+  const accepted=agreeOCR(passes.slice(0,2),candidate,'2026-09-08');
+  assert.ok(accepted);assert.equal(accepted.soups[0].name,'Kurací Vývar');
+  assert.deepEqual(accepted.mains.map(i=>i.price),[11.9,8.9,8.9,8.9,9.9]);
+  assert.equal(accepted.source.kind,'image-ocr');assert.equal(accepted.source.ocrEvidence.length,2);
+  // The optional transformed reading misreads the r as ľ; it is unnecessary after agreement.
+  assert.equal(agreeOCR([passes[0],passes[2]],candidate,'2026-09-08'),null);
+});
 const now=()=>options.now;
 function fakes() {
   const state=new Map();let posts=0,indexed=false;

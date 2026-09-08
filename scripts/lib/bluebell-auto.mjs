@@ -52,15 +52,18 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
     const file=path.join(directory,path.basename(c.saved.file));
     if(sha256(fs.readFileSync(file))!==c.imageSha256)throw Error('Bluebell image provenance mismatch');
     const enhanced=path.join(out,path.parse(c.saved.file).name+'-enhanced.png');
-    execFileSync('python3',['scripts/ocr-preprocess.py',file,enhanced],{timeout:15000,stdio:'pipe'});
     const passes=[];
     for(const [image,psm,label] of [[file,6,'original-6'],[file,11,'original-11'],[enhanced,6,'enhanced-6']]) {
       const base=path.join(out,path.parse(c.saved.file).name+'-'+label);
       try {
+        if(image===enhanced)execFileSync('python3',['scripts/ocr-preprocess.py',file,enhanced],{timeout:15000,stdio:'pipe'});
         execFileSync('tesseract',[image,base,'-l','slk+eng','--psm',String(psm),'txt','tsv'],{timeout:20000,stdio:'pipe'});
         const text=fs.readFileSync(base+'.txt','utf8'),confidence=ocrConfidence(fs.readFileSync(base+'.tsv','utf8'));
         passes.push({text,confidence,psm,inputSha256:sha256(fs.readFileSync(image))});
         if(confidence>=85)try{observed.push(cleanOCRMenu(parseBluebell(text,c,c.capturedAt,date)));}catch{}
+        // Once two readings of the original pixels agree, do not introduce an unnecessary
+        // transformed third reading. Upscaling can degrade a letter in an already clear image.
+        if(agreeOCR(passes,c,date))break;
         if(label==='original-6') {
           const ranges=dateRanges(text),markers=[...normalized(text).matchAll(/biznismenu|tradicnemenu|veggiemenu|specialmenu/g)].length;
           if(markers<3 || (ranges.length===1&&(ranges[0].to<date||ranges[0].from>date)))break;

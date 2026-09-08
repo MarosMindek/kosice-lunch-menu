@@ -87,6 +87,7 @@ export async function deliver({menu,message,gmail,journal,now=()=>new Date()}) {
     throw Error('UNCERTAIN_SEND: a durable delivery intent already exists; refusing a blind resend');
   }
   // No retries of POST /send. A timeout may mean Gmail already accepted the message.
+  if(localDate(now())!==menu.date)throw Error('Service date changed while reserving delivery');
   const result=await gmail.send(message);
   if(!result.id)throw Error('UNCERTAIN_SEND: Gmail returned no message ID');
   await gmail.verify(result.id,message);

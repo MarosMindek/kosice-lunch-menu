@@ -9,14 +9,14 @@ const client=JSON.parse(fs.readFileSync(clientFile,'utf8')).installed;
 if(!client?.client_id||!client.client_secret)throw Error('Use an OAuth Desktop application client JSON');
 const state=randomBytes(24).toString('base64url'),verifier=randomBytes(48).toString('base64url');
 const server=http.createServer();await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const redirect=`http://127.0.0.1:${server.address().port}/callback`;
+const redirect=`http://127.0.0.1:${server.address().port}`;
 const url=new URL('https://accounts.google.com/o/oauth2/v2/auth');
 url.search=new URLSearchParams({client_id:client.client_id,redirect_uri:redirect,response_type:'code',scope:'https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send',access_type:'offline',prompt:'consent',state,code_challenge:createHash('sha256').update(verifier).digest('base64url'),code_challenge_method:'S256'}).toString();
 console.log('Open this Google authorization page on this computer:\n'+url.href);
 const timer=setTimeout(()=>{server.close();console.error('Authorization timed out; run setup again.');process.exitCode=1;},10*60*1000);
 server.on('request',async(req,res)=>{
   const callback=new URL(req.url,redirect);
-  if(callback.pathname!=='/callback'||callback.searchParams.get('state')!==state){res.writeHead(400).end('Invalid authorization callback');return;}
+  if(callback.pathname!=='/'||callback.searchParams.get('state')!==state){res.writeHead(400).end('Invalid authorization callback');return;}
   try {
     const code=callback.searchParams.get('code');if(!code)throw Error('Authorization was not granted');
     const response=await fetch('https://oauth2.googleapis.com/token',{method:'POST',body:new URLSearchParams({client_id:client.client_id,client_secret:client.client_secret,code,code_verifier:verifier,redirect_uri:redirect,grant_type:'authorization_code'}),signal:AbortSignal.timeout(20000)});

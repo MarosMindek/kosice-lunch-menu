@@ -46,7 +46,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
 
 ## BlueBell a zlyhania zdrojov
 
-Program porovnáva viacero OCR čítaní jedného konkrétneho obrázka, vrátane zväčšenej verzie pôvodných pixelov. Na prijatie nového menu vyžaduje zhodu najmenej dvoch odlišných čítaní, minimálnu priemernú istotu 85 %, celý platný dátum, tri publikované polievkové položky a všetkých päť kategórií hlavných jedál. Rozdielne kompletné aktuálne menu blokujú odoslanie. Dátum príspevku ani zachytenia nenahrádza dátum na obrázku.
+Program porovnáva viacero OCR čítaní jedného konkrétneho obrázka, podľa potreby aj zväčšenú verziu pôvodných pixelov. Na prijatie nového menu vyžaduje zhodu najmenej dvoch odlišných čítaní, minimálnu priemernú istotu 85 %, celý platný dátum, tri publikované polievkové položky a všetkých päť kategórií hlavných jedál. Po zhode dvoch pôvodných čítaní už obraz zbytočne netransformuje. Rozdielne kompletné aktuálne menu blokujú odoslanie. Dátum príspevku ani zachytenia nenahrádza dátum na obrázku.
 
 OCR konsenzus je automatická kontrola, nie vyhlásenie o ľudskej vizuálnej kontrole. Chybu spoločnú viacerým OCR čítaniam nemožno úplne vylúčiť. Existujúci overený obrázok v `data/bluebell/2026-09-07.json` je len záloha na 7.–11. september 2026; jeho dátumy sa nepredlžujú. Po skončení platnosti musí prejsť nové OCR.
 
