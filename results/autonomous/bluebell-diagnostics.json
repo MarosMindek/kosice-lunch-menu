@@ -1,0 +1,962 @@
+{
+  "date": "2026-09-08",
+  "diagnostics": [
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1779999920293006&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/771894465_1790159489065740_5423137849678256738_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s206x206&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=vhyxq0S30V4Q7kNvwHz7TNT&_nc_oc=AdpxfKsdPbD2LOO4D6lw_g2UlA7iaBb0cSMzlkuPqK87M6vNnH6Sw4cA8Thyp0njphs&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQKyeNFXzr9yDo-UWRnRCBk8sh5icHsP2VmJYPfJ3vBIhg&oe=6AA5BCE5",
+        "alt": "Na obrázku môže byť text, v ktorom sa píše „TYŽDENNÉ od 10.8.2026 do 14.8.2026 14:00 BLUEBELL 1:00 Vpivámik menu džbán vody scitrónom GRÁTIS POLIEVKY 0,331 Kurací Vyvar 2,00€ 0,331 Podla Dennej Ponuky 2,00€ 0,331 Polievka Samostatne 3,50€ BIZNIS 12,90€ Grilované Sous Vide Kačacie Prsia Redukciou Portského Vina /Konfitovaná Mrkva/ Domáci Karlovarsky Knedlik/ Shimeji Huby TRADIČNE MENU 8,90€ Sošovicový Prívarok Bravčovou Sekanou Plnenou Vajíčkom Barčiansky Chlieb 180/300/50g 1,3,7,3 VEGGIE MENU 9,90€ Tekvicovym Krémom Feta Syrom/ Tekvicové Semienka Cerstvé Bylinky 300/50g 1,3,7 ŠPECIÁL MENU |8,90€ Kuraci Stroganov SBasmati Ryžou Domácimi Hranolkami Kurací Cordon 150/ 150/100/100g, ŠPECIÁL MENU 9,90€ Zemiakovou Kašou Uhorkový Salát Bolt Food OSOBNÝ ODBER: 10 000 www.pivarenbluebell.sk pivarenbluebell“",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1779999920293006",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:14.905Z",
+        "imageSha256": "a250aae4be715d318a199ac03d64b0c7698a9f9adff612a1689e78dfbfa7696f",
+        "saved": {
+          "file": "gallery-01.jpg",
+          "bytes": 143174,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/771894465_1790159489065740_5423137849678256738_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=vhyxq0S30V4Q7kNvwHz7TNT&_nc_oc=AdpxfKsdPbD2LOO4D6lw_g2UlA7iaBb0cSMzlkuPqK87M6vNnH6Sw4cA8Thyp0njphs&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQKyeNFXzr9yDo-UWRnRCBk8sh5icHsP2VmJYPfJ3vBIhg&oe=6AA5BCE5"
+        }
+      },
+      "passes": [
+        {
+          "text": "~ bal —\nY, Ý 0d 10.8.2026 do 14.8.2026 Vpivárni k menu\nBLUEBELL od 11:00 do 14:00 džbán vody\n— PIVÁREŇ — sdtronom\nPOLIEVKY GRÁTIS\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 12,90€\nGrilované Sous Vide Kačacie Prsia s Redukciou z Portského Vína / Konfitovaná Mrkva /\nDomáci Karlovarský Knedlík / Shimeji Huby 180/250/50g 13712\nTRADIČNÉ MENU | 8,90€\nŠošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barčiansky Chlieb 180/300/509 13,79\nVEGGIE MENU | 9,90€\nTagliatelle s Tekvicovým Krémom a Feta Syrom / Tekvicové Semienka / Čerstvé Bylinky 300/504 13:\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nKurací Cordon Bleu so Zemiakovou Kašou / Uhorkový Šalát. 180/250/50g 12712\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 87.00061060869565,
+          "psm": 6,
+          "inputSha256": "a250aae4be715d318a199ac03d64b0c7698a9f9adff612a1689e78dfbfa7696f"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/489528733_1335927868033549_2157637808078838566_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s960x960&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=irmLNSbIYBAQ7kNvwEmn4ua&_nc_oc=AdoVOVbk5ebejHoNgduwYk3Ejd_RxxH7lAJLgcDraow4KNHIetcAZvsjTZyyZHhJjoE&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=h4tnTp23gFBRNYwMqkO8iA&_nc_ss=7f289&oh=00_AQLl74N_GdCl35bGRZ2f1jS6ZP8zRrcEhNxrnSGw69I51w&oe=6AA5B27F",
+        "alt": "",
+        "w": 720,
+        "h": 960,
+        "caption": "",
+        "fbid": "1004694561156883",
+        "source": "posts",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Kosice | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.112Z",
+        "imageSha256": "272ab6bba52a75308eb37c68ed9a76dd4c329bfc89315e4e95947a4711e09b33",
+        "saved": {
+          "file": "gallery-02.jpg",
+          "bytes": 126796,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/489528733_1335927868033549_2157637808078838566_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s1024x1024&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=irmLNSbIYBAQ7kNvwEmn4ua&_nc_oc=AdoVOVbk5ebejHoNgduwYk3Ejd_RxxH7lAJLgcDraow4KNHIetcAZvsjTZyyZHhJjoE&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=h4tnTp23gFBRNYwMqkO8iA&_nc_ss=7f289&oh=00_AQLl74N_GdCl35bGRZ2f1jS6ZP8zRrcEhNxrnSGw69I51w&oe=6AA5B27F"
+        }
+      },
+      "passes": [
+        {
+          "text": "gt — ——— 4\nby O —_#_aa gk\nwe A | BX. OER I in: tl Tarr > | 14\nHl ; = el — [1 iting eR ME tL i iam | [3\n| me S a I aa ie bia ge 5 i | | ff\nPerera ie ei\n14 (TR x CT UL\nle, r EA\nA | a wi fit Vai 7 )\n] — „—a ra] a\nLe in » AS i. yy\nA |My, | >\nS “ Ak yg V = S\n[A | “< Vi \\\n! ure\nx\n",
+          "confidence": 39.30642821649486,
+          "psm": 6,
+          "inputSha256": "272ab6bba52a75308eb37c68ed9a76dd4c329bfc89315e4e95947a4711e09b33"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo/?fbid=1807428647550133&set=pcb.1807428677550130&__cft__[0]=AZhQi06wAt7OkFEe2KJs-pgG9O8fFpm7IHp6jNGdLySgqAj7QOMrnb6jN2Cf1Lzwk5tHUBhVlrvsgPrcX8JiFs1ao1RllQC2AVovBSwleJVdT5JjvfFWRgqCz5lLb0jyeWY0juhA3-BdAGfVwo-TQ8D48sa1ZUtYrC3an9QljcQgmD1nrAW7TuI-Jis&__tn__=*b1H-R",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/799844184_1111207098246430_7448627591735827852_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YpA2ah5ScoIQ7kNvwFzgQJU&_nc_oc=AdoJ07HdoAbigylE2EufH_tUy2R8dVeQdDRkYJF1cR1WFn7Bx27nnppTiJ8XXm9X3vM&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=Vf0i0lmDIuH2bn-IMg3m5A&_nc_ss=7f289&oh=00_AQL21XBXCIIUAN5Xvn5gLk5FNRmAbG9sUUjftSUdofbn4g&oe=6AA5B616",
+        "alt": "",
+        "w": 590,
+        "h": 590,
+        "caption": "Piváreň BlueBell je na mieste Piváreň BlueBell.\n23 h\n \n·\nKosice, Košický kraj, Slovensko\n \n·\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár",
+        "fbid": "1807428647550133",
+        "source": "posts",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Kosice | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.718Z",
+        "imageSha256": "4eb4be3ef02cf77d0416173e01ac24d9338226fc37404c4c1275625c0b655962",
+        "saved": {
+          "file": "gallery-03.jpg",
+          "bytes": 492337,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/799844184_1111207098246430_7448627591735827852_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YpA2ah5ScoIQ7kNvwFzgQJU&_nc_oc=AdoJ07HdoAbigylE2EufH_tUy2R8dVeQdDRkYJF1cR1WFn7Bx27nnppTiJ8XXm9X3vM&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=Vf0i0lmDIuH2bn-IMg3m5A&_nc_ss=7f289&oh=00_AQL21XBXCIIUAN5Xvn5gLk5FNRmAbG9sUUjftSUdofbn4g&oe=6AA5B616"
+        }
+      },
+      "passes": [
+        {
+          "text": "z mR 2 %\nb.“ > v =\n+ a as Ň ~ | - es \\\nne . 4 Ws\nZ f g „s\nfa) = a JA 4 p kap x 2 =\nZ NÁ \"MI S =| v v dá / , x\ni, a / :\nZa one ay\nNAN r\nU uj SN. . TÚ\n1 a fí A play) ee v re\n. : el Ao? č OF oy = 14\n/ / % [Ah ae a g ne ~ ;\nCBG EY Ln —. Va M\noF 9 rhs NT A A, 1\n» 7 . ká. s i 4\ná A s 40 Aa b. Pan A\nPe] x“ Ť » aa { = $\ni — NV NY.\n/ a, ok \"r s\nwt\nS\n",
+          "confidence": 48.83404462686567,
+          "psm": 6,
+          "inputSha256": "4eb4be3ef02cf77d0416173e01ac24d9338226fc37404c4c1275625c0b655962"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo/?fbid=1807428644216800&set=pcb.1807428677550130&__cft__[0]=AZhQi06wAt7OkFEe2KJs-pgG9O8fFpm7IHp6jNGdLySgqAj7QOMrnb6jN2Cf1Lzwk5tHUBhVlrvsgPrcX8JiFs1ao1RllQC2AVovBSwleJVdT5JjvfFWRgqCz5lLb0jyeWY0juhA3-BdAGfVwo-TQ8D48sa1ZUtYrC3an9QljcQgmD1nrAW7TuI-Jis&__tn__=*b0H-R",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/799251158_1582304706686187_7201555373803665141_n.png?stp=dst-jpg_tt6&cstp=mx3024x3023&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2tI9TrfnoDAQ7kNvwHF5Oza&_nc_oc=Adq4CiR0cjPnxd54nJtlWbEUZN6dIOdJnwEJsgiuijeOz-UvC9q79ICz-OSDFdqCpvE&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=Vf0i0lmDIuH2bn-IMg3m5A&_nc_ss=7f289&oh=00_AQKaJEpHLMa96hy6PBbeRRFGekhLnXZH7MQiwl9xsDVPVQ&oe=6AA5B75E",
+        "alt": "",
+        "w": 590,
+        "h": 590,
+        "caption": "Piváreň BlueBell je na mieste Piváreň BlueBell.\n23 h\n \n·\nKosice, Košický kraj, Slovensko\n \n·\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár",
+        "fbid": "1807428644216800",
+        "source": "posts",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Kosice | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.795Z",
+        "imageSha256": "59263e0119fe5a3ecc73be62e4a31f827ad8d960b6f118a077994c2d307760f1",
+        "saved": {
+          "file": "gallery-04.jpg",
+          "bytes": 404353,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/799251158_1582304706686187_7201555373803665141_n.png?stp=dst-jpg_tt6&cstp=mx3024x3023&ctp=s2048x2048&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2tI9TrfnoDAQ7kNvwHF5Oza&_nc_oc=Adq4CiR0cjPnxd54nJtlWbEUZN6dIOdJnwEJsgiuijeOz-UvC9q79ICz-OSDFdqCpvE&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=Vf0i0lmDIuH2bn-IMg3m5A&_nc_ss=7f289&oh=00_AQKaJEpHLMa96hy6PBbeRRFGekhLnXZH7MQiwl9xsDVPVQ&oe=6AA5B75E"
+        }
+      },
+      "passes": [
+        {
+          "text": "TE i Nel CAS\\ 7\n—_— Na dia. V,\ng ae i js «<o 3 hy weet 4 | ;\n: pS ORE ma. «.\n„S © a kj\nHY Bs\nAn SY —-\n1 “ A. A m »\nA < N ee . a Ex /,\n. Sao A | =—/\n\\ s a AA | —\n: - g — » iu) —\nTa s ž A ake 7s ; 3 mA sae > ; > A\nA Foie A A\no AAA A.\n£ 2 Tý Zo ‘ \" o ae a ‘ +“\nr a x a j f 7 kt. > M m < J ~\n7 = 5A ie ok sas\nay A 3 f g A 1 a va\noe > E.M j é V .% di s\nv/ & \\\nŇ Ň i A. © A\nŇ | č __ im e wey Ha . :\n% a A 4 SA. X ee ; .\nža á s te s\" j\ns b A 1 1%\n",
+          "confidence": 41.1117983542857,
+          "psm": 6,
+          "inputSha256": "59263e0119fe5a3ecc73be62e4a31f827ad8d960b6f118a077994c2d307760f1"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1807237660902565&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t51.82787-15/799200611_18121417646314990_4101600044420228741_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s206x206&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=hYMTVAJzZdwQ7kNvwHiMBh3&_nc_oc=AdrTyMSJSAHU1O9VLQigvPiPjLrVpTYDYd8Y05NLm7r3jtrUkBuG-iU4Uh9tmv5NVMw&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQKFyjVXlwMczo0Mb1_tO5--o-PlFBucxg6KKXzVqsz5FA&oe=6AA5B335",
+        "alt": "Na obrázku môže byť hamburger, klub sendvič a text",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1807237660902565",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.997Z",
+        "imageSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd",
+        "saved": {
+          "file": "gallery-05.jpg",
+          "bytes": 142673,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t51.82787-15/799200611_18121417646314990_4101600044420228741_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=hYMTVAJzZdwQ7kNvwHiMBh3&_nc_oc=AdrTyMSJSAHU1O9VLQigvPiPjLrVpTYDYd8Y05NLm7r3jtrUkBuG-iU4Uh9tmv5NVMw&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQKFyjVXlwMczo0Mb1_tO5--o-PlFBucxg6KKXzVqsz5FA&oe=6AA5B335"
+        }
+      },
+      "passes": [
+        {
+          "text": ". bad —”\nY Ý od 7.9.2026 do 11.9.2026 Vpivárni kmenu\nBLUEBELL 0d 11:00 do 14:00 džbán vody\n— PIVÁREŇ — sditrónom\nPOLIEVKY Selle\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2\nTRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z\nVEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 87.72715913740457,
+          "psm": 6,
+          "inputSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd"
+        },
+        {
+          "text": "bal\n\n~~\n\nTÝŽDENNÉ MENU\n\ny\n\n4\n\nv\n\n‘\n\nod 7.9.2026 do 11.9.2026\n\nx\n\nps\n\nč\n\nVpivárni kmenu\n\nBLUEBELL\n\n0d 11:00 do 14:00\n\ndžbán vody\n\n— PIVÁREŇ —\n\nsdtronom\n\nGRATIS\n\nPOLIEVKY\n\n0,331 Kurací Vývar 139 2,00€\n\n0,331 Podľa Dennej Ponuky 2,00€\n\n0,331 Polievka Samostatne 3,50€\n\nBIZNIS MENU | 11,90€\n\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\n\nPetržlenový Gél 180/100/100/50g 79,2\n\nTRADIČNÉ MENU | 8,90€\n\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z\n\nVEGGIE MENU | 8,90€\n\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :\n\nŠPECIÁL MENU 1 | 8,90€\n\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\n\nŠPECIÁL MENU 2 | 9,90€\n\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2\n\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 87.2062753014706,
+          "psm": 11,
+          "inputSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd"
+        },
+        {
+          "text": "- — —\n\nU iy od 7.9.2026 do 11.9.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n—PIvARER— scitrónom\n\nPOLIEVKY zb\n0,331 Kurací Vývaľ 139 2,00€\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 7,12\nTRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g :\nVEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka 120/250/50g 7\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€ .\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Salat 180/250/50g 13712\nOSOBNÝ ODBER: + 421910 613 000\nwww.pivarenbluebell.sk € ©) pivarenbluebell\nSe! ENIE\n",
+          "confidence": 86.10910740298507,
+          "psm": 6,
+          "inputSha256": "fc0869a50ff3383f0fa6f1123f02da35d740fafa0d285d5178e63ad289aaf642"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1800452811581050&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/790425778_28251825817772859_751953273206327621_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=111&ccb=1-7&_nc_sid=714c7a&_nc_ohc=KQdBHQJLovAQ7kNvwGOCxtJ&_nc_oc=Adq6eEERpitgF2zKsst989cJMfXmCSSsMx4hWNrmELgOjJwY_Lrtn1bWktfH0qdR2j8&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQJ2Hnr_IeA7fwpmkGoWoQ2r5jjhq1pjeuvISp820TSV-w&oe=6AA5AB98",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1800452811581050",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.101Z",
+        "imageSha256": "3b028316aa7785e47bc17a078418a83ca9c861ce22f3b7f78300d2d256c024f8",
+        "saved": {
+          "file": "gallery-06.jpg",
+          "bytes": 386047,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/790425778_28251825817772859_751953273206327621_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=111&ccb=1-7&_nc_sid=714c7a&_nc_ohc=KQdBHQJLovAQ7kNvwGOCxtJ&_nc_oc=Adq6eEERpitgF2zKsst989cJMfXmCSSsMx4hWNrmELgOjJwY_Lrtn1bWktfH0qdR2j8&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQJ2Hnr_IeA7fwpmkGoWoQ2r5jjhq1pjeuvISp820TSV-w&oe=6AA5AB98"
+        }
+      },
+      "passes": [
+        {
+          "text": ") |\ng Pá & } \"2\n‘ x !\nd A x“ . ‘ ?\ns %» g A\n- < “ © wy 2 je ' A\n> A pá a. € N : “ ’ ye\nZ a v “.. | $\nA. > rs eo 3 i\n> | a 347\nwe Ň KR\nJ m oN A i A Ň\nSat por j Hf ™ 1 Ja\n| “OS See? y\n3 ‘ } i 4 1% % 4\n",
+          "confidence": 47.72968709523808,
+          "psm": 6,
+          "inputSha256": "3b028316aa7785e47bc17a078418a83ca9c861ce22f3b7f78300d2d256c024f8"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1800452808247717&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/789426036_2149468069254904_4266157973486783357_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=3DEVbuUtOSEQ7kNvwFO_BkP&_nc_oc=AdpdRMfT7lDqBMMjx4vDYl8v1qu_--rRnfoFt436HPAXveQ7c6a0FZoL5wWVzPvqino&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQJdITdGL-slZmFfn9pC9ZPbxWzXS-ntD2uo7ubAJRnEfQ&oe=6AA5B71D",
+        "alt": "Na obrázku môže byť škótske vajce, žĺtko a huby šiitake",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1800452808247717",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.636Z",
+        "imageSha256": "3d34a4ffd5cda32a0133a07fc49097552eee43e5342e2c426eab907b2b4501fc",
+        "saved": {
+          "file": "gallery-07.jpg",
+          "bytes": 519306,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/789426036_2149468069254904_4266157973486783357_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=3DEVbuUtOSEQ7kNvwFO_BkP&_nc_oc=AdpdRMfT7lDqBMMjx4vDYl8v1qu_--rRnfoFt436HPAXveQ7c6a0FZoL5wWVzPvqino&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQJdITdGL-slZmFfn9pC9ZPbxWzXS-ntD2uo7ubAJRnEfQ&oe=6AA5B71D"
+        }
+      },
+      "passes": [
+        {
+          "text": "~ A Ae \\\nf že\nAE YS fy Vá. 7\ng A d4]“ . + =~ 7 Pay >\n> © « ~ ' i 9» M\nMA Ve Fa 2 a NY\nX > % “> „9 fy > re ey 4 f\n. by Ye ne ee ee 1 VA,\n> » Lg Ve > a\nRu 2 KK, [371\nSS 2\ns NA. & A Le zú fa\na 1 <n” Th > a oj\n+ zá sá ; b x NÁ > ~ } : A É\nVÝ PR. % 4M eed | 12.%\n‘ S \"> Ah BS vy b z Se vid v a\nNA EN 1 a VIZ > KEEN oe\nre eas vad AP .%“ X V 0. A \\ ej s\na“ SR ur > ‘ x %. s V A 1% N \\ A Po s\nNE ME A S\n¢ 4 „A A? ey 4 Tv tly OR { 7 M v\nTE a A M PR\ny < ; P 2 g A Sa | es. :\nos ae yA RS eon we Bo\n| *.@ Gin yy GID Ase NÝ? A onú 4\nS ty as Al V 9 Sor? ee ZA a s\nOa Ne 6 BN A nt Š\nkd Č 4: dz oa 4 3\n< W eer ~~. 4) 6“ dj\nx ©... VÝ, > LAS , v» a\n© «© a -\nV 2 fia so\nay -\nTOV se FS\n",
+          "confidence": 41.40070399999997,
+          "psm": 6,
+          "inputSha256": "3d34a4ffd5cda32a0133a07fc49097552eee43e5342e2c426eab907b2b4501fc"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1800452804914384&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/789325541_1925829551420040_4329979176215065466_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=105&ccb=1-7&_nc_sid=714c7a&_nc_ohc=siDaW-8KyUwQ7kNvwGWUMnE&_nc_oc=AdpZRSxr9U5DWJ9xm9EQyALP4vw1byG5rxCBOijC70M9slecMMjfOiiGZxRel9UzYU0&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQLOJj5hywksrWZBUhuq20L5kp4dQYKXTo3HI3Qi37OTdA&oe=6AA5C831",
+        "alt": "Na obrázku môže byť ossobuco a hrachové pyré",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1800452804914384",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.693Z",
+        "imageSha256": "f693add8fc1d1ec70029ce8aafaad7a95e109f83a709848c1d68801960ff1e21",
+        "saved": {
+          "file": "gallery-08.jpg",
+          "bytes": 359970,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/789325541_1925829551420040_4329979176215065466_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=105&ccb=1-7&_nc_sid=714c7a&_nc_ohc=siDaW-8KyUwQ7kNvwGWUMnE&_nc_oc=AdpZRSxr9U5DWJ9xm9EQyALP4vw1byG5rxCBOijC70M9slecMMjfOiiGZxRel9UzYU0&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQLOJj5hywksrWZBUhuq20L5kp4dQYKXTo3HI3Qi37OTdA&oe=6AA5C831"
+        }
+      },
+      "passes": [
+        {
+          "text": "e . sá\n. s.\n— - A »\nK. tS | ee W.\nTae, EV\nZa iE Zle AP aes 1\na # A Z ná. Ae “x Cy eS. a fa x a. a - .\n4 La — Já s S. : m NX\nud. S Wit cay © 7 ft Pe m“ d\ne M $ 1 2 | sy fy AV l \\ | |\nm 2 > i RO 405 gee % A a. }\nA | A jú a ® Ae 5 ; .\n>. Ň úra, 3 : x\n| Ň rá 9\nÄ Ň hi 4 : !\n\\ o\nSS . a ) Y 4\n\\ Sa ——Ug — s a a\nŇ N\n» ~ Sg\n",
+          "confidence": 47.17938388976378,
+          "psm": 6,
+          "inputSha256": "f693add8fc1d1ec70029ce8aafaad7a95e109f83a709848c1d68801960ff1e21"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1800452801581051&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/792235751_1401467788856804_3087644215113436004_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=odPpeg5-DEMQ7kNvwHC2-Yy&_nc_oc=Adrkm-yUgKi4eQqMvoju-Y9tFRPrWCuyhP3bH3LSvKFOf2BIPjVsVOSgE-I-Opf4ttI&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQKACavxFGpxVfpMF-DHoyY_eMdQMv3KqB_VPINQ5wEQEQ&oe=6AA5C352",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1800452801581051",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.735Z",
+        "imageSha256": "4b68aad382a363d09db79c1116e15ca55b694e9578f692f07dfff135f4fc3ef7",
+        "saved": {
+          "file": "gallery-09.jpg",
+          "bytes": 445652,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/792235751_1401467788856804_3087644215113436004_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=odPpeg5-DEMQ7kNvwHC2-Yy&_nc_oc=Adrkm-yUgKi4eQqMvoju-Y9tFRPrWCuyhP3bH3LSvKFOf2BIPjVsVOSgE-I-Opf4ttI&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQKACavxFGpxVfpMF-DHoyY_eMdQMv3KqB_VPINQ5wEQEQ&oe=6AA5C352"
+        }
+      },
+      "passes": [
+        {
+          "text": "ar, A | A\ng yy. 4 = 2\n- {te ve A Ai\nee Z aj M za A\n‘ +“ a svý A A. .\nú + y o > qv a,\nm4 Mu ““, 6 % lo €) : p „A\nPd i a4 fi lo ¥: at\n„ed a % Ž “a <A ’ é 3 %\ni? at 4? i , AA, My Ň €\n\" a Ai i wk , s : ay a. A\nNN > te b, A AAA x a | § f\nF , 5 M. 1 ) o A r Pr : id x “ X ies NI # - % ä\ný ja cM u ene. x ý Vy Din Sees S ; % ke: No f\ni d. 9 Pe “> of : P M ) g ot i s Ta NY | ox, ae\na ee eed , . s JA ? A a m 7 > ka. i\n4 iy are ine Tá 2 M s “gee ja M. a. S \\\na> . > i S 15 3 3 ys > 5.1 [A M mi .\nj es, Z I NU ; > eS ca $. a \\ x a\n4 „ - ie g a s J ¢ ae Pe \\ rere Ä\nan Aree O: ae | Jež\n4 gg > . ha | Pee, -\né 14 A ee eS TF 7 £ ote ee a we yee\nhh ea oy VA eed ae A : K OA\noP ae VA Ashcan. — |: AN Se SS < s\nBS z A 4 %w fade, as u ~s I (Sra\n= ae a x vá sude. ča Oe ate “Leet A 2 S — a\nSage dá v 1? Cs a Lek mg r JÚ +1 s\nO SN O % 4 BS A aS 12 s a +\n3 ye + s v x Sails S , 32% a ž gf + Ora ashy =\nory te £ s s) ‘wl k S 3 = a — Sta a\naie: EA K s ký POP) 2 pd x . Á N M... ŤA\nft V et - $ ae č“. Fe že ee 1 7) RS O\nAA 221 Ta 9 o Si 7 A S . Sees\nCUO. NA k r ‘gee : Sa eee \\\npeo: e* xe re ALN ix Oe yg a ; Ap 1 bi Be Mtr o\nRIVE a Bey BY gs) NENÉ, ab A : _ See f vv a\nWat ine >: eae s EN\nAt Ba Z o, de dl Nd A x MŠ ia \"|\nBO =) oe re 27. U? ee ae\nsg BS Calle ee Ne € 77 > x Sue“ ZdN ŠA VEKY\nech\". sá ’ SA pr ek 3 je See M a +) — =.\n: Ve - a “A b 2) 7 : i vá ý ? Na“, :\nye pô ae? x AA» 3... 4 ja x > „SM x\n„Z A wet OR \\ X PN“ S Ň zrat ‘ Aa y\nA ZA » Ni c 4 ‘ 7 m a) 4% xv Jj\nOOS ee nee adi Sy ay Mo % a 4 Úrad OS\nvO get a 4 4 „AA o 4, a. ‘ + 1 y $. a b De a. č\nM a vr . S NU i € oa? - q Pow\ni r. tds k Koto O AN fr S V\ntá M. NE dá) a. oa 1 iw Me [A 2 wht m. ( M\n7 (AA O ya 9 eg te ša, M Sake} ; Sor) te aa\n\" Sa MY s V A 7 oe, i) Ss AV, g #\nblues, > s i JU . [4 Dy OF + i Á g 1Ň j ; res a UVP?\nSA * A A ad # a X 7 7s Ň M A Sy ye A S 7 k ae x. HRONA i v feet\nm NY Figae: 2 m “ oe et Č 5) ‘ g: 1,2 Wy rs fs\nS. A —A Ree M Wye S AR ý en A Ag A Y v A. SRY\n„m „i v a ‘By ef 8 “ A, 4 Y Sw Ve PAC Se Sa ie\n‘ee | “oe a Wino Fee ee I k s 4. LY o V, nad\nM >. i RAJ O? va A A NA V Se\nea. ae ik Á A CEA Pn Nar ae 4\nZA, pore” ea ey. ar re” „A =\n\"0-0. tá SU Re NY %\nNA Maj ax y\npts / i 1\nNÁ vc: Ea aN č A. RE UŠ v Ä : :\np Ni i KUA S AUT Nee : j 4\nBe. Z ee Sut 9\n; a v a +, g 2\n",
+          "confidence": 37.14269717199019,
+          "psm": 6,
+          "inputSha256": "4b68aad382a363d09db79c1116e15ca55b694e9578f692f07dfff135f4fc3ef7"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1800452798247718&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/791399201_28059691030339895_3039428059047776746_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=goY8VwaaVQQQ7kNvwE3m9AM&_nc_oc=AdqLSWqVWvTFWV6oAAsQ_NtMSR8lb7ozDoaOiajxtdgj3RAikj-q9sMzYKCu66zI1U0&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQLnD2roIyI1RhVWYCupAjm_e5btPFZsN3iE4WlQQLrCqQ&oe=6AA598DD",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1800452798247718",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.781Z",
+        "imageSha256": "f1f07304cf52bad0d8b3beb476d599910545e395deaf6a8dfc4969616172cb49",
+        "saved": {
+          "file": "gallery-10.jpg",
+          "bytes": 493066,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/791399201_28059691030339895_3039428059047776746_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=goY8VwaaVQQQ7kNvwE3m9AM&_nc_oc=AdqLSWqVWvTFWV6oAAsQ_NtMSR8lb7ozDoaOiajxtdgj3RAikj-q9sMzYKCu66zI1U0&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=2vaRhOBgy1smxerZsq49yQ&_nc_ss=7f289&oh=00_AQLnD2roIyI1RhVWYCupAjm_e5btPFZsN3iE4WlQQLrCqQ&oe=6AA598DD"
+        }
+      },
+      "passes": [
+        {
+          "text": "k ~~ “a x\nbo b s\n-— x v Ň\nA A r ay ! > Se ee.\n7 ee Z VÁ a \"mr re OM fe\ns a, * > aj a as Ye / A\nyy eee ay\nú a mt si a SS\n[i § [74 \\ > 7 i Y ® i v\nA ea : Wl M V. k : v\ned o Nig)\n) 309s) ee, AP eee? es 7%\n/ ; 4% iy ee ag A,\n» os LÁ rhe td XT A »“ A\nas? > ú Y 2 Var X u “5 a ( Ka\nj we) ant’ 48]\n: s né EN os ) ag ty : o x Ť ) are\nV & Aw a M nl\ns sa. a ň ys\na / ag „A. 4 : é 4 : A a\nSoma. > SX:\nA a, oh 2% 4\nf „A\n",
+          "confidence": 44.182031825806476,
+          "psm": 6,
+          "inputSha256": "f1f07304cf52bad0d8b3beb476d599910545e395deaf6a8dfc4969616172cb49"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1799845331641798&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/788002194_1764702457903833_3704958268967346744_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s206x206&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=g_k4P0XiTw4Q7kNvwHvyr4L&_nc_oc=AdrI6PdtytcXnA_IXOGm8B2TPRih9xiKTxliIGrfPf09X_elIFcYU9CaQHfLSUAiKwU&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQL2gJsp5lC4KPp39p5DBU1iKdN3kojzaj9Ib-7nf10Dow&oe=6AA5B6CB",
+        "alt": "Na obrázku môže byť hamburger a text",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1799845331641798",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.828Z",
+        "imageSha256": "1904b3feb744d9cfd42bf72e900ed49bc9540641aae3e24afd95b037bdb94ab3",
+        "saved": {
+          "file": "gallery-11.jpg",
+          "bytes": 145602,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/788002194_1764702457903833_3704958268967346744_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=g_k4P0XiTw4Q7kNvwHvyr4L&_nc_oc=AdrI6PdtytcXnA_IXOGm8B2TPRih9xiKTxliIGrfPf09X_elIFcYU9CaQHfLSUAiKwU&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQL2gJsp5lC4KPp39p5DBU1iKdN3kojzaj9Ib-7nf10Dow&oe=6AA5B6CB"
+        }
+      },
+      "passes": [
+        {
+          "text": "S ladi — —\nBBY od 31.8.2026 do 4.9.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n— PIVÁREŇ — sditrónom\nPOLIEVKY Sule\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nKonfitovany Teriyaki Bôčik s Wasabi Zemiakovou Kašou / Wakame Riasy / Sépiová Omáčka / Sezam\n180/250/50g 46711\nTRADIČNÉ MENU | 9,90€\nBryndzové Pirohy s Opraženou Cibuľou a Slaninou / Kyslá Smotana / Jarná Cibuľka 350/509 137\nVEGGIE MENU | 10,90€\nGnocchi s Omáčkou z Lesných Hub / Syr Pecorino / Marinované Vajíčko / Čerstvé Bylinky 350/50g 1379\nSPECIAL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nVyprážaný Kurací Rezeň v Panko Strúhanke so Zemiakovou Kašou / Uhorkový Šalát. 180/250/504 133,2\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 87.3833434357143,
+          "psm": 6,
+          "inputSha256": "1904b3feb744d9cfd42bf72e900ed49bc9540641aae3e24afd95b037bdb94ab3"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793769652249366&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/782924722_1095254242942949_4268544491133418494_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=k1Tm9xR_D3EQ7kNvwE1mUP9&_nc_oc=Adq5vJ9zUSafZTxiJSJfL-aR693SvksxssNkyPqbSgpVGuQEjc-rbgpYemqYYHTC8Xc&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQIoVmZjd1tTHnt5hD2BTHCdI_NxCYRvQDe_jkJPkbzfng&oe=6AA5C020",
+        "alt": "Na obrázku môže byť mangold a kapustové listy",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793769652249366",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:16.898Z",
+        "imageSha256": "26c66da8dffeefbaaac0ca2864e19e7bd35292953ab505ed977331651270c477",
+        "saved": {
+          "file": "gallery-12.jpg",
+          "bytes": 374066,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/782924722_1095254242942949_4268544491133418494_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=k1Tm9xR_D3EQ7kNvwE1mUP9&_nc_oc=Adq5vJ9zUSafZTxiJSJfL-aR693SvksxssNkyPqbSgpVGuQEjc-rbgpYemqYYHTC8Xc&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQIoVmZjd1tTHnt5hD2BTHCdI_NxCYRvQDe_jkJPkbzfng&oe=6AA5C020"
+        }
+      },
+      "passes": [
+        {
+          "text": "_ > /\n[ g\ni 2 AC\n— | 9 Ta\ngut f g Sh. oY ~ AN s“\neye a A a On =)\nCEG (Me wo v 9. ‘3 x v\nVeg A ptm „5 m ; ‘\nferme $5 : S\nONA. A á i\nA rf M x’ ise “ A\nPÁ am . A i A\n(ite Ve *. > a gar la,\niy) ir A b , , Y\n| Zrt tft SS MA č ú = v“\n. x AU ee “%<- X1“ nj NÁ) to\ni A 4 Seer > > Ne\nnos A HP TA 1 ‘ en,\nba sx Y x oy at Y F ‘, 37A ž k js. £ UŽ\n~~} <..: ŇA CS wy. 2\ns. “ May Se oe Wi M i: 1 , i] A ty id Z\na Vii “a oe ee NL ERTIN\no BR a — 2 ee \\ ve\nae RS A tS ee Sa = A\n2 MJ s S te ST 7 ú st S A %\n, = ie ee AN RAIN me A A ~\n| <j — | a U , & 29 tu. © ( y\nNe Sek AA * af\na. Fike - > ig = “a A. |. s ÚNA\nA hie ~ . 5 EA MS me\n& — M =. = om , ‘ 3\nPN y . : s\n! J Sp\n7 if) >\n| py i } te\na i —=\n",
+          "confidence": 39.569028964566925,
+          "psm": 6,
+          "inputSha256": "26c66da8dffeefbaaac0ca2864e19e7bd35292953ab505ed977331651270c477"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793769648916033&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/784166300_27877128601948127_6754792571012446331_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=U9SmJVpuCwAQ7kNvwGWH0sj&_nc_oc=Adp1r8grfcrRkAV5ehHAV8k_l9xTlMBkAkx301GmKGVdVc1oZj-KZeSyJ7QNXcc4ico&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQISI-zOAgfP-_7NbKjFOzU3M63mD21C-GQmqK0cIbwtzA&oe=6AA59BDD",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793769648916033",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.000Z",
+        "imageSha256": "3215fbb7021715c360b728642571303baf0f20af18bd48954980cf3f5adc4700",
+        "saved": {
+          "file": "gallery-13.jpg",
+          "bytes": 354402,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/784166300_27877128601948127_6754792571012446331_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=U9SmJVpuCwAQ7kNvwGWH0sj&_nc_oc=Adp1r8grfcrRkAV5ehHAV8k_l9xTlMBkAkx301GmKGVdVc1oZj-KZeSyJ7QNXcc4ico&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQISI-zOAgfP-_7NbKjFOzU3M63mD21C-GQmqK0cIbwtzA&oe=6AA59BDD"
+        }
+      },
+      "passes": [
+        {
+          "text": "dd # MA e Least\n” > a 4 ' ~ NY x\n4 73 4 ď >\nZ nd = 2 Z a 2% ©\n5 J x i\nJ f M7 tý a\n& Rs ns, a eS |\n4 [ery a.\nLf Ge * a =. \\\n[ 3 BE > A .\nv 4 v j sA teow) %\n» f > 4 a aN\na . %, oe el . fj\ng 4 „r J P ad s . €\nAMW\" -a - 64 “AE,\n- N Te 4 > al : +\n- S > AO M\nM f < k | ewe AU be A va 7? ax 4, ) sš\nx 2 S : © Me a k v A\nČ. a— € 4 Z yer — . o> ‘\nof Tey pu X Ye “et be Feo\nt s Wee % ) M\" g 1 Re = ew ná j\ni te A 3\nO oe Pay“ Sa tá\na % i\nv 4\nV : :\n: | j é\ni % | |\nM8 .\n",
+          "confidence": 46.372972069892455,
+          "psm": 6,
+          "inputSha256": "3215fbb7021715c360b728642571303baf0f20af18bd48954980cf3f5adc4700"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793769645582700&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/784199340_1496758162342027_7682649205201992849_n.png?stp=dst-jpg_tt6&cstp=mx1260x1260&ctp=s206x206&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=iavlrvSqyT8Q7kNvwG7FZLU&_nc_oc=Adrr4uuZ0BE5gveUptUNS13cU9iAlzX5clsDzqgfSMaiTylH3biyRpszajB11WuYeaE&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQLDfvun8QnUSo_Ksr0XZ5ABjy_Zj6dMwzqC5a8m5CgFHg&oe=6AA5C719",
+        "alt": "Na obrázku môže byť tofu",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793769645582700",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.192Z",
+        "imageSha256": "882f74630b9399ab85ae89469084a09b70c4342a7a7a93a8053259ae56cc93d8",
+        "saved": {
+          "file": "gallery-14.jpg",
+          "bytes": 196750,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/784199340_1496758162342027_7682649205201992849_n.png?stp=dst-jpg_tt6&cstp=mx1260x1260&ctp=s1260x1260&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=iavlrvSqyT8Q7kNvwG7FZLU&_nc_oc=Adrr4uuZ0BE5gveUptUNS13cU9iAlzX5clsDzqgfSMaiTylH3biyRpszajB11WuYeaE&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQLDfvun8QnUSo_Ksr0XZ5ABjy_Zj6dMwzqC5a8m5CgFHg&oe=6AA5C719"
+        }
+      },
+      "passes": [
+        {
+          "text": "- m _ % = : =\n= s Lf S IN .\ngi % Pi AN vý ‘a aad\n¥ b Za a aa i\nPL AN. > — Je\nger ®\no 4 » + P\nu. f a M S . y\nmis Ť i ‘\nes Z cd PSN Nase Ps, so A\n€? JAN = a eS v Ss Siete g\ndo ná í ~ Be oe a a Ň > d\nA Re; Se a Ot aes\ncee x ages Ta £ ae ‘ 420 ; V 4 4 a\n: wre. A dy. > “4g ie\n4 / „ a as x u A av wot ye\n„ 2 4 A č © h oe A a 9. ei č = s\n\"AN s . sú A VA\nx P A V“ x V. A ana\nAig V = , at Fe s. ‘ | » oN\nig á [“ Ne Ä v. f ,\n£ x g V M “ Ň ~ .\n‘7 o er . x\n; v u. * | v\n; abe f ’ „\ntt v ra\n| a —i a.\n> >=\n",
+          "confidence": 42.146395265306154,
+          "psm": 6,
+          "inputSha256": "882f74630b9399ab85ae89469084a09b70c4342a7a7a93a8053259ae56cc93d8"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793769642249367&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/785722722_1542869327639021_8134515988153639848_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=UkPZtsUeLyIQ7kNvwEwL4KV&_nc_oc=AdrXAuTUUtv_gq86DN4DpiBqGW9NIl-8Bu9qtNP-gUm4kXs8o_BWcP3VAdQj4P9pjek&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQJKxrQEZSbdI9DRCgdKHzLnTb9Pf0Y4N2WDfgk7jdNh7Q&oe=6AA5C27A",
+        "alt": "Na obrázku môže byť tofu, hrachové pyré a kroketa",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793769642249367",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.302Z",
+        "imageSha256": "1f95c2f9c07c4b992447befbe3cfb05c02d6545ed3a2384ba6d633de412734d2",
+        "saved": {
+          "file": "gallery-15.jpg",
+          "bytes": 470145,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/785722722_1542869327639021_8134515988153639848_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=UkPZtsUeLyIQ7kNvwEwL4KV&_nc_oc=AdrXAuTUUtv_gq86DN4DpiBqGW9NIl-8Bu9qtNP-gUm4kXs8o_BWcP3VAdQj4P9pjek&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQJKxrQEZSbdI9DRCgdKHzLnTb9Pf0Y4N2WDfgk7jdNh7Q&oe=6AA5C27A"
+        }
+      },
+      "passes": [
+        {
+          "text": "> AE Ca are y ett\n‘ : a EE LA pay ey pry má.) ae eee Ň\n+ P eerie WAP ab ger AeA a .\n? me. , fee eee ar San ob v A er}\n> ‘ g Pos Spee thine i S KES TA . }\ney Cae ; sk EV < Š a$\nLÁ 4 - . + v BVT AY VT TA\n+ \\ arn i Ss dt EJ UVA: RY\nj k : PAS et ors EC ee s so Š\nf eh ee ee s ~ = g A\nPees de eet SR a OA M > — A >\na ate V. aie Ei ak se MO A z sar hoon Y Z A. b» ote hd\n| OO ie ANTA eee ts SS\nč > \\ we? Te ac aa DR eo Be = > Ň Sis a2eae ie 1\nSMRANŽANE i RNA I > aa\no 2 “ CMO EE V S. ac I Vrch T v\n3 g A zap. ae 10 bie Sey z PR ag . PAN Ay [4m % > ‘\n“ - Oh Se teres oR ES NA, za AO 5 Oy gee\nx ň VAŤ Ea zá mane SAE A pad a > Soe v\nS : VTE A 240. EBRO UNA a. Ň i 4 1\n; Lowe rue re eee 2% 1\ns ? g g O id TREE Z 1. ope [ša JA ‘\nee 5 4 See: eS Bee Se # : : . ďa a\n, 3 a A SE. A 7 > 3 kk ae K : sú á Ň < idee\nCay eS ier SY A\n‘ é NÝ o dy: a s A A 3 oa\n, WU. # v x SLE.\n> g a J a2 . MAE fe b % c ( A O\n| N AP A MN TN ( p). A O\n\\ is VR A a . ; ] Z a “a\nPONS Ss Betis v Áú TA a p> <> r\nONE A zá a lt V Ni ES\nÚNIA 3 bo v Z A i A EŠ\nNÁ ESE ; iar — | Po 2\nPhe Nove ] jé ASS 4 ’ V -% ed Ne > ey\ni Sie en „MA . w Za“ oo ean a :\nga es 7 ps ace ae A \\ < x ; | Orn. i i.\n[1227 Ong ae. Ň + EYE da, ;\nwh v i ge | > o e N A >\nná oe eee S S. 7! EN FS Vo ae\nM 3 Novy AM ee A i —) copay > PO i ae Y Ja\nb PÁ 4 s Bic: ey OM A » be hE SPS NA H “x\nABA OT et ~~, MT, = MO STILE AROS SN Fy x\na 4 Ge a ef ee, ee A “ 3 Ake oro . cg dia SE S tn,“\nk rem a < be v £ +5\na2 iy a ( > \\ a“ v >\nA TRA vege TIA! red SE VY OA b\nvé Or Bas joa v ap 4 g af Ot cy a] a +. S. ) | A k M. r\nor Va a % Tn t Aa > b > Č NE > ea\nL > Pay he. Or . č oh you x : ERA 4 y\n1 > Ž eek Ň x m. s o 3 S PO #\n5 Lye du, See \"i bo d.d A Ň No sá\nk. 2 x g + ~*~ v ‘ S i ap sa x =\nFUR aa VÝ TD vans : oe ee ž po ed\nSh. ks 477 KT 04 < Ri K, sú : cs\na ] A == eam,” 1 ay vat 77\ns. 3 Dy pe 4.5 sn le a\nA ee >\n",
+          "confidence": 35.93364383538459,
+          "psm": 6,
+          "inputSha256": "1f95c2f9c07c4b992447befbe3cfb05c02d6545ed3a2384ba6d633de412734d2"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793769638916034&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/783707327_2331570300922456_8064863610489187661_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=oHy_ht6bgnoQ7kNvwEgUouN&_nc_oc=Adrabf-kC3VE-nhG2uf_9RstUYFyi5x58GtOw2_1jepnT1mnJtdSciD4fUL2fbsSijw&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQIRw40xV2HdF9F01RJmPTs-Ug6qGm0X0tffqYt1rIPZBw&oe=6AA5B1B1",
+        "alt": "Na obrázku môže byť stratené vajce a žĺtko",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793769638916034",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.334Z",
+        "imageSha256": "feb8b8aea51ed93f1b1aee77314bac3df2614b0ecd7f212350b6fa86034fa327",
+        "saved": {
+          "file": "gallery-16.jpg",
+          "bytes": 325694,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/783707327_2331570300922456_8064863610489187661_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=oHy_ht6bgnoQ7kNvwEgUouN&_nc_oc=Adrabf-kC3VE-nhG2uf_9RstUYFyi5x58GtOw2_1jepnT1mnJtdSciD4fUL2fbsSijw&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQIRw40xV2HdF9F01RJmPTs-Ug6qGm0X0tffqYt1rIPZBw&oe=6AA5B1B1"
+        }
+      },
+      "passes": [
+        {
+          "text": "i) (1X vv)\nNE A AT \\Wy\nsd rr >\nb> | dbá\nú 1.3 \" b)\na te (Oe, nett tia? *s — v : 5 / ä\n44 NY, U wy SS ' 1%\n/ U i ze a SS .% 7 s b\nfly. .° \"m >» an = PE\nUA a mh... m.\nZAŇ @ i > S MS\n‘ “i 5 s 088 % ‘ !\nDate — |\n91 7 +. PN $ rade |\nian Aa a eh,\nk cy a\nv dý E\nta\n| k \"  “\n‘ i m a\n«7% V } y\n— DY >\n> > eee sá Ty\n",
+          "confidence": 37.726457928571435,
+          "psm": 6,
+          "inputSha256": "feb8b8aea51ed93f1b1aee77314bac3df2614b0ecd7f212350b6fa86034fa327"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1793548495604815&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/784618759_1760609821939104_4875603824545582264_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s206x206&_nc_cat=108&ccb=1-7&_nc_sid=714c7a&_nc_ohc=K2E3xFB7iBYQ7kNvwHwPO8H&_nc_oc=AdotggXDlJ8p-OYlmdfVdKDe3P0Wp26_T6jd8qwE34Tpc7iJLVeIbUk775ZkzWumdCU&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQJSaCejWmzRC1h8BHd173Kw2cwN-ce8p3K-za0cZZ50lw&oe=6AA5A03A",
+        "alt": "Na obrázku môže byť tofu a text",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1793548495604815",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.362Z",
+        "imageSha256": "1c9ca72b8fac4264e71f81edf72af48e9a5d99de0f0ea33b77df712c59978968",
+        "saved": {
+          "file": "gallery-17.jpg",
+          "bytes": 146997,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/784618759_1760609821939104_4875603824545582264_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=108&ccb=1-7&_nc_sid=714c7a&_nc_ohc=K2E3xFB7iBYQ7kNvwHwPO8H&_nc_oc=AdotggXDlJ8p-OYlmdfVdKDe3P0Wp26_T6jd8qwE34Tpc7iJLVeIbUk775ZkzWumdCU&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQJSaCejWmzRC1h8BHd173Kw2cwN-ce8p3K-za0cZZ50lw&oe=6AA5A03A"
+        }
+      },
+      "passes": [
+        {
+          "text": "~ bal — i”\nBB YG od 24.8.2026 do 28.8.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džhán vody\n—PIVÁREŇ— sdtronom\nPOLIEVKY Sele\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 12,90€\nGrilované Kuracie Supreme s Batátovým Pyré a Muškátovým Orechom / Pak Choi / Blanšírovaná Baby Brokolica /\nOpekané Zemiakové Gnocchi / Pohánkový Popcorn 180/100/100/100g 1375\nTRADIČNÉ MENU | 10,90€\nVyprážaná Treska so Zemiakovým Majonézovým Šalátom 180/250g 1347,0\nVEGGIE MENU | 8,90€\nTekvicový Prívarok s Volským Okom / Batčianský Chlieb 300/100/50g 137\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 8,90€\nČevapčiči z Bravčového Masa so Štuchanými Zemiakmi / Cibuľa / Domáca Ajvar Majonéza  180/250/50g 37,10\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 86.63167360902249,
+          "psm": 6,
+          "inputSha256": "1c9ca72b8fac4264e71f81edf72af48e9a5d99de0f0ea33b77df712c59978968"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1786945102931821&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/776275971_1043614285302664_4993824462786112545_n.png?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=s206x206&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=WpKIJnZiFpEQ7kNvwH6vJoR&_nc_oc=AdqXZIt9eXcJKDE11E1ZAHtvDOWH3YhluR5tAJPRWWoR7dCr0E5c_QdjEreFvsKi4ok&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQK-X_FycA1YTpnzkv0hwt4s1q3L-yh6-FyGxJtKKQM2Qw&oe=6AA59943",
+        "alt": "Na obrázku môže byť kroketa, hrachové pyré a škótske vajce",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1786945102931821",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.498Z",
+        "imageSha256": "8da267f7778a53f33fe59557b0a65140df0ff9556a4ec65fbb612a759441a000",
+        "saved": {
+          "file": "gallery-18.jpg",
+          "bytes": 150479,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/776275971_1043614285302664_4993824462786112545_n.png?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=s1200x1200&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=WpKIJnZiFpEQ7kNvwH6vJoR&_nc_oc=AdqXZIt9eXcJKDE11E1ZAHtvDOWH3YhluR5tAJPRWWoR7dCr0E5c_QdjEreFvsKi4ok&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=15rDB_ogdhSSZ1CGKrmRJQ&_nc_ss=7f289&oh=00_AQK-X_FycA1YTpnzkv0hwt4s1q3L-yh6-FyGxJtKKQM2Qw&oe=6AA59943"
+        }
+      },
+      "passes": [
+        {
+          "text": "ŤT a —- , =\nN ia A A ‘\nf ..<.\". slu\ng se x a : 6\n~ i a 7 s A\n| + x »¥ :\nz OZ 318a\nSú LAVÁ A pa 4.9\nwe y g it WA g. A 1% SY ,\nSas Gf Pe)\nSo ee\n= PS\nV\nx ? M“\n+\nA # Pp.\n* > A\nan s\n",
+          "confidence": 42.98755189705883,
+          "psm": 6,
+          "inputSha256": "8da267f7778a53f33fe59557b0a65140df0ff9556a4ec65fbb612a759441a000"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1786945099598488&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/774745193_912370628597012_3379445473347021312_n.png?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=s206x206&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=JMBll_NhLBoQ7kNvwF9aw9i&_nc_oc=Adol-I8bTevs6wV3NpjTkIzJiWXNEhcpMjdFS7bHrtWkPh_tVEnYd66QyRUEMb5z_Z8&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQINKGKNNah5hMTcr7h86vi9cb5qxesn3sfh6tsd9MSdRg&oe=6AA5A9DF",
+        "alt": "Na obrázku môže byť stratené vajce",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1786945099598488",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.763Z",
+        "imageSha256": "8316f92271883244cf264a31c7e35418e9d2d5382f49b113fd86736ca5dd1665",
+        "saved": {
+          "file": "gallery-19.jpg",
+          "bytes": 196722,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/774745193_912370628597012_3379445473347021312_n.png?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=s1200x1200&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=JMBll_NhLBoQ7kNvwF9aw9i&_nc_oc=Adol-I8bTevs6wV3NpjTkIzJiWXNEhcpMjdFS7bHrtWkPh_tVEnYd66QyRUEMb5z_Z8&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQINKGKNNah5hMTcr7h86vi9cb5qxesn3sfh6tsd9MSdRg&oe=6AA5A9DF"
+        }
+      },
+      "passes": [
+        {
+          "text": "> u\n= oe.\na \"\nNY U... 77 > =\nBale Vasa: € OK 4. 7 x\na WALY ‘ > De. fa.) 4 s\nV > a m oat ZV. as : Ye a =f\n48 <5 AT Cat : — Oe a\nFee STO ŠA = > Ť\nAS! 235 [3 “ga Og 25 A 4\nbere? ‘ie oe es 4\nHv ~~ SA q v 1x4 LEP\n| a s Z op. “ ie <a Onesies S\n; 3S Ni JA tá k S V\n, / te et 5 ©\nSs). 1019 Ja\n9 \"> \"a 2% U % + # cs\n% 28): ee po \\ M» TAT\n~ > a ~< x E fa © ea\n~ on; + og m — 5\nee esc\n",
+          "confidence": 44.857824022727286,
+          "psm": 6,
+          "inputSha256": "8316f92271883244cf264a31c7e35418e9d2d5382f49b113fd86736ca5dd1665"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1786259979667000&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/774668334_1597011792159571_4025896919738000179_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s206x206&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=OMzp0APK64gQ7kNvwGJ4fXV&_nc_oc=AdoX4_nNEoCU6F1kIFDj_8_uHyXX-nut87qNZroPvDvCalS9178mUpT5sZxV1X3XfZQ&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQJvAOxut5NwgvYjDyOmvv3osQIrGz2fd11kaka1aPldZA&oe=6AA5ACD0",
+        "alt": "Na obrázku môže byť text",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1786259979667000",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.853Z",
+        "imageSha256": "94273f38e829e6ca7419372f55add0e3952b5eae28bc087f58d9a9d69020d860",
+        "saved": {
+          "file": "gallery-20.jpg",
+          "bytes": 141234,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/774668334_1597011792159571_4025896919738000179_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=OMzp0APK64gQ7kNvwGJ4fXV&_nc_oc=AdoX4_nNEoCU6F1kIFDj_8_uHyXX-nut87qNZroPvDvCalS9178mUpT5sZxV1X3XfZQ&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQJvAOxut5NwgvYjDyOmvv3osQIrGz2fd11kaka1aPldZA&oe=6AA5ACD0"
+        }
+      },
+      "passes": [
+        {
+          "text": "~ bal — a”\nST BR)“ od 17.8.2026 do 21.8.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n—PIvARER— sditrónom\nPOLIEVKY oe\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 12,90€\nGrilovaný Steak z Lososa / Petržlenovo Cviklové Pyré / Citrónové Arancini / Pečená Šalotka / Citrónový Gél\n120/150/120g 1347\nTRADIČNÉ MENU | 8,90€\nPlnená Kapusta / Kyslá Smotana / Barčianský Chlieb 400/50/50g 137\nVEGGIE MENU | 8,90€\nVyprážaný Karfiol s Varenými Zemiakmi a Petržlenovou Vňaťou / Domáca Tatárska Omáčka 200/250/50g 13,710\nSPECIAL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 10,90€\nChilli Con Carne s Basmati Ryžou / Čerstvé Bylinky 200/250g ».2\nOSOBNÝ ODBER: + 421910 613 000\n",
+          "confidence": 87.39415189922478,
+          "psm": 6,
+          "inputSha256": "94273f38e829e6ca7419372f55add0e3952b5eae28bc087f58d9a9d69020d860"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1780193610273637&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t51.82787-15/772465898_18117988163314990_6922589754149798004_n.jpg?stp=dst-jpegr_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=rt6Wd8rQ1X8Q7kNvwEhUju9&_nc_oc=AdpETvZ8lg5WZagwggoKGZrZ8trQCJfwWiiIewoXvsTXeFVNFjKuvmOyWWbJTgiETKY&_nc_zt=23&se=-1&_nc_ht=scontent-atl3-2.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLHwuBQCnw32HllsPoeeU22HEe_v6LC1rmfrNingBb-HA&oe=6AA5A907",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1780193610273637",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:17.919Z",
+        "imageSha256": "169bba8b0689be4f13623bfb3b2da5117fd895defa30b6c4d9845c0bb20f1d1e",
+        "saved": {
+          "file": "gallery-21.jpg",
+          "bytes": 267609,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t51.82787-15/772465898_18117988163314990_6922589754149798004_n.jpg?stp=dst-jpegr_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=rt6Wd8rQ1X8Q7kNvwEhUju9&_nc_oc=AdpETvZ8lg5WZagwggoKGZrZ8trQCJfwWiiIewoXvsTXeFVNFjKuvmOyWWbJTgiETKY&_nc_zt=23&se=-1&_nc_ht=scontent-atl3-2.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLHwuBQCnw32HllsPoeeU22HEe_v6LC1rmfrNingBb-HA&oe=6AA5A907"
+        }
+      },
+      "passes": [
+        {
+          "text": "z a?\ns a © TY Nu. 1\na ’ :\n4 > 4 |\nA Z\na g p at st ’\nM 7 v - „A\nare“ | NS 11 dl\n‘A a ae + ;\ny yy. : É y A = / I Ga\nA A A k |\nPt + Pa “2\nwal = , 7 A — r, po\nx A. 4 ‘\nSe : eT - ic > a M\ní ee a | . m —— Ň V f°\n“a s. Ji Ň Ns ža : 4 4 i — . A\n“eee? VÁ, ©. m v 4\nM > zdá | al IR\n4 ST. z Z A 4 A Já \"u = ee : V\n| M >» ae . K za k 3 sú = c - AN £N\nonl | NU ee ond (1 eed Pou pee |\n1% NA ge a ) 2 A Ň\nSS am Ss jm“ 2 ZS Bop S bá\nb. aT ae ~~ f\ns ? rs z S Ages VY? ‘ey A\n: ae lll PE A) s Ň\nee 7 rm Vad a [7 i\nSs f? h OTA fi { P\n\\ kr“ cy A , <5 S . >\n>, mm e's ms K y V“ č f | > a g a\nKe : - Noy, Ao >) 1\nKA a bs! AA pt?\nS vn? Ň MI py .\nŇ p> NÉ\nv MS\nr be 1%\n~~ 2\nb) :\n— —“————€U€— aa \"m\n",
+          "confidence": 42.951664868725885,
+          "psm": 6,
+          "inputSha256": "169bba8b0689be4f13623bfb3b2da5117fd895defa30b6c4d9845c0bb20f1d1e"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1773313120961686&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/762606011_1058362233254209_1479150189638938459_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=102&ccb=1-7&_nc_sid=714c7a&_nc_ohc=RDKuKR8m4pIQ7kNvwEwtXJ8&_nc_oc=AdrGsfWzS2-D3zfc2fC5WZfHd2lsel0KHIQo2y6s9svHhleJkXRjSM-2m58FkA8hx5Q&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQJyC9zXS6tGubgDLFhnRpUJlf6auK3O0sckTguCvChtIQ&oe=6AA5A0F4",
+        "alt": "Opis fotky nie je k dispozícii.",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1773313120961686",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:18.455Z",
+        "imageSha256": "23cc4087524a544b6cefc0effa701ffd6c30f3f79eeb4118053d00cabc880dcc",
+        "saved": {
+          "file": "gallery-22.jpg",
+          "bytes": 371151,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.99422-6/762606011_1058362233254209_1479150189638938459_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=102&ccb=1-7&_nc_sid=714c7a&_nc_ohc=RDKuKR8m4pIQ7kNvwEwtXJ8&_nc_oc=AdrGsfWzS2-D3zfc2fC5WZfHd2lsel0KHIQo2y6s9svHhleJkXRjSM-2m58FkA8hx5Q&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQJyC9zXS6tGubgDLFhnRpUJlf6auK3O0sckTguCvChtIQ&oe=6AA5A0F4"
+        }
+      },
+      "passes": [
+        {
+          "text": ". X% núť m\"\n1 E— a + a!\nLF; Be\nm. s.a. Z —7 A\nnn — sá HY =» — .\nM iy (Me 7 si\n| dei A j Ä\n3 az 3 Ye =\n—~ A eG? €. s — ) A\nv H Gee\n» / Y a \\ v.\n: # JN k\n> a JA z < <\n“ Le Ww r W ’\n‘ofa =.\nx % x. AR „m\n; Ň > , s ft =) a 4 3\nM: el oe = CR IÉ : 7\n4 b , ie pe a | ee\n4 X ah NEO eu SS\n/ ee me =e #22:\nA a AA ee a Tx\n. A AE € a a A S m +\nA A NO NU +... . !\nA meee pate. ; ee €\nTD ; Baan’. č e + u\n. Ning A [4 ý ; ,\n“ lá \" A a a :\n\" Ls\nNuda - a Pht\n",
+          "confidence": 44.824591766081845,
+          "psm": 6,
+          "inputSha256": "23cc4087524a544b6cefc0effa701ffd6c30f3f79eeb4118053d00cabc880dcc"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1773313117628353&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/762276491_1557124736166983_1441523997241321190_n.png?stp=dst-jpg_tt6&cstp=mx1259x1259&ctp=s206x206&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=amgMfnoerhgQ7kNvwE6dDfy&_nc_oc=AdqL1SZG-7RJY_nd9CqPZYg6NPWUtBJyU_3-SuOxJJa4rkmnhx7cYCFrohH3AM595qU&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLCw2Cdg5pfb0iC707wF5cUUfTydYXlPMCqUVXWuWAwcw&oe=6AA5A17B",
+        "alt": "Na obrázku môže byť tofu",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1773313117628353",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:18.492Z",
+        "imageSha256": "99d0f8e6d0513eba2979ca8dce076c0e78fdd4235eba835dc0c485eca8285eb8",
+        "saved": {
+          "file": "gallery-23.jpg",
+          "bytes": 191213,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/762276491_1557124736166983_1441523997241321190_n.png?stp=dst-jpg_tt6&cstp=mx1259x1259&ctp=s1259x1259&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=amgMfnoerhgQ7kNvwE6dDfy&_nc_oc=AdqL1SZG-7RJY_nd9CqPZYg6NPWUtBJyU_3-SuOxJJa4rkmnhx7cYCFrohH3AM595qU&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLCw2Cdg5pfb0iC707wF5cUUfTydYXlPMCqUVXWuWAwcw&oe=6AA5A17B"
+        }
+      },
+      "passes": [
+        {
+          "text": "5 ) A wn g\nae Ko\noF me. sn is J deta 3 ufo 2 8L |\ns A > €\n— 7 AP Fo\" S.“ s rw\npeo RL aw GW „4 = spt Fa\nSee nO A\n> aa 20 ; <A =\n. 4 % i be S\n. z SS) @.. i ss o! «\nV ae 2% A\n4 - oe ‘Sar A\nSe, % . + > ; 4 ~ » z M ~~ (v\n. . #. s bá > >\nV a wes c é wa\nNA. .\n| PP oY\nAs > oe “A\nKa x v.\n",
+          "confidence": 45.35324619626167,
+          "psm": 6,
+          "inputSha256": "99d0f8e6d0513eba2979ca8dce076c0e78fdd4235eba835dc0c485eca8285eb8"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "candidate": {
+        "href": "https://www.facebook.com/photo.php?fbid=1773313114295020&set=pb.100048490447015.-2207520000&type=3",
+        "src": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/763018690_1377171491046823_4916529053581757602_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s206x206&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=Ww6g1Gf1yCkQ7kNvwHpyZry&_nc_oc=AdoYm5MK5zraAdO1DZI3san1KVAl9OLrTCuEaIKhSafL-151efUH6bmLUJJ4aN8PDYo&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLyIO9kyax6BcAP0WxEZbnxeo1HyQ0GTte4Zg69E8_54w&oe=6AA5B963",
+        "alt": "Na obrázku môže byť cestoviny",
+        "w": 206,
+        "h": 206,
+        "caption": "",
+        "fbid": "1773313114295020",
+        "source": "photos",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:18.975Z",
+        "imageSha256": "6bb0859d08f9204ada3570c4f455d86a37d0ff5ef4e77de3ba5b721d69242e3a",
+        "saved": {
+          "file": "gallery-24.jpg",
+          "bytes": 457691,
+          "contentType": "image/jpeg",
+          "url": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/763018690_1377171491046823_4916529053581757602_n.png?stp=dst-jpg_tt6&cstp=mx3024x3024&ctp=s2048x2048&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=Ww6g1Gf1yCkQ7kNvwHpyZry&_nc_oc=AdoYm5MK5zraAdO1DZI3san1KVAl9OLrTCuEaIKhSafL-151efUH6bmLUJJ4aN8PDYo&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=uLVieP-RHYevYUwE4AHNGQ&_nc_ss=7f289&oh=00_AQLyIO9kyax6BcAP0WxEZbnxeo1HyQ0GTte4Zg69E8_54w&oe=6AA5B963"
+        }
+      },
+      "passes": [
+        {
+          "text": "Oo NN Á\nAe s s | a Ť\n“ > . u S aa ee ~~» S\n4 á M a > > | Be\n4 |“ / > \\ VÝ :\n€ me O\n> AA - < JESS >\nA A M A.\n| i >. Ň A 4 + 1 Z « ! ,\n= i m „m s\n“ AE . Wi EN ( - : i a\n7). IM % 4 g 1 el =\n- « A Sa ie A .. aa\ny Ti M A Ha: 3 | \\ o .\n7 - NA. ey md x\ntt A\" ©. ! a> Ä ' / /\n1 PS —— Fe v\nae | . = Qhyy on „ý A ) F\n> = Ň Bio M q\n3 \\4 a a / 4\nA VN AA ON x\n",
+          "confidence": 44.60023263013699,
+          "psm": 6,
+          "inputSha256": "6bb0859d08f9204ada3570c4f455d86a37d0ff5ef4e77de3ba5b721d69242e3a"
+        }
+      ],
+      "accepted": false
+    }
+  ],
+  "observed": [
+    {
+      "id": "bluebell",
+      "source": {
+        "kind": "image-ocr",
+        "url": "https://www.facebook.com/photo.php?fbid=1807237660902565&set=pb.100048490447015.-2207520000&type=3",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.997Z",
+        "imageSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd",
+        "text": ". bad —”\nY Ý od 7.9.2026 do 11.9.2026 Vpivárni kmenu\nBLUEBELL 0d 11:00 do 14:00 džbán vody\n— PIVÁREŇ — sditrónom\nPOLIEVKY Selle\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2\nTRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z\nVEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2\nOSOBNÝ ODBER: + 421910 613 000\n",
+        "dateText": "7.9.2026 do 11.9.2026",
+        "validFrom": "2026-09-07",
+        "validTo": "2026-09-11"
+      },
+      "soups": [
+        {
+          "name": "Kurací Vývar",
+          "price": 2,
+          "sourceText": "0,331 Kurací Vývar 139 2,00€ |"
+        },
+        {
+          "name": "Podľa Dennej Ponuky",
+          "price": 2,
+          "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
+        },
+        {
+          "name": "Polievka Samostatne",
+          "price": 3.5,
+          "sourceText": "0,331 Polievka Samostatne 3,50€"
+        }
+      ],
+      "mains": [
+        {
+          "category": "biznis",
+          "name": "Grilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél",
+          "price": 11.9,
+          "sourceText": "BIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2"
+        },
+        {
+          "category": "tradicne",
+          "name": "Pečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót",
+          "price": 8.9,
+          "sourceText": "TRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z"
+        },
+        {
+          "category": "veggie",
+          "name": "Grilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka",
+          "price": 8.9,
+          "sourceText": "VEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :"
+        },
+        {
+          "category": "special-1",
+          "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+          "price": 8.9,
+          "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10"
+        },
+        {
+          "category": "special-2",
+          "name": "Obrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát",
+          "price": 9.9,
+          "sourceText": "ŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2"
+        }
+      ],
+      "reviewedComplete": false,
+      "needsVisualReview": true
+    },
+    {
+      "id": "bluebell",
+      "source": {
+        "kind": "image-ocr",
+        "url": "https://www.facebook.com/photo.php?fbid=1807237660902565&set=pb.100048490447015.-2207520000&type=3",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.997Z",
+        "imageSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd",
+        "text": "bal\n\n~~\n\nTÝŽDENNÉ MENU\n\ny\n\n4\n\nv\n\n‘\n\nod 7.9.2026 do 11.9.2026\n\nx\n\nps\n\nč\n\nVpivárni kmenu\n\nBLUEBELL\n\n0d 11:00 do 14:00\n\ndžbán vody\n\n— PIVÁREŇ —\n\nsdtronom\n\nGRATIS\n\nPOLIEVKY\n\n0,331 Kurací Vývar 139 2,00€\n\n0,331 Podľa Dennej Ponuky 2,00€\n\n0,331 Polievka Samostatne 3,50€\n\nBIZNIS MENU | 11,90€\n\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\n\nPetržlenový Gél 180/100/100/50g 79,2\n\nTRADIČNÉ MENU | 8,90€\n\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z\n\nVEGGIE MENU | 8,90€\n\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :\n\nŠPECIÁL MENU 1 | 8,90€\n\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\n\nŠPECIÁL MENU 2 | 9,90€\n\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2\n\nOSOBNÝ ODBER: + 421910 613 000\n",
+        "dateText": "7.9.2026 do 11.9.2026",
+        "validFrom": "2026-09-07",
+        "validTo": "2026-09-11"
+      },
+      "soups": [
+        {
+          "name": "Kurací Vývar",
+          "price": 2,
+          "sourceText": "0,331 Kurací Vývar 139 2,00€"
+        },
+        {
+          "name": "Podľa Dennej Ponuky",
+          "price": 2,
+          "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
+        },
+        {
+          "name": "Polievka Samostatne",
+          "price": 3.5,
+          "sourceText": "0,331 Polievka Samostatne 3,50€"
+        }
+      ],
+      "mains": [
+        {
+          "category": "biznis",
+          "name": "Grilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél",
+          "price": 11.9,
+          "sourceText": "BIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 79,2"
+        },
+        {
+          "category": "tradicne",
+          "name": "Pečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót",
+          "price": 8.9,
+          "sourceText": "TRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g z"
+        },
+        {
+          "category": "veggie",
+          "name": "Grilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka",
+          "price": 8.9,
+          "sourceText": "VEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka  120/250/50g :"
+        },
+        {
+          "category": "special-1",
+          "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+          "price": 8.9,
+          "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10"
+        },
+        {
+          "category": "special-2",
+          "name": "Obrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát",
+          "price": 9.9,
+          "sourceText": "ŠPECIÁL MENU 2 | 9,90€\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Šalát 180/250/50g 133,2"
+        }
+      ],
+      "reviewedComplete": false,
+      "needsVisualReview": true
+    },
+    {
+      "id": "bluebell",
+      "source": {
+        "kind": "image-ocr",
+        "url": "https://www.facebook.com/photo.php?fbid=1807237660902565&set=pb.100048490447015.-2207520000&type=3",
+        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+        "identityText": "Piváreň BlueBell | Facebook",
+        "capturedAt": "2026-09-08T09:50:15.997Z",
+        "imageSha256": "1804519f71325a9e52a69a3554bfdb584d4b5d3be3703aeb39305fdd2a9a4acd",
+        "text": "- — —\n\nU iy od 7.9.2026 do 11.9.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n—PIvARER— scitrónom\n\nPOLIEVKY zb\n0,331 Kurací Vývaľ 139 2,00€\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 7,12\nTRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g :\nVEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka 120/250/50g 7\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€ .\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Salat 180/250/50g 13712\nOSOBNÝ ODBER: + 421910 613 000\nwww.pivarenbluebell.sk € ©) pivarenbluebell\nSe! ENIE\n",
+        "dateText": "7.9.2026 do 11.9.2026",
+        "validFrom": "2026-09-07",
+        "validTo": "2026-09-11"
+      },
+      "soups": [
+        {
+          "name": "Kurací Vývaľ",
+          "price": 2,
+          "sourceText": "0,331 Kurací Vývaľ 139 2,00€"
+        },
+        {
+          "name": "Podľa Dennej Ponuky",
+          "price": 2,
+          "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
+        },
+        {
+          "name": "Polievka Samostatne",
+          "price": 3.5,
+          "sourceText": "0,331 Polievka Samostatne 3,50€"
+        }
+      ],
+      "mains": [
+        {
+          "category": "biznis",
+          "name": "Grilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace / Petržlenový Gél",
+          "price": 11.9,
+          "sourceText": "BIZNIS MENU | 11,90€\nGrilovaná Sous Vide Bravčová Panenka s Baby Hasselback Zemiakmi / Batátové Pyré / Čokoládový Demi Glace /\nPetržlenový Gél 180/100/100/50g 7,12"
+        },
+        {
+          "category": "tradicne",
+          "name": "Pečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót",
+          "price": 8.9,
+          "sourceText": "TRADIČNÉ MENU | 8,90€\nPečené Kuracie Stehno s Dusenou Ryžou / Ovocný Kompót 250/250/50g :"
+        },
+        {
+          "category": "veggie",
+          "name": "Grilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka",
+          "price": 8.9,
+          "sourceText": "VEGGIE MENU | 8,90€\nGrilovaný Hermelín s Pečenými Zemiakmi / Brusnicová Omáčka 120/250/50g 7"
+        },
+        {
+          "category": "special-1",
+          "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+          "price": 8.9,
+          "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10"
+        },
+        {
+          "category": "special-2",
+          "name": "Obrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Salat",
+          "price": 9.9,
+          "sourceText": "ŠPECIÁL MENU 2 | 9,90€ .\nObrátený Bravčový Rezeň so Zemiakovou Kašou / Paradajkový Salat 180/250/50g 13712"
+        }
+      ],
+      "reviewedComplete": false,
+      "needsVisualReview": true
+    }
+  ],
+  "failures": []
+}

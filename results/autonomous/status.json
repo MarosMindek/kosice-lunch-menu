@@ -1,9 +1,10 @@
 {
   "date": "2026-09-08",
   "mode": "dry-run",
-  "startedAt": "2026-09-08T09:41:35.076Z",
+  "startedAt": "2026-09-08T09:49:42.747Z",
   "modelCalls": 0,
+  "mailSecretPresent": false,
   "status": "failed",
-  "error": "stara-sypka: current complete menu unavailable; Bluebell: current image conflicts with verified backup",
-  "finishedAt": "2026-09-08T09:43:50.855Z"
+  "error": "Bluebell: current image conflicts with verified backup",
+  "finishedAt": "2026-09-08T09:51:35.010Z"
 }
