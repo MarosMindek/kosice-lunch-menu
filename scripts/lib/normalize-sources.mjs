@@ -93,7 +93,7 @@ export function parseSypka(raw,date) {
   for(const end of priceIndexes) {
     const block=lines.slice(cursor,end+1);cursor=end+1;
     const useful=block.filter(s=>!isLabel(s)&&!isFooter(s));
-    const text=useful.join('\n'), portions=[...text.matchAll(/\((\d+(?:[,.]\d+)?(?:\s*\/\s*\d+)*\s*[gl])\)\s*\([^)]*\)/gi)];
+    const text=useful.join('\n'), portions=[...text.matchAll(/\(\s*(\d+(?:[,.]\d+)?(?:\s*\/\s*\d+)*\s*[gl])\s*\)\s*\([^)]*\)/gi)];
     if(portions.length!==1)throw Error('Sypka: ambiguous portion/meal block');
     const q=portions[0],name=clean(text.slice(0,q.index));
     if(name.length<5 || /€/.test(name))throw Error('Sypka: unreadable meal name');

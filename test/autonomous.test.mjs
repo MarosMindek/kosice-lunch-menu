@@ -8,10 +8,23 @@ import {isWorkday} from '../scripts/lib/workday.mjs';
 import {agreeOCR} from '../scripts/lib/bluebell-auto.mjs';
 import {mailConfig,rawMessage,validSentCopy,deliver} from '../scripts/lib/gmail-delivery.mjs';
 import {GitHubJournal} from '../scripts/lib/delivery-journal.mjs';
+import {scheduledRunAllowed,SUMMER_SCHEDULES,WINTER_SCHEDULES} from '../scripts/lib/schedule.mjs';
 const read=name=>JSON.parse(fs.readFileSync(new URL('fixtures/'+name,import.meta.url)));
 const raw={kozlovna:read('raw-kozlovna.json'),'cool-bowling':read('raw-cool-bowling.json'),tahiti:read('raw-tahiti.json')};
 const fixture=read('menu-2026-09-07.json'),options={date:'2026-09-07',now:new Date('2026-09-07T12:00:00Z')};
 const message=renderEmail(fixture,options),config={client_id:'client',client_secret:'secret',refresh_token:'refresh',from:'sender@example.com',to:'recipient@example.com'};
+
+test('UTC schedules select Bratislava winter/summer time and accept delayed starts',()=>{
+  for(const date of ['2026-09-10T07:30:00Z','2026-09-10T10:55:00Z','2026-03-29T12:00:00Z']) {
+    for(const cron of SUMMER_SCHEDULES)assert.equal(scheduledRunAllowed(cron,new Date(date)),true);
+    for(const cron of WINTER_SCHEDULES)assert.equal(scheduledRunAllowed(cron,new Date(date)),false);
+  }
+  for(const date of ['2026-01-15T08:30:00Z','2026-10-25T12:00:00Z']) {
+    for(const cron of WINTER_SCHEDULES)assert.equal(scheduledRunAllowed(cron,new Date(date)),true);
+    for(const cron of SUMMER_SCHEDULES)assert.equal(scheduledRunAllowed(cron,new Date(date)),false);
+  }
+  assert.equal(scheduledRunAllowed('unknown',new Date('2026-09-10T07:30:00Z')),false);
+});
 
 test('all published weekdays parse without a model, including desserts and side dishes',()=>{
   for(const date of ['2026-09-07','2026-09-08','2026-09-09','2026-09-10','2026-09-11']) {
@@ -44,6 +57,16 @@ test('Slovak calendar includes Easter and the enacted 2026 exceptions',()=>{
   for(const d of ['2026-01-01','2026-01-06','2026-04-03','2026-04-06','2026-05-01','2026-12-24','2026-09-12'])assert.equal(isWorkday(d),false,d);
   for(const d of ['2026-05-08','2026-09-01','2026-09-08','2026-09-15','2026-11-17'])assert.equal(isWorkday(d),true,d);
   assert.equal(isWorkday('2027-09-15'),false);
+});
+test('Sypka September 9 PDF allows whitespace inside portion parentheses without dropping pasta',()=>{
+  const raw=read('raw-sypka-2026-09-09.json');
+  const parsed=parsers['stara-sypka'](raw,'2026-09-09');
+  assert.equal(parsed.soups.length,1);assert.equal(parsed.mains.length,6);
+  assert.deepEqual(parsed.mains.map(i=>i.price),[8.7,9.2,9.9,10.2,8.9,12.9]);
+  assert.equal(parsed.mains[4].portion,'450 G');
+  assert.match(parsed.mains[4].name,/CESTOVINY S PANCETTOU/);
+  assert.throws(()=>parsers['stara-sypka'](raw,'2026-09-10'),/current date/);
+  assert.throws(()=>parsers['stara-sypka']({...raw,pdfText:raw.pdfText.replace('( 450 G)(1,3,7)','')},'2026-09-09'),/portion/);
 });
 test('automatic Bluebell acceptance requires two distinct agreeing high-confidence readings',()=>{
   const b=fixture.restaurants.find(r=>r.id==='bluebell'),text=fs.readFileSync(new URL('fixtures/bluebell-current-ocr.txt',import.meta.url),'utf8');

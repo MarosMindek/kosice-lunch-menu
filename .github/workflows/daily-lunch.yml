@@ -11,10 +11,11 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '30,45 9 * * 1-5'
-      timezone: 'Europe/Bratislava'
-    - cron: '0 10 * * 1-5'
-      timezone: 'Europe/Bratislava'
+    # UTC: preflight selects CET/CEST by date and tolerates delayed starts.
+    - cron: '30,45 7 * * 1-5'
+    - cron: '30,45 8 * * 1-5'
+    - cron: '7 8 * * 1-5'
+    - cron: '7 9 * * 1-5'
 
 concurrency:
   group: ${{ (github.event_name == 'schedule' || inputs.send == true) && 'autonomous-lunch-delivery' || 'autonomous-lunch-preview' }}
@@ -31,6 +32,7 @@ jobs:
       SEND_EMAIL: ${{ github.event_name == 'schedule' || inputs.send == true }}
       GMAIL_OAUTH_JSON: ${{ secrets.GMAIL_OAUTH_JSON }}
       GITHUB_TOKEN: ${{ github.token }}
+      LUNCH_SCHEDULE: ${{ github.event.schedule }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -66,11 +68,14 @@ jobs:
           else
             npm run lunch:dry-run
           fi
+      - name: Explain delivery or activation status
+        if: always()
+        run: node .github/scripts/report-run.mjs
       - name: Save diagnostics and exact rendered preview
         if: always() && steps.preflight.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: lunch-${{ github.run_id }}
+          name: lunch-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             output/autonomous/
             output/bluebell-hires/

@@ -38,7 +38,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
 
 ## Rozvrh a formát
 
-- Jediný prevádzkový workflow: `daily-lunch.yml`, pondelok–piatok **09:30, 09:45 a 10:00 Europe/Bratislava**. Časové pásmo rieši aj letný čas. GitHub môže plánovaný štart oneskoriť; nejde o garanciu doručenia presne na minútu. [GitHub: plánované workflow](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+- Jediný prevádzkový workflow: `daily-lunch.yml`, pondelok–piatok **09:30, 09:45 a 10:07 Europe/Bratislava**. Spúšťače sú zapísané v UTC; kód podľa dátumu vyberá letný alebo zimný rozvrh pre Bratislavu. Beh neodmieta len preto, že sa vo fronte oneskoril. GitHub môže plánovaný štart oneskoriť; nejde o garanciu doručenia presne na minútu. [GitHub: plánované workflow](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 - Druhý a tretí pokus skončia pred inštaláciou prehliadača, ak už existuje overený e-mail. Odosielacie behy sa serializujú a nikdy sa automaticky nerušia. Skúšobné behy majú samostatnú skupinu; nový náhľad môže nahradiť starší bez zrušenia odosielania. Inštalácie majú vlastné časové limity.
 - `templates/email-v1.html` zostáva rovnaký. Jeho SHA-256 je uložené v `templates/email-v1.sha256`. Zmena šablóny bez výslovnej aktualizácie kontrolného súčtu zablokuje beh.
 - Všetky konkrétne položky, prílohy a ceny ostávajú v HTML aj textovej alternatíve. Tahiti má 15 % zľavu len na hlavné jedlá. Dezerty sa neporovnávajú s hlavnými jedlami.
@@ -63,3 +63,7 @@ Gmail API neposkytuje transakciu spoločnú s GitHubom. Ak sa po požiadavke na 
 `npm test` kontroluje reálne formáty celého publikovaného týždňa, prílohy, dezerty, ceny, sviatky, expiráciu a konflikty OCR, presné MIME, opakovaný/súbežný beh, zmenu dátumu a trvalý záznam nejasného odoslania. Testy transportu používajú simulovanú schránku; skutočné odoslanie samostatným programom sa overí po pripojení Gmailu.
 
 Push zmeny kódu na `main` vykoná celý živý test bez odoslania. Výsledok, zdrojové údaje a presný náhľad sú uložené v artefakte daného behu na sedem dní. Zber nezapisuje diagnostiku do hlavnej vetvy; staršie súbory `results/autonomous/` sú historické výstupy, nie stav najnovšieho behu. Samotný push nikdy neposiela e-mail. Staré jednotlivé zberové workflow ostávajú iba na výslovnú diagnostiku.
+
+## Kontrola aktivácie
+
+Workflow **Lunch activation check** overí predvolenú vetvu, aktívny rozvrh a skutočné prihlásenie ku Gmail API. Spusti ho cez Run workflow po nastavení secretu. Úspešný náhľad menu nenahrádza túto kontrolu ani test skutočného odoslania. Chýbajúce pripojenie skončí jasným `SETUP_REQUIRED`; stav je aj v prehľade behu a artefakte.

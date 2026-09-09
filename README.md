@@ -6,7 +6,7 @@ Automatické zbieranie denného menu, lokálne OCR obrázkov BlueBell, kontrola 
 
 1. Jednorazovo pripoj Gmail podľa [návodu](docs/AUTONOMOUS.md#jednorazové-pripojenie-gmailu) a nastav GitHub Actions secret `GMAIL_OAUTH_JSON`.
 2. Spusti [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml) cez **Run workflow → send**.
-3. Ďalšie pracovné dni bežia automaticky o **09:30 Europe/Bratislava**, s ďalšími pokusmi o 09:45 a 10:00. Po overenom odoslaní ďalší pokus skončí bez opakovaného zbierania.
+3. Ďalšie pracovné dni bežia automaticky o **09:30 Europe/Bratislava**, s ďalšími pokusmi o 09:45 a 10:07. Po overenom odoslaní ďalší pokus skončí bez opakovaného zbierania.
 
 Bez Gmail secretu sa dajú spúšťať živé náhľady; automatické odosielanie ho vyžaduje.
 
