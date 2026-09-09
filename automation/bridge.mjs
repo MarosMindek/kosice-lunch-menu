@@ -12,7 +12,11 @@ export async function runLunchBridge({tools,recipient,mode='send',previewRunId=n
   if(!['send','preview'].includes(mode)||previewRunId&&mode!=='preview')throw Error('Invalid bridge mode');
   const call=async(name,args)=>{const r=await tools[name](args);if(r.isError)throw Error(name+': '+JSON.stringify(r.structuredContent||r.content));return r.structuredContent?.result||r.structuredContent;};
   const get=async route=>JSON.parse((await call('mcp__codex_apps__github_fetch',{url:BASE+route})).content);
-  const shell=async(cmd,options={})=>{const r=await tools.exec_command({cmd,max_output_tokens:30000,...options});if(r.exit_code!==0)throw Error('Local validation failed: '+r.output);return r.output.trim();};
+  const shell=async(cmd,options={})=>{
+    let r=await tools.exec_command({cmd,max_output_tokens:30000,...options}),output=r.output;
+    while(r.session_id&&r.exit_code===undefined){r=await tools.write_stdin({session_id:r.session_id,chars:'',yield_time_ms:1000,max_output_tokens:30000});output+=r.output;}
+    if(r.exit_code!==0)throw Error('Local validation failed: '+output);return output.trim();
+  };
   const date=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bratislava',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(x=>[x.type,x.value]));return`${p.year}-${p.month}-${p.day}`;};
   const today=date(),subject='Obedové menu – Košice | '+today.split('-').reverse().join('.');
   async function existing() {
