@@ -1,9 +1,9 @@
 name: Menu validation and fixed email checks
 on:
   push:
-    paths: ['scripts/**', 'templates/**', 'data/bluebell/**', 'test/**', '.github/workflows/menu-checks.yml']
+    paths: ['scripts/**', 'automation/**', 'templates/**', 'data/bluebell/**', 'test/**', '.github/workflows/menu-checks.yml']
   pull_request:
-    paths: ['scripts/**', 'templates/**', 'data/bluebell/**', 'test/**']
+    paths: ['scripts/**', 'automation/**', 'templates/**', 'data/bluebell/**', 'test/**']
   workflow_dispatch:
 permissions:
   contents: read

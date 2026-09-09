@@ -1,5 +1,7 @@
 # Obedové menu bez modelových volaní
 
+Tento návod opisuje samostatnú alternatívu vyžadujúcu OAuth secret. Aktuálna prevádzková cesta je [pevný skript s pripojeným Gmailom](CONNECTED-RUNNER.md). Samostatné GitHub cron spúšťače sú do dokončenia aktivácie vypnuté.
+
 Bežný beh používa Node.js, Playwright, lokálny Tesseract a Gmail API. Nevolá žiadne generatívne modelové API a nepotrebuje ChatGPT úlohu, prompt, ručné skladanie JSON ani ručné odoslanie. OCR beží lokálne bez spotreby LLM tokenov.
 
 ## Jeden príkaz
@@ -32,13 +34,13 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
    ```
 
    Tento JSON obsahuje `client_id`, `client_secret`, `refresh_token`, `from` a `to`. Hodnoty sa nedávajú do repozitára ani do chatu. Klientsky JSON aj tokenový JSON sú v `.gitignore`.
-5. Otvor [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml), zvoľ **Run workflow** a zapni **send**. Najprv prebehne overenie účtu a kompletného menu. Nasledujúce pracovné dni bežia automaticky. Ak dnešné menu už odišlo cez konektor, odosielací skript ho nepošle druhýkrát: oznámi `EXISTING_MENU_REQUIRES_REVIEW`. Kontrolu prihlásenia v takom prípade vykonaj samostatným workflow **Lunch activation check**.
+5. Otvor [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml), zvoľ **Run workflow** a zapni **send**. Najprv prebehne overenie účtu a kompletného menu. Na automatickú prevádzku ešte treba nastaviť a overiť samostatný časovač. Ak dnešné menu už odišlo cez konektor, odosielací skript ho nepošle druhýkrát: oznámi `EXISTING_MENU_REQUIRES_REVIEW`. Kontrolu prihlásenia v takom prípade vykonaj samostatným workflow **Lunch activation check**.
 
 `GITHUB_TOKEN` poskytne GitHub Actions automaticky; slúži na trvalý záznam odosielania. Pri spustení mimo Actions musí prostredie navyše obsahovať `GITHUB_REPOSITORY` a vlastný token s Contents read/write pre tento repozitár. Gmail refresh token program priebežne vymieňa za krátkodobý access token bez modelového volania.
 
 ## Rozvrh a formát
 
-- Jediný prevádzkový workflow: `daily-lunch.yml`, pondelok–piatok **09:30, 09:45 a 10:07 Europe/Bratislava**. Spúšťače sú zapísané v UTC; kód podľa dátumu vyberá letný alebo zimný rozvrh pre Bratislavu. Beh neodmieta len preto, že sa vo fronte oneskoril. GitHub môže plánovaný štart oneskoriť; nejde o garanciu doručenia presne na minútu. [GitHub: plánované workflow](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+- Pripravené UTC rozvrhy pre samostatný workflow sú v `scripts/lib/schedule.mjs`; aktuálne nie sú zapnuté. Zodpovedajú časom **09:30, 09:45 a 10:07 Europe/Bratislava**. Kód podľa dátumu vyberá letný alebo zimný rozvrh. Beh neodmieta len preto, že sa vo fronte oneskoril. GitHub môže plánovaný štart oneskoriť; nejde o garanciu doručenia presne na minútu. [GitHub: plánované workflow](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 - Druhý a tretí pokus skončia pred inštaláciou prehliadača, ak už existuje overený e-mail. Odosielacie behy sa serializujú a nikdy sa automaticky nerušia. Skúšobné behy majú samostatnú skupinu; nový náhľad môže nahradiť starší bez zrušenia odosielania. Inštalácie majú vlastné časové limity.
 - `templates/email-v1.html` zostáva rovnaký. Jeho SHA-256 je uložené v `templates/email-v1.sha256`. Zmena šablóny bez výslovnej aktualizácie kontrolného súčtu zablokuje beh.
 - Všetky konkrétne položky, prílohy a ceny ostávajú v HTML aj textovej alternatíve. Tahiti má 15 % zľavu len na hlavné jedlá. Dezerty sa neporovnávajú s hlavnými jedlami.

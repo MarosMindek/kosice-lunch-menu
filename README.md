@@ -2,11 +2,15 @@
 
 Automatické zbieranie denného menu, lokálne OCR obrázkov BlueBell, kontrola aktuálnosti a odosielanie cez Gmail API. Bežný beh nevolá generatívne modelové API a nespotrebúva LLM tokeny.
 
-## Aktivácia
+## Aktuálna prevádzka
+
+Menu zabezpečuje [pevný skript s pripojeným Gmailom](docs/CONNECTED-RUNNER.md), spúšťaný jednou úlohou o **09:30 a 10:30 Europe/Bratislava** od 10. 9. 2026. Obsah aj formát vytvára kód. Vyvolanie úlohy má malú tokenovú réžiu.
+
+## Samostatná prevádzka bez modelovej réžie
 
 1. Jednorazovo pripoj Gmail podľa [návodu](docs/AUTONOMOUS.md#jednorazové-pripojenie-gmailu) a nastav GitHub Actions secret `GMAIL_OAUTH_JSON`.
 2. Spusti [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml) cez **Run workflow → send**.
-3. Ďalšie pracovné dni bežia automaticky o **09:30 Europe/Bratislava**, s ďalšími pokusmi o 09:45 a 10:07. Po overenom odoslaní ďalší pokus skončí bez opakovaného zbierania.
+3. Pred prechodom zo súčasnej úlohy ešte nastav a over samostatný časovač. Po overenom odoslaní ďalší pokus skončí bez opakovaného zbierania.
 
 Bez Gmail secretu sa dajú spúšťať živé náhľady; automatické odosielanie ho vyžaduje.
 

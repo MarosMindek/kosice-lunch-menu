@@ -10,12 +10,8 @@ on:
         description: 'Send the validated email (false runs a live preview only)'
         type: boolean
         default: false
-  schedule:
-    # UTC: preflight selects CET/CEST by date and tolerates delayed starts.
-    - cron: '30,45 7 * * 1-5'
-    - cron: '30,45 8 * * 1-5'
-    - cron: '7 8 * * 1-5'
-    - cron: '7 9 * * 1-5'
+  # Production scheduling currently calls automation/bridge.mjs through the connected tools.
+  # Standalone Gmail scheduling is enabled only after its separate OAuth activation.
 
 concurrency:
   group: ${{ (github.event_name == 'schedule' || inputs.send == true) && 'autonomous-lunch-delivery' || 'autonomous-lunch-preview' }}
