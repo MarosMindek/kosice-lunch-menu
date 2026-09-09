@@ -1,0 +1,35 @@
+name: Lunch activation check
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/scripts/check-activation.mjs', '.github/workflows/activation-check.yml']
+  workflow_dispatch:
+  # Temporary scheduler verification on 2026-09-09; removed after the check.
+  schedule:
+    - cron: '40,50 8 9 9 *'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  activation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify scheduled workflow and Gmail authorization
+        env:
+          GMAIL_OAUTH_JSON: ${{ secrets.GMAIL_OAUTH_JSON }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node .github/scripts/check-activation.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: activation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: output/activation/
+          retention-days: 7
