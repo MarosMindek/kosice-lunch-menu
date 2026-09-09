@@ -54,14 +54,20 @@ export class Gmail {
   }
   async findDelivered(date) {
     const {to}=this.config,subject=`Obedové menu – Košice | ${date.split('-').reverse().join('.')}`;
+    let existingUnverified=false;
     const query=new URLSearchParams({q:`in:sent to:${to} subject:"${subject}"`,maxResults:'100'});
     for(let page=0;page<5;page++) {
       const result=await this.request('messages?'+query);
       for(const item of result.messages||[]) {
         const data=await this.request(`messages/${item.id}?format=full`),h=decodedMail(data).headers;
         if(h.subject===subject&&validSentCopy(data,date,to))return data;
+        if(h.subject===subject&&data.labelIds?.includes('SENT')&&[to.toLowerCase(),`<${to.toLowerCase()}>`].some(address=>h.to?.toLowerCase()===address||h.to?.toLowerCase().endsWith(' '+address)))existingUnverified=true;
       }
-      if(!result.nextPageToken)return null;query.set('pageToken',result.nextPageToken);
+      if(!result.nextPageToken) {
+        if(existingUnverified)throw Error('EXISTING_MENU_REQUIRES_REVIEW: today already has a sent menu without this sender verification; refusing a duplicate');
+        return null;
+      }
+      query.set('pageToken',result.nextPageToken);
     }
     throw Error('Gmail deduplication search exceeded its bound');
   }

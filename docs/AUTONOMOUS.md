@@ -21,7 +21,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
 3. Na vlastnom počítači s Node 22+ spusti v priečinku repozitára:
 
    ```sh
-   node scripts/setup-gmail.mjs cesta/ku/client_secret.json odosielatel@example.com prijemca@example.com
+   node scripts/setup-gmail.mjs cesta/ku/client_secret.json maros7844@gmail.com maros.mindek@fpt.com
    ```
 
    Prihlásenie prebehne priamo cez Google. Skript používa PKCE, náhodný `state` a callback len na `127.0.0.1`. Výsledok uloží do lokálneho `gmail-oauth.json` s právami 0600 a nevypíše tokeny. Rozsahy sú `gmail.send` a `gmail.readonly` na kontrolu Sent; nežiada mazanie pošty. [Google: OAuth pre desktopové aplikácie](https://developers.google.com/identity/protocols/oauth2/native-app).
@@ -32,7 +32,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
    ```
 
    Tento JSON obsahuje `client_id`, `client_secret`, `refresh_token`, `from` a `to`. Hodnoty sa nedávajú do repozitára ani do chatu. Klientsky JSON aj tokenový JSON sú v `.gitignore`.
-5. Otvor [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml), zvoľ **Run workflow** a zapni **send**. Najprv prebehne overenie účtu a kompletného menu. Nasledujúce pracovné dni bežia automaticky.
+5. Otvor [Autonomous lunch email](https://github.com/MarosMindek/kosice-lunch-menu/actions/workflows/daily-lunch.yml), zvoľ **Run workflow** a zapni **send**. Najprv prebehne overenie účtu a kompletného menu. Nasledujúce pracovné dni bežia automaticky. Ak dnešné menu už odišlo cez konektor, odosielací skript ho nepošle druhýkrát: oznámi `EXISTING_MENU_REQUIRES_REVIEW`. Kontrolu prihlásenia v takom prípade vykonaj samostatným workflow **Lunch activation check**.
 
 `GITHUB_TOKEN` poskytne GitHub Actions automaticky; slúži na trvalý záznam odosielania. Pri spustení mimo Actions musí prostredie navyše obsahovať `GITHUB_REPOSITORY` a vlastný token s Contents read/write pre tento repozitár. Gmail refresh token program priebežne vymieňa za krátkodobý access token bez modelového volania.
 
@@ -67,3 +67,5 @@ Push zmeny kódu na `main` vykoná celý živý test bez odoslania. Výsledok, z
 ## Kontrola aktivácie
 
 Workflow **Lunch activation check** overí predvolenú vetvu, aktívny rozvrh a skutočné prihlásenie ku Gmail API. Spusti ho cez Run workflow po nastavení secretu. Úspešný náhľad menu nenahrádza túto kontrolu ani test skutočného odoslania. Chýbajúce pripojenie skončí jasným `SETUP_REQUIRED`; stav je aj v prehľade behu a artefakte.
+
+Ak Sent obsahuje menu s rovnakým dátumom a adresátom, ale bez overovacích hlavičiek samostatného programu (napríklad dnešné odoslanie cez konektor), program odmietne vytvoriť ďalšiu kópiu. Nezamieňa to za úspešné overenie vlastného transportu.

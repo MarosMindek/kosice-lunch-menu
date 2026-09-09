@@ -6,7 +6,7 @@ import {validateMenu,sha256} from '../scripts/lib/menu-contract.mjs';
 import {renderEmail} from '../scripts/render-email.mjs';
 import {isWorkday} from '../scripts/lib/workday.mjs';
 import {agreeOCR} from '../scripts/lib/bluebell-auto.mjs';
-import {mailConfig,rawMessage,validSentCopy,deliver} from '../scripts/lib/gmail-delivery.mjs';
+import {Gmail,mailConfig,rawMessage,validSentCopy,deliver} from '../scripts/lib/gmail-delivery.mjs';
 import {GitHubJournal} from '../scripts/lib/delivery-journal.mjs';
 import {scheduledRunAllowed,SUMMER_SCHEDULES,WINTER_SCHEDULES} from '../scripts/lib/schedule.mjs';
 const read=name=>JSON.parse(fs.readFileSync(new URL('fixtures/'+name,import.meta.url)));
@@ -92,6 +92,13 @@ test('Gmail MIME preserves the exact template and rejects altered or legacy copi
   assert.equal(validSentCopy(copy,options.date,config.to),false);
   assert.equal(validSentCopy({labelIds:['SENT'],payload:{headers:[],parts:[]}},options.date,config.to),false);
   assert.throws(()=>mailConfig(JSON.stringify({...config,to:'a@example.com\r\nBcc: b@example.com'})),/mailbox/);
+});
+test('a menu sent through the connector blocks a duplicate but a verified copy still wins',async()=>{
+  const gmail=new Gmail(config),legacy={labelIds:['SENT'],payload:{headers:[{name:'To',value:config.to},{name:'Subject',value:message.subject}]}};
+  gmail.request=async route=>route.startsWith('messages?')?{messages:[{id:'legacy'}]}:legacy;
+  await assert.rejects(gmail.findDelivered(options.date),/EXISTING_MENU_REQUIRES_REVIEW/);
+  gmail.request=async route=>route.startsWith('messages?')?{messages:[{id:'legacy'},{id:'verified'}]}:route.includes('/verified?')?sentCopy():legacy;
+  assert.equal(validSentCopy(await gmail.findDelivered(options.date),options.date,config.to),true);
 });
 test('the real Facebook image passes on two original readings without a manual backup',()=>{
   const {candidate,passes}=read('bluebell-live-consensus.json');
