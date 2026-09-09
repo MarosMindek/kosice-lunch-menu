@@ -21,7 +21,7 @@ GitHub runner potrebuje vlastné oprávnenie na schránku. Pripojenie Gmailu v C
 3. Na vlastnom počítači s Node 22+ spusti v priečinku repozitára:
 
    ```sh
-   node scripts/setup-gmail.mjs cesta/ku/client_secret.json maros7844@gmail.com maros.mindek@fpt.com
+   node scripts/setup-gmail.mjs cesta/ku/client_secret.json odosielatel@example.com prijemca@example.com
    ```
 
    Prihlásenie prebehne priamo cez Google. Skript používa PKCE, náhodný `state` a callback len na `127.0.0.1`. Výsledok uloží do lokálneho `gmail-oauth.json` s právami 0600 a nevypíše tokeny. Rozsahy sú `gmail.send` a `gmail.readonly` na kontrolu Sent; nežiada mazanie pošty. [Google: OAuth pre desktopové aplikácie](https://developers.google.com/identity/protocols/oauth2/native-app).
