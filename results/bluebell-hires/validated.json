@@ -1,0 +1,69 @@
+{
+  "id": "bluebell",
+  "source": {
+    "kind": "verified-image",
+    "origin": "live-facebook-capture",
+    "url": "https://www.facebook.com/photo/?fbid=1814058190220512&set=a.877992830493724&__cft__[0]=AZjasKvGOnv6gDBpZEt-MF2JMNNbH00lqoz28GUDMoodirNf4hbAB20kUeVM-c7owGNV4OjDHl_fkcCnPSg9X9lnf7ZuRgbsaBqpNJWAvXxk1Q3ceI2dP1-1j3bNljnw2vrDZoGoU2Nv5a0y61amlf6MYgncK4j6pc6dXlN-3n2GvhtAHiVJdBcLbvg&__tn__=EH-R",
+    "urlRole": "current public Facebook menu image",
+    "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+    "identityText": "Piváreň BlueBell",
+    "capturedAt": "2026-09-16T11:32:30.561Z",
+    "imageSha256": "c317e6869792ecf1c3ddf60bf4187db9dffa25bf4629997da358b362b29db476",
+    "originalFilename": "gallery-08.jpg",
+    "verification": "visual-transcription",
+    "dateText": "od 14.9.2026 do 18.9.2026",
+    "validFrom": "2026-09-14",
+    "validTo": "2026-09-18",
+    "text": "BLUEBELL PIVÁREŇ\nTÝŽDENNÉ MENU\nod 14.9.2026 do 18.9.2026\nod 11:00 do 14:00\nPOLIEVKY\n0,33l Kurací Vývar 2,00€\n0,33l Podľa Dennej Ponuky 2,00€\n0,33l Polievka Samostatne 3,50€\nBIZNIS MENU | 12,90€\nGrilovaný Losos s Petržlenovo - Cviklovým Pyré a Bielou Čokoládou / Citrónové Arancini / Pečená Šalotka / Limetkový Kaviár / Marinovaná Reďkovka 120/150/150g\nTRADIČNÉ MENU | 8,90€\nPomaly Pečená Bravčová Krkovička s Dusenou Červenou Kapustou / Domáca Parená Knedľa 180/150/200g\nVEGGIE MENU | 9,90€\nVyprážaný Údený Oštiepok so Šťuchanými Zemiakmi / Domáca Tatárska Omáčka 150/250/50g\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g\nŠPECIÁL MENU 2 | 10,90€\nPomaly Pečené Bravčové Líčka na Červenom Víne s Domácou Zemiakovou Štrúdľou / Pečená Koreňová Zelenina 180/250/50g\nOSOBNÝ ODBER: +421 910 613 000"
+  },
+  "soups": [
+    {
+      "name": "Kurací Vývar",
+      "price": 2,
+      "sourceText": "0,33l Kurací Vývar 2,00€"
+    },
+    {
+      "name": "Podľa Dennej Ponuky",
+      "price": 2,
+      "sourceText": "0,33l Podľa Dennej Ponuky 2,00€"
+    },
+    {
+      "name": "Polievka Samostatne",
+      "price": 3.5,
+      "sourceText": "0,33l Polievka Samostatne 3,50€"
+    }
+  ],
+  "mains": [
+    {
+      "category": "biznis",
+      "name": "Grilovaný Losos s Petržlenovo - Cviklovým Pyré a Bielou Čokoládou / Citrónové Arancini / Pečená Šalotka / Limetkový Kaviár / Marinovaná Reďkovka",
+      "price": 12.9,
+      "sourceText": "BIZNIS MENU | 12,90€\nGrilovaný Losos s Petržlenovo - Cviklovým Pyré a Bielou Čokoládou / Citrónové Arancini / Pečená Šalotka / Limetkový Kaviár / Marinovaná Reďkovka 120/150/150g"
+    },
+    {
+      "category": "tradicne",
+      "name": "Pomaly Pečená Bravčová Krkovička s Dusenou Červenou Kapustou / Domáca Parená Knedľa",
+      "price": 8.9,
+      "sourceText": "TRADIČNÉ MENU | 8,90€\nPomaly Pečená Bravčová Krkovička s Dusenou Červenou Kapustou / Domáca Parená Knedľa 180/150/200g"
+    },
+    {
+      "category": "veggie",
+      "name": "Vyprážaný Údený Oštiepok so Šťuchanými Zemiakmi / Domáca Tatárska Omáčka",
+      "price": 9.9,
+      "sourceText": "VEGGIE MENU | 9,90€\nVyprážaný Údený Oštiepok so Šťuchanými Zemiakmi / Domáca Tatárska Omáčka 150/250/50g"
+    },
+    {
+      "category": "special-1",
+      "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
+      "price": 8.9,
+      "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g"
+    },
+    {
+      "category": "special-2",
+      "name": "Pomaly Pečené Bravčové Líčka na Červenom Víne s Domácou Zemiakovou Štrúdľou / Pečená Koreňová Zelenina",
+      "price": 10.9,
+      "sourceText": "ŠPECIÁL MENU 2 | 10,90€\nPomaly Pečené Bravčové Líčka na Červenom Víne s Domácou Zemiakovou Štrúdľou / Pečená Koreňová Zelenina 180/250/50g"
+    }
+  ],
+  "reviewedComplete": true
+}
