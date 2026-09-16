@@ -26,7 +26,6 @@ export function agreeOCR(passes,candidate,date) {
       groups.set(key,group);
     } catch { /* A non-menu image or unclear reading is not evidence. */ }
   }
-  // Different complete readings are a conflict, even if one has more votes.
   if(groups.size!==1)return null;
   const group=[...groups.values()][0];if(group.length<2)return null;
   const menu=group[0].menu;
@@ -56,9 +55,14 @@ function currentBackups(date,backupDirectory='data/bluebell',machineValidated='r
   }
   return [...byKey.values()];
 }
+export function validatedBluebellBackup(date,backupDirectory='data/bluebell',machineValidated='results/bluebell-hires/validated.json') {
+  const backups=currentBackups(date,backupDirectory,machineValidated),keys=new Set(backups.map(imageMenuKey));
+  if(keys.size>1)throw Error('Bluebell: conflicting validated backups');
+  return backups[0]||null;
+}
 export function collectBluebell(directory,date,backupDirectory='data/bluebell') {
   const meta=JSON.parse(fs.readFileSync(path.join(directory,'metadata.json'),'utf8')), accepted=[],observed=[],failures=[];
-  const backups=currentBackups(date,backupDirectory);
+  const backup=validatedBluebellBackup(date,backupDirectory),backups=backup?[backup]:[];
   const out=path.join(directory,'auto-ocr');fs.mkdirSync(out,{recursive:true});
   const diagnostics=[];
   for(const c of meta.candidates||[]) {
@@ -75,8 +79,6 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
         const text=fs.readFileSync(base+'.txt','utf8'),confidence=ocrConfidence(fs.readFileSync(base+'.tsv','utf8'));
         passes.push({text,confidence,psm,inputSha256:sha256(fs.readFileSync(image))});
         if(confidence>=85)try{observed.push(cleanOCRMenu(parseBluebell(text,c,c.capturedAt,date)));}catch{}
-        // Once two readings of the original pixels agree, do not introduce an unnecessary
-        // transformed third reading. Upscaling can degrade a letter in an already clear image.
         if(agreeOCR(passes,c,date))break;
         if(label==='original-6') {
           const ranges=dateRanges(text),markers=[...normalized(text).matchAll(/biznismenu|tradicnemenu|veggiemenu|specialmenu/g)].length;
@@ -93,16 +95,12 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
   if(keys.size>1)throw Error('Bluebell: conflicting current images');
   if(accepted.length) {
     if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(accepted[0])))throw Error('Bluebell: conflicting complete OCR readings');
-    if(backups.some(m=>imageMenuKey(m)!==imageMenuKey(accepted[0])))throw Error('Bluebell: live image conflicts with validated backup');
+    if(backup&&imageMenuKey(backup)!==imageMenuKey(accepted[0]))throw Error('Bluebell: live image conflicts with validated backup');
     return accepted[0];
   }
-  const backupKeys=new Set(backups.map(imageMenuKey));
-  if(backupKeys.size>1)throw Error('Bluebell: conflicting validated backups');
-  // A current machine-validated capture or explicitly verified attachment is an expiring fallback.
-  // It is never relabelled to a new week/date and is rejected automatically when validateSource fails.
-  if(backups.length===1) {
-    if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(backups[0])))throw Error('Bluebell: current image conflicts with validated backup');
-    return backups[0];
+  if(backup) {
+    if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(backup)))throw Error('Bluebell: current image conflicts with validated backup');
+    return backup;
   }
   throw Error('Bluebell: no current menu with agreeing OCR and sufficient confidence');
 }
