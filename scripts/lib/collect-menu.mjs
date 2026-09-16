@@ -3,7 +3,7 @@ import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { parsers, fingerprint } from './normalize-sources.mjs';
-import { collectBluebell } from './bluebell-auto.mjs';
+import { collectBluebell, validatedBluebellBackup } from './bluebell-auto.mjs';
 import { validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
 const execute=promisify(execFile);
 const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/restauracia/obedove-menu','https://www.starasypka.sk/sk/']};
@@ -34,7 +34,6 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
           pdfURL.searchParams.set('_menu',String(Date.now()));
           const res=await ctx.request.get(pdfURL.href,{timeout:30000,headers:{'cache-control':'no-cache'}});
           if(!res.ok()||!/application\/pdf/.test(res.headers()['content-type']||''))continue;
-          // Homepage and daily-page requests run concurrently: never share temporary PDF paths.
           const stem='stara-sypka-'+sha256(url+'\n'+link).slice(0,16);
           const pdf=path.join(out,stem+'.pdf'),txt=path.join(out,stem+'.txt');
           fs.writeFileSync(pdf,await res.body());await execute('pdftotext',['-raw',pdf,txt],{timeout:15000});
@@ -63,12 +62,24 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
     }
     throw Error(`${id}: current complete menu unavailable`);
   }
+  async function bluebell() {
+    const cached=validatedBluebellBackup(date);
+    if(cached) {
+      sources.bluebell=cached;onStatus({id:'bluebell',status:'validated-cache'});return cached;
+    }
+    try {
+      await execute(process.execPath,['scripts/bluebell-hires.mjs'],{timeout:420000,maxBuffer:1024*1024});
+      const menu=collectBluebell('output/bluebell-hires',date);sources.bluebell=menu;onStatus({id:'bluebell',status:'validated-live'});return menu;
+    } catch(error) {
+      errors.push({id:'bluebell',reason:error.message});
+      const fallback=validatedBluebellBackup(date);
+      if(fallback) {sources.bluebell=fallback;onStatus({id:'bluebell',status:'validated-cache-after-live-failure'});return fallback;}
+      throw error;
+    }
+  }
   const ids=['kozlovna','cool-bowling','tahiti',...(weekday(date)===1?[]:['stara-sypka'])];
   try {
-    const results=await Promise.allSettled([
-      ...ids.map(restaurant),
-      (async()=>{await execute(process.execPath,['scripts/bluebell-hires.mjs'],{timeout:420000,maxBuffer:1024*1024});const menu=collectBluebell('output/bluebell-hires',date);sources.bluebell=menu;onStatus({id:'bluebell',status:'validated'});return menu;})()
-    ]);
+    const results=await Promise.allSettled([...ids.map(restaurant),bluebell()]);
     const failures=results.filter(r=>r.status==='rejected');
     if(failures.length)throw Error(failures.map(r=>r.reason.message).join('; '));
     const menu={date,restaurants:results.map(r=>r.value)};
