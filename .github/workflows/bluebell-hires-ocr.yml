@@ -1,12 +1,23 @@
 name: BlueBell hi-res OCR
 
-# Superseded by daily-lunch.yml; retained for explicit diagnostics only.
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/bluebell-hires.mjs'
+      - 'scripts/bluebell-select.mjs'
+      - 'scripts/lib/facebook-images.mjs'
+      - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
+  # GitHub cron is UTC.  We schedule both CET and CEST candidate hours and keep
+  # only 09:00-10:00 Europe/Bratislava below.  This yields captures around
+  # 09:10, 09:40 and 09:55 local time all year, before the mail attempts.
+  schedule:
+    - cron: '10,40,55 7,8 * * 1-5'
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  group: bluebell-hires-ocr-main
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -16,18 +27,38 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Local schedule guard
+        id: guard
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          local_hm=$(TZ=Europe/Bratislava date +%H%M)
+          if [ "$local_hm" -ge 0900 ] && [ "$local_hm" -le 1000 ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
         with:
           node-version: '22'
-      - run: npm install
+      - run: npm install --ignore-scripts --no-audit --no-fund
+        if: steps.guard.outputs.skip != 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.guard.outputs.skip != 'true'
       - run: npm run scrape:bluebell-hires
+        if: steps.guard.outputs.skip != 'true'
       - name: OCR hi-res images
+        if: steps.guard.outputs.skip != 'true'
         shell: bash
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-slk
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-slk python3-pil
           mkdir -p output/bluebell-hires/ocr
           shopt -s nullglob
           for f in output/bluebell-hires/gallery-*; do
@@ -38,13 +69,16 @@ jobs:
             done
           done
       - name: Select dated menu images independently
+        if: steps.guard.outputs.skip != 'true'
         run: node scripts/bluebell-select.mjs output/bluebell-hires
       - uses: actions/upload-artifact@v4
+        if: steps.guard.outputs.skip != 'true'
         with:
-          name: bluebell-hires-output
+          name: bluebell-hires-output-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/bluebell-hires/
           retention-days: 7
       - name: Publish hi-res OCR
+        if: steps.guard.outputs.skip != 'true'
         run: |
           rm -rf results/bluebell-hires
           mkdir -p results
