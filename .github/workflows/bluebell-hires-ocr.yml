@@ -6,12 +6,13 @@ on:
     paths:
       - 'scripts/bluebell-hires.mjs'
       - 'scripts/bluebell-select.mjs'
+      - 'scripts/lib/bluebell-auto.mjs'
       - 'scripts/lib/facebook-images.mjs'
       - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
-  # GitHub cron is UTC.  We schedule both CET and CEST candidate hours and keep
-  # only 09:00-10:00 Europe/Bratislava below.  This yields captures around
-  # 09:10, 09:40 and 09:55 local time all year, before the mail attempts.
+  # GitHub cron is UTC. Schedule both CET/CEST candidate hours and keep only
+  # 09:00-10:00 Europe/Bratislava below. This gives fresh captures before the
+  # 09:30, 09:45 and 10:00 lunch-email attempts throughout the year.
   schedule:
     - cron: '10,40,55 7,8 * * 1-5'
 
@@ -71,6 +72,26 @@ jobs:
       - name: Select dated menu images independently
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/bluebell-select.mjs output/bluebell-hires
+      - name: Publish strict machine-validated menu when OCR agrees
+        if: steps.guard.outputs.skip != 'true'
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { collectBluebell } from './scripts/lib/bluebell-auto.mjs';
+          import { localDate } from './scripts/lib/menu-contract.mjs';
+          const file='output/bluebell-hires/validated.json';
+          const errorFile='output/bluebell-hires/validation-error.json';
+          fs.rmSync(file,{force:true}); fs.rmSync(errorFile,{force:true});
+          try {
+            const menu=collectBluebell('output/bluebell-hires',localDate());
+            fs.writeFileSync(file,JSON.stringify(menu,null,2));
+            console.log(JSON.stringify({status:'validated',validFrom:menu.source.validFrom,validTo:menu.source.validTo,mains:menu.mains.length,soups:menu.soups.length,validation:menu.validation||menu.source.verification}));
+          } catch (error) {
+            fs.writeFileSync(errorFile,JSON.stringify({date:localDate(),capturedAt:new Date().toISOString(),error:error.message},null,2));
+            console.log(JSON.stringify({status:'not_validated',error:error.message}));
+          }
+          NODE
       - uses: actions/upload-artifact@v4
         if: steps.guard.outputs.skip != 'true'
         with:
