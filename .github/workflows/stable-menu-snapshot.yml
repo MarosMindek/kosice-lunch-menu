@@ -1,6 +1,12 @@
 name: Stable validated lunch snapshot
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/lib/collect-menu.mjs'
+      - 'scripts/lib/bluebell-auto.mjs'
+      - '.github/workflows/stable-menu-snapshot.yml'
   workflow_dispatch:
   # UTC candidates for both CET and CEST. Local guard keeps only 09:00-10:10 Bratislava.
   schedule:
