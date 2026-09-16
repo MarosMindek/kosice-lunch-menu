@@ -42,11 +42,23 @@ export function ocrConfidence(tsv) {
   const scores=words.map(p=>Number(p[10])).filter(n=>n>=0);
   return scores.reduce((a,b)=>a+b,0)/scores.length;
 }
+function currentBackups(date,backupDirectory='data/bluebell',machineValidated='results/bluebell-hires/validated.json') {
+  const files=[];
+  if(fs.existsSync(machineValidated))files.push(machineValidated);
+  if(fs.existsSync(backupDirectory))for(const f of fs.readdirSync(backupDirectory).filter(f=>f.endsWith('.json')))files.push(path.join(backupDirectory,f));
+  const byKey=new Map();
+  for(const file of files) {
+    try {
+      const m=JSON.parse(fs.readFileSync(file,'utf8'));validateSource(m.source,date,'bluebell');
+      if(m.reviewedComplete!==true || m.needsVisualReview===true)continue;
+      const key=imageMenuKey(m);if(!byKey.has(key))byKey.set(key,m);
+    } catch { /* Expired, stale or malformed backup is intentionally ignored. */ }
+  }
+  return [...byKey.values()];
+}
 export function collectBluebell(directory,date,backupDirectory='data/bluebell') {
   const meta=JSON.parse(fs.readFileSync(path.join(directory,'metadata.json'),'utf8')), accepted=[],observed=[],failures=[];
-  const backups=fs.existsSync(backupDirectory)?fs.readdirSync(backupDirectory).filter(f=>f.endsWith('.json')).flatMap(f=>{
-    try{const m=JSON.parse(fs.readFileSync(path.join(backupDirectory,f)));validateSource(m.source,date,'bluebell');return[m];}catch{return[];}
-  }):[];
+  const backups=currentBackups(date,backupDirectory);
   const out=path.join(directory,'auto-ocr');fs.mkdirSync(out,{recursive:true});
   const diagnostics=[];
   for(const c of meta.candidates||[]) {
@@ -76,16 +88,20 @@ export function collectBluebell(directory,date,backupDirectory='data/bluebell') 
     diagnostics.push({candidate:c,passes,accepted:!!menu});
   }
   fs.mkdirSync('output/autonomous',{recursive:true});
-  fs.writeFileSync('output/autonomous/bluebell-diagnostics.json',JSON.stringify({date,diagnostics,observed,failures},null,2));
+  fs.writeFileSync('output/autonomous/bluebell-diagnostics.json',JSON.stringify({date,diagnostics,observed,failures,backupCount:backups.length},null,2));
   const keys=new Set(accepted.map(imageMenuKey));
   if(keys.size>1)throw Error('Bluebell: conflicting current images');
   if(accepted.length) {
     if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(accepted[0])))throw Error('Bluebell: conflicting complete OCR readings');
+    if(backups.some(m=>imageMenuKey(m)!==imageMenuKey(accepted[0])))throw Error('Bluebell: live image conflicts with validated backup');
     return accepted[0];
   }
-  // The explicitly verified attachment is only an expiring fallback, never relabelled.
+  const backupKeys=new Set(backups.map(imageMenuKey));
+  if(backupKeys.size>1)throw Error('Bluebell: conflicting validated backups');
+  // A current machine-validated capture or explicitly verified attachment is an expiring fallback.
+  // It is never relabelled to a new week/date and is rejected automatically when validateSource fails.
   if(backups.length===1) {
-    if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(backups[0])))throw Error('Bluebell: current image conflicts with verified backup');
+    if(observed.some(m=>imageMenuKey(m)!==imageMenuKey(backups[0])))throw Error('Bluebell: current image conflicts with validated backup');
     return backups[0];
   }
   throw Error('Bluebell: no current menu with agreeing OCR and sufficient confidence');
