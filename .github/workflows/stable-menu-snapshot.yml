@@ -1,0 +1,96 @@
+name: Stable validated lunch snapshot
+
+on:
+  workflow_dispatch:
+  # UTC candidates for both CET and CEST. Local guard keeps only 09:00-10:10 Bratislava.
+  schedule:
+    - cron: '5,35,55 7,8,9 * * 1-5'
+
+concurrency:
+  group: stable-menu-snapshot-main
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Local schedule guard
+        id: guard
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          local_hm=$(TZ=Europe/Bratislava date +%H%M)
+          local_dow=$(TZ=Europe/Bratislava date +%u)
+          if [ "$local_dow" -le 5 ] && [ "$local_hm" -ge 0900 ] && [ "$local_hm" -le 1010 ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          node-version: '22'
+      - name: Install Node dependencies
+        if: steps.guard.outputs.skip != 'true'
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium
+        if: steps.guard.outputs.skip != 'true'
+        timeout-minutes: 6
+        env:
+          PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: '30000'
+        run: npx playwright install --with-deps chromium
+      - name: Install PDF and OCR dependencies
+        if: steps.guard.outputs.skip != 'true'
+        timeout-minutes: 3
+        run: |
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
+      - name: Build strict 5-of-5 validated snapshot
+        if: steps.guard.outputs.skip != 'true'
+        run: npm run lunch:dry-run
+      - name: Publish only a fully validated same-day snapshot
+        if: steps.guard.outputs.skip != 'true'
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const status=JSON.parse(fs.readFileSync('output/autonomous/status.json','utf8'));
+          const menu=JSON.parse(fs.readFileSync('output/autonomous/normalized-menu.json','utf8'));
+          const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bratislava',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+          if(status.status!=='dry_run_validated') throw Error(`snapshot not validated: ${status.status}`);
+          if(status.date!==date||menu.date!==date) throw Error(`snapshot date mismatch: ${status.date}/${menu.date} vs ${date}`);
+          if(!Array.isArray(menu.restaurants)||menu.restaurants.length<4) throw Error('snapshot restaurant count invalid');
+          fs.mkdirSync(`results/stable-menu/${date}`,{recursive:true});
+          for(const name of ['normalized-menu.json','email.json','status.json','sources.json']) {
+            fs.copyFileSync(`output/autonomous/${name}`,`results/stable-menu/${date}/${name}`);
+          }
+          fs.writeFileSync('results/stable-menu/latest.json',JSON.stringify({date,status:'dry_run_validated',capturedAt:new Date().toISOString(),path:`results/stable-menu/${date}`},null,2));
+          NODE
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/stable-menu
+          git commit -m "Update validated lunch snapshot [skip ci]" || exit 0
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
+      - name: Save diagnostics
+        if: always() && steps.guard.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: stable-menu-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/autonomous/
+            output/bluebell-hires/
+          retention-days: 7
+          if-no-files-found: ignore
