@@ -10,6 +10,12 @@ Jedna úloha beží v pracovné dni o **09:30 a 10:30 Europe/Bratislava**, od 10
 
 Časovanie nezávisí od GitHub cron. Skript cez pripojený GitHub spustí nový pokus posledného dokončeného zberového buildu, vždy zo spúšťača `push`, ktorý neposiela poštu. Čaká v ohraničenej slučke a použije artefakt presne daného pokusu. Starý artefakt ani neúspešný zber neprijme.
 
+## Manuálny retry a diagnostika
+
+Ak sa automatický snapshot nevytvorí a je potrebná manuálna kontrola, aktuálnosť sa overuje **iba otvorením priameho oficiálneho zdroja**. Search engine snippet, indexovaný text, cache výsledok alebo agregátor sa nesmie použiť na rozhodnutie, že dnešné menu existuje alebo neexistuje. Search môže nanajvýš nájsť URL; po nájdení sa musí načítať originál a dátum/týždeň, konkrétne jedlá a ceny musia byť prítomné v tom istom dokumente.
+
+Ak originál nie je aktuálny alebo sa nedá načítať, beh skončí STOP. Nikdy sa nepoužíva starší snippet ako náhrada priameho zdroja a nikdy sa z neho neskladá e-mail.
+
 ## Odosielanie
 
 Po stiahnutí artefaktu skript opätovne vykoná validáciu a renderer z rovnakého commitu. Overí dnešný dátum, úplnosť a kontrolný súčet pevnej šablóny. HTML aj text prenesie do Gmailu bez prepisovania a odoslanú kópiu následne porovná.
