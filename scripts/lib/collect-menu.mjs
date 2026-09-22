@@ -8,6 +8,18 @@ import { validateSource, validateMenu, weekday, sha256 } from './menu-contract.m
 const execute=promisify(execFile);
 const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/restauracia/obedove-menu','https://www.starasypka.sk/sk/']};
 
+function validatedRestaurantBackup(id,date) {
+  const file=process.env.LUNCH_SOURCE_CACHE || path.join('results','source-cache',date,'sources.json');
+  if(!fs.existsSync(file))return null;
+  const stored=JSON.parse(fs.readFileSync(file,'utf8'));
+  if(stored.date!==date)return null;
+  const raw=stored.sources?.[id];
+  if(!raw)return null;
+  const parsed=parsers[id](raw,date);
+  validateSource(parsed.source,date,id);
+  return{raw,parsed};
+}
+
 export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}={}) {
   const {chromium}=await import('playwright');
   fs.mkdirSync(out,{recursive:true});
@@ -59,6 +71,16 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
         if(new Set(ok.map(x=>fingerprint(x.parsed))).size!==1)throw Error(`${id}: conflicting official sources`);
         sources[id]=ok[0].raw;onStatus({id,status:'validated'});return ok[0].parsed;
       }
+    }
+    try {
+      const cached=validatedRestaurantBackup(id,date);
+      if(cached) {
+        sources[id]=cached.raw;
+        onStatus({id,status:'validated-same-day-cache'});
+        return cached.parsed;
+      }
+    } catch(error) {
+      errors.push({id,reason:`same-day cache rejected: ${error.message}`});
     }
     throw Error(`${id}: current complete menu unavailable`);
   }
