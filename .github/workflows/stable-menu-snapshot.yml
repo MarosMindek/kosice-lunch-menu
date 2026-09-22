@@ -7,6 +7,7 @@ on:
       - 'scripts/lib/collect-menu.mjs'
       - 'scripts/lib/normalize-sources.mjs'
       - 'scripts/lib/bluebell-auto.mjs'
+      - '.github/scripts/restore-source-cache.mjs'
       - '.github/workflows/stable-menu-snapshot.yml'
   workflow_dispatch:
   # Run several pre-lunch candidates. GitHub scheduled workflows may start late,
@@ -20,6 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
+  actions: read
   contents: write
 
 jobs:
@@ -55,6 +57,11 @@ jobs:
         run: |
           sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq
           sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
+      - name: Restore same-day validated sources from earlier attempts
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node .github/scripts/restore-source-cache.mjs
       - name: Build strict 5-of-5 validated snapshot
         if: steps.guard.outputs.skip != 'true'
         run: npm run lunch:dry-run
