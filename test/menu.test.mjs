@@ -5,6 +5,7 @@ import { dateRanges, localDate, discountedCents, validateMenu, displayDate, vali
 import { parseBluebell, selectCandidates } from '../scripts/bluebell-select.mjs';
 import { renderEmail, validateBody } from '../scripts/render-email.mjs';
 import { publicImageVariants } from '../scripts/lib/facebook-images.mjs';
+import { parseCoolBowling } from '../scripts/lib/normalize-sources.mjs';
 
 const bluebell = JSON.parse(fs.readFileSync(new URL('../data/bluebell/2026-09-07.json', import.meta.url)));
 const capturedAt = bluebell.source.capturedAt;
@@ -22,6 +23,26 @@ export function fixture(date = '2026-09-07') {
 const candidate = { href: 'https://www.facebook.com/pivarenbluebell/photos/123/', ownerUrl: 'https://www.facebook.com/pivarenbluebell/', identityText: 'Piváreň BlueBell | Kosice | Facebook', imageSha256: bluebell.source.imageSha256, capturedAt };
 const currentOCR = fs.readFileSync(new URL('fixtures/bluebell-current-ocr.txt', import.meta.url), 'utf8');
 const oldOCR = fs.readFileSync(new URL('fixtures/bluebell-old-ocr.txt', import.meta.url), 'utf8');
+
+test('Cool Bowling joins wrapped meal rows before strict parsing', () => {
+  const menu = parseCoolBowling({
+    requestedUrl: hosts['cool-bowling'],
+    capturedAt: '2026-09-22T09:34:40Z',
+    lines: [
+      '22.09.26 UTOROK: 0,25l Slepačia s cestovinou a zeleninou /1,3,9/ 0,25l Hovädzí vývar s krupicovými haluškami /1,3,9/ 1,70€',
+      'B.M. 150g/150g Cool burger s kuracím stehenným plátkom, volským okom a slaninkou',
+      'preliaty čedar omáčkou podávaný so steakovými hranolkami /1,3,7,11/12,90€',
+      '1menu -150g/150g Kurací steak na grilovanej cukete podávaný s ryžou /B/ 8,30€',
+      '7ADEZERT-150g Domáci ryžový nákyp s mix ovocím /B,3,7/ 4,00€',
+      '23.09.26 STREDA: ďalšie menu 1,70€'
+    ]
+  }, '2026-09-22');
+  assert.equal(menu.soups.length, 2);
+  assert.equal(menu.mains.length, 2);
+  assert.equal(menu.desserts.length, 1);
+  assert.equal(menu.mains[0].name, 'Cool burger s kuracím stehenným plátkom, volským okom a slaninkou preliaty čedar omáčkou podávaný so steakovými hranolkami');
+  assert.equal(menu.mains[0].price, 12.9);
+});
 
 test('public image resizing keeps image identity/signature and the original fallback URL', () => {
   const src = 'https://scontent.example.fbcdn.net/menu.jpg?cstp=mx1080x1080&ctp=s206x206&oh=example&oe=example';
