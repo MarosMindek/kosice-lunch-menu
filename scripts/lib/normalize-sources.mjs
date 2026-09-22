@@ -49,19 +49,19 @@ export function parseCoolBowling(raw,date) {
     const name=clean(m[2].replace(priceRE,'').replace(/\/[B\d,\s]+\//gi,''));
     soups.push({name,portion:m[1],price:moneyCents(p[1])/100,sourceText:header});
   }
-  const rows=[], startsRow=s=>/^(?:B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))/i.test(s);
+  const rows=[], startsRow=s=>/^(?:B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))/i.test(s), completeRow=s=>/\d+[,.]\d{2}\s*€\s*$/.test(s);
   let current='';
   for(const line of section.slice(1)) {
     if(startsRow(line)) {
       if(current)rows.push(current);
       current=line;
-    } else if(current) current+=' '+line;
-    else throw Error(`Cool Bowling: continuation without a meal row: ${line.slice(0,100)}`);
+    } else if(current&&!completeRow(current)) current+=' '+line;
+    else throw Error(`Cool Bowling: unparsed daily row: ${line.slice(0,100)}`);
   }
   if(current)rows.push(current);
   if(!rows.length)throw Error('Cool Bowling: no daily meal rows');
   for(const row of rows) {
-    const m=row.match(/^(B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))\s*(\d+g(?:\s*\/\s*\d+g)?)\s+(.+?)\s+\/[B,\d\s]+\/\s*(\d+[,.]\d{2})\s*€/i);
+    const m=row.match(/^(B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))\s*(\d+g(?:\s*\/\s*\d+g)?)\s+(.+?)\s+\/[B,\d\s]+\/\s*(\d+[,.]\d{2})\s*€\s*$/i);
     if(!m)throw Error(`Cool Bowling: unparsed daily row: ${row.slice(0,160)}`);
     const item={name:clean(m[3]),portion:m[2],price:moneyCents(m[4])/100,sourceText:row};
     if(/^B\.M\./i.test(m[1]))item.category='biznis';
