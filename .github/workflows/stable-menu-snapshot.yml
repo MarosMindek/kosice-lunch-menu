@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/lib/collect-menu.mjs'
+      - 'scripts/lib/normalize-sources.mjs'
       - 'scripts/lib/bluebell-auto.mjs'
       - '.github/workflows/stable-menu-snapshot.yml'
   workflow_dispatch:
