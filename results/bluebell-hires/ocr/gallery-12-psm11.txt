@@ -1,6 +1,6 @@
 bal
 
-—
+~~
 
 TÝŽDENNÉ MENU
 
@@ -10,19 +10,21 @@ y
 
 v
 
-od 14.9.2026 do 18.9.2026
+‘
 
-a
+od 21.9.2026 do 25.9.2026
+
+Vpivárni k menu
+
+x
 
 ps
 
 č
 
-Vpivárni k menu
-
 BLUEBELL
 
-od 11:00 do 14:00
+0d 11:00 do 14:00
 
 džbán vody
 
@@ -40,32 +42,28 @@ POLIEVKY
 
 0,331 Polievka Samostatne 3,50€
 
-BIZNIS MENU | 12,90€
+BIZNIS MENU | 11,90€
 
-Grilovaný Losos s Petržlenovo - Cviklovým Pyré a Bielou Čokoládou / Citrónové Arancini / Pečená Šalotka /
+Grilované Kuracie Prsia “Diana” s Cheddarovou Omáčkou / Opekané Baby Zemiaky / Broskyňový Gél / Čerstvé Bylinky
 
-Limetkový Kaviár / Marinovand Reďkovka 120/150/150g 13712
+180/250/50g 137
 
-TRADIČNÉ MENU |8,90€
+TRADIČNÉ MENU | 8,90€
 
-Pomaly Pečená Bravčová Krkovička s Dusenou Červenou Kapustou / Domáca Parená Knedľa 180/150/200g 137
+Zemiakový Prívarok s Bravčovými Fašírkami / Paprikový Olej / Barčiansky Chlieb 350/180/50g 147
 
-VEGGIE MENU | 9,90€
+VEGGIE MENU | 10,90€
 
-Vyprážaný Údený Oštiepok so Stuchanymi Zemiakmi / Domáca Tatárska Omáčka 150/250/504 132102
+Tagliatelle s Bazalkovým Pestom / Sušené Paradajky / Parmezán 350/50/30g 137
 
-ŠPECIÁL MENU 1 | 8,90€
+ŠPECIÁL MENU 1| 8,90€
 
 Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10
 
-ŠPECIÁL MENU 2 | 10,90€
+ŠPECIÁL MENU 2 | 9,90€
 
-Pomaly Pečené Bravčové Líčka na Červenom Vine s Domácou Zemiakovou Štrúdľou / Pečená Koreňová Zelenina
-
-180/250/50G 137,312
+Vyprážaný Bravčový Rezeň so Zemiakovou Kašou / Uhorkový Šalát 180/250/50g 13.2
 
 OSOBNÝ ODBER: + 421910 613 000
 
-www.pivarenbluebell.sk
-
-pivarenbluebell
+%
