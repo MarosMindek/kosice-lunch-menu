@@ -19,8 +19,6 @@ Fotky
 Zobraziť všetky fotky
 Ochrana súkromia
  
- · Ochrana súkromia v súvislosti so zdravím spotrebiteľov
- 
  · Podmienky
  
  · Reklama
@@ -31,16 +29,6 @@ Ochrana súkromia
  
  · Viac
 Piváreň BlueBell je na mieste Piváreň BlueBell.
-pred 3 hodinami
-3 h
- 
-·
-Kosice, Košický kraj, Slovensko
- 
-·
-Páči sa mi to
-Komentár
-Piváreň BlueBell je na mieste Piváreň BlueBell.
 včera
 1 d.
  
@@ -51,8 +39,20 @@ Kosice, Košický kraj, Slovensko
 Páči sa mi to
 Komentár
 Piváreň BlueBell je na mieste Piváreň BlueBell.
-včera
-1 d.
+pred 2 dňami
+2 d.
+ 
+·
+Kosice, Košický kraj, Slovensko
+ 
+·
+Všetky reakcie:
+1
+Páči sa mi to
+Komentár
+Piváreň BlueBell je na mieste Piváreň BlueBell.
+pred 2 dňami
+2 d.
  
 ·
 Kosice, Košický kraj, Slovensko
@@ -78,6 +78,7 @@ Všetky reakcie:
 1
 Páči sa mi to
 Komentár
+This is taking longer than expected
 Prihláste sa alebo sa zaregistrujte, aby ste sa spojili so svojimi priateľmi, rodinou a ľuďmi, ktorých poznáte.
 Prihlásiť sa
 alebo
