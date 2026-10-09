@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-08",
-  "capturedAt": "2026-10-08T12:04:41.214Z",
-  "error": "Bluebell: conflicting complete OCR readings"
+  "date": "2026-10-09",
+  "capturedAt": "2026-10-09T11:56:44.525Z",
+  "error": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
 }
