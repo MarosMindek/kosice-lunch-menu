@@ -10,6 +10,79 @@ const accents = { kozlovna: '#8a6f3d', 'cool-bowling': '#407a88', tahiti: '#3984
 const icons = { kozlovna: '🍽️', 'cool-bowling': '🎳', tahiti: '🌴', bluebell: '🍺', 'stara-sypka': '🏡' };
 const labels = { biznis: 'BIZNIS MENU', tradicne: 'TRADIČNÉ MENU', veggie: 'VEGGIE MENU', 'special-1': 'ŠPECIÁL MENU 1', 'special-2': 'ŠPECIÁL MENU 2' };
 const displayName = item => [item.name, item.description, item.portion].filter(Boolean).join(' · ');
+// Original short messages, not attributed quotations. Retries use the same date-based choice.
+const dailyThoughts = [
+  'Nemusíš zvládnuť všetko naraz. Aj jeden malý krok správnym smerom sa počíta.',
+  'Začni tým, čo vieš ovplyvniť. Aj malá zmena vie spríjemniť deň.',
+  'Prestávka nie je strata času. Dáva ti priestor pokračovať s čistejšou hlavou.',
+  'Nie každý výsledok je hneď viditeľný. Aj pokojná, poctivá práca má svoju hodnotu.',
+  'Dnes nemusí byť všetko dokonalé. Stačí, ak bude niečo o kúsok lepšie.',
+  'Daj si dobrý obed a trochu nadhľadu. Aj popoludnie môže priniesť príjemné prekvapenie.',
+  'Malý úspech si zaslúži pozornosť rovnako ako veľký plán.',
+  'Ak sa niečo nepodarilo, nemusíš tým označiť celý deň. Ešte zostáva priestor na niečo dobré.',
+  'Niekedy je najlepší ďalší krok ten najjednoduchší. Vyber si jednu vec a začni.',
+  'Dopraj si rovnakú trpezlivosť, akú vieš dopriať druhým.',
+  'Aj v obyčajnom dni sa dá nájsť chvíľa, ktorá stojí za úsmev.',
+  'Nemusíš sa ponáhľať s každou odpoveďou. Trochu pokoja môže pomôcť nájsť tú správnu.',
+  'Pokrok nemusí byť hlučný. Niekedy vyzerá len ako pokojne dokončená úloha.',
+  'Jedna úprimná pochvala môže niekomu spríjemniť deň. Možno ju dnes môžeš vysloviť práve ty.',
+  'Aj veľký plán sa dá rozdeliť na malé kroky. Ten najbližší máš pred sebou.',
+  'Nezabudni si všimnúť, čo už funguje. Aj na tom môžeš postaviť ďalší krok.',
+  'Dobrý nápad niekedy príde až vtedy, keď si na chvíľu vydýchneš.',
+  'Tvoj deň nemusí vyzerať ako deň niekoho iného. Nájdeš v ňom vlastné tempo.',
+  'Aj krátke poďakovanie má svoju váhu. Dnes môže byť tou najjednoduchšou dobrou vecou.',
+  'Nie je potrebné vyhrať nad celým zoznamom úloh. Vyber si tú, na ktorej teraz záleží.',
+  'Odvaha môže vyzerať aj nenápadne: položiť otázku, skúsiť to znova alebo požiadať o pomoc.',
+  'Nechaj si v dni miesto aj na niečo príjemné. Nemusí to byť nič veľké.',
+  'To, že sa ešte učíš, neznamená, že stojíš na mieste.',
+  'Dobrá nálada sa nedá prikázať. Malú príjemnú chvíľu si však môžeš dopriať.',
+  'Keď sa plán zmení, môžeš zmeniť aj ďalší krok. Nemusíš sa vzdať celého smeru.',
+  'Všímaj si malé veci, ktoré ti robia dobre. Aj tie patria do vydareného dňa.',
+  'Niektoré veci potrebujú čas. Dnešná snaha môže byť ich nenápadným začiatkom.',
+  'Porovnaj sa na chvíľu so svojím včerajškom. Možno si sa posunul viac, než si myslíš.',
+  'Láskavosť nemusí stáť veľa času. Niekedy stačí pozorné počúvanie.',
+  'Obed je dobrá chvíľa na krátky reset. Popoludnie môžeš začať jednou jasnou prioritou.',
+  'Nemusíš mať pripravenú celú cestu. Na začiatok stačí vedieť, kam položíš ďalší krok.',
+  'Vlastný úspech nemusíš zmenšovať len preto, že bol pre niekoho iného jednoduchý.',
+  'Aj pokojné nie môže vytvoriť priestor pre dôležité áno.',
+  'Ak dnes ideš pomalšie, stále sa môžeš posúvať. Tempo a smer sú dve rôzne veci.',
+  'Nie všetko musí zostať na tvojich pleciach. Dobrá spolupráca začína aj rozdelením úloh.',
+  'Urob jednu vec s plnou pozornosťou. Niekedy je to príjemnejšie než skúšať všetko naraz.',
+  'Každý deň nemusí priniesť veľký príbeh. Aj malá spokojnosť stojí za to.',
+  'Daj svojim nápadom šancu aj v nedokonalej podobe. Dopracovať ich môžeš postupne.',
+  'Zastav sa pri tom, čo sa dnes podarilo. Aj drobnosť si zaslúži uznanie.',
+  'Niektoré dobré rozhodnutia sú celkom obyčajné: najesť sa v pokoji, poďakovať a na chvíľu spomaliť.',
+  'Otázka nie je známkou slabosti. Môže byť začiatkom lepšieho porozumenia.',
+  'To, čo dnes dokončíš, môže zajtrajšok trochu uľahčiť. Aj malá úloha má svoj zmysel.',
+  'Nemusíš pokračovať presne tak, ako si začal. Skúsenosť ti môže ukázať lepšiu cestu.',
+  'Dobrý deň môže obsahovať aj náročnú chvíľu. Jedno nevylučuje druhé.',
+  'Venuj chvíľu človeku pred sebou. Obyčajný rozhovor môže byť najpríjemnejšou časťou dňa.',
+  'Keď nevieš, kde začať, skús si pomenovať najbližší malý krok.',
+  'Aj tvoja vlastná spokojnosť má miesto v pláne dňa.',
+  'Z dokončenej drobnosti môže prísť chuť pokračovať. Netreba začínať tým najväčším.',
+  'Nemusíš mať vždy posledné slovo. Niekedy viac prinesie dobrá otázka.',
+  'Učenie sa skladá aj z pokusov, ktoré nevyšli. Môžeš si z nich vziať niečo užitočné.',
+  'Keď je deň plný, vyber si jednu chvíľu, v ktorej sa nebudeš ponáhľať.',
+  'Rozumný cieľ nemusí byť malý. Len ti necháva priestor postupovať po častiach.',
+  'Povedz dnes niekomu, čo si na jeho práci vážiš. Konkrétne slová potešia viac než všeobecné.',
+  'Dobrý obed nevyrieši všetko. Môže však byť príjemným začiatkom lepšieho popoludnia.',
+  'Aj cesta, ktorú už poznáš, môže ponúknuť nový nápad. Stačí sa na chvíľu pozrieť inak.',
+  'To, čo nemusíš vyriešiť dnes, nemusí zabrať celé dnešné premýšľanie.',
+  'Ak si niečím neistý, môžeš začať malým pokusom. Aj ten ti dá novú skúsenosť.',
+  'Niekedy má najväčší zmysel dokončiť to, čo je takmer hotové.',
+  'V práci aj mimo nej si všimni ľudí, s ktorými je deň príjemnejší.',
+  'Na konci dňa môže potešiť aj jednoduchá vec: niečo si dokončil, niekomu pomohol alebo si sa niečo naučil.'
+];
+const workdayNumber = date => {
+  const day = Math.floor(Date.parse(`${date}T00:00:00Z`) / 86400000) + 3; // Monday-aligned calendar weeks.
+  if (!Number.isFinite(day)) throw Error('Invalid daily thought date');
+  const week = Math.floor(day / 7);
+  return week * 5 + Math.min(day - week * 7, 5);
+};
+export function dailyThought(date) {
+  const offset = workdayNumber(date) - workdayNumber('2026-10-09');
+  return dailyThoughts[((offset % dailyThoughts.length) + dailyThoughts.length) % dailyThoughts.length];
+}
 function itemRow(item, soup = false) {
   const price = euro(item.finalCents);
   const original = item.finalCents !== item.priceCents ? `<div style="color:#888;font-size:12px;white-space:nowrap;text-decoration:line-through;margin-bottom:4px;">${euro(item.priceCents)}</div>` : '';
@@ -38,15 +111,17 @@ function verdict(menu) {
 }
 export function renderEmail(input, options = {}) {
   const menu = validateMenu(input, options);
+  const thought = dailyThought(menu.date);
   const verdictRows = verdict(menu);
   const menuDigest = sha256(JSON.stringify(menu));
   const marker = `<!-- ${TEMPLATE_VERSION};date=${menu.date};sha256=${menuDigest} -->`;
   const values = { DAY: ['NEDEĽA', 'PONDELOK', 'UTOROK', 'STREDA', 'ŠTVRTOK', 'PIATOK', 'SOBOTA'][weekday(menu.date)], DATE: displayDate(menu.date), RESTAURANTS: menu.restaurants.map(card).join('\n'), VERDICT: verdictRows.map(([label, i, why]) => `<div style="padding:12px 0;border-top:1px solid #3e3b35;"><div style="font-size:11px;letter-spacing:0.7px;color:#d5bc89;font-weight:700;">${label}</div><div style="font-size:14px;line-height:1.5;margin-top:5px;"><b>${escape(i.restaurant)} · ${euro(i.finalCents)}</b><br>${escape(displayName(i))}</div><div style="font-size:12px;line-height:1.5;color:#c7c7c7;margin-top:4px;">${escape(why)}</div></div>`).join(''), VALIDATION_MARKER: marker };
+  values.DAILY_THOUGHT = escape(thought);
   const html = template.replace(/\{\{([A-Z_]+)\}\}/g, (_, key) => values[key]);
   if (/\{\{|<script|<img|<link|<iframe/i.test(html)) throw Error('Invalid fixed template output');
   const subject = `Obedové menu – Košice | ${displayDate(menu.date)}`;
   const plain = [subject, ...menu.restaurants.map(r => r.closed ? `${r.name}\nPondelok – zatvorené.` : `${r.name}${r.id === 'bluebell' ? `\n${displayDate(r.source.validFrom)} – ${displayDate(r.source.validTo)}` : ''}\nPolievky:\n${r.soups.map(i => `${displayName(i)} — ${euro(i.finalCents)}`).join('\n')}\nHlavné jedlá:\n${r.mains.map(i => `${labels[i.category] ? labels[i.category] + ': ' : ''}${displayName(i)} — ${i.priceCents !== i.finalCents ? euro(i.priceCents) + ' → ' : ''}${euro(i.finalCents)}`).join('\n')}${r.desserts.length ? `\nDezerty:\n${r.desserts.map(i => `${displayName(i)} — ${euro(i.finalCents)}`).join('\n')}` : ''}${r.notes.length ? '\n' + r.notes.join('\n') : ''}`), 'DNEŠNÝ VERDIKT', ...verdictRows.map(([label, i, why]) => `${label}: ${i.restaurant} — ${displayName(i)} — ${euro(i.finalCents)} (${why})`), 'Dobrú chuť!'].join('\n\n');
-  return { subject, html, plain, templateVersion: TEMPLATE_VERSION, menuDigest, date: menu.date };
+  return { subject, html, plain: `${plain}\n\n💡 MYŠLIENKA NA DNES\n${thought}`, templateVersion: TEMPLATE_VERSION, menuDigest, date: menu.date };
 }
 export function validateBody(message, input, options = {}) {
   const expected = renderEmail(input, options);

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { dateRanges, localDate, discountedCents, validateMenu, displayDate, validateSource } from '../scripts/lib/menu-contract.mjs';
 import { parseBluebell, selectCandidates } from '../scripts/bluebell-select.mjs';
-import { renderEmail, validateBody } from '../scripts/render-email.mjs';
+import { renderEmail, validateBody, dailyThought } from '../scripts/render-email.mjs';
 import { publicImageVariants } from '../scripts/lib/facebook-images.mjs';
 import { parseCoolBowling } from '../scripts/lib/normalize-sources.mjs';
 
@@ -127,6 +127,26 @@ test('HTML and plain text are deterministic, complete and reject edits before se
 
 const realMenu = JSON.parse(fs.readFileSync(new URL('fixtures/menu-2026-09-07.json', import.meta.url)));
 const realOptions = { date: '2026-09-07', now: new Date('2026-09-07T12:00:00Z') };
+test('daily thoughts stay the same on retries and change across consecutive working days', () => {
+  const approved = 'Nemusíš zvládnuť všetko naraz. Aj jeden malý krok správnym smerom sa počíta.';
+  assert.equal(dailyThought('2026-10-09'), approved);
+  const thoughts = [];
+  for (let date = new Date('2026-10-09T00:00:00Z'); thoughts.length < 60; date.setUTCDate(date.getUTCDate() + 1)) {
+    if (date.getUTCDay() === 0 || date.getUTCDay() === 6) continue;
+    const day = date.toISOString().slice(0, 10), thought = dailyThought(day);
+    assert.equal(thought, dailyThought(day));
+    thoughts.push(thought);
+  }
+  assert.equal(new Set(thoughts).size, thoughts.length);
+  assert.notEqual(dailyThought('2026-10-09'), dailyThought('2026-10-12'));
+  assert.notEqual(dailyThought('2026-12-31'), dailyThought('2027-01-01'));
+  const original = clone(realMenu), message = renderEmail(realMenu, realOptions), thought = dailyThought(realOptions.date);
+  assert.deepEqual(realMenu, original);
+  assert.ok(message.plain.endsWith(`\n\n💡 MYŠLIENKA NA DNES\n${thought}`));
+  assert.ok(message.html.includes(thought));
+  assert.equal(message.html.match(/💡 MYŠLIENKA NA DNES/g).length, 1);
+  assert.doesNotThrow(() => validateBody(message, realMenu, realOptions));
+});
 test('actual September 7 sources render every meal, garnish, dessert and published price', () => {
   const m = validateMenu(realMenu, realOptions), message = renderEmail(realMenu, realOptions);
   assert.deepEqual(m.restaurants.map(r => [r.soups.length, r.mains.length, r.desserts?.length || 0]), [[2,4,0],[2,8,2],[2,6,0],[3,5,0],[0,0,0]]);
