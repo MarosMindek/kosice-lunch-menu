@@ -1,37 +1,12 @@
 {
-  "date": "2026-10-12",
-  "capturedAt": "2026-10-12T13:12:06.091Z",
+  "date": "2026-10-13",
+  "capturedAt": "2026-10-13T12:44:47.993Z",
   "status": "unavailable",
   "selected": null,
   "candidates": [],
   "rejected": [
     {
       "file": "gallery-01.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1844240300535634&set=pcb.1844240330535631&__cft__[0]=AZhRn7mfg-zAB1wfd4Kju0d_J0f2z50kOJupIEgyfcdhGouNJtrd7ZXliFBqzwt3jZl_lt8vRrkyzD1gM7enTEvg_NLZd5dXIPUcIZNlN-MT19azhVGBnuj_nub7nF8vnjczOjDMRoo8tI2q8D2Pa5oNuudS5zoLa4q3MJdnm6y3cMmOfCRZwhH1TjU&__tn__=*b0H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-02.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1844240293868968&set=pcb.1844240330535631&__cft__[0]=AZhRn7mfg-zAB1wfd4Kju0d_J0f2z50kOJupIEgyfcdhGouNJtrd7ZXliFBqzwt3jZl_lt8vRrkyzD1gM7enTEvg_NLZd5dXIPUcIZNlN-MT19azhVGBnuj_nub7nF8vnjczOjDMRoo8tI2q8D2Pa5oNuudS5zoLa4q3MJdnm6y3cMmOfCRZwhH1TjU&__tn__=*b1H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-03.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1844240287202302&set=pcb.1844240330535631&__cft__[0]=AZhRn7mfg-zAB1wfd4Kju0d_J0f2z50kOJupIEgyfcdhGouNJtrd7ZXliFBqzwt3jZl_lt8vRrkyzD1gM7enTEvg_NLZd5dXIPUcIZNlN-MT19azhVGBnuj_nub7nF8vnjczOjDMRoo8tI2q8D2Pa5oNuudS5zoLa4q3MJdnm6y3cMmOfCRZwhH1TjU&__tn__=*b2H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-04.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1844240297202301&set=pcb.1844240330535631&__cft__[0]=AZhRn7mfg-zAB1wfd4Kju0d_J0f2z50kOJupIEgyfcdhGouNJtrd7ZXliFBqzwt3jZl_lt8vRrkyzD1gM7enTEvg_NLZd5dXIPUcIZNlN-MT19azhVGBnuj_nub7nF8vnjczOjDMRoo8tI2q8D2Pa5oNuudS5zoLa4q3MJdnm6y3cMmOfCRZwhH1TjU&__tn__=*b3H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-05.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1844240290535635&set=pcb.1844240330535631&__cft__[0]=AZhRn7mfg-zAB1wfd4Kju0d_J0f2z50kOJupIEgyfcdhGouNJtrd7ZXliFBqzwt3jZl_lt8vRrkyzD1gM7enTEvg_NLZd5dXIPUcIZNlN-MT19azhVGBnuj_nub7nF8vnjczOjDMRoo8tI2q8D2Pa5oNuudS5zoLa4q3MJdnm6y3cMmOfCRZwhH1TjU&__tn__=*b4H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-06.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     }
