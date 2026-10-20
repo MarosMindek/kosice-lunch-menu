@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "capturedAt": "2026-10-20T09:43:23.071Z",
+  "validated": [
+    "kozlovna",
+    "cool-bowling",
+    "tahiti",
+    "stara-sypka"
+  ],
+  "errors": [
+    {
+      "id": "bluebell",
+      "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
+    }
+  ]
+}
