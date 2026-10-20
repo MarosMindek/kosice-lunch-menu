@@ -3,11 +3,14 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { parsers } from '../../scripts/lib/normalize-sources.mjs';
+import { validateSource } from '../../scripts/lib/menu-contract.mjs';
+import { weekDates } from '../../scripts/lib/source-cache.mjs';
 
 const execute=promisify(execFile);
 const token=process.env.GITHUB_TOKEN;
 const repository=process.env.GITHUB_REPOSITORY;
-const ids=['kozlovna','cool-bowling','tahiti','stara-sypka'];
+const ids=['kozlovna','cool-bowling','tahiti','stara-sypka','bluebell'];
 const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bratislava',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const destination=path.join('results','source-cache',date,'sources.json');
 const headers={accept:'application/vnd.github+json','x-github-api-version':'2022-11-28',authorization:`Bearer ${token}`};
@@ -47,8 +50,14 @@ async function main() {
       const file=findSources(expanded);
       if(!file)continue;
       const candidate=JSON.parse(fs.readFileSync(file,'utf8'));
-      if(candidate.date!==date)continue;
-      for(const id of ids)if(!sources[id]&&candidate.sources?.[id])sources[id]=candidate.sources[id];
+      if(!weekDates(date).includes(candidate.date))continue;
+      for(const id of ids)if(!sources[id]&&candidate.sources?.[id]) {
+        try {
+          const raw=candidate.sources[id],parsed=id==='bluebell'?raw:parsers[id](raw,date);
+          validateSource(parsed.source,date,id);
+          if(parsed.reviewedComplete===true&&parsed.needsVisualReview!==true)sources[id]=raw;
+        } catch { /* Daily originals must still match today; expired weeks stay rejected. */ }
+      }
       if(ids.every(id=>sources[id]))break;
     } catch(error) {
       console.log(JSON.stringify({status:'artifact_rejected',artifactId:artifact.id,error:error.message}));

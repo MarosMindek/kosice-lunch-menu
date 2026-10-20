@@ -20,7 +20,7 @@ export function agreeOCR(passes,candidate,date) {
     if(pass.confidence<85 || !/^[a-f0-9]{64}$/.test(pass.inputSha256))continue;
     try {
       const menu=cleanOCRMenu(parseBluebell(pass.text,candidate,candidate.capturedAt,date));
-      if(menu.soups.length!==3)continue;
+      // Completeness comes from the printed rows and agreeing readings, not a fixed soup count.
       const key=imageMenuKey(menu),group=groups.get(key)||[];
       if(!group.some(p=>p.pass.inputSha256===pass.inputSha256&&p.pass.psm===pass.psm))group.push({menu,pass});
       groups.set(key,group);
@@ -42,6 +42,11 @@ export function ocrConfidence(tsv) {
   return scores.reduce((a,b)=>a+b,0)/scores.length;
 }
 function currentBackups(date,backupDirectory='data/bluebell',machineValidated='results/bluebell-hires/validated.json') {
+  const errorFile=path.join(path.dirname(machineValidated),'validation-error.json');
+  if(fs.existsSync(errorFile)) {
+    const failure=JSON.parse(fs.readFileSync(errorFile,'utf8'));
+    if(failure.date===date && /conflict/i.test(failure.error||''))return [];
+  }
   const files=[];
   if(fs.existsSync(machineValidated))files.push(machineValidated);
   if(fs.existsSync(backupDirectory))for(const f of fs.readdirSync(backupDirectory).filter(f=>f.endsWith('.json')))files.push(path.join(backupDirectory,f));

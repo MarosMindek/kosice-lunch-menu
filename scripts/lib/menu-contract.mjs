@@ -47,6 +47,17 @@ export function weeklyDateRanges(text) {
   }
   return [...new Map(ranges.map(r => [`${r.from}/${r.to}`, r])).values()];
 }
+// A full printed Mon–Fri timetable is reusable; the email still selects one dated day.
+export function weeklyTimetable(text, date) {
+  const names = ['pondelok', 'utorok', 'streda', 'stvrtok', 'piatok'];
+  const headings = String(text).split(/\r?\n/).filter(s => /^\d{1,2}\.\s*\d{1,2}\.\s*\d{2,4}\s+(pondelok|utorok|streda|stvrtok|piatok)\b/.test(fold(s)));
+  if (headings.length !== 5) return null;
+  const dates = headings.map(s => serviceDates(s, date));
+  if (dates.some(ds => ds.length !== 1)) return null;
+  const days = dates.map(ds => ds[0]);
+  if (days.some((d, i) => weekday(d) !== i + 1 || !new RegExp(`\\b${names[i]}\\b`).test(fold(headings[i])) || +new Date(d) !== +new Date(days[0]) + i * 86400000)) return null;
+  return days.includes(date) ? { from: days[0], to: days[4] } : null;
+}
 export function moneyCents(value) {
   if (typeof value === 'number') {
     if (!Number.isFinite(value) || value <= 0 || Math.abs(value * 100 - Math.round(value * 100)) > 1e-7) throw Error('Invalid published price');
@@ -76,7 +87,8 @@ export function validateSource(source, date, id, now = new Date()) {
   if (!source.text.includes(source.dateText)) throw Error(`${id}: date must be in the same menu document`);
   const captured = new Date(source.capturedAt);
   if (!Number.isFinite(+captured) || +captured > +now + 5 * 60_000) throw Error(`${id}: invalid capture time`);
-  if (source.kind !== 'verified-image' && localDate(captured) !== date) throw Error(`${id}: stale capture; refresh source`);
+  const weekly = id === 'bluebell' || (id === 'tahiti' && ['weekly', 'weekly-shared'].includes(source.scope)) || (id === 'cool-bowling' && weeklyTimetable(source.text, date));
+  if (localDate(captured) > date || (!weekly && localDate(captured) !== date)) throw Error(`${id}: stale capture; refresh source`);
   if (id === 'bluebell') {
     if (!bluebellIdentity(source)) throw Error('bluebell: unconfirmed pub identity');
     if (!['image-ocr', 'verified-image'].includes(source.kind) || !/^[a-f0-9]{64}$/.test(source.imageSha256 || '')) throw Error('bluebell: missing image provenance');

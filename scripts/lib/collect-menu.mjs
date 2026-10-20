@@ -4,26 +4,15 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { parsers, fingerprint } from './normalize-sources.mjs';
 import { collectBluebell, validatedBluebellBackup } from './bluebell-auto.mjs';
+import { cachedRestaurant } from './source-cache.mjs';
 import { validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
 const execute=promisify(execFile);
-const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/restauracia/obedove-menu','https://www.starasypka.sk/sk/']};
-
-function validatedRestaurantBackup(id,date) {
-  const file=process.env.LUNCH_SOURCE_CACHE || path.join('results','source-cache',date,'sources.json');
-  if(!fs.existsSync(file))return null;
-  const stored=JSON.parse(fs.readFileSync(file,'utf8'));
-  if(stored.date!==date)return null;
-  const raw=stored.sources?.[id];
-  if(!raw)return null;
-  const parsed=parsers[id](raw,date);
-  validateSource(parsed.source,date,id);
-  return{raw,parsed};
-}
+const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/','https://www.starasypka.sk/sk/restauracia/obedove-menu']};
 
 export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}={}) {
   const {chromium}=await import('playwright');
   fs.mkdirSync(out,{recursive:true});
-  const browser=await chromium.launch({headless:true}),ctx=await browser.newContext({locale:'sk-SK',timezoneId:'Europe/Bratislava'}),sources={},errors=[];
+  const browser=await chromium.launch({headless:true}),ctx=await browser.newContext({locale:'sk-SK',timezoneId:'Europe/Bratislava',serviceWorkers:'block',extraHTTPHeaders:{'cache-control':'no-cache, no-store, max-age=0',pragma:'no-cache'}}),sources={},errors=[];
   await ctx.route('**/*',route=>['font','media','image'].includes(route.request().resourceType())?route.abort():route.continue());
   async function capture(url,id) {
     const page=await ctx.newPage();
@@ -32,9 +21,16 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
       const response=await page.goto(target.href,{waitUntil:'domcontentloaded',timeout:35000});
       if(!response?.ok())throw Error('Source HTTP failure');
       await page.waitForTimeout(1800);
+      // The restaurant's weekly page is a wrapper: follow its actual official iframe.
+      if(id==='tahiti' && new URL(url).hostname.endsWith('tahitirestaurant.sk')) {
+        const frames=await page.locator('iframe').evaluateAll(xs=>xs.map(x=>x.src));
+        const menus=frames.filter(href=>{try{const u=new URL(href);return u.protocol==='https:'&&u.hostname==='menu.andiamogroup.eu';}catch{return false;}});
+        if(menus.length!==1)throw Error('Tahiti: missing/ambiguous official menu iframe');
+        return await capture(menus[0],id);
+      }
       const text=await page.locator('body').innerText();
       const raw={requestedUrl:url,capturedAt:new Date().toISOString(),lines:text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean)};
-      sources[id+'-latest-attempt']=raw;
+      sources[id+'-attempt-'+sha256(url).slice(0,12)]=raw;
       if(id==='stara-sypka') {
         const links=await page.locator('a').evaluateAll(as=>{
           const pdfs=as.filter(a=>/\.pdf(?:$|\?)/i.test(a.href));
@@ -59,6 +55,10 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
     }finally{await page.close();}
   }
   async function restaurant(id) {
+    if(['cool-bowling','tahiti'].includes(id)) {
+      const cached=cachedRestaurant(id,date);
+      if(cached){sources[id]=cached.raw;onStatus({id,status:'validated-weekly-cache'});return cached.parsed;}
+    }
     for(let attempt=0;attempt<2;attempt++) {
       let results;
       if(id==='stara-sypka') {
@@ -73,19 +73,24 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
       }
     }
     try {
-      const cached=validatedRestaurantBackup(id,date);
+      const cached=cachedRestaurant(id,date);
       if(cached) {
         sources[id]=cached.raw;
-        onStatus({id,status:'validated-same-day-cache'});
+        onStatus({id,status:'validated-source-cache'});
         return cached.parsed;
       }
     } catch(error) {
-      errors.push({id,reason:`same-day cache rejected: ${error.message}`});
+      errors.push({id,reason:`source cache rejected: ${error.message}`});
     }
     throw Error(`${id}: current complete menu unavailable`);
   }
   async function bluebell() {
-    const cached=validatedBluebellBackup(date);
+    const errorFile='results/bluebell-hires/validation-error.json';
+    const previousError=fs.existsSync(errorFile)?JSON.parse(fs.readFileSync(errorFile,'utf8')):{};
+    const conflict=previousError.date===date&&/conflict/i.test(previousError.error||'');
+    const primary=conflict?null:validatedBluebellBackup(date),stored=conflict?null:cachedRestaurant('bluebell',date)?.parsed;
+    if(primary&&stored&&fingerprint(primary)!==fingerprint(stored))throw Error('Bluebell: conflicting validated caches');
+    const cached=primary || stored;
     if(cached) {
       sources.bluebell=cached;onStatus({id:'bluebell',status:'validated-cache'});return cached;
     }

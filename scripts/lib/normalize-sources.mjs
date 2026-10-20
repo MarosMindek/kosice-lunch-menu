@@ -73,7 +73,10 @@ export function parseCoolBowling(raw,date) {
 export function parseTahiti(raw,date) {
   const all=linesOf(raw), headings=all.filter(s=>/tyzdenne\s+menu/.test(fold(s))&&weeklyDateRanges(s).length);
   if(headings.length!==1)throw Error('Tahiti: missing weekly heading');
-  const dateText=headings[0],start=all.indexOf(dateText),section=all.slice(start),soups=[],mains=[];
+  const dateText=headings[0],start=all.indexOf(dateText),fullSection=all.slice(start),soups=[],mains=[];
+  // A priced drink promotion after the meals is a note, not a second price for Menu 5.
+  const notes=fullSection.filter(s=>/^(?:coca[ -]?cola\s*=?\s*)?k obedovemu menu len za\s+\d+[,.]\d{2}\s*€\s*$/i.test(fold(s)));
+  const section=fullSection.filter(s=>!notes.includes(s));
   if(section.some(dayHeading))throw Error('Tahiti: daily layout changed; shared weekly parsing refused');
   const starts=section.map((s,i)=>/^(polievka\s*\d+|menu\s*\d+|tip sef kuchara|tip sefkuchara)$/i.test(fold(s))?i:-1).filter(i=>i>=0);
   if(!starts.length)throw Error('Tahiti: no meal categories');
@@ -91,12 +94,21 @@ export function parseTahiti(raw,date) {
     (/^polievka/i.test(block[0])?soups:mains).push(item);parsedPrices++;
   }
   if([...section.join('\n').matchAll(priceRE)].length!==parsedPrices)throw Error('Tahiti: unparsed prices');
-  return complete('tahiti',source(raw,date,section,dateText,{scope:'weekly-shared'}),soups,mains);
+  return complete('tahiti',source(raw,date,fullSection,dateText,{scope:'weekly-shared'}),soups,mains,[],notes);
 }
 export function parseSypka(raw,date) {
-  const lines=linesOf(raw), dates=lines.filter(s=>serviceDates(s,date).includes(date));
+  const originalLines=linesOf(raw), dates=originalLines.filter(s=>serviceDates(s,date).includes(date));
   if(!dates.length)throw Error('Sypka: PDF does not contain current date');
   const soups=[],mains=[],notes=[];
+  const lines=[];
+  for(let i=0;i<originalLines.length;i++) {
+    const line=originalLines[i];
+    if(/^k specialnej ponuke\s*:$/.test(fold(line))) {
+      const offer=originalLines[++i];
+      if(!offer || !/^0[,.]\d+\s*l\s+.+\s+za\s+\d+[,.]\d{2}\s*(?:eur|€)$/i.test(fold(offer)))throw Error('Sypka: unrecognized special offer');
+      notes.push(line+'\n'+offer);
+    } else lines.push(line);
+  }
   const isLabel=s=>['starasypka','dennemenu','denne','menu','polievka','specialita','dennaponuka'].includes(normalized(s)) || serviceDates(s,date).length>0;
   const isFooter=s=>/^(1obilniny|6sojove|pribalenijedal)/.test(normalized(s));
   const priceIndexes=lines.map((s,i)=>/\d{1,3}[,.]\d{2}\s*€$/.test(s)&&!isFooter(s)?i:-1).filter(i=>i>=0);
@@ -113,7 +125,7 @@ export function parseSypka(raw,date) {
   }
   const otherPrices=lines.filter((s,i)=>/€/.test(s)&&!priceIndexes.includes(i));
   for(const line of otherPrices) { if(!isFooter(line))throw Error('Sypka: unparsed published price'); notes.push(line); }
-  return complete('stara-sypka',source(raw,date,lines,dates[0]),soups,mains,[],notes);
+  return complete('stara-sypka',source(raw,date,originalLines,dates[0]),soups,mains,[],notes);
 }
 export const parsers={kozlovna:parseKozlovna,'cool-bowling':parseCoolBowling,tahiti:parseTahiti,'stara-sypka':parseSypka};
 export function fingerprint(menu) {

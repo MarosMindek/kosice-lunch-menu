@@ -6,7 +6,7 @@ import { fold, dateRanges, localDate, moneyCents, bluebellIdentity, sha256 } fro
 export function parseBluebell(text, candidate, capturedAt, date = localDate()) {
   const source = { kind: 'image-ocr', url: candidate.href, ownerUrl: candidate.ownerUrl, identityText: candidate.identityText, capturedAt: candidate.capturedAt || capturedAt, imageSha256: candidate.imageSha256, text };
   if (!bluebellIdentity(source)) throw Error('unconfirmed_pub');
-  if (localDate(new Date(source.capturedAt)) !== date) throw Error('stale_capture');
+  if (!Number.isFinite(+new Date(source.capturedAt)) || localDate(new Date(source.capturedAt)) > date) throw Error('invalid_capture');
   const ranges = dateRanges(text);
   if (ranges.length !== 1) throw Error('ambiguous_or_missing_image_dates');
   const range = ranges[0];

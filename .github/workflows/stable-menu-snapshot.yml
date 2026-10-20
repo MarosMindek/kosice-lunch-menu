@@ -7,6 +7,9 @@ on:
       - 'scripts/lib/collect-menu.mjs'
       - 'scripts/lib/normalize-sources.mjs'
       - 'scripts/lib/bluebell-auto.mjs'
+      - 'scripts/lib/menu-contract.mjs'
+      - 'scripts/lib/source-cache.mjs'
+      - 'scripts/publish-source-cache.mjs'
       - '.github/scripts/restore-source-cache.mjs'
       - '.github/workflows/stable-menu-snapshot.yml'
   workflow_dispatch:
@@ -57,7 +60,7 @@ jobs:
         run: |
           sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq
           sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y -qq poppler-utils tesseract-ocr tesseract-ocr-slk python3-pil
-      - name: Restore same-day validated sources from earlier attempts
+      - name: Restore reusable original sources from earlier attempts
         if: steps.guard.outputs.skip != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -65,6 +68,22 @@ jobs:
       - name: Build strict 5-of-5 validated snapshot
         if: steps.guard.outputs.skip != 'true'
         run: npm run lunch:dry-run
+      - name: Preserve validated sources and failure diagnostics
+        if: always() && steps.guard.outputs.skip != 'true'
+        shell: bash
+        run: |
+          node scripts/publish-source-cache.mjs
+          if [ ! -d results/source-cache ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/source-cache
+          git diff --cached --quiet && exit 0
+          git commit -m "Preserve validated lunch sources and diagnostics [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
       - name: Publish only a fully validated same-day snapshot
         if: steps.guard.outputs.skip != 'true'
         shell: bash

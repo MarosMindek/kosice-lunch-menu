@@ -76,9 +76,10 @@ test('invalid calendar dates, year rollover, leading zeros and Bratislava midnig
   assert.equal(dateRanges('od 07.09.2026 do 11.09.2026')[0].from, options.date);
   assert.equal(localDate(new Date('2026-09-06T22:30:00Z')), options.date);
 });
-test('wrong BlueBell business or old acquisition cannot qualify', () => {
+test('wrong BlueBell business and future acquisition cannot qualify; printed week governs reuse', () => {
   assert.throws(() => parseBluebell(currentOCR, { ...candidate, identityText: 'BlueBell Bistro cafe' }, capturedAt, options.date), /unconfirmed_pub/);
-  assert.throws(() => parseBluebell(currentOCR, { ...candidate, capturedAt: '2026-08-31T07:00:00Z' }, capturedAt, options.date), /stale_capture/);
+  assert.throws(() => parseBluebell(currentOCR, { ...candidate, capturedAt: '2026-09-08T07:00:00Z' }, capturedAt, options.date), /invalid_capture/);
+  assert.doesNotThrow(() => parseBluebell(currentOCR, candidate, capturedAt, '2026-09-11'));
 });
 test('the verified weekly attachment expires instead of receiving a new date', () => {
   assert.doesNotThrow(() => validateSource(bluebell.source, '2026-09-11', 'bluebell', new Date('2026-09-11T07:00:00Z')));

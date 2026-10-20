@@ -8,6 +8,8 @@ on:
       - 'scripts/bluebell-select.mjs'
       - 'scripts/lib/bluebell-auto.mjs'
       - 'scripts/lib/facebook-images.mjs'
+      - 'scripts/lib/menu-contract.mjs'
+      - 'scripts/publish-bluebell.mjs'
       - '.github/workflows/bluebell-hires-ocr.yml'
   workflow_dispatch:
   # Multiple early captures hedge GitHub schedule delays. Do not gate by actual
@@ -82,20 +84,19 @@ jobs:
           } catch (error) {
             fs.writeFileSync(errorFile,JSON.stringify({date:localDate(),capturedAt:new Date().toISOString(),error:error.message},null,2));
             console.log(JSON.stringify({status:'not_validated',error:error.message}));
+            process.exitCode=1;
           }
           NODE
       - uses: actions/upload-artifact@v4
-        if: steps.guard.outputs.skip != 'true'
+        if: always() && steps.guard.outputs.skip != 'true'
         with:
           name: bluebell-hires-output-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/bluebell-hires/
           retention-days: 7
       - name: Publish hi-res OCR
-        if: steps.guard.outputs.skip != 'true'
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
-          rm -rf results/bluebell-hires
-          mkdir -p results
-          cp -R output/bluebell-hires results/bluebell-hires
+          node scripts/publish-bluebell.mjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/bluebell-hires
