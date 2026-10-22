@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-22",
+  "capturedAt": "2026-10-22T10:08:23.169Z",
+  "validated": [
+    "kozlovna",
+    "tahiti",
+    "bluebell",
+    "stara-sypka"
+  ],
+  "errors": [
+    {
+      "id": "cool-bowling",
+      "attempt": 0,
+      "reason": "Cool Bowling: unparsed daily row: B.M.100g/250g Krémové hokkaido rizoto podávané s kačacím pečeným mäskom zdobené parmezánom a rukolou/B,7/     12,90€"
+    },
+    {
+      "id": "cool-bowling",
+      "attempt": 1,
+      "reason": "Cool Bowling: unparsed daily row: B.M.100g/250g Krémové hokkaido rizoto podávané s kačacím pečeným mäskom zdobené parmezánom a rukolou/B,7/     12,90€"
+    }
+  ]
+}
