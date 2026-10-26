@@ -1,5 +1,7 @@
 # Pevný skript s pripojeným Gmailom
 
+Aktuálna oprava 26.10.2026: štyri existujúce delivery úlohy používajú dnešný stable snapshot a pri jeho absencii volajú `automation/refresh-snapshot.mjs`. Helper spustí alebo počká na aktuálny stable collector a neposiela email. Rozvrhy úloh ostávajú 09:30, 09:45, 10:00 a 10:15 Europe/Bratislava. Podrobnosti sú v [Monday repair](MONDAY-FIX-2026-10-26.md). Nižšie uvedený samostatný `bridge.mjs` a jeho historický rozvrh opisujú pôvodnú alternatívu, nie aktuálne štyri úlohy.
+
 Prevádzková cesta od 10. septembra 2026 používa `automation/bridge.mjs`. Naplánovaná úloha iba načíta a zavolá tento skript; nečíta jednotlivé jedlá ani neskladá HTML či text e-mailu. Príjemca je nastavený v súkromnej úlohe, nie v tomto verejnom súbore.
 
 Skript používa už pripojené GitHub a Gmail nástroje. Neexportuje ich prihlasovacie údaje a nevyžaduje `GMAIL_OAUTH_JSON`. Samotné vyvolanie úlohy a pokračovanie dlhšieho behu majú tokenovú réžiu. Zber, OCR, výber položiek, šablóna a všetky kontroly sú programové.
