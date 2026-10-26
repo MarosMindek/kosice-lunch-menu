@@ -25,9 +25,14 @@ export async function refreshSnapshot({tools,date,emit=()=>{},pollMs=30000,maxPo
     return {status:'snapshot_ready',date,path:`results/stable-menu/${date}`};
   }
   const cached=await snapshot();if(cached)return cached;
-  // Scope the lookup to this workflow; unrelated runs cannot push the collector off page 1.
-  const runs=(await get('/actions/workflows/stable-menu-snapshot.yml/runs?branch=main&per_page=20')).workflow_runs;
-  let run=runs.find(r=>r.path===WORKFLOW&&r.head_branch==='main');
+  // The connected GitHub reader exposes the runs collection, not workflow metadata.
+  // Page through it so unrelated workflows do not hide the latest collector.
+  let run;
+  for(let page=1;page<=3&&!run;page++) {
+    const runs=(await get(`/actions/runs?branch=main&per_page=100&page=${page}`)).workflow_runs;
+    run=runs.find(r=>r.path===WORKFLOW&&r.head_branch==='main');
+    if(runs.length<100)break;
+  }
   if(!run)throw Error('No stable snapshot build exists');
   // Reruns use their original commit. Never silently run an obsolete collector.
   const [current,build]=await Promise.all(['main',run.head_sha].map(ref=>get('/git/trees/'+ref+'?recursive=1')));

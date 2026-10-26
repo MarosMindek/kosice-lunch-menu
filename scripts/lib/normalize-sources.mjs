@@ -1,4 +1,4 @@
-import { fold, normalized, serviceDates, weeklyDateRanges, moneyCents, weekday, validateSource } from './menu-contract.mjs';
+import { fold, normalized, serviceDates, serviceHeadingLines, weeklyDateRanges, moneyCents, weekday, validateSource } from './menu-contract.mjs';
 
 const linesOf=raw=>raw.lines || String(raw.pdfText || raw.text || '').split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
 const dayHeading=s=>/^(?:(?:\d{1,2}\.\s*\d{1,2}\.\s*\d{2,4})\s+)?(?:pondelok|utorok|streda|stvrtok|piatok|sobota|nedela)\b/.test(fold(s));
@@ -8,7 +8,7 @@ const clean=s=>s.replace(/\s+/g,' ').trim();
 const portionRE=/^(\d+(?:[,.]\d+)?(?:\s*\/\s*\d+(?:[,.]\d+)?)*\s*[gl])(?:\/|\s|$)/i;
 const category=s=>/^(polievky|hlavne jedla|specialna ponuka)$/.test(fold(s));
 function daily(raw,date) {
-  const all=linesOf(raw), starts=all.map((s,i)=>dayHeading(s)&&serviceDates(s,date).includes(date)?i:-1).filter(i=>i>=0);
+  const all=serviceHeadingLines(linesOf(raw).join('\n')), starts=all.map((s,i)=>dayHeading(s)&&serviceDates(s,date).includes(date)?i:-1).filter(i=>i>=0);
   if(starts.length!==1) throw Error('Missing or ambiguous current daily heading');
   const start=starts[0], next=all.findIndex((s,i)=>i>start&&(dayHeading(s)||/^upozornenie:/i.test(s)));
   return {all,section:all.slice(start,next<0?all.length:next)};
@@ -67,7 +67,7 @@ export function parseCoolBowling(raw,date) {
     if(/^B\.M\./i.test(m[1]))item.category='biznis';
     (/DEZERT/i.test(m[1])?desserts:mains).push(item);
   }
-  const notes=all.filter(s=>/polievka.*bez hlavneho jedla/i.test(fold(s)));
+  const notes=all.filter(s=>/polievka.*bez hlavneho jedla|^akcia k menu:/i.test(fold(s)));
   return complete('cool-bowling',source(raw,date,section,header.split(':')[0]+':'),soups,mains,desserts,notes);
 }
 export function parseTahiti(raw,date) {

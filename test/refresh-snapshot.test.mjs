@@ -13,7 +13,7 @@ function fixture({ready=false,active=false,failed=false,obsolete=false,missingRe
     },
     async mcp__codex_apps__github_fetch({url}) {
       let value;
-      if(url.includes('/actions/workflows/'))value={workflow_runs:[run()]};
+      if(url.includes('/actions/runs?'))value={workflow_runs:[run()]};
       else if(url.includes('/git/trees/'))value={tree:[{type:'blob',path:'scripts/lunch.mjs',sha:obsolete&&url.includes('/main?')?'changed':'same'}]};
       else {finished=true;value=run();}
       return ok({content:JSON.stringify(value)});

@@ -48,9 +48,14 @@ export function weeklyDateRanges(text) {
   return [...new Map(ranges.map(r => [`${r.from}/${r.to}`, r])).values()];
 }
 // A full printed Mon–Fri timetable is reusable; the email still selects one dated day.
+export function serviceHeadingLines(text) {
+  // Some official HTML joins a promotion and Monday's dated heading in one DOM line.
+  // Split only an explicit date + weekday + colon; never infer or rewrite a date.
+  return String(text).split(/\r?\n/).flatMap(line=>line.split(/(?=(?<!\d)\d{1,2}\.\s*\d{1,2}\.\s*(?:\d{4}|\d{2})\s+(?:PONDELOK|UTOROK|STREDA|ŠTVRTOK|STVRTOK|PIATOK|SOBOTA|NEDEĽA|NEDELA)\s*:)/iu)).map(s=>s.trim()).filter(Boolean);
+}
 export function weeklyTimetable(text, date) {
   const names = ['pondelok', 'utorok', 'streda', 'stvrtok', 'piatok'];
-  const headings = String(text).split(/\r?\n/).filter(s => /^\d{1,2}\.\s*\d{1,2}\.\s*\d{2,4}\s+(pondelok|utorok|streda|stvrtok|piatok)\b/.test(fold(s)));
+  const headings = serviceHeadingLines(text).filter(s => /^\d{1,2}\.\s*\d{1,2}\.\s*\d{2,4}\s+(pondelok|utorok|streda|stvrtok|piatok)\b/.test(fold(s)));
   if (headings.length !== 5) return null;
   const dates = headings.map(s => serviceDates(s, date));
   if (dates.some(ds => ds.length !== 1)) return null;

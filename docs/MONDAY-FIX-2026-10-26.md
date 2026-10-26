@@ -6,6 +6,8 @@ The 09:30 and 10:15 connected tasks saw a new BlueBell menu for 26–30 October 
 
 A live diagnostic rerun also exposed an infrastructure failure: `ubuntu-latest` selected Ubuntu 26.04, unsupported by pinned Playwright 1.55.0. The stable, BlueBell and autonomous collection workflows now pin Ubuntu 24.04.
 
+After repairing the runner, the actual 26 October capture reproduced the Monday parser failure: Cool Bowling's promotion and `26.10.26 PONDELOK:` heading shared one DOM line. The anchored parser missed Monday entirely. Explicit dated weekday headings are now separated without changing the original evidence or dates. The drinks promotion remains a note, not a soup price. The same separation validates the full weekly timetable, so Monday's capture remains reusable through Friday. The actual captured 26–30 October fixture is tested for every weekday, exact item counts and soup prices, duplicate headings, and next-week expiration.
+
 The 23 October diagnostic identified a separate parser defect: Cool Bowling joined `rukolou/B,7/` without whitespace. The parser now accepts this delimiter placement while still requiring the recognized allergen block, one price, and the full dish text. Regression cases reject missing/extra prices and unknown allergen text.
 
 The legacy connected bridge's template pin now matches the approved template, with a regression check to detect future drift. The template itself is unchanged.
