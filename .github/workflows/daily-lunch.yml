@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   lunch:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     env:
       SEND_EMAIL: ${{ github.event_name == 'schedule' || inputs.send == true }}

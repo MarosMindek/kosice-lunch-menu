@@ -2,7 +2,7 @@
 // Called by Work Mode with its tools object; also importable by Node tests.
 const REPO='MarosMindek/kosice-lunch-menu';
 const BASE='https://api.github.com/repos/'+REPO;
-const PIN='917fcfe0c6ea2a1ba267781501bcf66a66ca924be3deb03808cf22d599d68a0d';
+const PIN='4f910907f663ca1fd4671367f480ec75cfe96ce97a750eb6b7004bbeebe5b3b7';
 const FILES=['scripts/render-email.mjs','scripts/lib/menu-contract.mjs','scripts/lib/workday.mjs','templates/email-v1.html','templates/email-v1.sha256'];
 const quote=s=>"'"+String(s).replace(/'/g,"'\\''")+"'";
 const canonical=s=>String(s??'').replace(/\r\n/g,'\n').replace(/\n$/,'');
