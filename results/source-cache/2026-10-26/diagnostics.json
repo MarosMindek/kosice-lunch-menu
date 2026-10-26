@@ -1,21 +1,11 @@
 {
   "date": "2026-10-26",
-  "capturedAt": "2026-10-26T10:05:23.500Z",
+  "capturedAt": "2026-10-26T10:09:40.226Z",
   "validated": [
     "kozlovna",
+    "cool-bowling",
     "tahiti",
     "bluebell"
   ],
-  "errors": [
-    {
-      "id": "cool-bowling",
-      "attempt": 0,
-      "reason": "Missing or ambiguous current daily heading"
-    },
-    {
-      "id": "cool-bowling",
-      "attempt": 1,
-      "reason": "Missing or ambiguous current daily heading"
-    }
-  ]
+  "errors": []
 }
