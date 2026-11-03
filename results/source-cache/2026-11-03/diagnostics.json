@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-03",
+  "capturedAt": "2026-11-03T08:29:38.564Z",
+  "validated": [
+    "kozlovna",
+    "cool-bowling",
+    "tahiti",
+    "bluebell"
+  ],
+  "errors": [
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: ambiguous portion/meal block"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: ambiguous portion/meal block"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: ambiguous portion/meal block"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: ambiguous portion/meal block"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF parsed"
+    }
+  ]
+}
