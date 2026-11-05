@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "capturedAt": "2026-11-05T08:34:13.415Z",
+  "capturedAt": "2026-11-05T13:10:06.766Z",
   "validated": [
     "kozlovna",
     "cool-bowling",
@@ -10,19 +10,11 @@
   "errors": [
     {
       "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
+      "reason": "Sypka: ambiguous portion/meal block"
     },
     {
       "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
+      "reason": "Sypka: ambiguous portion/meal block"
     },
     {
       "id": "stara-sypka",
@@ -36,19 +28,11 @@
     },
     {
       "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
+      "reason": "Sypka: ambiguous portion/meal block"
     },
     {
       "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
+      "reason": "Sypka: ambiguous portion/meal block"
     },
     {
       "id": "stara-sypka",
