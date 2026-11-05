@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-05",
+  "capturedAt": "2026-11-05T08:34:13.415Z",
+  "validated": [
+    "kozlovna",
+    "cool-bowling",
+    "tahiti",
+    "bluebell"
+  ],
+  "errors": [
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF parsed"
+    }
+  ]
+}
