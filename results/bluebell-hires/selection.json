@@ -1,163 +1,39 @@
 {
-  "date": "2026-11-05",
-  "capturedAt": "2026-11-05T13:13:17.518Z",
-  "status": "needs_visual_review",
-  "selected": {
-    "id": "bluebell",
-    "source": {
-      "kind": "image-ocr",
-      "url": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZhKJ1xwUyXfJpH504IQ3thJGaC6Uyx2P9qkkpVUqMBWYGfrytuKW4FXRU7YEQU92Kt11A7wcAtwIW78wlPkw-HxEVLG66Dtqo9BGu1SVeEgshLVddsE42wZ6dZUN6pBcn4NNc-5ssXGUtB6ZSNL5869i4vF80h4ogJ8MQmabV3gWxssJ3-INwfSH_s&__tn__=EH-R",
-      "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
-      "identityText": "Piváreň BlueBell | Kosice | Facebook\nPrihlásiť sa\nZabudli ste údaje k účtu?\nPiváreň BlueBell \nsledovatelia: 2,9 tis. • Sledované: 2\nViac\nPríspevky\nInformácie\nReels\nFotky\nÚvod\n�unikátna piváreň v centre Košíc�\n�tradičná kuchyňa v netradičnej podobe�\n�premiérovo Maso Klouda na východe SR�\n�rýchla donáška denne 11:00-20:45�\nStránka · Piváreň\nHlavná 22, Kosice, Slovakia\n+421 910 613 000\nTeraz otvorené\nJedenie v reštaurácii · Sedenie vonku · Vyzdvihnutie v obchode\nCenová kategória · $$$\n82 % odporúča (23 recenzií)﻿\nFotky\nZobraziť všetky fotky\nOchrana súkromia\n \n · Ochrana súkromia v súvislosti so zdravím spotrebiteľov\n \n · Podmienky\n \n · Reklama\n \n · Vaša voľba \n \n · Cookies\n \n · Viac\nPiváreň BlueBell je na mieste Piváreň BlueBell.\npred 2 dňami\npondelok 2. november 2026 o 17:48\n2 d.\n \n·\nKosice, Košický kraj, Slovensko\n \n·\n﻿Magnetic\n \n · The Bausa\n \n·\nPredstavujeme vám naše Mac & Cheese \n s trhaným bravčovým mäsom, čiernou fazuľou a marinovanou červenou cibuľou. Krémové syrové cestoviny, šťavnaté trhané mäsko a dokonalá bodka v podobe chrumkavej kyselkavej cibuľky – toto si u nás môžeš vychutnať tento týždeň! \n#macandcheese #jedlokosice #dennemenu #foodlover Zobraziť menej\nĽutujeme, toto video sa nepodarilo prehrať.\nViac informácií\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár\nPrihláste sa alebo sa zaregistrujte, aby ste sa spojili so svojimi priateľmi, rodinou a ľuďmi, ktorých poznáte.\nPrihlásiť sa\nalebo\nVytvoriť nový účet",
-      "capturedAt": "2026-11-05T13:13:17.482Z",
-      "imageSha256": "25c0749749f60eb57fce7291b9baf219ca1489e8d4703c1e57b5637a9487dcf3",
-      "text": "S s —\n“(Dy od 2.11.2026 do 6.11.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n—PIvARER— sdtronom\nGRATIS\nPOLIEVKY\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 10,90€\nMac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa 350/150/50g 12712\nTRADIČNÉ MENU | 9,90€\nŠošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb. 350/180/50g 13710\nVEGGIE MENU | 8,90€\nKulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb 400/50/50g 137\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nČiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka 180/250/50g 13,710\nOSOBNÝ ODBER: + 421910 613 000\n",
-      "dateText": "2.11.2026 do 6.11.2026",
-      "validFrom": "2026-11-02",
-      "validTo": "2026-11-06"
-    },
-    "soups": [
-      {
-        "name": "Kurací Vývar 139",
-        "price": 2,
-        "sourceText": "0,331 Kurací Vývar 139 2,00€ |"
-      },
-      {
-        "name": "Podľa Dennej Ponuky",
-        "price": 2,
-        "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
-      },
-      {
-        "name": "Polievka Samostatne",
-        "price": 3.5,
-        "sourceText": "0,331 Polievka Samostatne 3,50€"
-      }
-    ],
-    "mains": [
-      {
-        "category": "biznis",
-        "name": "Mac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa",
-        "price": 10.9,
-        "sourceText": "BIZNIS MENU | 10,90€\nMac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa 350/150/50g 12712"
-      },
-      {
-        "category": "tradicne",
-        "name": "Šošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb.",
-        "price": 9.9,
-        "sourceText": "TRADIČNÉ MENU | 9,90€\nŠošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb. 350/180/50g 13710"
-      },
-      {
-        "category": "veggie",
-        "name": "Kulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb",
-        "price": 8.9,
-        "sourceText": "VEGGIE MENU | 8,90€\nKulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb 400/50/50g 137"
-      },
-      {
-        "category": "special-1",
-        "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
-        "price": 8.9,
-        "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10"
-      },
-      {
-        "category": "special-2",
-        "name": "Čiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka",
-        "price": 9.9,
-        "sourceText": "ŠPECIÁL MENU 2 | 9,90€\nČiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka 180/250/50g 13,710"
-      }
-    ],
-    "reviewedComplete": false,
-    "needsVisualReview": true,
-    "imageFile": "gallery-05.jpg"
-  },
-  "candidates": [
-    {
-      "id": "bluebell",
-      "source": {
-        "kind": "image-ocr",
-        "url": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZhKJ1xwUyXfJpH504IQ3thJGaC6Uyx2P9qkkpVUqMBWYGfrytuKW4FXRU7YEQU92Kt11A7wcAtwIW78wlPkw-HxEVLG66Dtqo9BGu1SVeEgshLVddsE42wZ6dZUN6pBcn4NNc-5ssXGUtB6ZSNL5869i4vF80h4ogJ8MQmabV3gWxssJ3-INwfSH_s&__tn__=EH-R",
-        "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
-        "identityText": "Piváreň BlueBell | Kosice | Facebook\nPrihlásiť sa\nZabudli ste údaje k účtu?\nPiváreň BlueBell \nsledovatelia: 2,9 tis. • Sledované: 2\nViac\nPríspevky\nInformácie\nReels\nFotky\nÚvod\n�unikátna piváreň v centre Košíc�\n�tradičná kuchyňa v netradičnej podobe�\n�premiérovo Maso Klouda na východe SR�\n�rýchla donáška denne 11:00-20:45�\nStránka · Piváreň\nHlavná 22, Kosice, Slovakia\n+421 910 613 000\nTeraz otvorené\nJedenie v reštaurácii · Sedenie vonku · Vyzdvihnutie v obchode\nCenová kategória · $$$\n82 % odporúča (23 recenzií)﻿\nFotky\nZobraziť všetky fotky\nOchrana súkromia\n \n · Ochrana súkromia v súvislosti so zdravím spotrebiteľov\n \n · Podmienky\n \n · Reklama\n \n · Vaša voľba \n \n · Cookies\n \n · Viac\nPiváreň BlueBell je na mieste Piváreň BlueBell.\npred 2 dňami\npondelok 2. november 2026 o 17:48\n2 d.\n \n·\nKosice, Košický kraj, Slovensko\n \n·\n﻿Magnetic\n \n · The Bausa\n \n·\nPredstavujeme vám naše Mac & Cheese \n s trhaným bravčovým mäsom, čiernou fazuľou a marinovanou červenou cibuľou. Krémové syrové cestoviny, šťavnaté trhané mäsko a dokonalá bodka v podobe chrumkavej kyselkavej cibuľky – toto si u nás môžeš vychutnať tento týždeň! \n#macandcheese #jedlokosice #dennemenu #foodlover Zobraziť menej\nĽutujeme, toto video sa nepodarilo prehrať.\nViac informácií\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár\nPrihláste sa alebo sa zaregistrujte, aby ste sa spojili so svojimi priateľmi, rodinou a ľuďmi, ktorých poznáte.\nPrihlásiť sa\nalebo\nVytvoriť nový účet",
-        "capturedAt": "2026-11-05T13:13:17.482Z",
-        "imageSha256": "25c0749749f60eb57fce7291b9baf219ca1489e8d4703c1e57b5637a9487dcf3",
-        "text": "S s —\n“(Dy od 2.11.2026 do 6.11.2026 Vpivamikmenu\nBLUEBELL od 11:00 do 14:00 džbán vody\n—PIvARER— sdtronom\nGRATIS\nPOLIEVKY\n0,331 Kurací Vývar 139 2,00€ |\n0,331 Podľa Dennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 10,90€\nMac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa 350/150/50g 12712\nTRADIČNÉ MENU | 9,90€\nŠošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb. 350/180/50g 13710\nVEGGIE MENU | 8,90€\nKulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb 400/50/50g 137\nŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10\nŠPECIÁL MENU 2 | 9,90€\nČiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka 180/250/50g 13,710\nOSOBNÝ ODBER: + 421910 613 000\n",
-        "dateText": "2.11.2026 do 6.11.2026",
-        "validFrom": "2026-11-02",
-        "validTo": "2026-11-06"
-      },
-      "soups": [
-        {
-          "name": "Kurací Vývar 139",
-          "price": 2,
-          "sourceText": "0,331 Kurací Vývar 139 2,00€ |"
-        },
-        {
-          "name": "Podľa Dennej Ponuky",
-          "price": 2,
-          "sourceText": "0,331 Podľa Dennej Ponuky 2,00€"
-        },
-        {
-          "name": "Polievka Samostatne",
-          "price": 3.5,
-          "sourceText": "0,331 Polievka Samostatne 3,50€"
-        }
-      ],
-      "mains": [
-        {
-          "category": "biznis",
-          "name": "Mac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa",
-          "price": 10.9,
-          "sourceText": "BIZNIS MENU | 10,90€\nMac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa 350/150/50g 12712"
-        },
-        {
-          "category": "tradicne",
-          "name": "Šošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb.",
-          "price": 9.9,
-          "sourceText": "TRADIČNÉ MENU | 9,90€\nŠošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barciansky Chlieb. 350/180/50g 13710"
-        },
-        {
-          "category": "veggie",
-          "name": "Kulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb",
-          "price": 8.9,
-          "sourceText": "VEGGIE MENU | 8,90€\nKulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb 400/50/50g 137"
-        },
-        {
-          "category": "special-1",
-          "name": "Kurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami",
-          "price": 8.9,
-          "sourceText": "ŠPECIÁL MENU 1 | 8,90€\nKurací Stroganov s Basmati Ryžou a Domácimi Zemiakovými Hranolkami 150/100/100g 7,10"
-        },
-        {
-          "category": "special-2",
-          "name": "Čiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka",
-          "price": 9.9,
-          "sourceText": "ŠPECIÁL MENU 2 | 9,90€\nČiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka 180/250/50g 13,710"
-        }
-      ],
-      "reviewedComplete": false,
-      "needsVisualReview": true,
-      "imageFile": "gallery-05.jpg"
-    }
-  ],
+  "date": "2026-11-06",
+  "capturedAt": "2026-11-06T12:58:30.991Z",
+  "status": "unavailable",
+  "selected": null,
+  "candidates": [],
   "rejected": [
     {
       "file": "gallery-01.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZj-aQa_i7jFqLu_YvnrK_QSe_tew0TTB121f-xqn-bREg7Pf4xzVUaW60yBBnPrWlBB-5y3SwMvQn936lsAAc0TDSeHrWaHQPXcQdQIajbG-f65WaCDDpOZ5t9UREs72M9nTz9ihSSZ1yIUIz0YJONACwhZ3-k5KrdUD8RMunbKY6bM_uDxNbqPokw&__tn__=*b0H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZjDZGigaq720o0Q9a5MB_0sZ-mQnFVf9X_o0Tug9o_pBgKxafJPbSDxRzNLZAqVc-1IJjOvyKQ02SW6yXPG5Jc-ANbsfbJHk7mfkeUtKu50ARIQxSOLRaQLXEBzHCPYbCmJAmqoWzlGnyyV2KTFXoZIXShoL66Pmy5pgRdv74Feg_NuAe3C91cTzrA&__tn__=*b1H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-02.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZj-aQa_i7jFqLu_YvnrK_QSe_tew0TTB121f-xqn-bREg7Pf4xzVUaW60yBBnPrWlBB-5y3SwMvQn936lsAAc0TDSeHrWaHQPXcQdQIajbG-f65WaCDDpOZ5t9UREs72M9nTz9ihSSZ1yIUIz0YJONACwhZ3-k5KrdUD8RMunbKY6bM_uDxNbqPokw&__tn__=*b1H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZjDZGigaq720o0Q9a5MB_0sZ-mQnFVf9X_o0Tug9o_pBgKxafJPbSDxRzNLZAqVc-1IJjOvyKQ02SW6yXPG5Jc-ANbsfbJHk7mfkeUtKu50ARIQxSOLRaQLXEBzHCPYbCmJAmqoWzlGnyyV2KTFXoZIXShoL66Pmy5pgRdv74Feg_NuAe3C91cTzrA&__tn__=*b2H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-03.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZj-aQa_i7jFqLu_YvnrK_QSe_tew0TTB121f-xqn-bREg7Pf4xzVUaW60yBBnPrWlBB-5y3SwMvQn936lsAAc0TDSeHrWaHQPXcQdQIajbG-f65WaCDDpOZ5t9UREs72M9nTz9ihSSZ1yIUIz0YJONACwhZ3-k5KrdUD8RMunbKY6bM_uDxNbqPokw&__tn__=*b2H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1859923868967277&set=pcb.1859923928967271&__cft__[0]=AZjmHFnjVbuGcPSg7YyJzbqymyUGJVmnHd10QsrWW5pQp_blj6BoUibHWMuUSRtwqdXSW_w0x_G7d5ER0B_IuNlAcMRjlQmYKRmb6fdk7PAFwLZwPImH8tzJQNtJ6OOHJcTQRutyGshDPPLN4uPyKEqO8txK-AgCPOJu_mApMUlk7BKpTi9gLFXdzWU&__tn__=*b0H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-04.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1859923862300611&set=pcb.1859923928967271&__cft__[0]=AZjmHFnjVbuGcPSg7YyJzbqymyUGJVmnHd10QsrWW5pQp_blj6BoUibHWMuUSRtwqdXSW_w0x_G7d5ER0B_IuNlAcMRjlQmYKRmb6fdk7PAFwLZwPImH8tzJQNtJ6OOHJcTQRutyGshDPPLN4uPyKEqO8txK-AgCPOJu_mApMUlk7BKpTi9gLFXdzWU&__tn__=*b1H-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-05.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-06.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1859805198979144&set=a.877992830493724&__cft__[0]=AZguDCR-28Z1YJFetnY9y5EG582HHjVLaCVa_ePsCW4AI3r0DWQbyVj5Xdc1xgMvcgmm6E9CHTkKh-JDab2kIIducFZX5QKMHUgFYzshqrzzQJ5WDYaof-3L6lpXnsgMjAy-sLli0i6in0i6VSBn_Yy40_G_r7XwTDDXtlzXmnyB-YbpAxALBqDHcBk&__tn__=EH-R",
+      "reason": "expired_or_future_image, expired_or_future_image"
     }
   ],
   "reviewCandidates": []
