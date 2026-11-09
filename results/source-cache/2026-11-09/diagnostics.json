@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-09",
+  "capturedAt": "2026-11-09T08:37:17.669Z",
+  "validated": [
+    "cool-bowling",
+    "tahiti"
+  ],
+  "errors": [
+    {
+      "id": "kozlovna",
+      "attempt": 0,
+      "reason": "kozlovna: empty parsed menu"
+    },
+    {
+      "id": "kozlovna",
+      "attempt": 1,
+      "reason": "kozlovna: empty parsed menu"
+    },
+    {
+      "id": "bluebell",
+      "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
+    }
+  ]
+}
