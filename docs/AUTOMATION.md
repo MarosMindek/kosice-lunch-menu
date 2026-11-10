@@ -15,4 +15,6 @@ Ak priamy zdroj nemožno načítať, jeho obsah neobsahuje dnešný dátum/aktu�
 
 Pre Tahiti sa pri retry otvára priamo aktuálna weekly page na `menu.andiamogroup.eu`; pre Kozlovňu a Cool Bowling priamo ich oficiálne menu sekcie; Stará Sýpka landing + aktuálny odkaz `ZOBRAZIŤ / VYTLAČIŤ`; BlueBell iba aktuálny validovaný interval alebo live verified-image s potvrdenou identitou Piváreň BlueBell/Blue Bell Pub. Search výsledok je len navigácia, nikdy obsahový zdroj.
 
+BlueBell má jedinú výnimku z blokovania celého e-mailu. Ak jeho prísna validácia neprejde ani z cache, ani zo živého obrázka, do karty sa nedajú žiadne jedlá, ceny ani neoverený text. Karta oznámi, že aktuálne menu zatiaľ nie je dostupné, a uvedie iba oficiálny zdroj `https://www.facebook.com/pivarenbluebell/`; ostatné validované reštaurácie a celý bežný e-mail sa odošlú. Pre ostatné reštaurácie zostáva výsledok pri zlyhaní validácie **STOP**.
+
 Ak používateľ požiada o manuálne spustenie, spusti existujúci workflow alebo tento príkaz a oznám jeho skutočný výsledok. Nenahrádzaj chýbajúce poverenie, neúspešný parser alebo chybu odoslania vlastným generovaním e-mailu. Stará trojica modelových ranných úloh sa už na prevádzku nepoužíva.

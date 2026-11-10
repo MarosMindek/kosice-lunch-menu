@@ -24,7 +24,7 @@ Po stiahnutí artefaktu skript opätovne vykoná validáciu a renderer z rovnak�
 
 Pred odoslaním atomicky uloží zámer do vetvy `lunch-delivery-state`. Rovnakú vetvu používa samostatný Gmail program. Pri strate odpovede z Gmailu slepo neposiela znova. Súbežný beh môže potvrdiť nanajvýš jeden zámer pre dátum a príjemcu. Trvalý záznam neobsahuje adresu, obsah e-mailu ani prihlasovacie údaje.
 
-Pripojenia GitHub a Gmail musia zostať aktívne. Chyba v pripojení alebo nečitateľné menu sa nahradia jasným zlyhaním úlohy, nie ručne vymysleným obsahom.
+Pripojenia GitHub a Gmail musia zostať aktívne. Chyba v pripojení alebo nečitateľné menu inej reštaurácie sa nahradia jasným zlyhaním úlohy, nie ručne vymysleným obsahom. Pri BlueBell sa po zlyhaní prísnej validácie odošle bežný e-mail bez jeho jedál, iba s oznámením o nedostupnom menu a oficiálnym Facebook odkazom.
 
 ## Alternatíva s nulovou modelovou réžiou
 

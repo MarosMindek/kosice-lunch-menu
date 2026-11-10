@@ -3,6 +3,8 @@ import { createHash } from 'node:crypto';
 export const TIMEZONE = 'Europe/Bratislava';
 export const ORDER = ['kozlovna', 'cool-bowling', 'tahiti', 'bluebell', 'stara-sypka'];
 export const NAMES = { kozlovna: 'Kozlovňa Košice', 'cool-bowling': 'Cool Bowling', tahiti: 'Tahiti Restaurant', bluebell: 'Piváreň BlueBell', 'stara-sypka': 'Stará Sýpka' };
+export const BLUEBELL_SOURCE_URL = 'https://www.facebook.com/pivarenbluebell/';
+export const unavailableBluebell = () => ({ id: 'bluebell', unavailable: true, source: { url: BLUEBELL_SOURCE_URL }, soups: [], mains: [], desserts: [], notes: [] });
 export const fold = s => String(s ?? '').normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
 export const normalized = s => fold(s).replace(/[^a-z0-9]+/g, '');
 export const sha256 = s => createHash('sha256').update(s).digest('hex');
@@ -133,6 +135,16 @@ export function validateMenu(data, { date = localDate(), now = new Date() } = {}
   const normalizedRestaurants = ORDER.map(id => {
     if (id === 'stara-sypka' && weekday(date) === 1) return { id, name: NAMES[id], closed: true, soups: [], mains: [] };
     const r = restaurants.find(r => r.id === id);
+    if (r?.unavailable === true) {
+      if (id !== 'bluebell') throw Error(`${id}: unavailable fallback is not permitted`);
+      const empty = [r.soups, r.mains, r.desserts, r.notes];
+      if (r.closed === true || r.reviewedComplete === true || r.needsVisualReview === true ||
+          !empty.every(Array.isArray) || empty.some(items => items.length) ||
+          r.source?.url !== BLUEBELL_SOURCE_URL || Object.keys(r.source || {}).length !== 1) {
+        throw Error('bluebell: invalid source-link fallback');
+      }
+      return { ...unavailableBluebell(), name: NAMES[id] };
+    }
     if (!r || r.closed) throw Error(`${id}: required restaurant missing`);
     validateSource(r.source, date, id, now);
     if (!r.soups?.length || !r.mains?.length || r.reviewedComplete !== true) throw Error(`${id}: incomplete menu`);

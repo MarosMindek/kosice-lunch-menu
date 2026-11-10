@@ -52,7 +52,9 @@ Program porovnáva viacero OCR čítaní jedného konkrétneho obrázka, podľa 
 
 OCR konsenzus je automatická kontrola, nie vyhlásenie o ľudskej vizuálnej kontrole. Chybu spoločnú viacerým OCR čítaniam nemožno úplne vylúčiť. Existujúci overený obrázok v `data/bluebell/2026-09-07.json` je len záloha na 7.–11. september 2026; jeho dátumy sa nepredlžujú. Po skončení platnosti musí prejsť nové OCR.
 
-Ak sa zmení štruktúra stránky/PDF, chýba cena alebo obrázok nie je čitateľný, program skončí s chybou a plánovaný ďalší pokus zdroj obnoví. Neposiela čiastočné menu ani staré jedlá s novým dátumom. Diagnostika a presný náhľad sú v artefaktoch Actions; neobsahujú Gmail poverenia. Zmena zdroja môže vyžadovať údržbu parsera, bežné používanie model nevyžaduje.
+Ak BlueBell neprejde touto validáciou ani z aktuálnej cache, ani zo živého obrázka, program nepoužije žiadne jeho jedlá, ceny či OCR text. Namiesto nich vloží do karty iba informáciu o nedostupnom aktuálnom menu a oficiálny odkaz `https://www.facebook.com/pivarenbluebell/`; ostatné validované reštaurácie a bežný e-mail pokračujú. Táto výnimka nemení kritériá prijatia BlueBell menu.
+
+Ak sa zmení štruktúra stránky/PDF alebo chýba cena pri inej reštaurácii, program skončí s chybou a plánovaný ďalší pokus zdroj obnoví. Nikdy neposiela čiastočné menu ani staré jedlá s novým dátumom. Diagnostika a presný náhľad sú v artefaktoch Actions; neobsahujú Gmail poverenia. Zmena zdroja môže vyžadovať údržbu parsera, bežné používanie model nevyžaduje.
 
 ## Ochrana pred duplicitou
 

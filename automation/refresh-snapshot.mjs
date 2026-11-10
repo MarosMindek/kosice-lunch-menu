@@ -2,7 +2,10 @@
 const REPO='MarosMindek/kosice-lunch-menu';
 const BASE='https://api.github.com/repos/'+REPO;
 const WORKFLOW='.github/workflows/stable-menu-snapshot.yml';
-const required=date=>['kozlovna','cool-bowling','tahiti','bluebell',...(new Date(date+'T12:00:00Z').getUTCDay()===1?[]:['stara-sypka'])];
+const BLUEBELL_SOURCE_URL='https://www.facebook.com/pivarenbluebell/';
+const required=date=>['kozlovna','cool-bowling','tahiti',...(new Date(date+'T12:00:00Z').getUTCDay()===1?[]:['stara-sypka'])];
+const complete=r=>r&&!r.closed&&r.reviewedComplete===true&&r.soups?.length&&r.mains?.length;
+const bluebellReady=r=>complete(r)||(r?.unavailable===true&&r.source?.url===BLUEBELL_SOURCE_URL&&Object.keys(r.source).length===1&&[r.soups,r.mains,r.desserts,r.notes].every(items=>Array.isArray(items)&&items.length===0));
 const unwrap=r=>{if(r.isError)throw Error(JSON.stringify(r.structuredContent||r.content));let d=r.structuredContent;while(d?.structuredContent)d=d.structuredContent;return d?.result||d;};
 
 export async function refreshSnapshot({tools,date,emit=()=>{},pollMs=30000,maxPolls=40}) {
@@ -21,7 +24,8 @@ export async function refreshSnapshot({tools,date,emit=()=>{},pollMs=30000,maxPo
     }
     const status=records['status.json'],menu=records['normalized-menu.json'],email=records['email.json'];
     if(status.status!=='dry_run_validated'||status.date!==date||menu.date!==date||email.date!==date||email.subject!==`Obedové menu – Košice | ${date.split('-').reverse().join('.')}`)return null;
-    if(!required(date).every(id=>menu.restaurants?.some(r=>r.id===id&&!r.closed&&r.reviewedComplete&&r.soups?.length&&r.mains?.length)))return null;
+    if(!required(date).every(id=>menu.restaurants?.some(r=>r.id===id&&complete(r))))return null;
+    if(!bluebellReady(menu.restaurants?.find(r=>r.id==='bluebell')))return null;
     return {status:'snapshot_ready',date,path:`results/stable-menu/${date}`};
   }
   const cached=await snapshot();if(cached)return cached;

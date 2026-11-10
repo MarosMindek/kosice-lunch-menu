@@ -5,7 +5,7 @@ import { promisify } from 'node:util';
 import { parsers, fingerprint } from './normalize-sources.mjs';
 import { collectBluebell, validatedBluebellBackup } from './bluebell-auto.mjs';
 import { cachedRestaurant } from './source-cache.mjs';
-import { validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
+import { BLUEBELL_SOURCE_URL, unavailableBluebell, validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
 const execute=promisify(execFile);
 const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/','https://www.starasypka.sk/sk/restauracia/obedove-menu']};
 
@@ -85,23 +85,29 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
     throw Error(`${id}: current complete menu unavailable`);
   }
   async function bluebell() {
-    const errorFile='results/bluebell-hires/validation-error.json';
-    const previousError=fs.existsSync(errorFile)?JSON.parse(fs.readFileSync(errorFile,'utf8')):{};
-    const conflict=previousError.date===date&&/conflict/i.test(previousError.error||'');
-    const primary=conflict?null:validatedBluebellBackup(date),stored=conflict?null:cachedRestaurant('bluebell',date)?.parsed;
-    if(primary&&stored&&fingerprint(primary)!==fingerprint(stored))throw Error('Bluebell: conflicting validated caches');
-    const cached=primary || stored;
-    if(cached) {
-      sources.bluebell=cached;onStatus({id:'bluebell',status:'validated-cache'});return cached;
-    }
     try {
-      await execute(process.execPath,['scripts/bluebell-hires.mjs'],{timeout:420000,maxBuffer:1024*1024});
-      const menu=collectBluebell('output/bluebell-hires',date);sources.bluebell=menu;onStatus({id:'bluebell',status:'validated-live'});return menu;
+      const errorFile='results/bluebell-hires/validation-error.json';
+      const previousError=fs.existsSync(errorFile)?JSON.parse(fs.readFileSync(errorFile,'utf8')):{};
+      const conflict=previousError.date===date&&/conflict/i.test(previousError.error||'');
+      const primary=conflict?null:validatedBluebellBackup(date),stored=conflict?null:cachedRestaurant('bluebell',date)?.parsed;
+      if(primary&&stored&&fingerprint(primary)!==fingerprint(stored))throw Error('Bluebell: conflicting validated caches');
+      const cached=primary || stored;
+      if(cached) {
+        sources.bluebell=cached;onStatus({id:'bluebell',status:'validated-cache'});return cached;
+      }
+      try {
+        await execute(process.execPath,['scripts/bluebell-hires.mjs'],{timeout:420000,maxBuffer:1024*1024});
+        const menu=collectBluebell('output/bluebell-hires',date);sources.bluebell=menu;onStatus({id:'bluebell',status:'validated-live'});return menu;
+      } catch(error) {
+        const fallback=validatedBluebellBackup(date);
+        if(fallback) {sources.bluebell=fallback;onStatus({id:'bluebell',status:'validated-cache-after-live-failure'});return fallback;}
+        throw error;
+      }
     } catch(error) {
       errors.push({id:'bluebell',reason:error.message});
-      const fallback=validatedBluebellBackup(date);
-      if(fallback) {sources.bluebell=fallback;onStatus({id:'bluebell',status:'validated-cache-after-live-failure'});return fallback;}
-      throw error;
+      sources['bluebell-fallback']={url:BLUEBELL_SOURCE_URL};
+      onStatus({id:'bluebell',status:'source-link-fallback'});
+      return unavailableBluebell();
     }
   }
   const ids=['kozlovna','cool-bowling','tahiti',...(weekday(date)===1?[]:['stara-sypka'])];
