@@ -65,7 +65,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node .github/scripts/restore-source-cache.mjs
-      - name: Build strict 5-of-5 validated snapshot
+      - name: Build validated snapshot with BlueBell source-link fallback
         if: steps.guard.outputs.skip != 'true'
         run: npm run lunch:dry-run
       - name: Preserve validated sources and failure diagnostics

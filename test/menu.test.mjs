@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { dateRanges, localDate, discountedCents, validateMenu, displayDate, validateSource } from '../scripts/lib/menu-contract.mjs';
+import { BLUEBELL_SOURCE_URL, dateRanges, localDate, discountedCents, unavailableBluebell, validateMenu, displayDate, validateSource } from '../scripts/lib/menu-contract.mjs';
 import { parseBluebell, selectCandidates } from '../scripts/bluebell-select.mjs';
 import { renderEmail, validateBody, dailyThought } from '../scripts/render-email.mjs';
 import { publicImageVariants } from '../scripts/lib/facebook-images.mjs';
@@ -96,6 +96,32 @@ test('old dish or unproven price cannot be mixed into a current menu', () => {
 test('missing prices/categories and incomplete restaurants block the entire email', () => {
   for (const mutate of [m => m.restaurants.find(r => r.id === 'bluebell').mains.pop(), m => m.restaurants[0].soups[0].price = null, m => m.restaurants[0].reviewedComplete = false, m => m.restaurants = m.restaurants.filter(r => r.id !== 'bluebell')]) {
     const m = fixture(); mutate(m); assert.throws(() => renderEmail(m, options));
+  }
+});
+test('a BlueBell validation failure renders only its official source link and keeps the normal email', () => {
+  const input = fixture();
+  input.restaurants = input.restaurants.map(r => r.id === 'bluebell' ? unavailableBluebell() : r);
+  const menu = validateMenu(input, options), fallback = menu.restaurants.find(r => r.id === 'bluebell');
+  assert.deepEqual(fallback, { ...unavailableBluebell(), name: 'Piváreň BlueBell' });
+  const message = renderEmail(input, options);
+  assert.ok(message.html.includes(`href="${BLUEBELL_SOURCE_URL}"`));
+  assert.ok(message.html.includes('Aktuálne menu zatiaľ nie je dostupné'));
+  assert.ok(message.plain.includes(`Sledujte ho po zverejnení: ${BLUEBELL_SOURCE_URL}`));
+  assert.ok(message.plain.includes('Kozlovňa Košice'));
+  assert.ok(message.plain.includes('DNEŠNÝ VERDIKT'));
+  assert.ok(!message.plain.includes(bluebell.mains[0].name));
+  assert.doesNotThrow(() => validateBody(message, input, options));
+});
+test('the BlueBell fallback rejects non-official links, menu content and validation claims', () => {
+  for (const mutate of [
+    b => b.source.url = 'https://example.com/menu',
+    b => b.source.caption = 'unvalidated data',
+    b => b.mains.push({ name: 'Stale meal' }),
+    b => b.reviewedComplete = true
+  ]) {
+    const input = fixture(), fallback = unavailableBluebell();mutate(fallback);
+    input.restaurants = input.restaurants.map(r => r.id === 'bluebell' ? fallback : r);
+    assert.throws(() => renderEmail(input, options), /source-link fallback/);
   }
 });
 test('Monday Sypka is closed; Tuesday requires the fifth restaurant', () => {
