@@ -1,23 +1,23 @@
 {
   "date": "2026-11-10",
-  "capturedAt": "2026-11-10T08:33:20.624Z",
+  "capturedAt": "2026-11-10T09:57:30.846Z",
   "validated": [
     "cool-bowling",
     "tahiti"
   ],
   "errors": [
     {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
-      "id": "stara-sypka",
-      "reason": "Sypka: PDF does not contain current date"
-    },
-    {
       "id": "kozlovna",
       "attempt": 0,
       "reason": "kozlovna: empty parsed menu"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
     },
     {
       "id": "kozlovna",
