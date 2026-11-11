@@ -14,7 +14,7 @@ function daily(raw,date) {
   return {all,section:all.slice(start,next<0?all.length:next)};
 }
 function source(raw,date,section,dateText,extra={}) {
-  return {kind:raw.pdfText?'pdf':'html',url:raw.requestedPdfUrl || raw.requestedUrl,capturedAt:raw.capturedAt || raw.fetchedAt,text:linesOf(raw).join('\n'),sectionText:section.join('\n'),dateText,serviceDate:date,...extra};
+  return {kind:raw.imageSha256?'image-ocr':raw.pdfText?'pdf':'html',...(raw.imageSha256?{imageSha256:raw.imageSha256}:{}),url:raw.requestedPdfUrl || raw.requestedUrl,capturedAt:raw.capturedAt || raw.fetchedAt,text:linesOf(raw).join('\n'),sectionText:section.join('\n'),dateText,serviceDate:date,...extra};
 }
 function complete(id,src,soups,mains,desserts=[],notes=[]) {
   if(!soups.length||!mains.length)throw Error(`${id}: empty parsed menu`);
@@ -22,6 +22,21 @@ function complete(id,src,soups,mains,desserts=[],notes=[]) {
 }
 export function parseKozlovna(raw,date) {
   const {section}=daily(raw,date), soups=[],mains=[];
+  const soupHeading=section.findIndex(s=>fold(s)==='polievky');
+  const mainStart=section.findIndex(s=>fold(s)==='hlavne jedla');
+  if(soupHeading>=0&&mainStart>soupHeading) {
+    const soupLines=section.slice(soupHeading+1,mainStart);
+    if(!soupLines.some(s=>/€|EUR/i.test(s))) {
+      let start=0;
+      for(let i=0;i<soupLines.length;i++) if(portionRE.test(soupLines[i])) {
+        const name=soupLines.slice(start,i).join(' ').trim();
+        if(!name)throw Error('Kozlovna: missing unpriced soup name');
+        soups.push({name,portion:soupLines[i].match(portionRE)[1],price:null,priceNotPublished:true,sourceText:soupLines.slice(start,i+1).join('\n')});
+        start=i+1;
+      }
+      if(start!==soupLines.length)throw Error('Kozlovna: unparsed unpriced soup');
+    }
+  }
   const prices=section.map((s,i)=>/^\d{1,3}[,.]\d{2}\s*€$/.test(s)?i:-1).filter(i=>i>=0);
   const anchors=prices.map(i=>{let a=i-1;while(a>0&&portionRE.test(section[a]))a--;if(a<=0||category(section[a])||dayHeading(section[a]))throw Error('Kozlovna: missing meal name');return a;});
   if(section.filter(s=>s.includes('€')).length!==prices.length)throw Error('Kozlovna: unparsed price layout');

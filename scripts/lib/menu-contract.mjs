@@ -153,6 +153,10 @@ export function validateMenu(data, { date = localDate(), now = new Date() } = {}
       const evidenceText = id === 'bluebell' ? r.source.text : r.source.sectionText;
       if (!normalized(evidenceText).includes(normalized(item.sourceText)) || !normalized(item.sourceText).includes(normalized(item.name))) throw Error(`${id}: meal not found in this source`);
       for (const field of ['description', 'portion']) if (item[field] != null && (typeof item[field] !== 'string' || !item[field].trim() || !normalized(item.sourceText).includes(normalized(item[field])))) throw Error(`${id}: unproven ${field}`);
+      if(id==='kozlovna'&&!isMain&&r.soups.includes(item)&&item.price===null&&item.priceNotPublished===true) {
+        if(/€|\bEUR\b/i.test(item.sourceText))throw Error('kozlovna: published soup price cannot be omitted');
+        return {...item,priceCents:null,finalCents:null};
+      }
       const cents = moneyCents(item.price);
       const prices = [...item.sourceText.matchAll(/(?<!\d)(\d{1,3}[,.]\d{2})\s*(?:€|eur)/gi)].map(m => moneyCents(m[1]));
       if (!prices.includes(cents)) throw Error(`${id}: price not present beside meal evidence`);
