@@ -84,6 +84,7 @@ export function dailyThought(date) {
   return dailyThoughts[((offset % dailyThoughts.length) + dailyThoughts.length) % dailyThoughts.length];
 }
 function itemRow(item, soup = false) {
+  if(item.finalCents===null)return `<tr><td colspan="2" style="font-size:15px;line-height:1.55;padding:12px 10px;border-bottom:1px solid #eee7de;">${escape(displayName(item))}</td></tr>`;
   const price = euro(item.finalCents);
   const original = item.finalCents !== item.priceCents ? `<div style="color:#888;font-size:12px;white-space:nowrap;text-decoration:line-through;margin-bottom:4px;">${euro(item.priceCents)}</div>` : '';
   const label = labels[item.category] ? `<div style="font-size:10px;font-weight:700;color:#8a6f3d;margin-bottom:4px;">${labels[item.category]}</div>` : '';
@@ -121,7 +122,7 @@ export function renderEmail(input, options = {}) {
   const html = template.replace(/\{\{([A-Z_]+)\}\}/g, (_, key) => values[key]);
   if (/\{\{|<script|<img|<link|<iframe/i.test(html)) throw Error('Invalid fixed template output');
   const subject = `Obedové menu – Košice | ${displayDate(menu.date)}`;
-  const plain = [subject, ...menu.restaurants.map(r => r.closed ? `${r.name}\nPondelok – zatvorené.` : r.unavailable ? `${r.name}\nAktuálne menu zatiaľ nie je dostupné.\nSledujte ho po zverejnení: ${r.source.url}` : `${r.name}${r.id === 'bluebell' ? `\n${displayDate(r.source.validFrom)} – ${displayDate(r.source.validTo)}` : ''}\nPolievky:\n${r.soups.map(i => `${displayName(i)} — ${euro(i.finalCents)}`).join('\n')}\nHlavné jedlá:\n${r.mains.map(i => `${labels[i.category] ? labels[i.category] + ': ' : ''}${displayName(i)} — ${i.priceCents !== i.finalCents ? euro(i.priceCents) + ' → ' : ''}${euro(i.finalCents)}`).join('\n')}${r.desserts.length ? `\nDezerty:\n${r.desserts.map(i => `${displayName(i)} — ${euro(i.finalCents)}`).join('\n')}` : ''}${r.notes.length ? '\n' + r.notes.join('\n') : ''}`), 'DNEŠNÝ VERDIKT', ...verdictRows.map(([label, i, why]) => `${label}: ${i.restaurant} — ${displayName(i)} — ${euro(i.finalCents)} (${why})`), 'Dobrú chuť!'].join('\n\n');
+  const plain = [subject, ...menu.restaurants.map(r => r.closed ? `${r.name}\nPondelok – zatvorené.` : r.unavailable ? `${r.name}\nAktuálne menu zatiaľ nie je dostupné.\nSledujte ho po zverejnení: ${r.source.url}` : `${r.name}${r.id === 'bluebell' ? `\n${displayDate(r.source.validFrom)} – ${displayDate(r.source.validTo)}` : ''}\nPolievky:\n${r.soups.map(i => `${displayName(i)}${i.finalCents===null ? '': ' — '+euro(i.finalCents)}`).join('\n')}\nHlavné jedlá:\n${r.mains.map(i => `${labels[i.category] ? labels[i.category] + ': ' : ''}${displayName(i)} — ${i.priceCents !== i.finalCents ? euro(i.priceCents) + ' → ' : ''}${euro(i.finalCents)}`).join('\n')}${r.desserts.length ? `\nDezerty:\n${r.desserts.map(i => `${displayName(i)} — ${euro(i.finalCents)}`).join('\n')}` : ''}${r.notes.length ? '\n' + r.notes.join('\n') : ''}`), 'DNEŠNÝ VERDIKT', ...verdictRows.map(([label, i, why]) => `${label}: ${i.restaurant} — ${displayName(i)} — ${euro(i.finalCents)} (${why})`), 'Dobrú chuť!'].join('\n\n');
   return { subject, html, plain: `${plain}\n\n💡 MYŠLIENKA NA DNES\n${thought}`, templateVersion: TEMPLATE_VERSION, menuDigest, date: menu.date };
 }
 export function validateBody(message, input, options = {}) {

@@ -5,6 +5,7 @@ import { promisify } from 'node:util';
 import { parsers, fingerprint } from './normalize-sources.mjs';
 import { collectBluebell, validatedBluebellBackup } from './bluebell-auto.mjs';
 import { cachedRestaurant } from './source-cache.mjs';
+import { acceptSypkaImage } from './sypka-image.mjs';
 import { BLUEBELL_SOURCE_URL, unavailableBluebell, validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
 const execute=promisify(execFile);
 const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/','https://www.starasypka.sk/sk/restauracia/obedove-menu']};
@@ -33,7 +34,7 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
       sources[id+'-attempt-'+sha256(url).slice(0,12)]=raw;
       if(id==='stara-sypka') {
         const links=await page.locator('a').evaluateAll(as=>{
-          const pdfs=as.filter(a=>/\.pdf(?:$|\?)/i.test(a.href));
+          const pdfs=as.filter(a=>/\.(?:pdf|jpe?g|png)(?:$|\?)/i.test(a.href));
           const daily=pdfs.filter(a=>/zobrazi|vytla/i.test(a.textContent||''));
           return(daily.length?daily:pdfs).map(a=>a.href);
         });
@@ -41,15 +42,28 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
           const pdfURL=new URL(link);if(!['www.starasypka.sk','starasypka.sk'].includes(pdfURL.hostname)||pdfURL.protocol!=='https:')continue;
           pdfURL.searchParams.set('_menu',String(Date.now()));
           const res=await ctx.request.get(pdfURL.href,{timeout:30000,headers:{'cache-control':'no-cache'}});
-          if(!res.ok()||!/application\/pdf/.test(res.headers()['content-type']||''))continue;
+          const type=res.headers()['content-type']||'';
+          if(!res.ok()||!/application\/pdf|image\/(?:jpeg|png)/.test(type))continue;
           const stem='stara-sypka-'+sha256(url+'\n'+link).slice(0,16);
+          if(/^image\//.test(type)) {
+            const bytes=await res.body(),file=path.join(out,stem+'.image');fs.writeFileSync(file,bytes);
+            const readings=[];
+            for(const psm of [6,11]) {
+              const base=path.join(out,stem+'-'+psm);
+              await execute('tesseract',[file,base,'-l','slk+eng','--psm',String(psm)],{timeout:30000});
+              const candidate={...raw,lines:undefined,pdfText:fs.readFileSync(base+'.txt','utf8'),requestedPdfUrl:pdfURL.href,imageSha256:sha256(bytes),ocrPsm:psm};
+              sources[stem+'-ocr-'+psm]=candidate;
+              readings.push(candidate);
+            }
+            try{return acceptSypkaImage(readings,date);}catch(e){errors.push({id,reason:'Image OCR: '+e.message});}continue;
+          }
           const pdf=path.join(out,stem+'.pdf'),txt=path.join(out,stem+'.txt');
           fs.writeFileSync(pdf,await res.body());await execute('pdftotext',['-raw',pdf,txt],{timeout:15000});
           const candidate={...raw,lines:undefined,pdfText:fs.readFileSync(txt,'utf8'),requestedPdfUrl:pdfURL.href};
           sources['stara-sypka-pdf-'+pdfURL.pathname.split('/').pop()]=candidate;
           try{const parsed=parsers[id](candidate,date);validateSource(parsed.source,date,id);return{raw:candidate,parsed};}catch(e){errors.push({id,reason:e.message});}
         }
-        throw Error('No current Sypka PDF parsed');
+        throw Error('No current Sypka PDF or image parsed');
       }
       const parsed=parsers[id](raw,date);validateSource(parsed.source,date,id);return{raw,parsed};
     }finally{await page.close();}
