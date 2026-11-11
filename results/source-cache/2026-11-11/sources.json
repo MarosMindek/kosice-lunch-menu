@@ -1,10 +1,10 @@
 {
   "date": "2026-11-11",
-  "capturedAt": "2026-11-11T10:11:26.021Z",
+  "capturedAt": "2026-11-11T12:45:11.447Z",
   "sources": {
     "kozlovna": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-11T10:08:24.988Z",
+      "capturedAt": "2026-11-11T12:41:38.423Z",
       "lines": [
         "Preskočiť na hlavný obsah",
         "Zažite autentickú pivovú kultúru v Kozlovni",
@@ -1023,9 +1023,9 @@
     },
     "stara-sypka": {
       "requestedUrl": "https://www.starasypka.sk/sk/",
-      "capturedAt": "2026-11-11T10:08:25.018Z",
+      "capturedAt": "2026-11-11T12:41:38.295Z",
       "pdfText": "Stará sýpka\nD E N N É\nM E N U\n11.11.2026\nKRÚPKOVÁ SO ZELENINOU\n(0,3L)(1)1,50€\nPolievka\nŠpecialita\nDenná ponuka\nVYPRÁŽANÝ SYR S CHRUMKAVÝMI HRANOLKAMI A DOMÁCOU\nTATÁRSKOU OMÁČKOU (150/200G)(1,3,7,10)\n10,20 €\n1 – O B I L N I N Y O B S A H U J Ú C E L E P O K , 2 - K Ô R O V C E , 3 - V A J C I A , 4 - R Y B Y , 5 - A R A Š I D Y ,\n6 - S Ó J O V É Z R N Á , 7 - M L I E K O , 8 - O R E C H Y , 9 - Z E L E R , 1 0 - H O R Č I C A , 1 1 – S E Z A M\nP R I B A L E N Í J E D Á L N A P O Ž I A D A N I E Z Á K A Z N Í K A Ú Č T U J E M E P O P L A T O K 0 , 5 0 €\nVIEDENSKÁ ROŠTENKA,DUSENÁ RYŽA,UHORKOVÝ ŠALÁT\n(150/200 G)(1,6)\n11,90€\nSALAŠNÍCKY KURACÍ REZEŇ,PUČENÉ ZEMIAKY S CIBUĽKOU,\nMIX ZELENINA\n(150/200 G)(1,3,7)\n9,50 €\nMÄSOVÁ ROLÁDA SO ŠPENÁTOM A SYROM,RYŽA,\nOPEKANÉ ZEMIAKY\n(150/100/100 G)(3,7)\n8,50 €\nTAGLIATELLE S DUBÁKOVOU OMÁČKOU A PARMEZÁNOM\n(450 G)(1,3,7)\n8,20 €\n\f",
-      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_175.pdf?_menu=1794391705034"
+      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_175.pdf?_menu=1794400898305"
     }
   }
 }
