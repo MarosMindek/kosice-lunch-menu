@@ -1,33 +1,43 @@
 {
   "date": "2026-11-11",
-  "capturedAt": "2026-11-11T10:11:02.406Z",
+  "capturedAt": "2026-11-11T12:44:47.616Z",
   "status": "unavailable",
   "selected": null,
   "candidates": [],
   "rejected": [
     {
       "file": "gallery-01.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZhuKc6aHl8GvbONqIlDWz9062DakdF7r_Rmd2jn6AFnkB3d0rMDeXSkVRq-dQu1wiFtwxTaaJ9HQ9VNCN70_3YdaDgWgIcAi9J-WrjGBrdEwQS1uS6j-aPy3oopekJadasUDoDEm26Er9rmu3qyZdrMz67O4kyA1bQ_LcwzOIQ9MB43BIZhSh-OLZw&__tn__=*b0H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZhDAcWVq-wiv5q3I7OfBaQKkpkjHh-j-SVYK6yX53Q_VuCb1UmsrSHz25RYBIUyKPQCjufkS2xa9-D-O8ENiC9reGmrubhaSwYTBwkV6Xcrk9nwgEHIZaiCrw2rP0J6nd1oAlgDhzmA4t3dkfoA2e_FXKZqwxn1lxovj7aTI1cFni57OfEUmAiNVmk&__tn__=*b0H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-02.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZhuKc6aHl8GvbONqIlDWz9062DakdF7r_Rmd2jn6AFnkB3d0rMDeXSkVRq-dQu1wiFtwxTaaJ9HQ9VNCN70_3YdaDgWgIcAi9J-WrjGBrdEwQS1uS6j-aPy3oopekJadasUDoDEm26Er9rmu3qyZdrMz67O4kyA1bQ_LcwzOIQ9MB43BIZhSh-OLZw&__tn__=*b1H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZhDAcWVq-wiv5q3I7OfBaQKkpkjHh-j-SVYK6yX53Q_VuCb1UmsrSHz25RYBIUyKPQCjufkS2xa9-D-O8ENiC9reGmrubhaSwYTBwkV6Xcrk9nwgEHIZaiCrw2rP0J6nd1oAlgDhzmA4t3dkfoA2e_FXKZqwxn1lxovj7aTI1cFni57OfEUmAiNVmk&__tn__=*b1H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-03.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZhuKc6aHl8GvbONqIlDWz9062DakdF7r_Rmd2jn6AFnkB3d0rMDeXSkVRq-dQu1wiFtwxTaaJ9HQ9VNCN70_3YdaDgWgIcAi9J-WrjGBrdEwQS1uS6j-aPy3oopekJadasUDoDEm26Er9rmu3qyZdrMz67O4kyA1bQ_LcwzOIQ9MB43BIZhSh-OLZw&__tn__=*b2H-R",
+      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZhDAcWVq-wiv5q3I7OfBaQKkpkjHh-j-SVYK6yX53Q_VuCb1UmsrSHz25RYBIUyKPQCjufkS2xa9-D-O8ENiC9reGmrubhaSwYTBwkV6Xcrk9nwgEHIZaiCrw2rP0J6nd1oAlgDhzmA4t3dkfoA2e_FXKZqwxn1lxovj7aTI1cFni57OfEUmAiNVmk&__tn__=*b2H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-04.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
+      "href": "https://www.facebook.com/photo/?fbid=1859923868967277&set=pcb.1859923928967271&__cft__[0]=AZj9So4sh2YaBcAo2KiND9B1xUADFYQJO5S0G89KlA0s6Iiedi2a63FHdZuKRkUUOMLWkupMK2srYOMgEZEyVVxYVp7J2QInygYkNKXC9hbKMw04YMoQRqHUA5XzmTPpDpTjbQowugql352A4i1A-XlbYl53KEZqGV4q_plshBStT-hBbk6JQDKkoYk&__tn__=*b0H-R",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-05.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZjzrQ2KEw3Ccf8YC35ELc0YOLl0DJOHD5clOgjdCk4CLUWfJABucdXYRnq8Cq_ZJMMZMMxREvMZ7_ayFSPKELAjV7y97rev-dp7tHCcKJYbIv5wlaKaxZyIScE2DUGp92tqFCtbrNYwbevOO4ovQ9QzyA7SNFuIjJsM1nN091z3Ghyfwgugu82PgpM&__tn__=EH-R",
+      "href": "https://www.facebook.com/photo/?fbid=1859923862300611&set=pcb.1859923928967271&__cft__[0]=AZj9So4sh2YaBcAo2KiND9B1xUADFYQJO5S0G89KlA0s6Iiedi2a63FHdZuKRkUUOMLWkupMK2srYOMgEZEyVVxYVp7J2QInygYkNKXC9hbKMw04YMoQRqHUA5XzmTPpDpTjbQowugql352A4i1A-XlbYl53KEZqGV4q_plshBStT-hBbk6JQDKkoYk&__tn__=*b1H-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-06.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-07.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1859805198979144&set=a.877992830493724&__cft__[0]=AZiygQbVnYkUc5N8pZSUuic0mHa_nYKpLTS-C1pYaPg4VzKhdYMPSfD0KtHY24AK9gp2koV9J9qLqyPoS6xbq49Qg2yuLoe5n2fUs5HVs5zibY4FWFexyNPjmF0VcK13tY4qCGQ8aw-BjTWRXbbHqy77-B3NinVl18HORqxj3xj0fz_8-8OVl5eMgi8&__tn__=EH-R",
       "reason": "expired_or_future_image, expired_or_future_image"
     }
   ],
