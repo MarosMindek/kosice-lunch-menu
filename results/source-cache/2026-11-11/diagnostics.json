@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-11",
+  "capturedAt": "2026-11-11T08:32:42.534Z",
+  "validated": [
+    "cool-bowling",
+    "tahiti",
+    "stara-sypka"
+  ],
+  "errors": [
+    {
+      "id": "kozlovna",
+      "attempt": 0,
+      "reason": "kozlovna: empty parsed menu"
+    },
+    {
+      "id": "kozlovna",
+      "attempt": 1,
+      "reason": "kozlovna: empty parsed menu"
+    },
+    {
+      "id": "bluebell",
+      "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
+    }
+  ]
+}
