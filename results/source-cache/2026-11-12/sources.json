@@ -1,19 +1,12 @@
 {
   "date": "2026-11-12",
-  "capturedAt": "2026-11-12T08:32:10.105Z",
+  "capturedAt": "2026-11-12T13:47:02.886Z",
   "sources": {
     "kozlovna": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-12T08:29:08.700Z",
+      "capturedAt": "2026-11-12T13:44:06.227Z",
       "lines": [
         "Preskočiť na hlavný obsah",
-        "Obedové menu",
-        "Jedálny lístok",
-        "Nápojový lístok",
-        "Galéria",
-        "Rezervácia",
-        "Kontakt",
-        "SK",
         "Zažite autentickú pivovú kultúru v Kozlovni",
         "Kvalitné pivo a domáce jedlá každý deň – už od obeda",
         "Rezervácia",
@@ -1030,9 +1023,9 @@
     },
     "stara-sypka": {
       "requestedUrl": "https://www.starasypka.sk/sk/",
-      "capturedAt": "2026-11-12T08:29:08.653Z",
+      "capturedAt": "2026-11-12T13:44:06.443Z",
       "pdfText": "Stará sýpka\nD E N N É\nM E N U\n12.11.2026\nSLEPAČÍ VÝVAR SO ZELENINOU A CESTOVINOU\n(0,3L)(1,3,7)1,50€\nPolievka\nŠpecialita\nDenná ponuka\nVYPRÁŽANÝ SYR S CHRUMKAVÝMI HRANOLKAMI A DOMÁCOU\nTATÁRSKOU OMÁČKOU (150/200G)(1,3,7,10)\n10,20 €\n1 – O B I L N I N Y O B S A H U J Ú C E L E P O K , 2 - K Ô R O V C E , 3 - V A J C I A , 4 - R Y B Y , 5 - A R A Š I D Y ,\n6 - S Ó J O V É Z R N Á , 7 - M L I E K O , 8 - O R E C H Y , 9 - Z E L E R , 1 0 - H O R Č I C A , 1 1 – S E Z A M\nP R I B A L E N Í J E D Á L N A P O Ž I A D A N I E Z Á K A Z N Í K A Ú Č T U J E M E P O P L A T O K 0 , 5 0 €\nRISOTTO SO ZELENÝMI FAZUĽKAMI A GRILOVANÝMI REZANČEKMI Z\nBRAVČOVEJ PANENKY,PARMEZÁN\n(450 G)(7)\n11,90€\nGAZDOVSKÁ KURACIA ROLKA,ZEMIAKOVÁ KAŠA,\nMIX ZELENINA\n(150/200 G)(1,3,7)\n9,20 €\nHOVÄDZÍ KAPUCÍNSKY GULÁŠ,DOMÁCE KYSNUTÉ KNEDLE\n(150/160 G)(1,7)\n9,50 €\nFLIAČKY S HLÁVKOVOU KAPUSTOU (SLANINKOU ALEBO MASLOM)\n(450 G)(1,3,7)\n7,20 €\nKAPUSTNICA,CHLIEB\n(0,3L)(1)3,90€\n\f",
-      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_176.pdf?_menu=1794472148662"
+      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_176.pdf?_menu=1794491046452"
     }
   }
 }
