@@ -1,14 +1,34 @@
 {
-  "date": "2026-11-12",
-  "capturedAt": "2026-11-12T13:47:27.983Z",
+  "date": "2026-11-13",
+  "capturedAt": "2026-11-13T13:07:31.576Z",
   "status": "unavailable",
   "selected": null,
   "candidates": [],
   "rejected": [
     {
       "file": "gallery-01.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b0H-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-02.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b1H-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-03.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b2H-R",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-04.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-05.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZgsRH6YpLJ4ceFXv-9Z774Fw4BfCYsdKHqkHwFldyfH03uBbTqn-tEulwPgRtTMvL1TGSgnMEPbSeDiD08DnrVRP8gAiPmMmzPGyapY7hgFCz5yLDLH06lj1gaDoYtJh3tpEp1_RlmpB7dtXH2zEVjFLUO56mpTlkMYKYh72Hof-S42xorQtfIejtE&__tn__=EH-R",
+      "reason": "expired_or_future_image, expired_or_future_image"
     }
   ],
   "reviewCandidates": []
