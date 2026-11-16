@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-16",
+  "mode": "dry-run",
+  "startedAt": "2026-11-16T09:08:31.159Z",
+  "modelCalls": 0,
+  "mailSecretPresent": false,
+  "counts": [
+    {
+      "id": "kozlovna",
+      "soups": 2,
+      "mains": 4,
+      "desserts": 0
+    },
+    {
+      "id": "cool-bowling",
+      "soups": 2,
+      "mains": 7,
+      "desserts": 2
+    },
+    {
+      "id": "tahiti",
+      "soups": 2,
+      "mains": 6,
+      "desserts": 0
+    },
+    {
+      "id": "bluebell",
+      "soups": 0,
+      "mains": 0,
+      "desserts": 0
+    }
+  ],
+  "templateVersion": "kosice-lunch-email-v1",
+  "menuDigest": "629de889761dcce366bc6133112ba293acddd5a2a13fc4f8b1c20c7ace161a32",
+  "status": "dry_run_validated",
+  "finishedAt": "2026-11-16T09:10:31.563Z"
+}
