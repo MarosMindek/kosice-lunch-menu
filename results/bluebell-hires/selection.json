@@ -1,35 +1,55 @@
 {
-  "date": "2026-11-13",
-  "capturedAt": "2026-11-13T13:07:31.576Z",
-  "status": "unavailable",
+  "date": "2026-11-16",
+  "capturedAt": "2026-11-16T13:39:01.940Z",
+  "status": "needs_visual_review",
   "selected": null,
   "candidates": [],
   "rejected": [
     {
       "file": "gallery-01.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b0H-R",
+      "href": "https://www.facebook.com/111610103916447?ref=embed_page",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-02.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b1H-R",
+      "href": "https://www.facebook.com/111610103916447?ref=embed_page",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
       "file": "gallery-03.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZg_KofISMa2TGBc2rldY7uc9W15XT9ZO9W3OuRNW30mPptTsA8PyGxB6kTKFDgHDqfKvTJae_Z_Ng5AuOfLfCIEuJxUpDERlYYGBarcIR0yPpXqAjpOi9rtJQsOLmhNsUszrsYgKxORRm_KYPPjfaR13aGOleV-JCOzK_F21jiYwWPK4pqV9aQ4Uks&__tn__=*b2H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-04.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
+      "file": "gallery-04.jpg",
+      "href": "",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
       "file": "gallery-05.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZgsRH6YpLJ4ceFXv-9Z774Fw4BfCYsdKHqkHwFldyfH03uBbTqn-tEulwPgRtTMvL1TGSgnMEPbSeDiD08DnrVRP8gAiPmMmzPGyapY7hgFCz5yLDLH06lj1gaDoYtJh3tpEp1_RlmpB7dtXH2zEVjFLUO56mpTlkMYKYh72Hof-S42xorQtfIejtE&__tn__=EH-R",
-      "reason": "expired_or_future_image, expired_or_future_image"
+      "href": "https://www.facebook.com/111610103916447?ref=embed_page",
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
+    },
+    {
+      "file": "gallery-06.jpg",
+      "href": "https://www.facebook.com/111610103916447?ref=embed_page",
+      "reason": "ambiguous_or_missing_image_dates, expired_or_future_image"
     }
   ],
-  "reviewCandidates": []
+  "reviewCandidates": [
+    {
+      "imageFile": "gallery-05.jpg",
+      "href": "https://www.facebook.com/111610103916447?ref=embed_page",
+      "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
+      "identityText": "Facebook\nPiváreň BlueBell\n2,9 tis. followers\n�unikátna piváreň v centre Košíc� �tradičná kuchyňa v netradičnej podobe� �premiérovo Maso Klouda na východe SR� �rýchla donáška denne 11:00-20:45�\nPiváreň\n·\n€€€\n·\n+421 910 613 000\nFollow\nPiváreň BlueBell\n5h\n0\n0\n0\nPiváreň BlueBell\nNov 2\nPredstavujeme vám naše Mac & Cheese 💥🧀 s trhaným bravčovým mäsom, čiernou fazuľou a marinovanou červenou cibuľou. Krémové syrové cestoviny, šťavnaté trhané mäsko a dokonalá bodka v podobe chrumkavej kyselkavej cibuľky – toto si u nás môžeš vychutnať tento týždeň! 😊 #macandcheese #jedlokosice #dennemenu #foodlover\n0:10\n1\n0\n0\nPiváreň BlueBell\nNov 2\nTýždňová obedová ponuka od 2.11.2026 do 6.11.2026 ❇️ BIZNIS MENU ➡️ Mac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa ❇️ TRADIČNÉ MENU ➡️ Šošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barčianský Chlieb ❇️ VEGGIE MENU ➡️ Kulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb ❇️ ŠPECIÁL MENU 1 ➡️ Kurací Stroganov s Basmati Ryžou a Domácimi Hranolkami ❇️ ŠPECIÁL MENU 2 ➡️ Čiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka ❇️ Každý deň od 11:00-14:00 ❇️ ➡️ Objednávky cez Bolt Food Slovensko 🇸🇰 alebo osobne na Bočnej 6 v Košiciach ☎️ +421 910 613 000 ☎️ Tešíme sa na Vás a Prajeme Dobrú Chuť 😊\n1\n0\n0\nPiváreň BlueBell\nNov 2\n0\n0\n0\nPiváreň BlueBell\nOct 27\nČakáš, kým sa rozhodnú, kto zaplatí, ale tvoja obedová prestávka už dávno začala 😂🥘 #kosice #kamnaobedvkosi",
+      "imageSha256": "9d73916e23a349c839a3e696cdfdf1271e3fd53968019b82f9632e06937ae6a1",
+      "capturedAt": "2026-11-16T13:39:01.860Z",
+      "needsVisualReview": true,
+      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates",
+      "ocrByMode": {
+        "6": "~ - ———\n«Dr 0d16.11.2026 d020.112026— (AA\nUEBE od 1:00 do 1400, džbánvody\nBUEEELL : a\nGRATIS\nPOLIEVKY\n0331KuradVjvari» 2,00€\n035l PodľaDennej Ponuky 2,00€\n0,331 Polievka Samostatne 3,50€\nBIZNIS MENU | 10,90€\n‘Loaded Fries - Pomaly Pečené Trhané Bravčové Plece / Cheddarova Omáčka / \"\nNakladané Jalapeňo / Zemiakové Hranolky 150/2504 1258\nTRADIČNÉ MENU 8,90€\nKurací Paprikas s Domácimi Maslovými Haluškami / Kyslá Smotana 200/250/509 117\nŠPECIÁL MENU 1 90€\nKurací Stroganov Basmati RyZou a Zemiakovými Hranolkami. 150/100/1009 0+.\nŠPECIÁL MENU | 9,90€.\nVyprážaný Syr so Šunkou a Maslovými Zemiakmi s Petržienovou Viaťu  atárska Omáčka. 180/250/50 3+\nOSOBNÝ ODBER: +421310613000\n",
+        "11": "a\n\nTÝŽDENNÉ MENU\n\n(04 16.19.2026 do 20.11.2026.\n\nVyšvár krnenu\n\n4):\n\nod 1:00 do 14:00\n\nbin vody\n\nBLUEBELL\n\nrr\n\nsdtrónom\n\nGRÁTIS\n\nPOLIEVKY.\n\n0351 Kurací Vývar» 2,00€\n\n0,3l Podľa Dennej Ponuky 2,00€\n\n031 Polievka Samostatne 3,50€\n\nBIZNIS MENU | 10,30€\n\nLoaded res - Pomaly Pečené rhané Bravčové Pece / Cheddarová Omáčka /\n\nNakladané Jalapeňo / Zemiakové Hranolky. 150/2509 258\n\nTRADIČNÉ MENU 8,90€\n\nKura Paprkášs Domácim Maslovými Hlluškami/ Kysa Smotana: 200/250/509 3\n\nŠPECIÁL MENU 1\n\n90€\n\nKúra Stoganov Basmati Ryu Žemiakovými Hanolkami 150/100/1009x\n\nŠPECIÁL MENU | 9,90€\n\nprážaný Sro unkou a Masový Zemiak s PtržienovouVaľu /Tatáska Omáčka. 180/250/509 8\n\nOSOBNÝ ODBER: +421\n\n10613 000,\n"
+      }
+    }
+  ]
 }
