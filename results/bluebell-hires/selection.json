@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "capturedAt": "2026-11-19T09:37:58.958Z",
+  "capturedAt": "2026-11-19T14:27:49.978Z",
   "status": "needs_visual_review",
   "selected": null,
   "candidates": [],
@@ -17,58 +17,38 @@
     },
     {
       "file": "gallery-03.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552224771108&set=pcb.1868552271437770&__cft__[0]=AZh3BeszqOvU_i8On3p8ji5umU74DKSuWebt_WG86vck5tD5Lz2-5t8foM-i7cfxSixB4YsBkubgtuH3sNVNa9Samv5HDLtfhJO6eeU64PdXe_wtMUlYc2u6jXaHYqwzHrBhTh2r7Z9murPJp1aYoPNxFcdV_G1kuvkvcT6Iv8nrN97WMFeuZR1n4QY&__tn__=*b0H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-04.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552231437774&set=pcb.1868552271437770&__cft__[0]=AZh3BeszqOvU_i8On3p8ji5umU74DKSuWebt_WG86vck5tD5Lz2-5t8foM-i7cfxSixB4YsBkubgtuH3sNVNa9Samv5HDLtfhJO6eeU64PdXe_wtMUlYc2u6jXaHYqwzHrBhTh2r7Z9murPJp1aYoPNxFcdV_G1kuvkvcT6Iv8nrN97WMFeuZR1n4QY&__tn__=*b1H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-05.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868552228104441&set=pcb.1868552271437770&__cft__[0]=AZh3BeszqOvU_i8On3p8ji5umU74DKSuWebt_WG86vck5tD5Lz2-5t8foM-i7cfxSixB4YsBkubgtuH3sNVNa9Samv5HDLtfhJO6eeU64PdXe_wtMUlYc2u6jXaHYqwzHrBhTh2r7Z9murPJp1aYoPNxFcdV_G1kuvkvcT6Iv8nrN97WMFeuZR1n4QY&__tn__=*b2H-R",
-      "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
-    },
-    {
-      "file": "gallery-06.jpg",
       "href": "https://www.facebook.com/photo/?fbid=1004694561156883&set=a.877125697247104",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
-      "file": "gallery-07.jpg",
+      "file": "gallery-04.jpg",
       "href": "",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
-      "file": "gallery-08.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1885863353039995&set=a.877992830493724&__cft__[0]=AZhVC_iDTLQnTifRV2boY9ll04i9jmRjVwcSUtsGolUL4W6JSHCT2XDoBeC7nT5sX6P8iiTrubyB4yfQtbQd5RFFt1Iqy4MJRUfqj-_XJhVkcaUXQ_wwH1f8V3XFx8pw_78xp7T-bE1_CmCt1oYsL-v_l25ej9QmBQ6w4yGNroYXBxBgN9gm9sjWaeo&__tn__=EH-R",
+      "file": "gallery-05.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1885863353039995&set=a.877992830493724&__cft__[0]=AZh5vypHi26BkRGdlqT577N4EVXTBrMYMAtCcB2oL9JXwHE4vuP1_F_9S4B5eVsZjXftwV38tPRKqdKZK5DQ0Vl9vuxVgzpNtGCyVbtwX8x9oFRnwQ2QYOSeR25O1IyZ6jmOyB9yjdD2Uw854ij0U6Yf46HA5Z50o4A_M8lzXTxM-Jc-x5coImPEI-0&__tn__=EH-R",
       "reason": "missing_or_duplicate_veggie, missing_or_duplicate_veggie"
     },
     {
-      "file": "gallery-09.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1868381401454857&set=a.877992830493724&__cft__[0]=AZhSnYgnCf3a2DGpxHOcA0jWILPUZJ0xyInPC1Y3NRh1PLylT48Z_zM8hTzpnbNNjIMo9dT5hFKJAya6q-7hO0FRDLi904nP30OSbwI40-P3gJEvvkV5f-0nUVyD1TmAX7QSfGqLNcWAr8iLo20CAWhbmz-imU-C_G_hbsfAeqV7ey2QsxAASKSbKgo&__tn__=EH-R",
-      "reason": "expired_or_future_image, expired_or_future_image"
-    },
-    {
-      "file": "gallery-10.jpg",
+      "file": "gallery-06.jpg",
       "href": "https://www.facebook.com/111610103916447?ref=embed_page",
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates"
     },
     {
-      "file": "gallery-11.jpg",
+      "file": "gallery-07.jpg",
       "href": "https://www.facebook.com/111610103916447?ref=embed_page",
       "reason": "ambiguous_or_missing_image_dates, expired_or_future_image"
     }
   ],
   "reviewCandidates": [
     {
-      "imageFile": "gallery-08.jpg",
-      "href": "https://www.facebook.com/photo/?fbid=1885863353039995&set=a.877992830493724&__cft__[0]=AZhVC_iDTLQnTifRV2boY9ll04i9jmRjVwcSUtsGolUL4W6JSHCT2XDoBeC7nT5sX6P8iiTrubyB4yfQtbQd5RFFt1Iqy4MJRUfqj-_XJhVkcaUXQ_wwH1f8V3XFx8pw_78xp7T-bE1_CmCt1oYsL-v_l25ej9QmBQ6w4yGNroYXBxBgN9gm9sjWaeo&__tn__=EH-R",
+      "imageFile": "gallery-05.jpg",
+      "href": "https://www.facebook.com/photo/?fbid=1885863353039995&set=a.877992830493724&__cft__[0]=AZh5vypHi26BkRGdlqT577N4EVXTBrMYMAtCcB2oL9JXwHE4vuP1_F_9S4B5eVsZjXftwV38tPRKqdKZK5DQ0Vl9vuxVgzpNtGCyVbtwX8x9oFRnwQ2QYOSeR25O1IyZ6jmOyB9yjdD2Uw854ij0U6Yf46HA5Z50o4A_M8lzXTxM-Jc-x5coImPEI-0&__tn__=EH-R",
       "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
-      "identityText": "Piváreň BlueBell | Kosice | Facebook\nPrihlásiť sa\nZabudli ste údaje k účtu?\nPiváreň BlueBell \nsledovatelia: 2,9 tis. • Sledované: 2\nViac\nPríspevky\nInformácie\nReels\nFotky\nÚvod\n�unikátna piváreň v centre Košíc�\n�tradičná kuchyňa v netradičnej podobe�\n�premiérovo Maso Klouda na východe SR�\n�rýchla donáška denne 11:00-20:45�\nStránka · Piváreň\nHlavná 22, Kosice, Slovakia\n+421 910 613 000\nČoskoro otvára\nJedenie v reštaurácii · Sedenie vonku · Vyzdvihnutie v obchode\nCenová kategória · $$$\n82 % odporúča (23 recenzií)﻿\nFotky\nZobraziť všetky fotky\nOchrana súkromia\n \n · Ochrana súkromia v súvislosti so zdravím spotrebiteľov\n \n · Podmienky\n \n · Reklama\n \n · Vaša voľba \n \n · Cookies\n \n · Viac\nPiváreň BlueBell je na mieste Piváreň BlueBell.\npred 3 dňami\npondelok 16. november 2026 o 9:07\n3 d.\n \n·\nKosice, Košický kraj, Slovensko\n \n·\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár\nPrihláste sa alebo sa zaregistrujte, aby ste sa spojili so svojimi priateľmi, rodinou a ľuďmi, ktorých poznáte.\nPrihlásiť sa\nalebo\nVytvoriť nový účet",
+      "identityText": "Piváreň BlueBell | Kosice | Facebook\nPrihlásiť sa\nZabudli ste údaje k účtu?\nPiváreň BlueBell \nsledovatelia: 2,9 tis. • Sledované: 2\nViac\nPríspevky\nInformácie\nReels\nFotky\nÚvod\n�unikátna piváreň v centre Košíc�\n�tradičná kuchyňa v netradičnej podobe�\n�premiérovo Maso Klouda na východe SR�\n�rýchla donáška denne 11:00-20:45�\nStránka · Piváreň\nHlavná 22, Kosice, Slovakia\n+421 910 613 000\nTeraz otvorené\nJedenie v reštaurácii · Sedenie vonku · Vyzdvihnutie v obchode\nCenová kategória · $$$\n82 % odporúča (23 recenzií)﻿\nFotky\nZobraziť všetky fotky\nOchrana súkromia\n \n · Ochrana súkromia v súvislosti so zdravím spotrebiteľov\n \n · Podmienky\n \n · Reklama\n \n · Vaša voľba \n \n · Cookies\n \n · Viac\nPiváreň BlueBell je na mieste Piváreň BlueBell.\npred 3 dňami\npondelok 16. november 2026 o 9:07\n3 d.\n \n·\nKosice, Košický kraj, Slovensko\n \n·\nVšetky reakcie:\n1\nPáči sa mi to\nKomentár\nPrihláste sa alebo sa zaregistrujte, aby ste sa spojili so svojimi priateľmi, rodinou a ľuďmi, ktorých poznáte.\nPrihlásiť sa\nalebo\nVytvoriť nový účet",
       "imageSha256": "ccf7fdc81f64f461927f5c91e9016dfa74649a93eb160e9cf81b5283f86f10ad",
-      "capturedAt": "2026-11-19T09:37:58.799Z",
+      "capturedAt": "2026-11-19T14:27:49.843Z",
       "needsVisualReview": true,
       "reason": "missing_or_duplicate_veggie, missing_or_duplicate_veggie",
       "ocrByMode": {
@@ -77,12 +57,12 @@
       }
     },
     {
-      "imageFile": "gallery-10.jpg",
+      "imageFile": "gallery-06.jpg",
       "href": "https://www.facebook.com/111610103916447?ref=embed_page",
       "ownerUrl": "https://www.facebook.com/pivarenbluebell/",
       "identityText": "Facebook\nPiváreň BlueBell\n2,9 tis. followers\n�unikátna piváreň v centre Košíc� �tradičná kuchyňa v netradičnej podobe� �premiérovo Maso Klouda na východe SR� �rýchla donáška denne 11:00-20:45�\nPiváreň\n·\n€€€\n·\n+421 910 613 000\nFollow\nPiváreň BlueBell\n3d\n1\n0\n0\nPiváreň BlueBell\nNov 2\nPredstavujeme vám naše Mac & Cheese 💥🧀 s trhaným bravčovým mäsom, čiernou fazuľou a marinovanou červenou cibuľou. Krémové syrové cestoviny, šťavnaté trhané mäsko a dokonalá bodka v podobe chrumkavej kyselkavej cibuľky – toto si u nás môžeš vychutnať tento týždeň! 😊 #macandcheese #jedlokosice #dennemenu #foodlover\n0:10\n1\n0\n0\nPiváreň BlueBell\nNov 2\nTýždňová obedová ponuka od 2.11.2026 do 6.11.2026 ❇️ BIZNIS MENU ➡️ Mac & Cheese s Trhaným Bravčovým Mäsom a Čiernou Fazuľou / Marinovaná Červená Cibuľa ❇️ TRADIČNÉ MENU ➡️ Šošovicový Prívarok s Bravčovou Sekanou Plnenou Vajíčkom / Barčianský Chlieb ❇️ VEGGIE MENU ➡️ Kulajda Ragú s Vyprážaným Vajíčkom v Panko Strúhanke / Barčianský Chlieb ❇️ ŠPECIÁL MENU 1 ➡️ Kurací Stroganov s Basmati Ryžou a Domácimi Hranolkami ❇️ ŠPECIÁL MENU 2 ➡️ Čiernohorský Kurací Rezeň so Zemiakovou Kašou / Domáca Tatárska Omáčka ❇️ Každý deň od 11:00-14:00 ❇️ ➡️ Objednávky cez Bolt Food Slovensko 🇸🇰 alebo osobne na Bočnej 6 v Košiciach ☎️ +421 910 613 000 ☎️ Tešíme sa na Vás a Prajeme Dobrú Chuť 😊\n1\n0\n0\nPiváreň BlueBell\nNov 2\n0\n0\n0\nPiváreň BlueBell\nOct 27\nČakáš, kým sa rozhodnú, kto zaplatí, ale tvoja obedová prestávka už dávno začala 😂🥘 #kosice #kamnaobedvkosi",
       "imageSha256": "9d73916e23a349c839a3e696cdfdf1271e3fd53968019b82f9632e06937ae6a1",
-      "capturedAt": "2026-11-19T09:37:58.811Z",
+      "capturedAt": "2026-11-19T14:27:49.848Z",
       "needsVisualReview": true,
       "reason": "ambiguous_or_missing_image_dates, ambiguous_or_missing_image_dates",
       "ocrByMode": {
