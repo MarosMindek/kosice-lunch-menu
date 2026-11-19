@@ -6,12 +6,13 @@ import { parsers, fingerprint } from './normalize-sources.mjs';
 import { collectBluebell, validatedBluebellBackup } from './bluebell-auto.mjs';
 import { cachedRestaurant } from './source-cache.mjs';
 import { acceptSypkaImage } from './sypka-image.mjs';
-import { BLUEBELL_SOURCE_URL, unavailableBluebell, validateSource, validateMenu, weekday, sha256 } from './menu-contract.mjs';
+import { BLUEBELL_SOURCE_URL, unavailableBluebell, validateSource, validateMenu, weekday, sha256, explicitDates } from './menu-contract.mjs';
 const execute=promisify(execFile);
 const URLs={kozlovna:['https://kozlovnakosice.sk/#obedove-menu'],'cool-bowling':['https://www.coolbowling.sk/denne-menu'],tahiti:['https://www.tahitirestaurant.sk/tyzdenne-menu','https://menu.andiamogroup.eu/chickin/denne-menu'],'stara-sypka':['https://www.starasypka.sk/sk/','https://www.starasypka.sk/sk/restauracia/obedove-menu']};
 
 export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}={}) {
   const {chromium}=await import('playwright');
+  let sypkaDateMismatchLink=null;
   fs.mkdirSync(out,{recursive:true});
   const browser=await chromium.launch({headless:true}),ctx=await browser.newContext({locale:'sk-SK',timezoneId:'Europe/Bratislava',serviceWorkers:'block',extraHTTPHeaders:{'cache-control':'no-cache, no-store, max-age=0',pragma:'no-cache'}}),sources={},errors=[];
   await ctx.route('**/*',route=>['font','media','image'].includes(route.request().resourceType())?route.abort():route.continue());
@@ -61,7 +62,12 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
           fs.writeFileSync(pdf,await res.body());await execute('pdftotext',['-raw',pdf,txt],{timeout:15000});
           const candidate={...raw,lines:undefined,pdfText:fs.readFileSync(txt,'utf8'),requestedPdfUrl:pdfURL.href};
           sources['stara-sypka-pdf-'+pdfURL.pathname.split('/').pop()]=candidate;
-          try{const parsed=parsers[id](candidate,date);validateSource(parsed.source,date,id);return{raw:candidate,parsed};}catch(e){errors.push({id,reason:e.message});}
+          try{const parsed=parsers[id](candidate,date);validateSource(parsed.source,date,id);return{raw:candidate,parsed};}catch(e){
+            const pageText=raw.lines.join(' '),pageShowsToday=explicitDates(pageText).includes(date)&&/dne\\s*sna\\s+ponuka/i.test(pageText.normalize('NFD').replace(/[\\u0300-\\u036f]/g,''));
+            const pdfDates=explicitDates(candidate.pdfText);
+            if(pageShowsToday&&pdfDates.length>0&&!pdfDates.includes(date)&&pdfDates.every(d=>d<date))sypkaDateMismatchLink=link;
+            errors.push({id,reason:e.message});
+          }
         }
         throw Error('No current Sypka PDF or image parsed');
       }
@@ -85,6 +91,11 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
         if(new Set(ok.map(x=>fingerprint(x.parsed))).size!==1)throw Error(`${id}: conflicting official sources`);
         sources[id]=ok[0].raw;onStatus({id,status:'validated'});return ok[0].parsed;
       }
+    }
+    if(id==='stara-sypka'&&sypkaDateMismatchLink){
+      sources['stara-sypka-date-mismatch']={url:sypkaDateMismatchLink,reason:'Official page shows today while the linked PDF explicitly shows only earlier dates'};
+      onStatus({id,status:'date-mismatch-link-only'});
+      return {id,linkOnly:true,source:{url:sypkaDateMismatchLink},soups:[],mains:[],desserts:[],notes:[]};
     }
     try {
       const cached=cachedRestaurant(id,date);
