@@ -138,7 +138,7 @@ export function validateMenu(data, { date = localDate(), now = new Date() } = {}
     if (r?.linkOnly === true) {
       if(id!=='stara-sypka'||Object.keys(r).some(k=>!['id','linkOnly','source','soups','mains','desserts','notes'].includes(k))||
           ![r.soups,r.mains,r.desserts,r.notes].every(Array.isArray)||[r.soups,r.mains,r.desserts,r.notes].some(xs=>xs.length)||
-          Object.keys(r.source||{}).length!==1||!/^https:\\/\\/(?:www\\.)?starasypka\\.sk\\/media\\/object\\/[^?#]+\\.pdf$/i.test(r.source.url||''))
+          Object.keys(r.source||{}).length!==1||!/^https:\/\/(?:www\.)?starasypka\.sk\/media\/object\/[^?#]+\.pdf$/i.test(r.source.url||''))
         throw Error('stara-sypka: invalid date-mismatch link-only fallback');
       return {id,name:NAMES[id],linkOnly:true,source:{url:r.source.url},soups:[],mains:[],desserts:[],notes:[]};
     }
