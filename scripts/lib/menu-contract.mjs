@@ -135,6 +135,13 @@ export function validateMenu(data, { date = localDate(), now = new Date() } = {}
   const normalizedRestaurants = ORDER.map(id => {
     if (id === 'stara-sypka' && weekday(date) === 1) return { id, name: NAMES[id], closed: true, soups: [], mains: [] };
     const r = restaurants.find(r => r.id === id);
+    if (r?.linkOnly === true) {
+      if(id!=='stara-sypka'||Object.keys(r).some(k=>!['id','linkOnly','source','soups','mains','desserts','notes'].includes(k))||
+          ![r.soups,r.mains,r.desserts,r.notes].every(Array.isArray)||[r.soups,r.mains,r.desserts,r.notes].some(xs=>xs.length)||
+          Object.keys(r.source||{}).length!==1||!/^https:\\/\\/(?:www\\.)?starasypka\\.sk\\/media\\/object\\/[^?#]+\\.pdf$/i.test(r.source.url||''))
+        throw Error('stara-sypka: invalid date-mismatch link-only fallback');
+      return {id,name:NAMES[id],linkOnly:true,source:{url:r.source.url},soups:[],mains:[],desserts:[],notes:[]};
+    }
     if (r?.unavailable === true) {
       if (id !== 'bluebell') throw Error(`${id}: unavailable fallback is not permitted`);
       const empty = [r.soups, r.mains, r.desserts, r.notes];
