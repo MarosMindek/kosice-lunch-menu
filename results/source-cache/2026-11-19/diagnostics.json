@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-19",
+  "capturedAt": "2026-11-19T08:53:47.032Z",
+  "validated": [
+    "kozlovna",
+    "cool-bowling",
+    "tahiti"
+  ],
+  "errors": [
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "bluebell",
+      "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
+    }
+  ]
+}
