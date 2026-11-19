@@ -63,7 +63,7 @@ export async function collectMenu(date,{out='output/autonomous',onStatus=()=>{}}
           const candidate={...raw,lines:undefined,pdfText:fs.readFileSync(txt,'utf8'),requestedPdfUrl:pdfURL.href};
           sources['stara-sypka-pdf-'+pdfURL.pathname.split('/').pop()]=candidate;
           try{const parsed=parsers[id](candidate,date);validateSource(parsed.source,date,id);return{raw:candidate,parsed};}catch(e){
-            const pageText=raw.lines.join(' '),pageShowsToday=explicitDates(pageText).includes(date)&&/dnesna\\s+ponuka/i.test(pageText.normalize('NFD').replace(/\\p{M}/gu,''));
+            const pageText=raw.lines.join(' '),pageShowsToday=explicitDates(pageText).includes(date)&&/dnesna\s+ponuka/i.test(pageText.normalize('NFD').replace(/\p{M}/gu,''));
             const pdfDates=explicitDates(candidate.pdfText);
             if(pageShowsToday&&pdfDates.length>0&&!pdfDates.includes(date)&&pdfDates.every(d=>d<date))sypkaDateMismatchLink=link;
             errors.push({id,reason:e.message});
