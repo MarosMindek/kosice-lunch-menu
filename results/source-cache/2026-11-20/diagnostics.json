@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-20",
+  "capturedAt": "2026-11-20T14:02:40.481Z",
+  "validated": [
+    "kozlovna",
+    "tahiti",
+    "stara-sypka"
+  ],
+  "errors": [
+    {
+      "id": "cool-bowling",
+      "attempt": 0,
+      "reason": "Cool Bowling: unparsed daily row: B.M.150g/150gChrumkavé teľacie rezníky v BBQ strúhanke podávané s lionskými  zemiakmi a čerstvým šalátikom/1,3,7/12,90€"
+    },
+    {
+      "id": "cool-bowling",
+      "attempt": 1,
+      "reason": "Cool Bowling: unparsed daily row: B.M.150g/150gChrumkavé teľacie rezníky v BBQ strúhanke podávané s lionskými  zemiakmi a čerstvým šalátikom/1,3,7/12,90€"
+    },
+    {
+      "id": "bluebell",
+      "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"
+    }
+  ]
+}
