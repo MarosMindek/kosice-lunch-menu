@@ -44,6 +44,21 @@ test('Cool Bowling accepts the actual attached allergen marker without losing me
   }
 });
 
+test('Cool Bowling reads the published meal when the portion touches its name',()=>{
+  const row='B.M.150g/150gChrumkavé teľacie rezníky v BBQ strúhanke podávané s lionskými  zemiakmi a čerstvým šalátikom/1,3,7/12,90€';
+  const raw={requestedUrl:'https://www.coolbowling.sk/denne-menu',capturedAt:'2026-11-20T14:02:40Z',lines:[
+    '20.11.26 PIATOK: 0,25l Slepačia polievka /1,3,9/ 1,70€',
+    row
+  ]};
+  const menu=parseCoolBowling(raw,'2026-11-20');
+  assert.equal(menu.mains.length,1);
+  const [item]=menu.mains;
+  assert.equal(item.portion,'150g/150g');
+  assert.equal(item.name,'Chrumkavé teľacie rezníky v BBQ strúhanke podávané s lionskými zemiakmi a čerstvým šalátikom');
+  assert.equal(item.price,12.9);
+  assert.equal(item.category,'biznis');
+});
+
 test('the connected bridge uses the approved current template checksum',()=>{
   const bridge=fs.readFileSync(new URL('../automation/bridge.mjs',import.meta.url),'utf8');
   assert.equal(bridge.match(/const PIN='([a-f0-9]+)'/)[1],sha256(fs.readFileSync(new URL('../templates/email-v1.html',import.meta.url))));
