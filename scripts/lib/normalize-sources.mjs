@@ -77,7 +77,7 @@ export function parseCoolBowling(raw,date) {
   if(!rows.length)throw Error('Cool Bowling: no daily meal rows');
   for(const row of rows) {
     // The site's markup sometimes joins the weight and the first letter of the name.
-    const m=row.match(/^(B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))\s*(\d+g(?:\s*\/\s*\d+g)?)(?:\s+|(?=\p{L}))(.+?)\s*\/[B,\d\s]+\/\s*(\d+[,.]\d{2})\s*€\s*$/iu);
+    const m=row.match(/^(B\.M\.|\d+[AB]?(?:menu\s*-|DEZERT-))\s*(\d+g(?:\s*\/\s*\d+g)?)(?:\s+|(?=\p{L}))(.+?)\s*\/[B,\d\s]+\/?\s*(\d+[,.]\d{2})\s*€\s*$/iu);
     if(!m)throw Error(`Cool Bowling: unparsed daily row: ${row.slice(0,160)}`);
     const item={name:clean(m[3]),portion:m[2],price:moneyCents(m[4])/100,sourceText:row};
     if(/^B\.M\./i.test(m[1]))item.category='biznis';
