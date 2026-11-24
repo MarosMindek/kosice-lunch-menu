@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "capturedAt": "2026-11-24T09:27:08.782Z",
+  "capturedAt": "2026-11-24T15:51:30.243Z",
   "validated": [
     "kozlovna",
     "cool-bowling",
@@ -8,6 +8,66 @@
     "stara-sypka"
   ],
   "errors": [
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Image OCR: Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Image OCR: Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
     {
       "id": "bluebell",
       "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"

@@ -1,12 +1,21 @@
 {
   "date": "2026-11-24",
-  "capturedAt": "2026-11-24T09:27:08.782Z",
+  "capturedAt": "2026-11-24T15:51:30.243Z",
   "sources": {
     "kozlovna": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-24T09:24:33.931Z",
+      "capturedAt": "2026-11-24T15:49:38.096Z",
       "lines": [
         "Preskočiť na hlavný obsah",
+        "Ochrana osobných údajov",
+        "Všeobecné vyhlásenie",
+        "Kontakt",
+        "Obedové menu",
+        "Jedálny lístok",
+        "Nápojový lístok",
+        "Galéria",
+        "Rezervácia",
+        "SK",
         "Zažite autentickú pivovú kultúru v Kozlovni",
         "Kvalitné pivo a domáce jedlá každý deň – už od obeda",
         "Rezervácia",
