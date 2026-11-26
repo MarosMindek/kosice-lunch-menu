@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "capturedAt": "2026-11-26T08:37:48.632Z",
+  "capturedAt": "2026-11-26T15:13:01.261Z",
   "sources": {
     "cool-bowling": {
       "requestedUrl": "https://www.coolbowling.sk/denne-menu",
@@ -127,9 +127,104 @@
         "k obedovému menu len za 2,80€"
       ]
     },
+    "stara-sypka-attempt-bf4e81272dfc": {
+      "requestedUrl": "https://www.starasypka.sk/sk/",
+      "capturedAt": "2026-11-26T15:09:36.990Z",
+      "lines": [
+        "Súhlasím",
+        "Tieto internetové stránky používajú k poskytovaniu služieb a analýze návštevnosti súbory cookie. Používaním týchto internetových stránok s týmto súhlasíte. Viac info.",
+        "REŠTAURÁCIA",
+        "JEDÁLNY LÍSTOK",
+        "NÁPOJOVÝ LÍSTOK",
+        "LETNÁ ZÁHRADA",
+        "SPOLOČENSKÉ AKCIE",
+        "FOTOGALÉRIA",
+        "AKCIE",
+        "KONTAKT",
+        "OHODNOŤTE NÁS",
+        "Cookies.",
+        "© 2015 - 2026. Reštaurácia Stará sýpka.",
+        "Created by webmatic s. r. o.",
+        "KAČACIE HODY V STAREJ SÝPKE",
+        "KAČACIE HODY V STAREJ SÝPKE",
+        "KAČACIE HODY V STAREJ SÝPKE",
+        "SPOZNAJTE REŠTAURÁCIU STARÁ SÝPKA",
+        "REŠTAURÁCIA STARÁ SÝPKA",
+        "NENÁPADNÁ REŠTAURÁCIA, ZA KTORÚ HOVORÍ JEJ MENO",
+        "V uličke nedaľeko Nám. osoloboditeľov je prekvapujúco príjemná reštaurácia Stará sýpka. Nenápadný vchod návštevník ľahko prehliadne, no nemal by. Podľa ruchu a počtu hostí si podnik od roku 2005 získal početnú klientelu.",
+        "P",
+        "PARKOVANIE",
+        "FAJČIARSKA ZÓNA",
+        "NEFAJČIARSKA ZÓNA",
+        "PLATBA KARTOU",
+        "zobraziť všetky fotky",
+        "MENU",
+        "Ponúkame Vám veľký výber tej najlepšej slovenskej a zahraničnej kuchyne. Polievky, predjedlá, steaky, bezmäsité jedlá ako aj dezerty a veľa ďalšieho Vám s radosťou prinesie špičková obsluha.",
+        "V našom jedálnom lístku nájdete:",
+        "- špeciality našej kuchyne",
+        "- studené predjedlá",
+        "- teplé predjedlá",
+        "- polievky",
+        "- jedlá z hovädzieho mäsa",
+        "- jedlá z bravčového mäsa",
+        "- jedlá z hydiny",
+        "- jedlá na rošte",
+        "- jedlá z rýb",
+        "- bezmäsité jedlá",
+        "- syry",
+        "- múčne jedlá",
+        "- šaláty",
+        "- dezerty",
+        "- zmrzlina, zmrzlinové poháre",
+        "- múčniky",
+        "- ovocné poháre",
+        "- prílohy a pochutiny",
+        "U nás si každý príde na svoje. V ponuke nájdete okrem iného až 5 polievok, 8 steakov či 7 syrov.",
+        "Príďte a presvedčte sa sami. Ústretový personál sa postará o Vašu spokojnosť.",
+        "ČAPUJEME",
+        "K dobrému jedlu patrí aj dobré pivo. U nás nájdete tankový Gambrinus, Plzeňský Prazdroj, Master a nealkoholický Birell.",
+        "ČAPUJEME TANKOVÝ GAMBRINUS",
+        "NAZDRAVIE!",
+        "LETNÁ ZÁHRADA",
+        "Letná záhrada prináša atmosféru, na ktorú sa nezabúda. Veľmi vhodný priestor pre spoločenské akcie počas letnej sezóny. Každý piatok tu hrá cigánska hudba a na svoje si prídu aj priaznivci športových prenosov.",
+        "V našej letnej záhrade aspoň na chvíľu zabudnete na ruch mesta.",
+        "zobraziť všetky fotky",
+        "SPOLOČENSKÉ AKCIE",
+        "Ponúkame Vám vynikajúce priestory na konanie spoločenských akcií. V letnej sezóne máme k dispozíciiobrovskú letnú terasu, počas zimy priestory reštaurácie či salónika. Samostatne oddelený salónik s kapacitou 32 miest sa hodí na organizovanie rodinných aj firemných osláv.",
+        "Zarezervujte si priestor pre Vašu akciu ešte dnes:",
+        "- rodinné oslavy",
+        "- stužkové",
+        "- promócie",
+        "- kar",
+        "- firemné akcie",
+        "Príjemné prostredie, výborné jedlo a ústretový personál sú tou najlepšou kombináciou pre Vašu akciu.",
+        "pre rezervácie volajte:",
+        "0905 290 872, 0918 122 199",
+        "zobraziť všetky fotky",
+        "KONTAKT",
+        "Fejova 1",
+        "040 01 Košice",
+        "Slovensko",
+        "telefón: 055 623 0133",
+        "prevádzka: 0905 290 872, 0918 122 199",
+        "e-mail: starasypka@gmail.com",
+        "OTVÁRACIE HODINY",
+        "Pondelok:\tzatvorené",
+        "Utorok - Štvrtok:\t11.00 - 22.00",
+        "Piatok:\t11.00 - 23.00",
+        "Sobota:\t11.00 - 22.00",
+        "Nedeľa:\tlen dohodnuté akcie",
+        "(min. 20 osôb)",
+        "zobraziť mapu",
+        "26.11.2026",
+        "Dnešná ponuka",
+        "(podávame od 11:00)",
+        "VYTLAČIŤ"
+      ]
+    },
     "kozlovna-attempt-ed88e8c9a24f": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-26T08:33:54.914Z",
+      "capturedAt": "2026-11-26T15:09:27.048Z",
       "lines": [
         "Preskočiť na hlavný obsah",
         "Zažite autentickú pivovú kultúru v Kozlovni",
@@ -1013,7 +1108,7 @@
     },
     "kozlovna": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-26T08:33:54.914Z",
+      "capturedAt": "2026-11-26T15:09:27.048Z",
       "lines": [
         "Preskočiť na hlavný obsah",
         "Zažite autentickú pivovú kultúru v Kozlovni",
@@ -1895,14 +1990,41 @@
         "© 2026 Kozlovňa Košice | Created by"
       ]
     },
-    "stara-sypka-attempt-bf4e81272dfc": {
+    "stara-sypka-pdf-jedalny_listok_2026.pdf": {
+      "requestedUrl": "https://www.starasypka.sk/sk/restauracia/obedove-menu",
+      "capturedAt": "2026-11-26T15:09:43.355Z",
+      "pdfText": "www.starasypka.sk\nJedálny lístok\nMenu\n\fwww.starasypka.sk\n100g Mix domácich pomazánok, opečená bagetka (1,3,7,10) (podľa ponuky) . . . . . . . . . . . . . . . . . . . . 5,20€\nSelection of domestic spreads, toasted baguette\n50g Tatarák z údeného lososa, opečená bagetka (1,4,10) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6,90€\nSmoked salmon tartare, toasted baguette\n50g Roastbeef z bravčovej panenky na opečenej bagetke . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5,90€\ns horčicovým dipom (1,10)\nRoast beef from pork tenderloin on a toasted baguette with mustard dip\n100g Toast „diabolský“ (s kuracím mäsom a syrom) (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6,20€\n“Hot” Toast (with chicken meat and cheese)\n100g Restovaná bravčová pečeň s kyslou uhorkou a chlebíkom (1,10) . . . . . . . . . . . . . . . . . . . . . . 6,90€\nSautéed pork liver with pickled cucumber and bread\n150g Škvarky zo sumca s kyslou uhorkou, feferónkami a chrenom, chlieb (1,4,7,10) . . . 9,50€\nCatfish greaves with pickled cucumber, chilli and horseradish, bread\nTeplé predjedlá Hot starters\nStudené predjedlá Cold starters\nTatarák z údeného lososa, opečená bagetka\n\f0,33l Slepačia polievka s mäsom, zeleninou a rezancami (1,3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,90€\nChicken soup with meat, vegetables and noodles\n0,33l Hovädzia polievka s pečeňovými haluškami (1,3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,90€\nBeef soup with liver halusky\n0,33l Cesnaková polievka s vajíčkom, syrom a domácimi krutónkami (1,3,7) . . . . . . . . . . . . . 4,90€\nGarlic soup with egg, cheese and homemade croutons\n0,33l Mačanka s domácimi krutónkami (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5,90€\nTraditional Slovak mushroom soup with croutons\n0,33l Krém podľa ponuky (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5,90€\nCream soup according to offer\n0,5l Halaszlé s kúskami ryby (100g ostriež, treska, kapor – podľa výberu)\nso smotanou a chlebom (4,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9,90€\nHalaszlé “Fisherman´s soup” with pieces of fish (100g catfish, cod, carp - daily selection) with cream and bread\nPolievky Soups\nHalaszlé s kúskami ryby\nso smotanou a chlebom\nwww.starasypka.sk\n\fwww.starasypka.sk\nJedlá z rýb Fish dishes\n150/200g Zapekaný perkelt zo sumca na tvarohových haluškách(1,3,4,7) . . . . . . . . . . . . . . . . 19,90€\nCatfishr perkelt on quark halusky\n200g Zubáč filet na grilovanej zelenine (4,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .17,90€\nZander fillet on barbecued vegetables\n200g Losos steak s bylinkovým maslom (4,7) (odporúčame omáčku podľa vlastného výberu) . . . 14,90€\nSalmon steak with herb butter (we recommend a dressing of your choice)\n150g Vyprážaná ryba (Treska chrbát) (1,3,4,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .12,90€\nFried fish fillets (Cod fillets)\nZapekaný perkelt zo sumca\n\fwww.starasypka.sk\nJedlá z hydiny Poultry dishes\n200g Steak z kuracích pŕs „KAROLY“ (s enciánom a brusnicami) (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .13,90€\nChicken breast steak “Karoly” (with encian and cranberries)\n200g Steak z kuracích pŕs „TEXAS“ (marinované v omáčke TEXAS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .11,90€\nChicken breast steak “Texas” (marinated in TEXAS sauce)\n150g Kuracie prsia zapekané s paradajkou a mozarellou (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .11,90€\nChicken breast roasted with tomatoes and mozarella\n150g Kuracie prsia „Orlica“ (kuracie prsia plnené šunkou, syrom, šampiňónmi a kápiou – vyprážané) (1,3,7) . . . .11,90€\nChicken breast “Orlica” (fried chicken breast stuffed with ham, cheese, mushrooms and red peppers)\n150g Kurací stroganov (7,10) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10,90€\nChicken stroganoff\n150g Vyprážaný kurací rezeň (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10,90€\nFried chicken steak\n150g Kačacie prsia na slivkovej omáčke, 2ks lokša so smotanou (1,7) . . . . . . . . . . . . . . . . . . . . .18,90€\nDuck breast with plum sauce, 2pcs Lokše (potato flatbread) with cream\n150g Kačacie prsia na červenej kapuste, 2ks lokša (1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .18,90€\nDuck breast with red cabbage, 2pcs lokše (potato flatbread)\nKačacie prsia na slivkovej omáčke\n\fwww.starasypka.sk\nJedlá z bravčového mäsa Pork dishes\n700/250g Pečené bravčové koleno(celé s kosťou)\nna strapačkách s kyslou kapustou(1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,90€\nRoasted pork knee (bone-in) with strapacky and sauerkraut\n200g Steak z bravčovej panenky\ns grilovaným oštiepkom a bryndzovou omáčkou (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17,90€\nPork steak with grilled smoked sheep cheese and sheep cheese sauce\n200/250g Steak z bravčovej panenky na haluškách s dubákovou omáčkou (1,3,7) . . . . . 19,90€\nPork steak with wild mushroom halusky\n200g Poľovnícky steak(s opečenou slaninkou a cibuľkou) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16,90€\nHunter´s pork steak (with fried bacon and onions)\n200g Bravčová panenka v slaninkovom kabátiku na omáčke DEMI GLACE. . . . . .15,90€\nBacon wrapped pork tenderloin with DEMI GLACE\n150g Poľovnícke soté (brav. panenka so šampiňónami, slaninkou a smotanou) (7) . . . . . . . . . . . . . . . . . . . . 12,90€\nHunter´s sauté pork (with mushrooms, bacon and cream)\n150g Vyprážaný bravč. rezeň z panenky(1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12,90€\nFried pork schnitzel (pork neck)\n150g Čiernohorský rezeň z panenky(v zemiakovom cestíčku, so syrom) (1,3,7) . . . . . . . . . . . . . . . . 12,90€\nČiernohorský tenderloin schnitzel (in potato crust, with cheese)\nPečené Bavorské koleno(feferonky, baranie rohy, chren, horčica, chlieb) (1) (cena za 100 g) 2,30€\nRoasted Bavarian knee (hot peppers, mutton horns, horseradish, mustard, bread)\n(doba prípravy cca 90 min.)\nKoleno na strapačkách\n\fwww.starasypka.sk\nJedlá z hovädzieho a teľacieho mäsa Beef and veal dishes\nHovädzí steak s bylinkovým maslom: 200g, 300g, 400g (7) . . . . . . . . (cena za 100g) 10,90€\n(odporúčame omáčku podľa vlastného výberu) Beef steak with herb butter - according to weight (per 100g)\n(we recommend a sauce of your choice)\n200g Americký hovädzí steak (s opečenou slaninkou a volským okom) (3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22,00€\nAmerican beef steak (with fried bacon and a fried egg)\n150g Vyprážaný Viedenský teľací rezeň(1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .16,90€\nViennese veal schnitzel\n150g Teľací stroganov (7,10) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .16,90€\nVeal Stroganoff\n150g Teľacie medailónky na dubákovej omáčke, 2 ks lokše (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . 22,00€\nVeal medallions on wild mushroom sauce, 2 pcs lokše (potato flatbread)\nTeľacie medailónky na dubákovej omáčke, lokše\n\fwww.starasypka.sk\nBezmäsité a múčne jedlá Vegetarian dishes\n200g Hlivový perkelt (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9,90€\nOyster mushroom perkelt\n200g Vyprážaný karfiol (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9,90€\nFried cauliflower\n350g Bryndzové halušky so smotanou a slaninkou (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10,90€\nHalusky with sheep cheese, cream and bacon\n400g Domáce spišské pirohy so zemiakovo-bryndzovou plnkou,\nso smotanou a slaninkou (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10,90€\nSpis pirohy filled with potato-sheep cheese, with cream and bacon\n400g Domáce lekvárové pirohy s maslom, strúhankou a cukrom (1,3,7) . . . . . . . . . . . . . . . . . . . . 9,90€\nHomemade pirohy with plum jam, butter, breadcrumbs and sugar\n400g Strapačky s kyslou kapustou a slaninkou (1,3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9,90€\nStrapacky with sauerkraut and bacon\n400g Gazdovský tanier (spišské pirohy, bryndzové halušky a 120g medailónky z bravčovej panenky) (1,3,7)\t\t\n\t\t17,90€\nGazdovsky plate (Spis pirohy, sheep cheese halusky and 120g pork tenderloin medallions)\n\fwww.starasypka.sk\nRisottá Risotto\n300/100g Šafránové risotto s teľacími rezancami a parmezánom (7) . . . . . . . . . . . . . . . . . . . . . 16,90€\nSaffron risotto with veal strips and parmesan\n400g Dubákové risotto so slaninkovými chipsami a parmezánom (7) . . . . . . . . . . . . . 13,90€\nWild mushroom risotto with bacon chips and parmesan\n300/100g Špenátové risotto s kúskami lososa a parmezánom (4,7) . . . . . . . . . . . . . . . . . . . . . . . . 16,90€\nSpinach risotto with pieces of salmon and parmesan\n400g Zeleninovo-cuketové risotto s parmezánom (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11,90€\nVegetable-zucchini risotto with parmesan\n300/120g Hráškové risotto s grilovaným kuracím steakom a parmezánom (7) . . . . . . . . 13,90€\nPea risotto with grilled chicken steak and parmesan cheese\n150g Vyprážaný syr (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10,90€\nFried cheese\n150g Pastiersky syr (so šunkou, v cestíčku, preliatý omáčkou zo šampiňónov a kápie)(1,3,7) . . . . . . . . . . 11,90€\nBatter fried “Shepherd‘s”cheese (with ham, covered in mushroom and red pepper sauce)\n120g Grilovaný Encián s brusnicami (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9,90€\nGrilled Encian with cranberries\n150g Salašnícky syr ( údený syr v zemiakovom cestíčku) (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11,90€\nSalas Cheese fried in potato batter\nSyry Cheeses\nŠpenátové risotto s lososom\n\fwww.starasypka.sk\nPre najmenších For children\n100g Prírodné kuracie prsia, 100g hranolky, kečup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8,20€\nBraised chicken breast, 100g pommes frites , Ketchup\n100g Vyprážané kuracie nugetky, 100g hranolky, kečup (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8,20€\nFried chicken nuggets, 100g pommes frites, tartar sauce\n100g Kurací stroganov, 100g ryža (7,10) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8,20€\nChicken stroganoff, 100g rice\n200g Domáce lekvárové pirohy s maslom, strúhankou a cukrom (1,3,7) . . . . . . . . . . . . . . . . . . . . 8,20€\nHomemade pirohy filled with plum jam, with butter, breadcrumbs and sugar\n200g Špagety s maslom (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5,50€\nSpaghetti with butter\n200g Špagety s kečupom a syrom (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7,50€\nSpaghetti with ketchup and cheese\nVyprážané kuracie nugetky, hranolky, tatárska omáčka\n\fwww.starasypka.sk\n150g Tatársky biftek, 4 ks hrianky s cesnakom (1,3,10) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17,90€\n„Neodporúča sa, aby tepelne nespracované mäso a vajcia konzumovali deti, tehotné ženy, dojčiace ženy a osoby s oslabenou imunitou!”\nSteak tartare, 4 pcs garlic toast\n“Raw meat and eggs are not recommended for children, pregnant women, nursing women,\nand people with weakened immune systems!”\n500g Kuracie chilli krídelka, omáčka BBQ,\ncesnakovo-smotanová omáčka, chren, 4 ks chlieb (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12,90€\nChilli chicken wings, BBQ sauce, garlic-cream sauce, horseradish, 4 pcs bread\n300g Gazdovské denko (údená slanina, klobása, syr, kyslá uhorka, feferónka, horčica, 4 ks chlieb) (7,10) . . . . 10,90€\n“Gazdovske” Farmer‘s board (smoked bacon, sausage, cheese, pickled cucumber,\nchilli peppers, mustard, 4 pcs bread\n100g Výber domácich pomazánok (podľa aktuálnej ponuky), 4 ks pečivo(1,7) . . . . . . . . . . . . . . . . . . . . . 5,20€\nSelection of homemade spreads (according to current offer) , 4 pcs pastry\n100g Chlieb s domácou masťou, cibuľou a kyslou uhorkou (1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,20€\nBread with lard, onion and pickled cucumber\n500g Marinované bravčové rebierka s omáčkou, chlieb (1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13,90€\nMarinated pork ribs with BBQ sauce, bread\n30g Hrianka s cesnakom (1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0,70€\nGarlic toast\n400g Syrový tanier, 4 ks chlieb (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11,90€\nCheese plate, 4 pieces of bread\nPivárske špeciality Specialties\nTatársky biftek\n\fwww.starasypka.sk\n1700 g Gazdovská misa\nGazdovska platter\n700g pečené bravčové koleno s kosťou,\n500g marinované bravčové rebierka s BBQ omáčkou,\n500g chilli krídelka, 100g domáce pomazánky, chren,\nfeferónky, kyslé uhorky, 10 ks chlieb\n700g roasted pork knee (bone-in) 500g marinated pork ribs with BBQ sauce,\n300g chilli wings, 100g homemade spreads, horseradish,\nchilli peppers, pickled cucumber, 10 pcs bread\n45,00€\n\fwww.starasypka.sk\nHotové jedlá Prepared meals\n150g Sviečková na smotane, domáci kys. knedlík (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15,90€\nTenderloin on cream, 160g homemade steamed dumplings\n150g Maďarský guláš, 160g domáci kysnutý knedlík (1,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15,90€\nHungarian goulash, 160g homemade steamed dumplings\n150g Bravčový vrabec, 150g dusená kyslá kapusta, 200g zemiakový knedlík (1,3) . . . 15,90€\nPork drumstick, 150g sauerkraut, 200g potato dumplings\nBravčový vrabec, dusená kapusta, knedlík\n\fwww.starasypka.sk\n150g Uhorkový šalát Cucumber salad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,90€\n150g Kapustový šalát Cabbage salad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n150g Mrkvový šalát Carrot salad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n250g Šopský šalát Bulgarian salad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,90€\n250g Grécky šalát Greek salad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,90€\nŠaláty Salads\nOmáčky Sauces\nTeplé omáčky bez smotany Hot sauces without cream\n100g Čučoriedková omáčka sladká Sweet blueberry sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n100g Teplá pikantná omáčka Hot spicy sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n100g BBQ omáčka BBQ sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\nTeplé omáčky so smotanou Hot sauces with cream\n100g Syrová omáčka (7) Cheese sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,20€\n100g Dubáková omáčka (7) Wild mushroom sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,90€\n100g Pfefer omáčka (7) Pfeffersauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,20€\nStudené omáčky Cold sauces\n100g BBQ BBQ sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n100g Ostrosladká Sweet and Spicy sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n100g Cesnakovo-smotanová (7) Creamy garlic sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\n100g Medovo-horčicová omáčka (10) Honey-mustard sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,50€\nKompóty Fruit compote\n150g broskyňový peach compote . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,20€\n\fwww.starasypka.sk\nDezerty Desserts\n2ks Palacinky s džemom, mrazeným ovocím a šľahačkou (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6,20€\nPancakes with jam, fruit and whipped cream (2 pcs)\n2ks Palacinky „Parížske“(džem, orechy, čokoláda, šľahačka) (1,3,7,8) . . . . . . . . . . . . . . . . . . . . . . 6,20€\n“Parisian” pancakes with jam, nuts, chocolate and whipped cream (2pcs)\n100g Lávová čokoládová tortička na malinovej omáčke so šľahačkou (1,3) . . . . . . . . . . . . . . 5,50€\nChocolate lava cake with raspberry sauce and whipped cream\n2ks Palacinky zo Starej sýpky\n(sliv. lekvár, vlašské orechy, struhaná čokoláda, cukor) (1,3,7,8) . . . . . . . . . . . . . . . . . . . . . . . 6,50€\nPancakes „Stará sýpka“ (plum jam, walnuts, grated chocolate, sugar)(2pcs)\n100g Domáce tiramisu (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6,50€\nHomemade tiramisu\n150g Horúce maliny s vanilkovou zmrzlinou a šľahačkou (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5,50€\nHot raspberries with vanilla ice cream and whipped cream\nMúčniky Desserts\n100g Štrúdle - Torty – podľa aktuálnej ponuky\n100g Strudel - Cakes – According to current offer\nPalacinky s džemom, ovocím a šľahačkou\n\fwww.starasypka.sk\n200g Steakové hranolky . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nSteak fries\n200 g Batatové hranolky . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,90€\nBataty fries\n200 g Pučené zemiaky s cibuľkou a kôprom (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nMashed potatoes with onion and dill\n200 g Varené zemiaky s maslom (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,90€\nBoiled potatoes with butter\n200 g Opekané zemiaky . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nRoasted baby potatoes\n200 g Dusená zelenina . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,50€\nBraised vegetables\n200 g Grilovaná zelenina . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,50€\nGrilled vegetables\n200 g Dusená ryža. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,90€\nRice\n150 g Príloha z čerstvej zeleniny. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . 3,50€\nFresh vegetable garnish\n160 g Kysnuté knedle (1,7). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nSteamed dumplings\n150 g Dusená červená kapusta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nBraised red cabbage\n200 g Domáce noky (1,3,7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nHomemade gnocchi\n200 g Zemiakové knedle (1,3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,10€\nPotato dumplings\nPrílohy Side orders\n\fwww.starasypka.sk\nPochutiny Extra\n20g Horčica (10) Mustard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n20g Chren Horseradish . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n20g Feferonky Chilli peppers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n100g Tatárska omáčka (7) Tartar sauce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n100g Kečup Ketchup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n100g Kyslé uhorky Pickled cucumber . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,50€\n20g Chlieb (1) 1 slice of bread . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0,50€\nJedlá pre Vás pripravujeme z čerstvých surovín, preto je doba prípravy\nminimálne 30 minút. Ďakujeme za pochopenie.\nAll the food we prepare for you is made from fresh ingredients, therefore\npreparation time is at least 30 minutes. Thank you for your understanding.\nK polovičným porciám účtujeme prirážku 20% !\nWe charge a 20% surcharge for half portions!\nPri balení jedál na požiadanie zákazníka účtujeme poplatok 0,30€/kus.\nPacking meals “to go” at customer‘s request EUR 0,30 per container.\nZoznam označovaných alergénov:\n1 – obilniny obsahujúce lepok, 2 - kôrovce, 3 - vajcia, 4 - ryby, 5 - arašidy, 6 - sójové zrná,\n7 - mlieko, 8 - orechy, 9 - zeler, 10 - horčica, 11 - sézamové semená\nList of known allergens:\n1 – cereals containing gluten, 2 – crustaceans, 3 – eggs, 4- fish, 5 – peanuts, 6 – soybeans,\n7 – milk, 8 – nuts, 9 – celery, 10 – mustard, 11 – sesame seeds\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\fwww.starasypka.sk\n350g Šalát „LETNÝ“\nzmes listových šalátov so smotanovo-uhorkovým dipoms cibuľkou,\nvyprážaným karfiolom v sezamovej strúhanke,\npečená bagetka na masle (1,7,10)\n11,90€\n350g Šalát „BARBECUE CHICKEN“\nzmes listových šalátov, paradajka, farebná paprika, červená cibuľka,\n100g kuracie rezance s omáčkou BBQ, sézam, kyslá smotana,\nopečená bagetka s bylinkovým maslom (1,7,11)\n14,90€\n350g Šalát „LOSOS“\nzmes listových šalátov, paradajka, uhorka, 100g grilované kúsky lososa,\nmätový dressing, opečená bagetka s bylinkovým maslom (1,4,7)\n15,90€\n350g Šalát „CHRUMKAVÝ BAKLAŽÁN“\nzmes listových šalátov, 100g vyprážané plátky baklažánu\ns mandľovými lupienkami, citrónový dip, opečená bagetka s cesnakom (1,7,8)\n11,90€\n\fwww.starasypka.sk\n400g Šalát „CHEF“\nzeleninový šalát (bez papriky) s kuracími kúskami, vareným vajíčkom,\nopečenou bagetkou na masle, Cézar dressing (1,3,7)\n14,90€\n400g Šalát „SÝPKA“\nzeleninový šalát s bravčovými nugetkami (panenka), strúhaný parmezán,\ncesnakový dressing, opečená bagetka na masle (1,7)\n14,90€\n350g Šalát „ENCIÁN“\nzmes listových šalátov, paradajka, farebná paprika, uhorka,\ngrilovaný encián, brusnice, opečená bagetka s bylinkovým maslom (1,7)\n12,90€\n350g Šalát „GAZDOVSKÝ“\nzmes listových šalátov, paradajka, uhorka, mrkva, paprika,\nčervená cibuľka, 100g bravčová panenka so slaninkou\na oštiepkom vyprážaná v cestíčku (1,3,7)\n16,90€\n\f",
+      "requestedPdfUrl": "https://www.starasypka.sk/media/jedalny_listok_2026.pdf?_menu=1795705783364"
+    },
+    "stara-sypka-pdf-napojovy_listok_2026.pdf": {
+      "requestedUrl": "https://www.starasypka.sk/sk/restauracia/obedove-menu",
+      "capturedAt": "2026-11-26T15:09:43.355Z",
+      "pdfText": "Nápojový lístok\nDrinks\n\fwww.starasypka.sk\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\nBorovička Spišská (4cl) 1,90€\nHruška SPIŠ ORIGINAL (4cl) 1,90€\nSlivovica Gazdovská 52% (4cl) 2,70€\nPlum Spirit (koscher)\nStarorežná (4cl) 2,10€\nTequila Olmega Silver (4cl) 3,20€\nTequila Olmega Gold (4cl) 3,60€\nVodka Absolut (4cl) 2,50€\nVodka Triumph (4cl) 1,90€\nVodka Fínska (4cl) 2,50€\nWiliams (výr. ZWACK) (4cl) 2,50€\nMarhuľovica 42% (4cl) 3,50€\nBohemia Honey 35% (4cl) 3,30€\nHruškovica Williams 42% (4cl) 2,90€\nSlivovica 50% (4cl) 3,70€\nSlovácka Borovička 45% (4cl) 3,20€\nTrnkovica 42% (4cl) 3,60€\nSlivovica Vizovická 50% Zlatá (4cl) 5,50€\nSlivovica Čačanská 50% (4cl) 5,50€\nRum Božkov Republica (4cl) 2,50€\nMalibu (4cl) 2,50€\nHavana Gold (4cl) 2,90€\nDiplomatico Reserva Exclusiva (4cl) 4,90€\nCaptain Morgan SPICE (4cl) 2,90€\nDictador 12 R. (4cl) 5,50€\nMillonario RES. 15 R. (4cl) 5,50€\nRum DON PAPA (4cl) 5,50€\nRum Blue Mauritius GOLD (4cl) 5,50€\nSauvignon Blanc, suché, Velkeer (1dl) 2,50€\nChardonnay, suché, Vitis (1dl) 1,90€\nPálava, polosladké, Velkeer (1dl) 2,50€\nBiele vína\nTri Ruže, Cuvée, polosuché, Velkeer (1dl) 2,10€\nElizabeth, polosladké, Golguz (1dl) 2,30€\nRužové vína\nKensington (4cl) 1,90€\nBeefeater (4cl) 2,90€\nGin\nCabernet Savignon, suché, Vitis (1dl) 1,90€\nFrankovka Modrá, suché, Vitis (1dl) 1,90€\nCarmenére, suché, Chille (1dl) 2,50€\nDunaj, polosuché, v.z.h, Pivnica Orechová (1dl) 2,70€\nCabernet, Cuvée, polosladké, Velkeer (1dl) 2,30€\nČervené vína\nHubert sladký, polosladký, suchý (0,75l) 13,00€\nHubert polosladký ružový (0,75l) 13,00€\nHubert de Luxe (0,75l) 15,00€\nProseco, suché (1dl) 2,50€\nŠumivé vína\nMartini Bianco, Rosso, Dry (1dl) 2,90€\nCampari Bitter (1dl) 4,50€\nGinger nealko (4cl) 2,20€\nAperitívové vína Destiláty a liehoviny\nDestiláty z ponuky\nRudolf Jelínek\nRUM\n\f.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\nwww.starasypka.sk\nBallantines (4cl) 3,20€\nChivas Regal (4cl) 5,20€\nJack Daniels (4cl) 3,50€\nJameson – Írska Whisky (4cl) 3,50€\nTullamore Dew – Írska Whisky (4cl) 3,50€\nCapa Negra (4cl) 2,10€\nKarpatské brandy Špecial (4cl) 3,90€\nMetaxa 5* (4cl) 3,30€\nMetaxa 12 R. (4cl) 4,50€\nArarat 10 R. (4cl) 3,30€\nHenessy V.S. (4cl) 4,50€\nMartell V.S. (4cl) 4,50€\nMartell V.S.O.P. (4cl) 5,90€\nRemy Martin V.S.O.P. (4cl) 5,90€\nRemy Martin X.O (4cl) 12,10€\nBaileys (4cl) 2,50€\nBecherovka (4cl) 2,70€\nDemänovka horká (4cl) 1,90€\nFernet Stock (4cl) 2,60€\nFernet Stock Citrus (4cl) 2,60€\nGriotka (4cl) 1,90€\nJägermeister (4cl) 2,90€\nMyslivecká (4cl) 1,90€\nTatranský čaj 52% (4cl) 2,90€\nVaječný likér (4cl) 1,90€\nWhisky\nBrandy\nCognac\nLikéry\nGambrinus tank 10˚ nepasterizovaný (0,50l) 2,60€\nGambrinus tank 10˚ nepasterizovaný (0,30l) 2,30€\nPilsner urquell 12˚ (0,50l) 3,10€\nPilsner urquell 12˚ (0,30l) 2,50€\nMaster tmavé 18˚ nefiltrované (0,40l) 3,10€\nRezané pivo (0,50l) 3,50€\n(0,25 pivo Master 18˚+ 0,25 pivo Gambrinus 10˚)\nBirel nealko, podľa ponuky (0,30l) 2,20€\n(0,50l) 2,70€\nPilsner urquell (0,33l) 2,50€\nBirell nealko (0,50l) 2,50€\nBirell nealko ochutený (0,50l) 2,50€\nPivo sudové\nFľašové pivo\n... ďalší sotiment pív podľa\naktuálnej ponuky\nCampari Koktail 0,25l 4,90€\n(2cl Campari, 2cl Martini Rosso, 2cl Gin,1 dl pom.džús, citrón)\nAPEROL spritz 0,30l 5,30€\n(5cl Aperol, 1dl Prosseco, ľad, sóda, pomaranč)\nMOJITO 0,30l 5,90€\n(4cl rum biely, trst. cukor, limetka, sirup, sóda, ľad)\nMiešané nápoje\nalkoholické\n\fwww.starasypka.sk\nTARGA TONICA – Rosa, Zázvor, Originale 0,25l\t\t 2,10€\nTARGA – Citrón, Pomaranč 0,25l \t\t 2,10€\nKofola čapovaná 0,30l\t\t 1,50€\nKofola čapovaná 0,50l\t\t 2,50€\nĽadový čaj Dilmah– Citrón, Broskyňa 0,25l\t\t 2,10€\nZelený čaj NATIVA (citrón) 0,25l\t\t 2,10€\nMinerálna voda Radenská 0,25l\t\t 1,90€\nPramenitá voda Rajecká (nesýtená, jemne sýtená, sýtená) 0,33l\t\t 1,90€\nRoyal Crown Cola (bez cukru) 0,25l\t\t 2,20€\nOvocné šťavy 100% podľa ponuky 0,20l\t\t 2,10€\nOvocné šťavy sladené podľa ponuky 0,20l\t\t 2,30€\nVinea biela, červená 0,25l\t\t 2,10€\nSprite 0,33l\t\t 2,10€\nVoda s citrónom a mätou 0,10l\t\t 0,27€\nNealkoholické nápoje\n100g Štrúdľa višňa-mak 2,90€\n120g Štrúdľa jablko-mak, jablko-orech 2,90€\n.... iné podľa aktuálnej ponuky\nMúčniky\n5g Oliva 0,10€\n20g rez citrónu 0,30€\n30g šľahačka 0,60€\n75g Chipsy Slovakia 2,30€\n100g Arašídy 2,10€\n80g Pistácie 3,10€\n60g Kešu 3,10€\nPochutiny\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\fwww.starasypka.sk\nČaj čierny s citrónom (2,5g čaj, 20g rez citróna, 4,5 g cukor HB)\t\t2,10€\nČaj ovocný s citrónom (podľa ponuky) (2,5g čaj, 20g rez citróna, 4,5 g cukor HB)\t\t\n2,10€\nČaj zelený (2,5g čaj, 20g rez citróna, 4,5 g cukor HB)\t\t\n2,10€\nČaj z čerstvej mäty (2g mäta, 20g rez citróna, 4,5 g cukor HB) (3dl) 2,50€\nČaj z čerstvého zázvoru (20g zázvor, 20g rez citróna, 4,5 g cukor HB) (3dl) 2,50€\nČaj z čerstvej mäty a zázvoru (15g mäta a zázvor,20g rez citróna, 4,5 g cukor HB) (3dl) 2,50€\nHorúca čokoláda (ochutená podľa ponuky) (1,5dl) 2,50€\nHorúce jablčko, hruška, brusnica (2dl) 2,00€\nVarenie vína (škorica, klinčeky, cukor HB 4,5g) (1dl) 0,20€\nEspresso – Trieste*(7,5g káva, 2 x 4,5g cukor)\t\t\n1,90€\nEspresso lungo – Trieste* (7,5g káva, 2 x 4,5g cukor)\t\t\n1,90€\nCappucino – Trieste* (7,5g káva, 2 x 4,5g cukor)\t\t\n2,50€\nCaffé Latte Macchiato – Trieste* (7,5g káva, 2 x 4,5g cukor) \t\t\n2,80€\n1/3 horúceho mlieka a 1/3 mliečnej peny a doliate klasické espresso\nViedenská káva – Trieste (7,5g káva, 2 x 4,5g cukor)\t\t\n2,90€\nEspreso plus 3 cl vody a šľahačka.\nĽadová viedenská káva – Trieste (7,5g káva, 2 x 4,5g cukor, 30g šľahačka)\t\t\n2,90€\n1 kopček vanilkovej zmrzliny zaliate studeným mliekom a preliate espressom.\nEspresso bez kofeinu* (7,5g káva bezkofeinová, 2 x 4,5g cukor HB)\t\t2,30€\nSmotana ku káve (8g)\t\t\n0,30€\nMed (15g)\t\t\n0,70€\nVôňa, teplo, farby, rôznorodosť – toto sú hlavné vlastnosti klasických viedenských kávových receptov,\nktoré sa tradujú už stovky rokov. Vojdite do sveta tradície a úžasných chutí.\nTeplé nápoje\nKávy\n\fwww.starasypka.sk\nwww.starasypka.sk\nVínna karta Wine card\nNoria 16 (Chateau Rubáň) kabinet, biele, polosuché (0,75l) 25,00€\nVeltínske zelené (Repa winery) biele, suché D.S.C. (0,75l) 22,00€\nRulandské šedé (TT Régia Orechová) biele, suché, výber z hrozna (0,75l) 22,00€\nTramín červený (Víno Dudo Modra) biele, polosuché, výber z hrozna (0,75l) 22,00€\nRiesling H-LINE (PRINS VON HESSEN), Germany biele, suché (0,75l) 29,00€\nTramín červený, bobuľový výber, sladké, Velkeer (0,50l) 25,00€\nAlibernet FUSION (Nichta) červené, suché D.S.C. (0,75l) 22,00€\nCabernet Sauvignon (MAVIN - Martin Pomfy) červené, suché, výber z hrozna (0,75l) 25,00€\nFrankovka modrá (Chateau Rubáň) neskorý zber, červené, suché (0,75l) 23,00€\nDunaj (Nichta) červené, suché D.S.C. (0,75l) 29,00€\nPeresek suché, Velkeer (0,75l) 29,00€\nBiele víno White wine\nSekty, Champagne\nČervené víno Red wine\nHubert nealko (0,75l) 15,00€\nHubert suché (0,75l) 13,00€\nHubert polosladké (0,75l) 13,00€\nHubert sladké (0,75l) 13,00€\nHubert De Luxe (0,75l) 15,00€\nMoet (0,75l) 89,90€\n\fwww.starasypka.sk\nKolektív reštaurácie „Stará sýpka“ Vám praje Dobrú chuť\na teší sa na Vašu ďalšiu návštevu!\nFamily Plus s.r.o.\nPrevádzka: Reštaurácia „Stará sýpka“\nFejova ul. 1\nKošice\nTel. 055/ 623 01 33\n0905 290 872, 0918 122 199\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\f",
+      "requestedPdfUrl": "https://www.starasypka.sk/media/napojovy_listok_2026.pdf?_menu=1795705784229"
+    },
+    "stara-sypka-6c73e81b5ec5d415-ocr-6": {
       "requestedUrl": "https://www.starasypka.sk/sk/",
-      "capturedAt": "2026-11-26T08:33:55.096Z",
+      "capturedAt": "2026-11-26T15:09:36.990Z",
+      "pdfText": "O\n„4 S j s aa fj} me “al A\nNa\nA r. = Ň ID @\na ZADU,\nRovnako ako každý rok,\naj tento rok sme pre Vás pripravili obľúbené\nKAČACIE HODY\n— 77 (A 77\nZAČÍNAME (Z,\\@ 1.10.2025\ni: |) as\nREZERVACIE\n+421 905 290 872\n",
+      "requestedPdfUrl": "https://www.starasypka.sk/media/object/1798/1798_img2_b.png?_menu=1795705778440",
+      "imageSha256": "0fb6d362b7d5d6153fa63880bee2fe5414a9a595647684100971989a8ddf851b",
+      "ocrPsm": 6
+    },
+    "stara-sypka-6c73e81b5ec5d415-ocr-11": {
+      "requestedUrl": "https://www.starasypka.sk/sk/",
+      "capturedAt": "2026-11-26T15:09:36.990Z",
+      "pdfText": "KAGAGIE\n\nMODY\n\nPa a\n\n4\n\n“1\n\n(A\n\noA Áá\n\nNá\n\nK\n\nSe\n\n7\n\nxa\n\nON\n\nAS\n\n28\n\nRovnako ako každý rok,\n\naj tento rok sme pre Vás pripravili obľúbené\n\nKAČACIE HODY\n\n&\n\nZACINAME\n\nŇ\n\n1.10.2025\n\n»\n\nANN\n\nREZERVACIE\n\n+421 905 290 872\n",
+      "requestedPdfUrl": "https://www.starasypka.sk/media/object/1798/1798_img2_b.png?_menu=1795705778440",
+      "imageSha256": "0fb6d362b7d5d6153fa63880bee2fe5414a9a595647684100971989a8ddf851b",
+      "ocrPsm": 11
+    },
+    "stara-sypka-attempt-dd9be93dd472": {
+      "requestedUrl": "https://www.starasypka.sk/sk/restauracia/obedove-menu",
+      "capturedAt": "2026-11-26T15:09:43.355Z",
       "lines": [
         "Súhlasím",
         "Tieto internetové stránky používajú k poskytovaniu služieb a analýze návštevnosti súbory cookie. Používaním týchto internetových stránok s týmto súhlasíte. Viac info.",
         "REŠTAURÁCIA",
-        "DENNÉ MENU",
         "JEDÁLNY LÍSTOK",
         "NÁPOJOVÝ LÍSTOK",
         "LETNÁ ZÁHRADA",
@@ -1914,88 +2036,15 @@
         "Cookies.",
         "© 2015 - 2026. Reštaurácia Stará sýpka.",
         "Created by webmatic s. r. o.",
-        "KAČACIE HODY V STAREJ SÝPKE",
-        "KAČACIE HODY V STAREJ SÝPKE",
-        "KAČACIE HODY V STAREJ SÝPKE",
-        "SPOZNAJTE REŠTAURÁCIU STARÁ SÝPKA",
-        "REŠTAURÁCIA STARÁ SÝPKA",
-        "NENÁPADNÁ REŠTAURÁCIA, ZA KTORÚ HOVORÍ JEJ MENO",
-        "V uličke nedaľeko Nám. osoloboditeľov je prekvapujúco príjemná reštaurácia Stará sýpka. Nenápadný vchod návštevník ľahko prehliadne, no nemal by. Podľa ruchu a počtu hostí si podnik od roku 2005 získal početnú klientelu.",
-        "P",
-        "PARKOVANIE",
-        "FAJČIARSKA ZÓNA",
-        "NEFAJČIARSKA ZÓNA",
-        "PLATBA KARTOU",
-        "zobraziť všetky fotky",
-        "MENU",
-        "Ponúkame Vám veľký výber tej najlepšej slovenskej a zahraničnej kuchyne. Polievky, predjedlá, steaky, bezmäsité jedlá ako aj dezerty a veľa ďalšieho Vám s radosťou prinesie špičková obsluha.",
-        "V našom jedálnom lístku nájdete:",
-        "- špeciality našej kuchyne",
-        "- studené predjedlá",
-        "- teplé predjedlá",
-        "- polievky",
-        "- jedlá z hovädzieho mäsa",
-        "- jedlá z bravčového mäsa",
-        "- jedlá z hydiny",
-        "- jedlá na rošte",
-        "- jedlá z rýb",
-        "- bezmäsité jedlá",
-        "- syry",
-        "- múčne jedlá",
-        "- šaláty",
-        "- dezerty",
-        "- zmrzlina, zmrzlinové poháre",
-        "- múčniky",
-        "- ovocné poháre",
-        "- prílohy a pochutiny",
-        "U nás si každý príde na svoje. V ponuke nájdete okrem iného až 5 polievok, 8 steakov či 7 syrov.",
-        "Príďte a presvedčte sa sami. Ústretový personál sa postará o Vašu spokojnosť.",
-        "ČAPUJEME",
-        "K dobrému jedlu patrí aj dobré pivo. U nás nájdete tankový Gambrinus, Plzeňský Prazdroj, Master a nealkoholický Birell.",
-        "ČAPUJEME TANKOVÝ GAMBRINUS",
-        "NAZDRAVIE!",
-        "LETNÁ ZÁHRADA",
-        "Letná záhrada prináša atmosféru, na ktorú sa nezabúda. Veľmi vhodný priestor pre spoločenské akcie počas letnej sezóny. Každý piatok tu hrá cigánska hudba a na svoje si prídu aj priaznivci športových prenosov.",
-        "V našej letnej záhrade aspoň na chvíľu zabudnete na ruch mesta.",
-        "zobraziť všetky fotky",
-        "SPOLOČENSKÉ AKCIE",
-        "Ponúkame Vám vynikajúce priestory na konanie spoločenských akcií. V letnej sezóne máme k dispozíciiobrovskú letnú terasu, počas zimy priestory reštaurácie či salónika. Samostatne oddelený salónik s kapacitou 32 miest sa hodí na organizovanie rodinných aj firemných osláv.",
-        "Zarezervujte si priestor pre Vašu akciu ešte dnes:",
-        "- rodinné oslavy",
-        "- stužkové",
-        "- promócie",
-        "- kar",
-        "- firemné akcie",
-        "Príjemné prostredie, výborné jedlo a ústretový personál sú tou najlepšou kombináciou pre Vašu akciu.",
-        "pre rezervácie volajte:",
-        "0905 290 872, 0918 122 199",
-        "zobraziť všetky fotky",
-        "KONTAKT",
-        "Fejova 1",
-        "040 01 Košice",
-        "Slovensko",
-        "telefón: 055 623 0133",
-        "prevádzka: 0905 290 872, 0918 122 199",
-        "e-mail: starasypka@gmail.com",
-        "OTVÁRACIE HODINY",
-        "Pondelok:\tzatvorené",
-        "Utorok - Štvrtok:\t11.00 - 22.00",
-        "Piatok:\t11.00 - 23.00",
-        "Sobota:\t11.00 - 22.00",
-        "Nedeľa:\tlen dohodnuté akcie",
-        "(min. 20 osôb)",
-        "zobraziť mapu",
+        "DENNÉ MENU - HOTOVKY",
+        "(obedové menu podávame od 11:00)",
+        "26.11.2026",
+        "VYTLAČIŤ",
         "26.11.2026",
         "Dnešná ponuka",
         "(podávame od 11:00)",
-        "ZOBRAZIŤ / VYTLAČIŤ"
+        "VYTLAČIŤ"
       ]
-    },
-    "stara-sypka-pdf-canva_dennemenu_184.pdf": {
-      "requestedUrl": "https://www.starasypka.sk/sk/",
-      "capturedAt": "2026-11-26T08:33:55.096Z",
-      "pdfText": "Stará sýpka\nD E N N É\nM E N U\n26.11.2026\nZELENINOVÝ KRÉM S KRUTÓNKAMI\n(0,3L)(1,7)1,50€\nPolievka\nŠpecialita\nDenná ponuka\nVYPRÁŽANÝ SYR S CHRUMKAVÝMI HRANOLKAMI A\nDOMÁCOU TATÁRSKOU OMÁČKOU (150/200G)(1,3,7,10)\n10,20 €\n1 – O B I L N I N Y O B S A H U J Ú C E L E P O K , 2 - K Ô R O V C E , 3 - V A J C I A , 4 - R Y B Y , 5 - A R A Š I D Y ,\n6 - S Ó J O V É Z R N Á , 7 - M L I E K O , 8 - O R E C H Y , 9 - Z E L E R , 1 0 - H O R Č I C A , 1 1 – S E Z A M\nP R I B A L E N Í J E D Á L N A P O Ž I A D A N I E Z Á K A Z N Í K A Ú Č T U J E M E P O P L A T O K 0 , 5 0 €\nHOVÄDZIE KAPUCÍNSKE SOTÉ.RYŽA,ZEMIAKOVÉ DUKÁTIKY\n(150/100/100 G)(7)\n12,90€\nKURACIE PRSIA NA HORČICOVO-SMOTANOVEJ OMÁČKE,\nRYŽA,OPEKANÉ ZEMIAKY\n(150/100/100 G)(7,10)\n8,90 €\nVYPRÁŽANÁ BRAVČOVÁ ROLKA PLNENÁ ŠUNKOU A NIVOU,\nPUČENÉ ZEMIAKY S CIBUĽKOU\n(150/200 G)(1,3,7,10)\n8,90 €\nZELENINOVÉ KARBONÁTKY SO STRÚHANÝM SYROM,\nZEMIAKOVÁ KAŠA,DOMÁCA TATÁRSKA OMÁČKA\n(150/200 G)(1,3,7,10)\n8,20 €\nKAPUSTNICA,CHLIEB\n(0,3L)(1,7)3,90€\n\f",
-      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_dennemenu_184.pdf?_menu=1795682035105"
     },
     "stara-sypka": {
       "requestedUrl": "https://www.starasypka.sk/sk/",
@@ -2008,6 +2057,66 @@
     }
   },
   "errors": [
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Image OCR: Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 0,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Image OCR: Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "reason": "Sypka: PDF does not contain current date"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
+    {
+      "id": "stara-sypka",
+      "attempt": 1,
+      "reason": "No current Sypka PDF or image parsed"
+    },
     {
       "id": "bluebell",
       "reason": "Bluebell: no current menu with agreeing OCR and sufficient confidence"

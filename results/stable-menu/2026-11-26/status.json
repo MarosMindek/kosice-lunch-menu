@@ -1,7 +1,7 @@
 {
   "date": "2026-11-26",
   "mode": "dry-run",
-  "startedAt": "2026-11-26T08:33:48.415Z",
+  "startedAt": "2026-11-26T15:09:21.379Z",
   "modelCalls": 0,
   "mailSecretPresent": false,
   "counts": [
@@ -37,7 +37,7 @@
     }
   ],
   "templateVersion": "kosice-lunch-email-v1",
-  "menuDigest": "d2608bbbf59cbe27afe4da6e34edee8a0826c22e4dc5c3fdf1f3fdffbd3460e2",
+  "menuDigest": "390c33408c3f44bba235ebd84d1d1d437adba08d6670670d6b935c7980d6666d",
   "status": "dry_run_validated",
-  "finishedAt": "2026-11-26T08:37:48.644Z"
+  "finishedAt": "2026-11-26T15:13:01.270Z"
 }
