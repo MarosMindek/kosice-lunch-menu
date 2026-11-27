@@ -1,10 +1,10 @@
 {
   "date": "2026-11-27",
-  "capturedAt": "2026-11-27T08:41:07.581Z",
+  "capturedAt": "2026-11-27T15:03:43.415Z",
   "sources": {
     "kozlovna": {
       "requestedUrl": "https://kozlovnakosice.sk/#obedove-menu",
-      "capturedAt": "2026-11-27T08:37:46.692Z",
+      "capturedAt": "2026-11-27T14:59:39.111Z",
       "lines": [
         "Preskočiť na hlavný obsah",
         "Zažite autentickú pivovú kultúru v Kozlovni",
@@ -1013,9 +1013,9 @@
     },
     "stara-sypka": {
       "requestedUrl": "https://www.starasypka.sk/sk/",
-      "capturedAt": "2026-11-27T08:37:46.458Z",
+      "capturedAt": "2026-11-27T14:59:37.077Z",
       "pdfText": "Stará sýpka\nD E N N É\nM E N U\n27.11.2026\nFRANKFURTSKÁ\n(0,3L)(1)1,50€\nPolievka\nŠpecialita\nDenná ponuka\nVYPRÁŽANÝ SYR S CHRUMKAVÝMI HRANOLKAMI A\nDOMÁCOU TATÁRSKOU OMÁČKOU (150/200G)(1,3,7,10)\n10,20 €\n1 – O B I L N I N Y O B S A H U J Ú C E L E P O K , 2 - K Ô R O V C E , 3 - V A J C I A , 4 - R Y B Y , 5 - A R A Š I D Y ,\n6 - S Ó J O V É Z R N Á , 7 - M L I E K O , 8 - O R E C H Y , 9 - Z E L E R , 1 0 - H O R Č I C A , 1 1 – S E Z A M\nP R I B A L E N Í J E D Á L N A P O Ž I A D A N I E Z Á K A Z N Í K A Ú Č T U J E M E P O P L A T O K 0 , 5 0 €\nJAHŇACIE TRHANÉ MÄSKO NA DUSENEJ ČERVENEJ KAPUSTE,\nZEMIAKOVÉ KNEDLE,DOMÁCE KYSNUTÉ KNEDLE\n(150/150/100/80 G)(1,7)\n12,90€\nKURACIE PICCATA MILANESE,RYŽA,OPEKANÉ ZEMIAKY\n(150/100/100 G)(1,3,7)\n8,90 €\nMAĎARSKÝ GULÁŠ,DOMÁCE KYSNUTÉ KNEDLE\n(150/200 G)(1,7)\n9,90 €\nVYPRÁŽANÁ TRESKA (CHRBÁT),ZEMIAKOVÁ KAŠA,KYSLÉ UHORKY\n(150/200 G)(1,3,4,7)\n9,20 €\nKAPUSTNICA,CHLIEB\n(0,3L)(1,7)3,90€\nGAZDOVSKÁ PLNENÁ KAPUSTA,CHLIEB\n(450 G)(1,3,7)\n8,70 €\n\f",
-      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_185.pdf?_menu=1795768666468"
+      "requestedPdfUrl": "https://www.starasypka.sk/media/object/canva_denne_menu_185.pdf?_menu=1795791577103"
     }
   }
 }
